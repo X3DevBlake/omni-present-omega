@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="chassis-metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="50%" stop-color="#4E82EE" />
+      <stop offset="100%" stop-color="#7B61FF" />
+    </linearGradient>
+    <linearGradient id="visor-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Robot Head / Visor Unit -->
+  <rect x="22" y="10" width="20" height="15" rx="5" fill="#0C101E" stroke="url(#chassis-metal)" stroke-width="2" />
+  <!-- Stereo Optical Vision Visor -->
+  <rect x="25" y="14" width="14" height="4" rx="2" fill="url(#visor-glow)" />
+  <!-- Perception Antenna / Sensor Crown -->
+  <line x1="32" y1="5" x2="32" y2="10" stroke="#00F2FE" stroke-width="2" stroke-linecap="round" />
+  <circle cx="32" cy="4" r="2" fill="#00F2FE" />
+
+  <!-- Articulated Neck Actuator -->
+  <line x1="32" y1="25" x2="32" y2="29" stroke="#94A3B8" stroke-width="3" />
+
+  <!-- Torso / Kinematic Core Enclosure -->
+  <path d="M18 29 L46 29 L41 46 L23 46 Z" fill="#0C101E" stroke="url(#chassis-metal)" stroke-width="2" />
+  <!-- Center Core Fusion Reactor / Battery Gauge -->
+  <circle cx="32" cy="37" r="4.5" fill="#00F2FE" opacity="0.8" />
+  <circle cx="32" cy="37" r="2" fill="#FFFFFF" />
+
+  <!-- Shoulder Actuator Spheres -->
+  <circle cx="16" cy="31" r="3.5" fill="#7B61FF" />
+  <circle cx="48" cy="31" r="3.5" fill="#7B61FF" />
+
+  <!-- Bipedal Kinematic Leg Joints -->
+  <line x1="27" y1="46" x2="25" y2="58" stroke="url(#chassis-metal)" stroke-width="3" stroke-linecap="round" />
+  <line x1="37" y1="46" x2="39" y2="58" stroke="url(#chassis-metal)" stroke-width="3" stroke-linecap="round" />
+  <circle cx="26" cy="52" r="2" fill="#00F2FE" />
+  <circle cx="38" cy="52" r="2" fill="#00F2FE" />
+</svg>

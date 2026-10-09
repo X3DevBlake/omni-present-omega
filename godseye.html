@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="theme-color" content="#07090e">
+  <title>God's Eye View (Godseyeview) | OPO × Omni Spatial Intelligence</title>
+  <meta name="description" content="Planetary 3D Spatial Intelligence Console. Fusing real-time ADS-B flight tracking, AIS maritime telemetry, orbital satellite propagation, USGS seismic sensors, and OPO SCION mesh topology with OmniBrain and Gemini 4.0 Argon.">
+  <link rel="icon" type="image/svg+xml" href="svg/gemini-sparkle.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/liquid-glass.css">
+  <style>
+    .godseye-console-container {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 1.5rem;
+      min-height: 720px;
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 1024px) {
+      .godseye-console-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .godseye-viewport-card {
+      position: relative;
+      background: rgba(11, 15, 23, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(0, 229, 255, 0.25);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .godseye-canvas-wrapper {
+      position: relative;
+      flex: 1;
+      min-height: 520px;
+      cursor: grab;
+    }
+
+    .godseye-canvas-wrapper:active {
+      cursor: grabbing;
+    }
+
+    #godseye-globe-canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .godseye-hud-overlay {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: rgba(11, 15, 23, 0.88);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(0, 229, 255, 0.3);
+      border-radius: 14px;
+      padding: 14px 18px;
+      max-width: 320px;
+      pointer-events: none;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .godseye-layer-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 12px 18px;
+      background: rgba(15, 23, 42, 0.6);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .godseye-layer-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.74rem;
+      font-family: var(--font-mono);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #94A3B8;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .godseye-layer-btn.active {
+      background: rgba(0, 229, 255, 0.15);
+      border-color: rgba(0, 229, 255, 0.5);
+      color: var(--gemini-cyan);
+    }
+
+    .godseye-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .godseye-feed-card {
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .godseye-feed-card:hover {
+      border-color: rgba(0, 229, 255, 0.3);
+    }
+
+    .event-log-entry {
+      display: flex;
+      gap: 8px;
+      font-size: 0.74rem;
+      font-family: var(--font-mono);
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .event-log-time {
+      color: var(--gemini-cyan);
+      white-space: nowrap;
+    }
+
+    .event-log-text {
+      color: #CBD5E1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Liquid Ambient Background Engine with 3D Neural Connectome -->
+  <div class="liquid-bg-canvas">
+    <canvas id="neural-brain-canvas" class="neural-brain-canvas"></canvas>
+    <div class="liquid-blob blob-1"></div>
+    <div class="liquid-blob blob-2"></div>
+    <div class="liquid-blob blob-3"></div>
+    <div class="liquid-blob blob-4"></div>
+  </div>
+  <div class="glass-grid-overlay"></div>
+
+  <!-- Liquid Glass Sticky Navigation Header with Mega-Dropdowns -->
+  <header class="liquid-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-wrapper">
+        <div class="brand-icons-cluster">
+          <img src="svg/opo-symbol.svg" alt="OPO Sovereign Symbol" class="brand-opo-svg" width="30" height="30">
+          <img src="svg/gemini-argon-3d.svg" alt="Gemini 4.0 Argon 3D" class="brand-sparkle-svg" width="24" height="24">
+        </div>
+        <div style="display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <span class="brand-title">OMNI-PRESENT OMEGA</span>
+            <span class="brand-badge" style="background: rgba(0, 229, 255, 0.2); color: var(--gemini-cyan); border-color: rgba(0, 229, 255, 0.5);">GODSEYEVIEW</span>
+          </div>
+          <span style="font-size: 0.65rem; color: #94A3B8; font-family: var(--font-mono); letter-spacing: 0.04em;">PLANETARY SPATIAL OBSERVATORY</span>
+        </div>
+      </a>
+
+      <!-- Navigation Pills -->
+      <nav class="nav-pills">
+        <a href="index.html" class="nav-pill-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Home</span>
+        </a>
+
+        <!-- Omni Ecosystem Dropdown -->
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" type="button">
+            <span style="color: var(--gemini-cyan); font-size: 1.1rem; line-height: 1;">✦</span>
+            <span>Omni Ecosystem</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <div class="dropdown-section-title">AI &amp; SUPERCOMPUTING</div>
+            <a href="https://omni-brain-39821.web.app" target="_blank" rel="noopener" class="dropdown-item">
+              <div class="dropdown-item-icon">🧠</div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">OmniBrain <span class="item-badge" style="color: #4ADE80;">Live</span></div>
+                <div class="dropdown-item-desc">DeepMind &amp; Google Research AI Supercomputing</div>
+              </div>
+            </a>
+            <a href="https://omni-kronos-39821.web.app" target="_blank" rel="noopener" class="dropdown-item">
+              <div class="dropdown-item-icon">⚡</div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">OmniKronos <span class="item-badge" style="color: #4ADE80;">Live</span></div>
+                <div class="dropdown-item-desc">Agentic Development Environment &amp; Sub-Agents</div>
+              </div>
+            </a>
+            <a href="https://omni-llm-39821.web.app" target="_blank" rel="noopener" class="dropdown-item">
+              <div class="dropdown-item-icon">🤖</div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">OmniLLM &amp; Season Pass <span class="item-badge" style="color: #4ADE80;">Live</span></div>
+                <div class="dropdown-item-desc">Multi-Model Intelligence &amp; Gamified Web3 Quests</div>
+              </div>
+            </a>
+            <div class="dropdown-section-title" style="margin-top: 6px;">SOVEREIGN MARKETS &amp; DEFI</div>
+            <a href="https://omni-futures-39821.web.app" target="_blank" rel="noopener" class="dropdown-item">
+              <div class="dropdown-item-icon">📈</div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">OmniFutures Pro (200x) <span class="item-badge" style="color: #4ADE80;">Live</span></div>
+                <div class="dropdown-item-desc">Crypto, Stocks, Gold Derivatives &amp; 1,000 BTC Fund</div>
+              </div>
+            </a>
+            <a href="https://omni-dao-39821.web.app" target="_blank" rel="noopener" class="dropdown-item">
+              <div class="dropdown-item-icon">🏛️</div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">OmniDAO &amp; DEX <span class="item-badge" style="color: #4ADE80;">Live</span></div>
+                <div class="dropdown-item-desc">Multi-Chain Yield, Staking &amp; Treasury Ledgers</div>
+              </div>
+            </a>
+            <a href="https://omni-presale-39821.web.app" target="_blank" rel="noopener" class="dropdown-item">
+              <div class="dropdown-item-icon">💎</div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">Omni Presale <span class="item-badge" style="color: #4ADE80;">Live</span></div>
+                <div class="dropdown-item-desc">Official $OMNI Token Presale &amp; Allocation</div>
+              </div>
+            </a>
+            <a href="https://omni-airdrop-39821.web.app" target="_blank" rel="noopener" class="dropdown-item">
+              <div class="dropdown-item-icon">🪂</div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">Omni Airdrop <span class="item-badge" style="color: #4ADE80;">Live</span></div>
+                <div class="dropdown-item-desc">Claim Your $OMNI Ecosystem Allocation</div>
+              </div>
+            </a>
+            <div class="dropdown-section-title" style="margin-top: 6px;">CORE FABRIC &amp; COMMUNICATION</div>
+            <a href="https://omni-network-39821.web.app" class="dropdown-item">
+              <div class="dropdown-item-icon">🌐</div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">Omni-Present Omega (OPO) <span class="item-badge" style="color: #00E5FF;">This Site</span></div>
+                <div class="dropdown-item-desc">Sovereign Physical &amp; Real-World Intelligence Fabric</div>
+              </div>
+            </a>
+            <a href="https://omni-explorer-39821.web.app" target="_blank" rel="noopener" class="dropdown-item">
+              <div class="dropdown-item-icon">🔍</div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">OmniScan Explorer <span class="item-badge" style="color: #4ADE80;">Live</span></div>
+                <div class="dropdown-item-desc">Block Explorer, Node Topology &amp; Validator Hub</div>
+              </div>
+            </a>
+            <a href="https://omniair-39821.web.app" target="_blank" rel="noopener" class="dropdown-item">
+              <div class="dropdown-item-icon">✈️</div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">OmniAir <span class="item-badge" style="color: #4ADE80;">Live</span></div>
+                <div class="dropdown-item-desc">Premium Social, Discussion &amp; WebRTC Voice Channels</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <a href="godseye.html" class="nav-pill-btn active">
+          <span style="font-size: 1rem; line-height: 1;">🛰️</span>
+          <span>Godseyeview</span>
+        </a>
+        <a href="architecture.html" class="nav-pill-btn">
+          <img src="svg/scion-routing.svg" width="16" height="16" alt="Arch">
+          <span>Architecture</span>
+        </a>
+        <a href="sentient-radar.html" class="nav-pill-btn">
+          <img src="svg/sentient-radar.svg" width="16" height="16" alt="Radar">
+          <span>SENTIENT Radar</span>
+        </a>
+        <a href="crdt-lab.html" class="nav-pill-btn">
+          <img src="svg/crdt-lattice.svg" width="16" height="16" alt="CRDT">
+          <span>Delta-CRDT</span>
+        </a>
+        <a href="learn.html" class="nav-pill-btn">
+          <span style="font-size: 1rem; line-height: 1;">🎓</span>
+          <span>Learn</span>
+        </a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- 9-Dot Ecosystem Launcher -->
+        <div class="ecosystem-launcher-wrapper" id="ecoLauncherWrapper">
+          <button class="launcher-btn" id="ecoLauncherBtn" type="button" title="Omni Ecosystem Hub" aria-label="Omni Ecosystem Hub" onclick="toggleEcoLauncher(event)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <circle cx="5" cy="5" r="2.2"/><circle cx="12" cy="5" r="2.2"/><circle cx="19" cy="5" r="2.2"/>
+              <circle cx="5" cy="12" r="2.2"/><circle cx="12" cy="12" r="2.2"/><circle cx="19" cy="12" r="2.2"/>
+              <circle cx="5" cy="19" r="2.2"/><circle cx="12" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/>
+            </svg>
+          </button>
+          <div class="ecosystem-menu-dropdown" id="ecoDropdown">
+            <a href="https://omni-brain-39821.web.app" target="_blank" rel="noopener" class="eco-app-tile">
+              <span class="eco-icon" style="color: #E040FB;">🧠</span>
+              <span>OmniBrain</span>
+            </a>
+            <a href="https://omni-kronos-39821.web.app" target="_blank" rel="noopener" class="eco-app-tile">
+              <span class="eco-icon" style="color: #A855F7;">⚡</span>
+              <span>OmniKronos</span>
+            </a>
+            <a href="https://omni-llm-39821.web.app" target="_blank" rel="noopener" class="eco-app-tile">
+              <span class="eco-icon" style="color: #00E5FF;">🤖</span>
+              <span>OmniLLM</span>
+            </a>
+            <a href="https://omni-futures-39821.web.app" target="_blank" rel="noopener" class="eco-app-tile">
+              <span class="eco-icon" style="color: #38BDF8;">📈</span>
+              <span>OmniFutures</span>
+            </a>
+            <a href="https://omni-dao-39821.web.app" target="_blank" rel="noopener" class="eco-app-tile">
+              <span class="eco-icon" style="color: #10B981;">🏛️</span>
+              <span>OmniDAO</span>
+            </a>
+            <a href="https://omni-network-39821.web.app" class="eco-app-tile current-active">
+              <span class="eco-icon" style="color: #00E5FF;">🌐</span>
+              <span>OPO Mesh</span>
+            </a>
+            <a href="godseye.html" class="eco-app-tile current-active">
+              <span class="eco-icon" style="color: #38BDF8;">🛰️</span>
+              <span>God's Eye</span>
+            </a>
+            <a href="https://omni-explorer-39821.web.app" target="_blank" rel="noopener" class="eco-app-tile">
+              <span class="eco-icon" style="color: #60A5FA;">🔍</span>
+              <span>OmniScan</span>
+            </a>
+            <a href="https://omni-presale-39821.web.app" target="_blank" rel="noopener" class="eco-app-tile">
+              <span class="eco-icon" style="color: #FFD700;">💎</span>
+              <span>Presale</span>
+            </a>
+            <a href="https://omni-airdrop-39821.web.app" target="_blank" rel="noopener" class="eco-app-tile">
+              <span class="eco-icon" style="color: #F43F5E;">🪂</span>
+              <span>Airdrop</span>
+            </a>
+            <a href="https://omniair-39821.web.app" target="_blank" rel="noopener" class="eco-app-tile">
+              <span class="eco-icon" style="color: #00E5FF;">✈️</span>
+              <span>OmniAir</span>
+            </a>
+            <a href="https://omni-trading-c7ff4.web.app" target="_blank" rel="noopener" class="eco-app-tile">
+              <span class="eco-icon" style="color: #F59E0B;">📊</span>
+              <span>OmniTrade</span>
+            </a>
+          </div>
+        </div>
+
+        <button id="audio-toggle-btn" class="glass-btn glass-btn-secondary" style="padding: 5px 12px; font-size: 0.75rem; border-radius: 9999px;" onclick="window.soundEngine.toggle()" title="Toggle Cybernetic Audio Haptics">
+          <span id="audio-toggle-icon">🔊</span>
+          <span id="audio-toggle-text">FX ON</span>
+        </button>
+        <button id="mobile-menu-toggle" class="glass-btn glass-btn-secondary mobile-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu">
+          <span id="mobile-menu-icon">☰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="app-container">
+    <!-- Breadcrumb -->
+    <div style="font-size: 0.78rem; font-family: var(--font-mono); color: #94A3B8; margin-bottom: 0.75rem;">
+      <a href="index.html" style="color: var(--gemini-cyan); text-decoration: none;">HOME</a> /
+      <span style="color: #E2E8F0;">GOD'S EYE VIEW (GODSEYEVIEW) SPATIAL OBSERVATORY</span>
+    </div>
+
+    <!-- Header Section -->
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
+      <div>
+        <div class="brand-badge" style="background: rgba(0, 229, 255, 0.15); color: var(--gemini-cyan); border-color: rgba(0, 229, 255, 0.4); margin-bottom: 8px;">
+          <span>🛰️ OPO × OMNI ECOSYSTEM REAL-TIME SPATIAL INTELLIGENCE</span>
+        </div>
+        <h1 style="font-size: 2.25rem; font-weight: 800; color: #FFFFFF; letter-spacing: -0.02em; margin: 0 0 6px 0;">
+          God's Eye View (Godseyeview)
+        </h1>
+        <p style="color: #94A3B8; font-size: 0.95rem; max-width: 820px; line-height: 1.6; margin: 0;">
+          The planetary sensory bridge uniting <strong>Omni-Present Omega</strong> with the <strong>Omni Ecosystem</strong>. Aggregates live ADS-B flight transponders, maritime AIS vessel fleets, orbital satellite propagation (ISS, Starlink, GPS), USGS seismic telemetry, and OPO SCION physical node infrastructure onto an interactive 3D globe.
+        </p>
+      </div>
+
+      <!-- Quick Metrics Bar -->
+      <div style="display: flex; gap: 12px; font-family: var(--font-mono);">
+        <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(0, 229, 255, 0.3); border-radius: 12px; padding: 10px 16px; text-align: center;">
+          <div style="font-size: 1.25rem; font-weight: 700; color: var(--gemini-cyan);">7,420+</div>
+          <div style="font-size: 0.68rem; color: #94A3B8;">ACTIVE SATELLITES</div>
+        </div>
+        <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 10px 16px; text-align: center;">
+          <div style="font-size: 1.25rem; font-weight: 700; color: #38BDF8;">12,840</div>
+          <div style="font-size: 0.68rem; color: #94A3B8;">AIRBORNE VECTORS</div>
+        </div>
+        <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(74, 222, 128, 0.3); border-radius: 12px; padding: 10px 16px; text-align: center;">
+          <div style="font-size: 1.25rem; font-weight: 700; color: #4ADE80;">9 OPO NODES</div>
+          <div style="font-size: 0.68rem; color: #94A3B8;">SCION MESH</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Geospatial Console -->
+    <div class="godseye-console-container">
+      <!-- Left: Interactive 3D Globe & Layer Toolbar -->
+      <div class="godseye-viewport-card">
+        <div class="godseye-canvas-wrapper" id="canvas-container">
+          <canvas id="godseye-globe-canvas"></canvas>
+
+          <!-- Floating HUD Lock-on Card -->
+          <div class="godseye-hud-overlay">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <span id="godseye-hud-badge" style="font-size: 0.65rem; font-family: var(--font-mono); font-weight: 700; color: var(--gemini-cyan); background: rgba(0, 229, 255, 0.15); border: 1px solid rgba(0, 229, 255, 0.3); padding: 2px 6px; border-radius: 4px;">TARGET LOCKED</span>
+              <span style="font-size: 0.68rem; font-family: var(--font-mono); color: #4ADE80;">● TRACKING</span>
+            </div>
+            <div id="godseye-hud-title" style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Zurich Hermetic Root</div>
+            <div id="godseye-hud-meta" style="font-size: 0.72rem; font-family: var(--font-mono); color: #94A3B8; line-height: 1.45;">
+              <strong>LAT/LON:</strong> 47.3769°, 8.5417° &bull; <strong>PEERS:</strong> 128 &bull; <strong>RTT:</strong> 1.2ms
+            </div>
+          </div>
+        </div>
+
+        <!-- Layer Toggle Toolbar -->
+        <div class="godseye-layer-toolbar">
+          <span style="font-size: 0.72rem; font-family: var(--font-mono); color: #94A3B8; align-self: center; margin-right: 4px;">DATA FEEDS:</span>
+          <button class="godseye-layer-btn active" id="btn-toggle-satellites" onclick="toggleLayer('satellites')">
+            <span>🛰️ Satellites</span>
+          </button>
+          <button class="godseye-layer-btn active" id="btn-toggle-flights" onclick="toggleLayer('flights')">
+            <span>✈️ ADS-B Flights</span>
+          </button>
+          <button class="godseye-layer-btn active" id="btn-toggle-maritime" onclick="toggleLayer('maritime')">
+            <span>🚢 Maritime AIS</span>
+          </button>
+          <button class="godseye-layer-btn active" id="btn-toggle-seismic" onclick="toggleLayer('seismic')">
+            <span>🌋 USGS Seismic</span>
+          </button>
+          <button class="godseye-layer-btn active" id="btn-toggle-opo" onclick="toggleLayer('opoNodes')">
+            <span>🌐 OPO Nodes</span>
+          </button>
+          <button class="godseye-layer-btn active" id="btn-toggle-cables" onclick="toggleLayer('subseaCables')">
+            <span>⚡ Subsea Cables</span>
+          </button>
+          <button class="godseye-layer-btn" id="btn-toggle-autorotate" onclick="toggleAutoRotate()" style="margin-left: auto;">
+            <span>🔄 Auto-Orbit</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right: Omni Ecosystem Cross-Platform Feeds -->
+      <div class="godseye-sidebar">
+        <!-- 1. OmniBrain Deep Research Anomaly Scanner -->
+        <div class="godseye-feed-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="font-size: 1.2rem;">🧠</span>
+              <span style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF;">OmniBrain Anomaly Scanner</span>
+            </div>
+            <span style="font-size: 0.65rem; color: #E040FB; font-family: var(--font-mono); background: rgba(224, 64, 251, 0.15); padding: 2px 6px; border-radius: 4px;">GEMINI 4.0</span>
+          </div>
+          <p style="font-size: 0.78rem; color: #94A3B8; line-height: 1.5; margin: 0 0 10px 0;">
+            DeepMind &amp; Google Research neural models cross-correlate satellite imagery and ADS-B radar tracks with physical ground-truth anomalies.
+          </p>
+          <div style="background: rgba(0,0,0,0.4); border-left: 3px solid #E040FB; padding: 8px 10px; border-radius: 6px; font-size: 0.72rem; font-family: var(--font-mono); color: #E2E8F0;">
+            <span style="color: #E040FB; font-weight: bold;">[SCAN ACTIVE]:</span> Zero military transponder deviations detected in Baltic Sector. Kuril M6.8 seismic wavefront propagating at 3.4 km/s.
+          </div>
+        </div>
+
+        <!-- 2. OmniKronos Autonomous Agent Swarm -->
+        <div class="godseye-feed-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="font-size: 1.2rem;">⚡</span>
+              <span style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF;">OmniKronos Spatial Agents</span>
+            </div>
+            <span style="font-size: 0.65rem; color: #A855F7; font-family: var(--font-mono); background: rgba(168, 85, 247, 0.15); padding: 2px 6px; border-radius: 4px;">ADE ENGINE</span>
+          </div>
+          <p style="font-size: 0.78rem; color: #94A3B8; line-height: 1.5; margin: 0 0 10px 0;">
+            Autonomous agents dispatched across physical coordinates: monitoring SCION subsea fiberoptic health, tracking drone trajectories, and balancing edge mesh compute.
+          </p>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <span style="font-size: 0.68rem; font-family: var(--font-mono); background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 4px; color: #CBD5E1;">Vortex: Drone Fleet #4</span>
+            <span style="font-size: 0.68rem; font-family: var(--font-mono); background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 4px; color: #CBD5E1;">Spectre: SCION Route #12</span>
+            <span style="font-size: 0.68rem; font-family: var(--font-mono); background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 4px; color: #CBD5E1;">Nexus: BCI Stream</span>
+          </div>
+        </div>
+
+        <!-- 3. OmniFutures & OmniDAO Physical Ground-Truth -->
+        <div class="godseye-feed-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="font-size: 1.2rem;">📈</span>
+              <span style="font-size: 0.85rem; font-weight: 700; color: #FFFFFF;">OmniFutures Commodity Oracle</span>
+            </div>
+            <span style="font-size: 0.65rem; color: #38BDF8; font-family: var(--font-mono); background: rgba(56, 189, 248, 0.15); padding: 2px 6px; border-radius: 4px;">ORACLE LIVE</span>
+          </div>
+          <p style="font-size: 0.78rem; color: #94A3B8; line-height: 1.5; margin: 0 0 10px 0;">
+            Automated settlement of perpetual futures and prediction markets based on AIS tanker arrivals at Rotterdam &amp; Singapore.
+          </p>
+          <div style="font-size: 0.72rem; font-family: var(--font-mono); color: #38BDF8;">
+            TI EUROPE: 3.1M bbl Crude &bull; ETA 14h &bull; Settle Rate $78.40/bbl
+          </div>
+        </div>
+
+        <!-- 4. Real-Time Telemetry Event Log -->
+        <div class="godseye-feed-card" style="flex: 1;">
+          <div style="font-size: 0.82rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px; display: flex; justify-content: space-between;">
+            <span>GLOBAL SPATIAL FEED</span>
+            <span style="font-size: 0.65rem; color: #4ADE80; font-family: var(--font-mono);">60 FPS</span>
+          </div>
+          <div style="max-height: 180px; overflow-y: auto;">
+            <div class="event-log-entry">
+              <span class="event-log-time">16:15:10</span>
+              <span class="event-log-text">FORTE12 (RQ-4B) maintaining FL520 orbit over Black Sea</span>
+            </div>
+            <div class="event-log-entry">
+              <span class="event-log-time">16:14:48</span>
+              <span class="event-log-text">STARLINK-9102 apogee verified at 553 km via CelesTrak TLE</span>
+            </div>
+            <div class="event-log-entry">
+              <span class="event-log-time">16:14:22</span>
+              <span class="event-log-text">OPO-ZUR-01 sync complete with Frankfurt SCION border router</span>
+            </div>
+            <div class="event-log-entry">
+              <span class="event-log-time">16:13:50</span>
+              <span class="event-log-text">AL DAAYEN Q-Flex LNG vessel passed Malacca Strait checkpoint</span>
+            </div>
+            <div class="event-log-entry">
+              <span class="event-log-time">16:13:12</span>
+              <span class="event-log-text">USGS M6.8 Kuril Trench telemetry ingested into Delta-CRDT vector</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Liquid Glass Footer -->
+  <footer class="liquid-footer">
+    <div class="ecosystem-footer-bar" style="margin-bottom: 1.5rem; padding-bottom: 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.08); text-align: center;">
+      <div style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--gemini-cyan); letter-spacing: 0.1em; margin-bottom: 0.75rem; text-transform: uppercase;">
+        ✦ Omni Ecosystem Cross-Platform Network • Live on Firebase
+      </div>
+      <div class="ecosystem-footer-chips" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">
+        <a href="https://omni-brain-39821.web.app" target="_blank" rel="noopener" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #CBD5E1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s ease;">🧠 OmniBrain</a>
+        <a href="https://omni-kronos-39821.web.app" target="_blank" rel="noopener" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #CBD5E1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s ease;">⚡ OmniKronos</a>
+        <a href="https://omni-llm-39821.web.app" target="_blank" rel="noopener" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #CBD5E1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s ease;">🤖 OmniLLM</a>
+        <a href="https://omni-futures-39821.web.app" target="_blank" rel="noopener" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #CBD5E1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s ease;">📈 OmniFutures (200x)</a>
+        <a href="https://omni-dao-39821.web.app" target="_blank" rel="noopener" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #CBD5E1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s ease;">🏛️ OmniDAO &amp; DEX</a>
+        <a href="https://omni-network-39821.web.app" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: var(--gemini-cyan); background: rgba(0,229,255,0.12); border: 1px solid rgba(0,229,255,0.4); transition: all 0.2s ease;">🌐 OPO Mesh (Current)</a>
+        <a href="godseye.html" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #38BDF8; background: rgba(56,189,248,0.15); border: 1px solid rgba(56,189,248,0.4); transition: all 0.2s ease;">🛰️ God's Eye View</a>
+        <a href="https://omni-explorer-39821.web.app" target="_blank" rel="noopener" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #CBD5E1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s ease;">🔍 OmniScan</a>
+        <a href="https://omni-presale-39821.web.app" target="_blank" rel="noopener" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #CBD5E1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s ease;">💎 Presale</a>
+        <a href="https://omni-airdrop-39821.web.app" target="_blank" rel="noopener" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #CBD5E1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s ease;">🪂 Airdrop</a>
+        <a href="https://omniair-39821.web.app" target="_blank" rel="noopener" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #CBD5E1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s ease;">✈️ OmniAir</a>
+        <a href="https://omni-trading-c7ff4.web.app" target="_blank" rel="noopener" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #CBD5E1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s ease;">📊 OmniTrade</a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html" class="footer-link">Home</a>
+      <a href="godseye.html" class="footer-link">God's Eye View</a>
+      <a href="architecture.html" class="footer-link">Architecture</a>
+      <a href="crdt-lab.html" class="footer-link">Delta-CRDT Lab</a>
+      <a href="gemini-studio.html" class="footer-link">Gemini 4.0 Argon</a>
+      <a href="sentient-radar.html" class="footer-link">SENTIENT Radar</a>
+      <a href="whitepaper.html" class="footer-link">Whitepaper</a>
+      <a href="deploy.html" class="footer-link">Edge Operations</a>
+      <a href="learn.html" class="footer-link">Learning Hub</a>
+    </div>
+    <div style="font-size: 0.8rem; color: #64748B; font-family: var(--font-mono); margin-top: 0.75rem;">
+      Omni-Present Omega (OPO) &amp; RedComm Ecosystem • Sovereign Real-World Intelligence Fabric
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/neural-brain.js"></script>
+  <script src="js/godseye-engine.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    function toggleLayer(layerName) {
+      if (!window.godsEyeEngine) return;
+      window.godsEyeEngine.layers[layerName] = !window.godsEyeEngine.layers[layerName];
+      const btn = document.getElementById('btn-toggle-' + layerName.toLowerCase());
+      if (btn) {
+        btn.classList.toggle('active', window.godsEyeEngine.layers[layerName]);
+      }
+      if (window.soundEngine) window.soundEngine.playClick();
+    }
+
+    function toggleAutoRotate() {
+      if (!window.godsEyeEngine) return;
+      window.godsEyeEngine.autoRotate = !window.godsEyeEngine.autoRotate;
+      const btn = document.getElementById('btn-toggle-autorotate');
+      if (btn) {
+        btn.classList.toggle('active', window.godsEyeEngine.autoRotate);
+      }
+      if (window.soundEngine) window.soundEngine.playClick();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="dna-strand-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F06292" />
+      <stop offset="50%" stop-color="#BA68C8" />
+      <stop offset="100%" stop-color="#7B61FF" />
+    </linearGradient>
+    <linearGradient id="dna-strand-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="50%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#4E82EE" />
+    </linearGradient>
+  </defs>
+
+  <!-- Helix Strand 1 (Pink/Violet) -->
+  <path d="M12 12 C24 20 40 20 52 12 C40 28 24 28 12 36 C24 44 40 44 52 52" 
+        stroke="url(#dna-strand-1)" stroke-width="3" stroke-linecap="round" fill="none" />
+
+  <!-- Helix Strand 2 (Cyan/Blue) -->
+  <path d="M52 12 C40 20 24 20 12 28 C24 36 40 36 52 44 C40 52 24 52 12 52" 
+        stroke="url(#dna-strand-2)" stroke-width="3" stroke-linecap="round" fill="none" />
+
+  <!-- Hydrogen Base Pair Rungs -->
+  <line x1="20" y1="16" x2="44" y2="16" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="2 3" opacity="0.6" />
+  <line x1="26" y1="24" x2="38" y2="24" stroke="#00F2FE" stroke-width="2" stroke-linecap="round" />
+  <line x1="20" y1="32" x2="44" y2="32" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="2 3" opacity="0.6" />
+  <line x1="26" y1="40" x2="38" y2="40" stroke="#F06292" stroke-width="2" stroke-linecap="round" />
+  <line x1="20" y1="48" x2="44" y2="48" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="2 3" opacity="0.6" />
+
+  <!-- Prime Editing Scissors / Guided Nanoparticle Sparkle Target -->
+  <circle cx="32" cy="24" r="5" fill="#F06292" opacity="0.4" />
+  <circle cx="32" cy="24" r="2.5" fill="#FFFFFF" />
+  <circle cx="32" cy="40" r="5" fill="#00F2FE" opacity="0.4" />
+  <circle cx="32" cy="40" r="2.5" fill="#FFFFFF" />
+</svg>

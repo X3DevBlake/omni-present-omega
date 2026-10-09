@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="multi-mic-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F06292" />
+      <stop offset="50%" stop-color="#BA68C8" />
+      <stop offset="100%" stop-color="#7B61FF" />
+    </linearGradient>
+    <radialGradient id="mic-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F06292" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#7B61FF" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Ambient Glow Behind Sensor -->
+  <circle cx="32" cy="30" r="24" fill="url(#mic-glow)" opacity="0.35" />
+
+  <!-- Acoustic / Tensor Wave Fronts -->
+  <path d="M12 24 C10 29 10 35 12 40" stroke="#00F2FE" stroke-width="2.5" stroke-linecap="round" opacity="0.75" />
+  <path d="M17 18 C14 26 14 38 17 46" stroke="#4E82EE" stroke-width="2" stroke-linecap="round" opacity="0.5" />
+  
+  <path d="M52 24 C54 29 54 35 52 40" stroke="#00F2FE" stroke-width="2.5" stroke-linecap="round" opacity="0.75" />
+  <path d="M47 18 C50 26 50 38 47 46" stroke="#4E82EE" stroke-width="2" stroke-linecap="round" opacity="0.5" />
+
+  <!-- Microphone / Sensory Ingest Capsule -->
+  <rect x="25" y="10" width="14" height="24" rx="7" fill="url(#multi-mic-grad)" stroke="#FFFFFF" stroke-width="1.5" />
+  <!-- Capsule Grille Lines -->
+  <line x1="28" y1="17" x2="36" y2="17" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" opacity="0.8" />
+  <line x1="28" y1="22" x2="36" y2="22" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" opacity="0.8" />
+
+  <!-- Cradle Bracket -->
+  <path d="M19 28 C19 39 25 45 32 45 C39 45 45 39 45 28" stroke="url(#multi-mic-grad)" stroke-width="3" stroke-linecap="round" fill="none" />
+
+  <!-- Stem & Base -->
+  <line x1="32" y1="45" x2="32" y2="54" stroke="#7B61FF" stroke-width="3" stroke-linecap="round" />
+  <line x1="22" y1="54" x2="42" y2="54" stroke="#00F2FE" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Camera Vision Ray Sparkle -->
+  <circle cx="44" cy="14" r="2.5" fill="#00F2FE" />
+  <path d="M44 8 L44 20 M38 14 L50 14" stroke="#00F2FE" stroke-width="1.2" stroke-linecap="round" />
+</svg>

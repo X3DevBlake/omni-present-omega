@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="gemini-pulse-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A73E8">
+        <animate attributeName="stop-color" values="#1A73E8;#7B61FF;#F06292;#00C9A7;#1A73E8" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#7B61FF">
+        <animate attributeName="stop-color" values="#7B61FF;#F06292;#00C9A7;#1A73E8;#7B61FF" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#00C9A7">
+        <animate attributeName="stop-color" values="#00C9A7;#1A73E8;#7B61FF;#F06292;#00C9A7" dur="8s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    <filter id="liquid-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <g transform="translate(8, 8)">
+    <circle cx="24" cy="24" r="18" fill="url(#gemini-pulse-grad)" opacity="0.25">
+      <animate attributeName="r" values="16;22;16" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.35;0.15" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <path d="M24 0 C24 13.255 13.255 24 0 24 C13.255 24 24 34.745 24 48 C24 34.745 34.745 24 48 24 C34.745 24 24 13.255 24 0 Z" fill="url(#gemini-pulse-grad)" filter="url(#liquid-glow)" />
+    <!-- Secondary miniature spark -->
+    <path d="M38 6 C38 9.3 35.3 12 32 12 C35.3 12 38 14.7 38 18 C38 14.7 40.7 12 44 12 C40.7 12 38 9.3 38 6 Z" fill="#F06292" opacity="0.9">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+    </path>
+  </g>
+</svg>

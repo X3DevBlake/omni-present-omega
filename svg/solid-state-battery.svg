@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="battery-casing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="50%" stop-color="#00F2FE" />
+      <stop offset="100%" stop-color="#4E82EE" />
+    </linearGradient>
+    <radialGradient id="charge-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#00F2FE" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Ambient Cell Glow -->
+  <rect x="6" y="14" width="46" height="36" rx="8" fill="url(#charge-glow)" opacity="0.3" />
+
+  <!-- Outer Battery Enclosure -->
+  <rect x="8" y="16" width="42" height="32" rx="6" stroke="url(#battery-casing)" stroke-width="2.5" fill="#0A0F1D" />
+
+  <!-- Positive Terminal Tab -->
+  <rect x="50" y="26" width="6" height="12" rx="2" fill="#10B981" stroke="#34D399" stroke-width="1.5" />
+
+  <!-- Ceramic Solid-State Separator (Central Barrier) -->
+  <line x1="29" y1="16" x2="29" y2="48" stroke="#F59E0B" stroke-width="3" stroke-dasharray="2 2" />
+
+  <!-- Anode (Lithium Metal in-situ plating) -->
+  <rect x="11" y="19" width="15" height="26" rx="3" fill="rgba(0, 242, 254, 0.15)" stroke="#00F2FE" stroke-width="1" />
+  <!-- Cathode Layer -->
+  <rect x="32" y="19" width="15" height="26" rx="3" fill="rgba(16, 185, 129, 0.15)" stroke="#10B981" stroke-width="1" />
+
+  <!-- Li+ Ion Transfer Stream Vectors -->
+  <circle cx="21" cy="27" r="2" fill="#00F2FE" />
+  <circle cx="21" cy="37" r="2" fill="#00F2FE" />
+  
+  <path d="M22 27 L37 27" stroke="#34D399" stroke-width="2" stroke-linecap="round" />
+  <polygon points="36,25 40,27 36,29" fill="#34D399" />
+
+  <path d="M22 37 L37 37" stroke="#34D399" stroke-width="2" stroke-linecap="round" />
+  <polygon points="36,35 40,37 36,39" fill="#34D399" />
+
+  <!-- High Energy Voltage Icon (+) and (-) -->
+  <text x="14" y="24" fill="#00F2FE" font-family="sans-serif" font-size="7" font-weight="bold">-</text>
+  <text x="43" y="24" fill="#10B981" font-family="sans-serif" font-size="7" font-weight="bold">+</text>
+</svg>

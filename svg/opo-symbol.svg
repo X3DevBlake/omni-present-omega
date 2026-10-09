@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="opo-mesh-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="50%" stop-color="#4FACFE" />
+      <stop offset="100%" stop-color="#7B61FF" />
+    </linearGradient>
+    <linearGradient id="inner-core" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF0844" />
+      <stop offset="100%" stop-color="#FFB199" />
+    </linearGradient>
+  </defs>
+  <!-- Outer glowing ring -->
+  <circle cx="32" cy="32" r="30" stroke="url(#opo-mesh-grad)" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.5" />
+  <!-- Greek Omega Symbol with Sovereign Interlock -->
+  <path d="M12 50 L22 50 C22 44 16 38 16 28 C16 19.16 23.16 12 32 12 C40.84 12 48 19.16 48 28 C48 38 42 44 42 50 L52 50" 
+        stroke="url(#opo-mesh-grad)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Central Delta-CRDT Quantum Point -->
+  <circle cx="32" cy="28" r="5" fill="url(#inner-core)">
+    <animate attributeName="r" values="4;6;4" dur="2.5s" repeatCount="indefinite" />
+  </circle>
+  <!-- Semilattice Nodes -->
+  <circle cx="22" cy="48" r="3" fill="#00F2FE" />
+  <circle cx="42" cy="48" r="3" fill="#7B61FF" />
+  <circle cx="32" cy="14" r="2.5" fill="#FFB199" />
+</svg>

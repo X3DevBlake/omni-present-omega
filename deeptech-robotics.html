@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="theme-color" content="#07090e">
+  <title>Embodied Humanoid Actuators & VLA Control | Omni-Present Omega</title>
+  <meta name="description" content="Quasi-Direct Drive (QDD) Actuators and End-to-End Vision-Language-Action Neural Control.">
+  <link rel="icon" type="image/svg+xml" href="svg/gemini-sparkle.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/liquid-glass.css">
+</head>
+<body>
+  <!-- Liquid Ambient Background Engine with 3D Neural Connectome -->
+  <div class="liquid-bg-canvas">
+    <canvas id="neural-brain-canvas" class="neural-brain-canvas"></canvas>
+    <div class="liquid-blob blob-1"></div>
+    <div class="liquid-blob blob-2"></div>
+    <div class="liquid-blob blob-3"></div>
+    <div class="liquid-blob blob-4"></div>
+  </div>
+  <div class="glass-grid-overlay"></div>
+
+  <!-- Liquid Glass Sticky Navigation Header with Mega-Dropdowns -->
+  <header class="liquid-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-wrapper">
+        <div class="brand-icons-cluster">
+          <img src="svg/opo-symbol.svg" alt="OPO Sovereign Symbol" class="brand-opo-svg" width="30" height="30">
+          <img src="svg/gemini-argon-3d.svg" alt="Gemini 4.0 Argon 3D" class="brand-sparkle-svg" width="24" height="24">
+        </div>
+        <div style="display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <span class="brand-title">OMNI-PRESENT OMEGA</span>
+            <span class="brand-badge">OPO 3.0</span>
+          </div>
+          <span style="font-size: 0.65rem; color: #94A3B8; font-family: var(--font-mono); letter-spacing: 0.04em;">REDCOMM SOVEREIGN FABRIC</span>
+        </div>
+      </a>
+
+      <!-- Smooth Anchor & Multi-Page Navigation Pills with Dropdowns -->
+      <nav class="nav-pills">
+        <a href="index.html" class="nav-pill-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Home</span>
+        </a>
+        <a href="godseye.html" class="nav-pill-btn" style="border-color: rgba(0, 229, 255, 0.4); background: rgba(0, 229, 255, 0.08);">
+          <span style="color: #00E5FF; font-size: 0.95rem; line-height: 1;">🛰️</span>
+          <span style="color: #00E5FF; font-weight: 600;">God's Eye</span>
+        </a>
+
+        <!-- Omni Ecosystem Dropdown -->
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" type="button">
+            <span style="color: var(--gemini-cyan); font-size: 1.1rem; line-height: 1;">✦</span>
+            <span>Omni Ecosystem</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <div class="dropdown-section-title">AI &amp; SUPERCOMPUTING</div>
+            <a href="https://omni-brain-39821.web.app" target="_blank" rel="noopener" class="dropdown-item">
+              <div class="dropdown-item-icon">🧠</div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">OmniBrain <span class="item-badge" style="color: #4ADE80;">Live</span></div>
+                <div class="dropdown-item-desc">DeepMind &amp; Google Research AI Supercomputing</div>
+              </div>
+            </a>
+            <a href="https://omni-kronos-39821.web.app" target="_blank" rel="noopener" class="dropdown-item">
+              <div class="dropdown-item-icon">⚡</div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">OmniKronos <span class="item-badge" style="color: #4ADE80;">Live</span></div>
+                <div class="dropdown-item-desc">Agentic Development Environment &amp; Sub-Agents</div>
+              </div>
+            </a>
+            <a href="https://omni-llm-39821.web.app" target="_blank" rel="noopener" class="dropdown-item">
+              <div class="dropdown-item-icon">🤖</div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">OmniLLM &amp; Season Pass <span class="item-badge" style="color: #4ADE80;">Live</span></div>
+                <div class="dropdown-item-desc">Multi-Model Intelligence &amp; Gamified Web3 Quests</div>
+              </div>
+            </a>
+            <div class="dropdown-section-title" style="margin-top: 6px;">SOVEREIGN MARKETS &amp; DEFI</div>
+            <a href="https://omni-futures-39821.web.app" target="_blank" rel="noopener" class="dropdown-item">
+              <div class="dropdown-item-icon">📈</div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">OmniFutures Pro (200x) <span class="item-badge" style="color: #4ADE80;">Live</span></div>
+                <div class="dropdown-item-desc">Crypto, Stocks, Gold Derivatives &amp; 1,000 BTC Fund</div>
+              </div>
+            </a>
+            <a href="https://omni-dao-39821.web.app" target="_blank" rel="noopener" class="dropdown-item">
+              <div class="dropdown-item-icon">🏛️</div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">OmniDAO &amp; DEX <span class="item-badge" style="color: #4ADE80;">Live</span></div>
+                <div class="dropdown-item-desc">Multi-Chain Yield, Staking &amp; Treasury Ledgers</div>
+              </div>
+            </a>
+            <a href="https://omni-presale-39821.web.app" target="_blank" rel="noopener" class="dropdown-item">
+              <div class="dropdown-item-icon">💎</div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">Omni Presale <span class="item-badge" style="color: #4ADE80;">Live</span></div>
+                <div class="dropdown-item-desc">Official $OMNI Token Presale &amp; Allocation</div>
+              </div>
+            </a>
+            <a href="https://omni-airdrop-39821.web.app" target="_blank" rel="noopener" class="dropdown-item">
+              <div class="dropdown-item-icon">🪂</div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">Omni Airdrop <span class="item-badge" style="color: #4ADE80;">Live</span></div>
+                <div class="dropdown-item-desc">Claim Your $OMNI Ecosystem Allocation</div>
+              </div>
+            </a>
+            <div class="dropdown-section-title" style="margin-top: 6px;">CORE FABRIC &amp; COMMUNICATION</div>
+            <a href="https://omni-network-39821.web.app" class="dropdown-item active">
+              <div class="dropdown-item-icon">🌐</div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">Omni-Present Omega (OPO) <span class="item-badge" style="color: #00E5FF;">This Site</span></div>
+                <div class="dropdown-item-desc">Sovereign Physical &amp; Real-World Intelligence Fabric</div>
+              </div>
+            </a>
+            <a href="godseye.html" class="dropdown-item">
+              <div class="dropdown-item-icon">🛰️</div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">Godseyeview 3D <span class="item-badge" style="color: #00E5FF;">Orbital</span></div>
+                <div class="dropdown-item-desc">Planetary Spatial Intelligence, Satellites &amp; AIS Maritime</div>
+              </div>
+            </a>
+            <a href="https://omni-explorer-39821.web.app" target="_blank" rel="noopener" class="dropdown-item">
+              <div class="dropdown-item-icon">🔍</div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">OmniScan Explorer <span class="item-badge" style="color: #4ADE80;">Live</span></div>
+                <div class="dropdown-item-desc">Block Explorer, Node Topology &amp; Validator Hub</div>
+              </div>
+            </a>
+            <a href="https://omniair-39821.web.app" target="_blank" rel="noopener" class="dropdown-item">
+              <div class="dropdown-item-icon">✈️</div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">OmniAir <span class="item-badge" style="color: #4ADE80;">Live</span></div>
+                <div class="dropdown-item-desc">Premium Social, Discussion &amp; WebRTC Voice Channels</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Architecture Dropdown -->
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" type="button">
+            <img src="svg/scion-routing.svg" alt="Architecture" width="16" height="16">
+            <span>Architecture</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="architecture.html" class="dropdown-item">
+              <div class="dropdown-item-icon">
+                <img src="svg/scion-routing.svg" alt="Triad">
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">Sovereign Triad</div>
+                <div class="dropdown-item-desc">Hermetic Soul, Edge Sensorium, and Global Mesh</div>
+              </div>
+            </a>
+            <a href="architecture.html#scion" class="dropdown-item">
+              <div class="dropdown-item-icon">
+                <img src="svg/opo-symbol.svg" alt="SCION">
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">SCION Protocol</div>
+                <div class="dropdown-item-desc">Path-aware cryptographically isolated routing</div>
+              </div>
+            </a>
+            <a href="crdt-lab.html" class="dropdown-item">
+              <div class="dropdown-item-icon">
+                <img src="svg/crdt-lattice.svg" alt="CRDT">
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">Delta-CRDT Engine</div>
+                <div class="dropdown-item-desc">Join-semilattice mathematical state sync</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Deep Tech Mega-Dropdown (6 Frontier Pages) -->
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" type="button">
+            <img src="svg/gemini-deep-research.svg" alt="Deep Tech" width="16" height="16">
+            <span>Frontier Tech</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dropdown-menu mega-menu-grid">
+            <div class="dropdown-section-title">PHYSICS & ENERGY CONVERGENCE</div>
+            <a href="deeptech-fusion.html" class="dropdown-item">
+              <div class="dropdown-item-icon">
+                <img src="svg/fusion-tokamak.svg" alt="Fusion">
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">SPARC Fusion <span class="item-badge">Q≥2</span></div>
+                <div class="dropdown-item-desc">HTS REBCO Magnets & Net Energy Gain</div>
+              </div>
+            </a>
+            <a href="deeptech-quantum.html" class="dropdown-item">
+              <div class="dropdown-item-icon">
+                <img src="svg/quantum-photonics.svg" alt="Quantum">
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">Quantum Photonics</div>
+                <div class="dropdown-item-desc">Thin-film lithium niobate optical routing</div>
+              </div>
+            </a>
+            <a href="deeptech-battery.html" class="dropdown-item">
+              <div class="dropdown-item-icon">
+                <img src="svg/battery-solidstate.svg" alt="Battery">
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">Solid-State Battery</div>
+                <div class="dropdown-item-desc">500 Wh/kg Lithium-Metal Anode-Free</div>
+              </div>
+            </a>
+            <div class="dropdown-section-title" style="margin-top: 4px;">BIOLOGY & EMBODIED SYSTEMS</div>
+            <a href="deeptech-genomic.html" class="dropdown-item">
+              <div class="dropdown-item-icon">
+                <img src="svg/genomic-crispr.svg" alt="Genomics">
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">Prime Genome Editing</div>
+                <div class="dropdown-item-desc">pegRNA synthesis & Cas9 epiproteomics</div>
+              </div>
+            </a>
+            <a href="deeptech-neural.html" class="dropdown-item">
+              <div class="dropdown-item-icon">
+                <img src="svg/neural-threads.svg" alt="Neural">
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">Intracortical BCI</div>
+                <div class="dropdown-item-desc">1024-ch flexible polyimide micro-threads</div>
+              </div>
+            </a>
+            <a href="deeptech-robotics.html" class="dropdown-item">
+              <div class="dropdown-item-icon">
+                <img src="svg/humanoid-robotics.svg" alt="Robotics">
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">Humanoid Robotics</div>
+                <div class="dropdown-item-desc">Quasi-direct drive actuators & VLA</div>
+              </div>
+            </a>
+            <div class="dropdown-section-title" style="margin-top: 4px;">ORBITAL &amp; ANOMALY INTELLIGENCE</div>
+            <a href="godseye.html" class="dropdown-item">
+              <div class="dropdown-item-icon">
+                <span style="font-size: 1.1rem;">🛰️</span>
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">God's Eye View <span class="item-badge" style="color: #00E5FF;">3D Planetary</span></div>
+                <div class="dropdown-item-desc">Planetary spatial intelligence, satellites, ADS-B &amp; maritime AIS</div>
+              </div>
+            </a>
+            <a href="sentient-radar.html" class="dropdown-item">
+              <div class="dropdown-item-icon">
+                <img src="svg/sentient-radar.svg" alt="Project SENTIENT">
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">Project SENTIENT <span class="item-badge">Radar &amp; Swarm</span></div>
+                <div class="dropdown-item-desc">60 FPS multi-spectral scope &amp; 5-agent deliberation</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Developer Tools Dropdown -->
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>Developer Tools</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="godseye.html" class="dropdown-item">
+              <div class="dropdown-item-icon">
+                <span style="font-size: 1.1rem;">🛰️</span>
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">Godseyeview Spatial Engine <span class="item-badge" style="color: #00E5FF;">60 FPS</span></div>
+                <div class="dropdown-item-desc">3D WebGL/Canvas planetary intelligence console</div>
+              </div>
+            </a>
+            <a href="crdt-lab.html" class="dropdown-item">
+              <div class="dropdown-item-icon">
+                <img src="svg/crdt-lattice.svg" alt="CRDT Lab">
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">CRDT Workbench <span class="item-badge">Interactive</span></div>
+                <div class="dropdown-item-desc">60 FPS lattice simulation & partitions</div>
+              </div>
+            </a>
+            <a href="gemini-studio.html" class="dropdown-item">
+              <div class="dropdown-item-icon">
+                <img src="svg/gemini-sparkle.svg" alt="Gemini Engine">
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">Gemini 4.0 Argon Engine</div>
+                <div class="dropdown-item-desc">Multimodal reasoning &amp; live streaming</div>
+              </div>
+            </a>
+            <a href="learn.html" class="dropdown-item">
+              <div class="dropdown-item-icon">
+                <span style="font-size: 1.1rem;">🎓</span>
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">Learning Hub &amp; Audio <span class="item-badge">NotebookLM</span></div>
+                <div class="dropdown-item-desc">3D Flashcards, Deep Dive Podcast &amp; Quizzes</div>
+              </div>
+            </a>
+            <a href="sentient-radar.html" class="dropdown-item">
+              <div class="dropdown-item-icon">
+                <img src="svg/swarm-intelligence.svg" alt="Swarm Overlord">
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">Project SENTIENT &amp; Swarm <span class="item-badge">New</span></div>
+                <div class="dropdown-item-desc">60 FPS radar &amp; 5-agent deliberation console</div>
+              </div>
+            </a>
+            <a href="javascript:void(0)" onclick="openGenAiSdkModal()" class="dropdown-item">
+              <div class="dropdown-item-icon">
+                <img src="svg/gemini-sparkle.svg" alt="GenAI SDK">
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">GenAI SDK Modal <span class="item-badge">gemini-4.0-argon</span></div>
+                <div class="dropdown-item-desc">Interactive Python SDK runner &amp; thinking budget</div>
+              </div>
+            </a>
+            <a href="whitepaper.html" class="dropdown-item">
+              <div class="dropdown-item-icon">
+                <img src="svg/gemini-deep-research.svg" alt="Whitepaper">
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">Sovereign Whitepaper</div>
+                <div class="dropdown-item-desc">Mathematical proofs & SCION specs</div>
+              </div>
+            </a>
+            <a href="deploy.html" class="dropdown-item">
+              <div class="dropdown-item-icon">
+                <img src="svg/bench-suite-3d.svg" alt="Deploy" width="18" height="18">
+              </div>
+              <div class="dropdown-item-content">
+                <div class="dropdown-item-title">Edge Deployment &amp; Diagnostics</div>
+                <div class="dropdown-item-desc">Production cluster &amp; 3D test suite</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- 9-Dot Ecosystem Launcher -->
+        <div class="ecosystem-launcher-wrapper" id="ecoLauncherWrapper">
+          <button class="launcher-btn" id="ecoLauncherBtn" type="button" title="Omni Ecosystem Hub" aria-label="Omni Ecosystem Hub" onclick="toggleEcoLauncher(event)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <circle cx="5" cy="5" r="2.2"/><circle cx="12" cy="5" r="2.2"/><circle cx="19" cy="5" r="2.2"/>
+              <circle cx="5" cy="12" r="2.2"/><circle cx="12" cy="12" r="2.2"/><circle cx="19" cy="12" r="2.2"/>
+              <circle cx="5" cy="19" r="2.2"/><circle cx="12" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/>
+            </svg>
+          </button>
+          <div class="ecosystem-menu-dropdown" id="ecoDropdown">
+            <a href="https://omni-brain-39821.web.app" target="_blank" rel="noopener" class="eco-app-tile">
+              <span class="eco-icon" style="color: #E040FB;">🧠</span>
+              <span>OmniBrain</span>
+            </a>
+            <a href="https://omni-kronos-39821.web.app" target="_blank" rel="noopener" class="eco-app-tile">
+              <span class="eco-icon" style="color: #A855F7;">⚡</span>
+              <span>OmniKronos</span>
+            </a>
+            <a href="https://omni-llm-39821.web.app" target="_blank" rel="noopener" class="eco-app-tile">
+              <span class="eco-icon" style="color: #00E5FF;">🤖</span>
+              <span>OmniLLM</span>
+            </a>
+            <a href="https://omni-futures-39821.web.app" target="_blank" rel="noopener" class="eco-app-tile">
+              <span class="eco-icon" style="color: #38BDF8;">📈</span>
+              <span>OmniFutures</span>
+            </a>
+            <a href="https://omni-dao-39821.web.app" target="_blank" rel="noopener" class="eco-app-tile">
+              <span class="eco-icon" style="color: #10B981;">🏛️</span>
+              <span>OmniDAO</span>
+            </a>
+            <a href="https://omni-network-39821.web.app" class="eco-app-tile current-active">
+              <span class="eco-icon" style="color: #00E5FF;">🌐</span>
+              <span>OPO Mesh</span>
+            </a>
+            <a href="godseye.html" class="eco-app-tile">
+              <span class="eco-icon" style="color: #00E5FF;">🛰️</span>
+              <span>God's Eye</span>
+            </a>
+            <a href="https://omni-explorer-39821.web.app" target="_blank" rel="noopener" class="eco-app-tile">
+              <span class="eco-icon" style="color: #60A5FA;">🔍</span>
+              <span>OmniScan</span>
+            </a>
+            <a href="https://omni-presale-39821.web.app" target="_blank" rel="noopener" class="eco-app-tile">
+              <span class="eco-icon" style="color: #FFD700;">💎</span>
+              <span>Presale</span>
+            </a>
+            <a href="https://omni-airdrop-39821.web.app" target="_blank" rel="noopener" class="eco-app-tile">
+              <span class="eco-icon" style="color: #F43F5E;">🪂</span>
+              <span>Airdrop</span>
+            </a>
+            <a href="https://omniair-39821.web.app" target="_blank" rel="noopener" class="eco-app-tile">
+              <span class="eco-icon" style="color: #00E5FF;">✈️</span>
+              <span>OmniAir</span>
+            </a>
+            <a href="https://omni-trading-c7ff4.web.app" target="_blank" rel="noopener" class="eco-app-tile">
+              <span class="eco-icon" style="color: #F59E0B;">📊</span>
+              <span>OmniTrade</span>
+            </a>
+            <a href="https://omni-llm-39821.web.app/season-pass.html" target="_blank" rel="noopener" class="eco-app-tile">
+              <span class="eco-icon" style="color: #FFD700;">🎟️</span>
+              <span>Season Pass</span>
+            </a>
+          </div>
+        </div>
+
+        <button id="audio-toggle-btn" class="glass-btn glass-btn-secondary" style="padding: 5px 12px; font-size: 0.75rem; border-radius: 9999px;" onclick="window.soundEngine.toggle()" title="Toggle Cybernetic Audio Haptics">
+          <span id="audio-toggle-icon">🔊</span>
+          <span id="audio-toggle-text">FX ON</span>
+        </button>
+        <button id="mobile-menu-toggle" class="glass-btn glass-btn-secondary mobile-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu">
+          <span id="mobile-menu-icon">☰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="app-container">
+
+    <!-- Breadcrumb Trail -->
+    <nav class="glass-breadcrumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="sep">/</span>
+      <a href="index.html#deeptech">Deep Tech</a> <span class="sep">/</span> <span class="current">Humanoid Robotics</span>
+    </nav>
+
+    <section class="landing-section">
+      <div class="dossier-hero-container">
+        <div>
+          <div class="section-badge">
+            <img src="svg/humanoid-robotics.svg" width="16" height="16" alt="Robotics">
+            <span>FRONTIER DEEP TECH DOSSIER #06</span>
+          </div>
+          <h1 class="hero-title" style="text-align: left; margin-bottom: 1rem;">
+            <span class="hero-gradient-text">Embodied Humanoids</span><br>
+            <span style="color: #10B981; font-size: 1.6rem; font-weight: 600;">Quasi-Direct Drive &amp; Whole-Body VLA Control</span>
+          </h1>
+          <p class="hero-desc" style="text-align: left; margin: 0 0 1.5rem 0;">
+            Humanoid locomotion requires high torque transparency and impact backdrivability. By pairing low gear ratio Quasi-Direct Drive (QDD &le; 10:1) motors with planetary gearing and high-flux NdFeB magnets, robots achieve natural compliance while executing end-to-end multimodal policies via Gemini Vision-Language-Action (VLA) models.
+          </p>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <span class="synergy-tag">BANDWIDTH: &gt; 50 Hz</span>
+            <span class="synergy-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #34D399;">QDD BACKDRIVABLE ACTUATORS</span>
+          </div>
+        </div>
+
+        <div class="dossier-visual-frame">
+          <img src="assets/images/deeptech/humanoid-actuator-skeleton.jpg" alt="Humanoid Actuator Skeleton Render">
+          <div class="hero-visual-overlay"></div>
+        </div>
+      </div>
+
+      <!-- Spec Metrics -->
+      <div class="dossier-metric-grid">
+        <div class="dossier-metric-val">120 Nm</div>
+        <div class="dossier-metric-label">Joint Peak Torque</div>
+        <div class="dossier-metric-val">8:1 QDD</div>
+        <div class="dossier-metric-label">Backdrivable Gear Ratio</div>
+        <div class="dossier-metric-val">1,000 Hz</div>
+        <div class="dossier-metric-label">Whole-Body Impedance Loop</div>
+        <div class="dossier-metric-val">38 ms</div>
+        <div class="dossier-metric-label">Gemini VLA Inference Time</div>
+      </div>
+
+      <!-- Interactive Robotics Simulator -->
+      <div class="interactive-slider-box">
+        <h3 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px;">
+          <span>🤖 Interactive Actuator Torque &amp; Bandwidth Simulator</span>
+        </h3>
+        <p style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 1.5rem;">
+          Examine the tradeoff between motor stator diameter and planetary reduction ratio on peak torque and dynamic mechanical bandwidth.
+        </p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+          <div>
+            <div class="slider-row">
+              <span style="font-size: 0.82rem; color: #E2E8F0; font-family: var(--font-mono);">Stator Diameter:</span>
+              <span id="robotics-dia-val" style="font-size: 0.85rem; color: #34D399; font-weight: 700; font-family: var(--font-mono);">90 mm Diameter</span>
+            </div>
+            <input type="range" id="robotics-dia-slider" class="custom-range-slider" min="60" max="130" step="5" value="90">
+
+            <div class="slider-row" style="margin-top: 1.25rem;">
+              <span style="font-size: 0.82rem; color: #E2E8F0; font-family: var(--font-mono);">Gear Ratio:</span>
+              <span id="robotics-gear-val" style="font-size: 0.85rem; color: var(--gemini-cyan); font-weight: 700; font-family: var(--font-mono);">8:1 QDD</span>
+            </div>
+            <input type="range" id="robotics-gear-slider" class="custom-range-slider" min="4" max="15" step="1" value="8">
+          </div>
+
+          <div style="background: rgba(5, 8, 16, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 14px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+            <div style="font-size: 0.75rem; color: #94A3B8; font-family: var(--font-mono); text-transform: uppercase;">Dynamic Actuator Output</div>
+            <div id="robotics-torque-result" style="font-size: 2.2rem; font-weight: 800; color: #34D399; font-family: var(--font-mono); margin: 6px 0;">28.0 Nm Peak</div>
+            <div id="robotics-bw-result" style="font-size: 0.95rem; color: #E2E8F0; font-family: var(--font-mono);">64 Hz Bandwidth</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Liquid Glass Google GenAI SDK Modal (gemini-4.0-argon) -->
+  <div id="genai-sdk-modal" class="importer-modal-backdrop" onclick="if(event.target === this) closeGenAiSdkModal()">
+    <div class="importer-modal-panel" style="max-width: 820px; max-height: 90vh; overflow-y: auto;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.75rem;">
+        <div>
+          <div style="font-size: 0.75rem; font-family: var(--font-mono); color: #94A3B8; letter-spacing: 0.05em;">
+            INFERENCE WORKBENCH // GEMINI 4.0 ARGON
+          </div>
+          <h3 style="margin: 4px 0 0 0; font-size: 1.35rem; color: #FFF; font-weight: 700;">Google GenAI Python &amp; TypeScript Execution Modal</h3>
+        </div>
+        <button class="glass-modal-close-btn" onclick="closeGenAiSdkModal()" title="Close">&times;</button>
+      </div>
+
+      <!-- Code Viewer Section -->
+      <div style="margin-bottom: 1.25rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+          <div style="display: flex; gap: 6px;">
+            <button class="glass-btn glass-btn-secondary" style="font-size: 0.75rem; padding: 4px 10px;" onclick="copyGenAiSdkSnippet('python')">🐍 Copy Python SDK</button>
+            <button class="glass-btn glass-btn-secondary" style="font-size: 0.75rem; padding: 4px 10px;" onclick="copyGenAiSdkSnippet('typescript')">⚡ Copy TypeScript SDK</button>
+          </div>
+          <span style="font-size: 0.72rem; font-family: var(--font-mono); color: #94A3B8;">from google import genai</span>
+        </div>
+        <pre style="background: rgba(3, 7, 18, 0.95); border: 1px solid rgba(0, 242, 254, 0.2); border-radius: 12px; padding: 1rem; font-family: var(--font-mono); font-size: 0.78rem; line-height: 1.5; color: #E2E8F0; overflow-x: auto; margin: 0;"><span style="color: #F472B6;">from</span> google <span style="color: #F472B6;">import</span> genai
+<span style="color: #F472B6;">from</span> google.genai <span style="color: #F472B6;">import</span> types
+
+client = genai.Client()
+response = client.models.generate_content(
+    model=<span style="color: #34D399;">"gemini-4.0-argon"</span>,
+    contents=<span style="color: #34D399;">"Synthesize OPO Delta-CRDT vector &amp; Lawson criterion"</span>,
+    config=types.GenerateContentConfig(
+        thinking_config=types.ThinkingConfig(thinking_budget=<span style="color: #F59E0B;">16384</span>),
+        temperature=<span style="color: #F59E0B;">0.2</span>,
+        tools=[{<span style="color: #34D399;">"function_declarations"</span>: [crdt_tool]}]
+    )
+)</pre>
+      </div>
+
+      <!-- Interactive Execution Form -->
+      <div class="glass-panel" style="padding: 1.25rem; margin-bottom: 1.25rem;">
+        <h4 style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #FFF;">Live Interactive Inference Execution</h4>
+
+        <!-- Prompt input -->
+        <div style="margin-bottom: 0.9rem;">
+          <label style="display: block; font-size: 0.78rem; font-family: var(--font-mono); color: #94A3B8; margin-bottom: 4px;">CONTENTS / PROMPT:</label>
+          <input type="text" id="genai-modal-prompt" value="Synthesize OPO Delta-CRDT vector &amp; Lawson criterion" style="width: 100%; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 8px 12px; color: #FFF; font-size: 0.85rem;">
+        </div>
+
+        <!-- Controls grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.9rem; margin-bottom: 1rem;">
+          <div>
+            <label style="display: block; font-size: 0.75rem; font-family: var(--font-mono); color: #94A3B8; margin-bottom: 4px;">MODEL:</label>
+            <select id="genai-modal-model" style="width: 100%; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 6px 10px; color: #FFF; font-size: 0.8rem;">
+              <option value="gemini-4.0-argon" selected>gemini-4.0-argon (Flagship Deep Reasoning)</option>
+              <option value="gemini-4.0-argon-live">gemini-4.0-argon-live (Sub-5ms Realtime Stream)</option>
+              <option value="gemini-3.0-pro">gemini-3.0-pro (Algorithmic Proofs)</option>
+              <option value="gemini-2.5-flash">gemini-2.5-flash (Edge Sensor Ingestion)</option>
+            </select>
+          </div>
+
+          <div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; font-family: var(--font-mono); color: #94A3B8; margin-bottom: 4px;">
+              <span>THINKING BUDGET:</span>
+              <span id="genai-modal-budget-val" style="color: var(--gemini-cyan);">16384 tokens</span>
+            </div>
+            <input type="range" id="genai-modal-budget" min="1024" max="32768" step="1024" value="16384" style="width: 100%; accent-color: var(--gemini-cyan);" oninput="document.getElementById('genai-modal-budget-val').textContent = this.value + ' tokens'">
+          </div>
+
+          <div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; font-family: var(--font-mono); color: #94A3B8; margin-bottom: 4px;">
+              <span>TEMPERATURE:</span>
+              <span id="genai-modal-temp-val" style="color: var(--gemini-cyan);">0.2</span>
+            </div>
+            <input type="range" id="genai-modal-temp" min="0.0" max="1.0" step="0.05" value="0.2" style="width: 100%; accent-color: var(--gemini-cyan);" oninput="document.getElementById('genai-modal-temp-val').textContent = this.value">
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+          <label style="display: flex; align-items: center; gap: 6px; font-size: 0.78rem; font-family: var(--font-mono); color: #CBD5E1; cursor: pointer;">
+            <input type="checkbox" id="genai-modal-tools" checked style="accent-color: var(--gemini-cyan);">
+            <span>Enable Function Declarations (crdt_tool)</span>
+          </label>
+          <button id="genai-modal-run-btn" class="glass-btn glass-btn-primary" style="padding: 7px 16px; font-size: 0.82rem;" onclick="runGenAiSdkModal()">
+            <span>▶️ Execute client.models.generate_content()</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Deep Thinking Inspector -->
+      <div id="genai-modal-thinking" style="margin-bottom: 1rem; padding: 0.75rem; background: rgba(0,0,0,0.5); border-radius: 8px; border-left: 3px solid var(--gemini-cyan);">
+        <div style="font-size: 0.75rem; font-family: var(--font-mono); color: #94A3B8;">
+          Ready to execute with Gemini 4.0 Argon. Click 'Execute' to trigger deep reasoning.
+        </div>
+      </div>
+
+      <!-- Tool Call Invocation Box -->
+      <div id="genai-modal-toolcall" style="display: none; margin-bottom: 1rem; padding: 0.75rem; background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: 8px;"></div>
+
+      <!-- Output Container -->
+      <div id="genai-modal-output" style="padding: 1rem; background: rgba(0, 242, 254, 0.03); border: 1px solid rgba(0, 242, 254, 0.2); border-radius: 12px;"></div>
+
+      <div style="margin-top: 1.25rem; display: flex; justify-content: flex-end; gap: 0.5rem;">
+        <button class="glass-btn glass-btn-secondary" style="font-size: 0.8rem; padding: 6px 16px;" onclick="closeGenAiSdkModal()">Close Modal</button>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile Bottom Floating Quick-Action Dock -->
+  <nav class="mobile-bottom-dock" aria-label="Mobile Quick Dock">
+    <a href="index.html" class="mobile-dock-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      <span>Home</span>
+    </a>
+    <a href="sentient-radar.html" class="mobile-dock-btn">
+      <img src="svg/sentient-radar.svg" alt="Radar">
+      <span>Radar</span>
+    </a>
+    <a href="gemini-studio.html" class="mobile-dock-btn">
+      <img src="svg/gemini-sparkle.svg" alt="Engine">
+      <span>Engine</span>
+    </a>
+    <a href="learn.html" class="mobile-dock-btn">
+      <span style="font-size: 1.1rem; line-height: 1;">🎓</span>
+      <span>Learn</span>
+    </a>
+    <button class="mobile-dock-btn" onclick="openGenAiSdkModal()" style="background: none; border: none; cursor: pointer;">
+      <img src="svg/gemini-argon-3d.svg" alt="SDK">
+      <span style="color: var(--gemini-cyan);">SDK</span>
+    </button>
+  </nav>
+
+  <!-- Liquid Glass Footer -->
+  <footer class="liquid-footer">
+    <div class="ecosystem-footer-bar" style="margin-bottom: 1.5rem; padding-bottom: 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.08); text-align: center;">
+      <div style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--gemini-cyan); letter-spacing: 0.1em; margin-bottom: 0.75rem; text-transform: uppercase;">
+        ✦ Omni Ecosystem Cross-Platform Network • Live on Firebase
+      </div>
+      <div class="ecosystem-footer-chips" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">
+        <a href="https://omni-brain-39821.web.app" target="_blank" rel="noopener" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #CBD5E1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s ease;">🧠 OmniBrain</a>
+        <a href="https://omni-kronos-39821.web.app" target="_blank" rel="noopener" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #CBD5E1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s ease;">⚡ OmniKronos</a>
+        <a href="https://omni-llm-39821.web.app" target="_blank" rel="noopener" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #CBD5E1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s ease;">🤖 OmniLLM</a>
+        <a href="https://omni-futures-39821.web.app" target="_blank" rel="noopener" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #CBD5E1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s ease;">📈 OmniFutures (200x)</a>
+        <a href="https://omni-dao-39821.web.app" target="_blank" rel="noopener" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #CBD5E1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s ease;">🏛️ OmniDAO &amp; DEX</a>
+        <a href="https://omni-network-39821.web.app" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: var(--gemini-cyan); background: rgba(0,229,255,0.12); border: 1px solid rgba(0,229,255,0.4); transition: all 0.2s ease;">🌐 OPO Mesh (Current)</a>
+        <a href="godseye.html" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #38BDF8; background: rgba(56,189,248,0.12); border: 1px solid rgba(56,189,248,0.35); transition: all 0.2s ease;">🛰️ God's Eye View</a>
+        <a href="https://omni-explorer-39821.web.app" target="_blank" rel="noopener" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #CBD5E1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s ease;">🔍 OmniScan</a>
+        <a href="https://omni-presale-39821.web.app" target="_blank" rel="noopener" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #CBD5E1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s ease;">💎 Presale</a>
+        <a href="https://omni-airdrop-39821.web.app" target="_blank" rel="noopener" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #CBD5E1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s ease;">🪂 Airdrop</a>
+        <a href="https://omniair-39821.web.app" target="_blank" rel="noopener" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #CBD5E1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s ease;">✈️ OmniAir</a>
+        <a href="https://omni-trading-c7ff4.web.app" target="_blank" rel="noopener" class="footer-chip" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 9999px; font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; color: #CBD5E1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s ease;">📊 OmniTrade</a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html" class="footer-link">Home</a>
+      <a href="godseye.html" class="footer-link" style="color: var(--gemini-cyan); font-weight: 600;">🛰️ God's Eye View</a>
+      <a href="architecture.html" class="footer-link">Architecture</a>
+      <a href="crdt-lab.html" class="footer-link">Delta-CRDT Lab</a>
+      <a href="deeptech-fusion.html" class="footer-link">Fusion</a>
+      <a href="deeptech-quantum.html" class="footer-link">Quantum</a>
+      <a href="deeptech-battery.html" class="footer-link">Battery</a>
+      <a href="deeptech-genomic.html" class="footer-link">Genomics</a>
+      <a href="deeptech-neural.html" class="footer-link">Neural BCI</a>
+      <a href="deeptech-robotics.html" class="footer-link">Robotics</a>
+      <a href="gemini-studio.html" class="footer-link">Gemini 4.0 Argon</a>
+      <a href="learn.html" class="footer-link">Learning Hub</a>
+      <a href="sentient-radar.html" class="footer-link">Project SENTIENT Radar</a>
+      <a href="whitepaper.html" class="footer-link">Whitepaper</a>
+      <a href="deploy.html" class="footer-link">Edge Operations</a>
+    </div>
+    <div style="font-size: 0.8rem; color: #64748B; font-family: var(--font-mono); margin-top: 0.75rem;">
+      Omni-Present Omega (OPO) &amp; RedComm Ecosystem • Sovereign Real-World Intelligence Fabric
+    </div>
+  </footer>
+
+  <!-- App Logic & 3D Neural Connectome Engine -->
+  <script src="js/neural-brain.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

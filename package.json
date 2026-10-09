@@ -1,0 +1,16 @@
+{
+  "name": "omni-present-omega",
+  "version": "3.0.0",
+  "description": "Omni-Present Omega (OPO) & RedComm Sovereign Delta-CRDT Mesh & Gemini SDK Liquid Glass Portal",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 serve.py 8080",
+    "serve": "python3 serve.py 8080",
+    "check": "python3 test/run_tests.py",
+    "test": "python3 test/run_tests.py",
+    "login": "firebase login --no-localhost",
+    "deploy": "firebase deploy --only hosting"
+  },
+  "author": "rgkdevx1@gmail.com",
+  "license": "MIT"
+}

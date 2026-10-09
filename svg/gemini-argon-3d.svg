@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="argon-facet-top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="100%" stop-color="#4E82EE" />
+    </linearGradient>
+    <linearGradient id="argon-facet-left" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4E82EE" />
+      <stop offset="100%" stop-color="#7B61FF" />
+    </linearGradient>
+    <linearGradient id="argon-facet-right" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7B61FF" />
+      <stop offset="100%" stop-color="#F472B6" />
+    </linearGradient>
+    <radialGradient id="argon-core-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#7B61FF" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#7B61FF" stop-opacity="0" />
+    </radialGradient>
+    <filter id="argon-glow-filter" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow -->
+  <circle cx="32" cy="32" r="26" fill="url(#argon-core-glow)" opacity="0.6" filter="url(#argon-glow-filter)" />
+
+  <!-- Orbital Ellipse -->
+  <ellipse cx="32" cy="32" rx="28" ry="10" stroke="#00F2FE" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.5" transform="rotate(-25 32 32)" />
+  <circle cx="10" cy="22" r="2" fill="#00F2FE" />
+  <circle cx="54" cy="42" r="2" fill="#F472B6" />
+
+  <!-- 3D Polyhedral Diamond Faces -->
+  <!-- Top Point to Center -->
+  <polygon points="32,6 32,32 18,22" fill="url(#argon-facet-top)" opacity="0.95" />
+  <polygon points="32,6 46,22 32,32" fill="url(#argon-facet-right)" opacity="0.9" />
+
+  <!-- Center to Bottom Point -->
+  <polygon points="32,32 18,42 32,58" fill="url(#argon-facet-left)" opacity="0.95" />
+  <polygon points="32,32 32,58 46,42" fill="url(#argon-facet-right)" opacity="0.85" />
+
+  <!-- Lateral Wings (4-Point Gemini Star) -->
+  <polygon points="6,32 18,22 32,32" fill="url(#argon-facet-left)" opacity="0.9" />
+  <polygon points="6,32 32,32 18,42" fill="url(#argon-facet-top)" opacity="0.8" />
+  <polygon points="58,32 32,32 46,22" fill="url(#argon-facet-top)" opacity="0.9" />
+  <polygon points="58,32 46,42 32,32" fill="url(#argon-facet-right)" opacity="0.85" />
+
+  <!-- Specular Center Highlight -->
+  <circle cx="32" cy="32" r="3.5" fill="#FFFFFF" opacity="0.95" />
+</svg>

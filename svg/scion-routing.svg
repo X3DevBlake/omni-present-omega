@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="scion-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="50%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#7B61FF" />
+    </linearGradient>
+    <radialGradient id="isd-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7B61FF" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#00F2FE" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Isolation Domain Boundary (ISD) -->
+  <rect x="6" y="6" width="52" height="52" rx="14" stroke="url(#scion-grad)" stroke-width="1.8" stroke-dasharray="4 2" fill="url(#isd-glow)" opacity="0.3" />
+
+  <!-- Dynamic Multipath Routes -->
+  <path d="M18 20 C28 12 36 12 46 20" stroke="#00F2FE" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.9" />
+  <path d="M18 44 C28 52 36 52 46 44" stroke="#7B61FF" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 3" fill="none" opacity="0.8" />
+  <path d="M18 20 L32 32 L46 20" stroke="url(#scion-grad)" stroke-width="2" stroke-linecap="round" fill="none" />
+  <path d="M18 44 L32 32 L46 44" stroke="url(#scion-grad)" stroke-width="2" stroke-linecap="round" fill="none" />
+
+  <!-- Autonomous System (AS) Nodes -->
+  <!-- Source AS Node -->
+  <rect x="12" y="14" width="12" height="12" rx="4" fill="#0c1020" stroke="#00F2FE" stroke-width="2" />
+  <circle cx="18" cy="20" r="3" fill="#00F2FE" />
+
+  <!-- Destination AS Node -->
+  <rect x="40" y="14" width="12" height="12" rx="4" fill="#0c1020" stroke="#7B61FF" stroke-width="2" />
+  <circle cx="46" cy="20" r="3" fill="#7B61FF" />
+
+  <!-- Core Router / Transit Switch Node -->
+  <circle cx="32" cy="32" r="7" fill="#0c1020" stroke="#38BDF8" stroke-width="2.5" />
+  <circle cx="32" cy="32" r="3" fill="#FFFFFF" />
+
+  <!-- Edge AS Nodes (Lower) -->
+  <rect x="12" y="38" width="12" height="12" rx="4" fill="#0c1020" stroke="#38BDF8" stroke-width="2" />
+  <circle cx="18" cy="44" r="3" fill="#38BDF8" />
+
+  <rect x="40" y="38" width="12" height="12" rx="4" fill="#0c1020" stroke="#F06292" stroke-width="2" />
+  <circle cx="46" cy="44" r="3" fill="#F06292" />
+</svg>
