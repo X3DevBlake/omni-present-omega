@@ -1,0 +1,52 @@
+{
+  "version": "1.0.0",
+  "last_consolidated": "2026-10-09T18:02:23.725954+00:00",
+  "entities": {
+    "Delta-CRDT": {
+      "category": "Algorithm",
+      "properties": {
+        "lattice": "(S, \u2294, \u2264)",
+        "monotonicity": true
+      }
+    },
+    "SCION": {
+      "category": "Network",
+      "properties": {
+        "path_aware": true,
+        "crypto_hops": true
+      }
+    },
+    "OmniToken": {
+      "category": "Web3",
+      "properties": {
+        "symbol": "OMNI",
+        "standard": "ERC-20"
+      }
+    },
+    "Liquid-Glass": {
+      "category": "Design",
+      "properties": {
+        "specular": true,
+        "blur": "28px"
+      }
+    }
+  },
+  "relations": [
+    {
+      "from": "Delta-CRDT",
+      "to": "SCION",
+      "type": "PROPAGATES_OVER"
+    },
+    {
+      "from": "OmniToken",
+      "to": "OmniDAO",
+      "type": "GOVERNS"
+    }
+  ],
+  "global_insights": [
+    "Always run node --check on JavaScript engines before concluding edits.",
+    "Zero undefined CSS variables preserve pure-CSS Liquid Glass balance.",
+    "Join-semilattices require monotonic state progression for partition resilience."
+  ],
+  "total_consolidated_memories": 1
+}
