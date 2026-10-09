@@ -117,9 +117,8 @@ All platforms share the unified Google 9-dot launcher, responsive Liquid Glass d
 
 ```
 omni-web/
-├── .github/
-│   └── workflows/
-│       └── firebase-deploy.yml    # Automated CI/CD verification & hosting deployment
+├── ci/
+│   └── firebase-deploy.yml       # Automated CI/CD verification & hosting deployment
 ├── assets/
 │   ├── images/                   # High-res renders (hero-mesh-render, deep-tech photos)
 │   └── videos/                   # HTML5 ambient video streams (MP4 & WebM)
