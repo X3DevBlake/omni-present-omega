@@ -1,6 +1,6 @@
 {
   "user_email": "rgkdevx1@gmail.com",
-  "last_synced": "2026-10-09T19:26:06.326522+00:00",
+  "last_synced": "2026-10-09T19:28:46.108706+00:00",
   "notes": [
     {
       "id": "keep_init_1",
@@ -191,6 +191,71 @@
         },
         {
           "text": "Gmail ID: 1a122213c2c0f45c",
+          "checked": false
+        },
+        {
+          "text": "Focus: Join-semilattice algebraic CRDT proofs and zero-allocation dot compaction",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_97dfeb89",
+      "title": "\ud83d\udcc1 Drive Taxonomy Hierarchy",
+      "type": "checklist",
+      "color": "purple",
+      "pinned": false,
+      "author": "omni-keep-scratchpad-curator",
+      "tags": [
+        "#drive",
+        "#taxonomy"
+      ],
+      "created_at": "2026-10-09T19:28:44.882354+00:00",
+      "updated_at": "2026-10-09T19:28:44.882354+00:00",
+      "items": [
+        {
+          "text": "Omni Sovereign Swarm Documents root",
+          "checked": false
+        },
+        {
+          "text": "Sub-disciplines: Legal, Eng, Code, Research",
+          "checked": false
+        },
+        {
+          "text": "Real-time Google Docs & Sheets exports",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_f71ffea0",
+      "title": "\ud83e\udd1d Outreach Dispatched: Protocol Labs / Filecoin Research",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-partner-dispatch-operator",
+      "tags": [
+        "#outreach",
+        "#partnerships",
+        "#council11"
+      ],
+      "created_at": "2026-10-09T19:28:46.108573+00:00",
+      "updated_at": "2026-10-09T19:28:46.108573+00:00",
+      "items": [
+        {
+          "text": "Domain: Decentralized Systems & CRDTs",
+          "checked": false
+        },
+        {
+          "text": "Contact: research-partnerships@protocol.ai",
+          "checked": false
+        },
+        {
+          "text": "Gmail ID: 1a12223ace19911a",
           "checked": false
         },
         {

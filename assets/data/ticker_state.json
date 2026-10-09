@@ -8,7 +8,7 @@
   "councils_count": 11,
   "messages_count": 32,
   "code_assets_count": 15,
-  "documents_count": 15,
+  "documents_count": 16,
   "sheets_count": 4,
   "keep_notes_count": 0,
   "tests_status": "14/14 PASSED (100%)",
@@ -291,6 +291,6 @@
   ],
   "live_hub_url": "https://omni-network-39821.web.app/workspace",
   "local_hub_url": "http://localhost:8080/workspace.html",
-  "last_web_upgrade": "2026-10-09T19:28:11.868235+00:00",
+  "last_web_upgrade": "2026-10-09T19:28:46.758600+00:00",
   "test_suite": "14/14 PASSED (100%)"
 }
