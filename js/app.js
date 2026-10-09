@@ -1664,7 +1664,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Topology Canvas Renderer
   window.latticeRenderer = new LatticeCanvasRenderer('crdt-topology-canvas', window.crdtSim);
 
-  // Setup CRDT Mutation Form
+  // Setup CRDT Mutation Form with Native opo-stated Daemon Sync
   const mutForm = document.getElementById('crdt-mutation-form');
   if (mutForm) {
     mutForm.onsubmit = (e) => {
@@ -1677,8 +1677,25 @@ document.addEventListener('DOMContentLoaded', () => {
       } catch {}
       if (key) {
         window.crdtSim.mutate(node, key, val);
+        // Also replicate mutation directly to native Rust opo-stated daemon (Port 8001)
+        fetch('http://127.0.0.1:8001/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ Put: { key: key, value: val } })
+        }).catch(() => {});
       }
     };
+
+    // Probe native opo-stated daemon connection status
+    fetch('http://127.0.0.1:8001/', { signal: AbortSignal.timeout(1200) })
+      .then(r => r.json())
+      .then(() => {
+        const statusElem = document.getElementById('partition-status-text');
+        if (statusElem) {
+          statusElem.innerHTML = '● Native Rust Daemon (Port 8001): <strong style="color: #34D399;">SYNCHRONIZED</strong>';
+        }
+      })
+      .catch(() => {});
   }
 
   // Render Deep Tech Cards & Code Tabs
