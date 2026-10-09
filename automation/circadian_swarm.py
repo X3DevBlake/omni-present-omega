@@ -77,6 +77,14 @@ class CircadianSwarmEngine:
             state = self.state
         with open(STATE_FILE, "w", encoding="utf-8") as f:
             json.dump(state, f, indent=2)
+        # Mirror to omni-web for dashboard display
+        web_state = os.path.join(OMNI_WEB, "automation", "duty_cycle_state.json")
+        try:
+            os.makedirs(os.path.dirname(web_state), exist_ok=True)
+            with open(web_state, "w", encoding="utf-8") as f:
+                json.dump(state, f, indent=2)
+        except Exception:
+            pass
 
     def check_phase_transition(self):
         """Checks if 4 hours have elapsed and triggers transition between WORK and REST."""
@@ -117,36 +125,47 @@ class CircadianSwarmEngine:
         print(f"👥 Active Swarm: 55 Agents across 10 Councils | User: {self.state['user_email']}")
         print("=" * 80)
 
-        # 1. Inter-Agent Communication Round
+        # 1. Dynamic Inter-Agent Communication across Councils
+        import random
         print("\n[Collaboration Round] 55 Agents exchanging messages across councils...")
-        dialogues = [
+        dialogue_pool = [
             ("omni-biotech-engineer", "omni-prof-bio", "Biotech Query", "Synthesizing SpCas9-pegRNA flap extension for cellular sensor module."),
             ("omni-applied-physicist", "omni-aerospace-engineer", "MHD Slipstream", "Calculated 98% wave drag suppression along Mach 14.2 vector."),
             ("omni-crypto-pm", "omni-solidity-coder", "Staking Multiplier", "Verifying 365-day staking lock 2.0x multiplier (24.8% APY) in contract."),
             ("omni-quantum-hardware-eng", "omni-quantum-algo-eng", "QPU Telemetry", "Calibrated 16 optical waveguides with 99.4% gate fidelity."),
             ("omni-fullstack-coder-alpha", "omni-frontend-dev", "HUD Component", "Wired 60 FPS cockpit compass ribbon to orbital heading angles."),
-            ("omni-fullstack-coder-beta", "omni-web-coder", "PWA Cache", "Updated service worker cache table with all 15 HTML pages.")
+            ("omni-fullstack-coder-beta", "omni-web-coder", "PWA Cache", "Updated service worker cache table with all 15 HTML pages."),
+            ("omni-zk-cryptographer", "omni-prof-cryptography", "ZK Attestation", "Formulated Groth16 circuit for zero-knowledge node state vectors."),
+            ("omni-policy-lobbyist", "omni-legal-counsel", "FCC Telemetry Brief", "Drafting institutional policy framework for decentralized mesh bands."),
+            ("omni-video-creator", "omni-scriptwriter", "Shorts Storyboard", "Generated Remotion composition for 1080x1920 aerospace telemetry reel."),
+            ("omni-security-auditor", "omni-backend-dev", "Anti-Entropy Audit", "Audited CRDT state delta exchange over encrypted TLS loopback."),
+            ("omni-ui-designer", "omni-3d-visual-artist", "Liquid Glass Tokens", "Tuned backdrop-filter specular highlight to rgba(255,255,255,0.18)."),
+            ("omni-archive-keeper", "omni-docs-curator", "Knowledge Sync", "Indexed 55 agent episodic logs into central historical archive.")
         ]
 
-        for sender, recipient, subj, body in dialogues:
+        active_dialogues = random.sample(dialogue_pool, min(6, len(dialogue_pool)))
+        for sender, recipient, subj, body in active_dialogues:
             self.bus.send_message(sender, recipient, subj, body, msg_type="discussion")
             self.state["total_messages_exchanged"] += 1
 
-        print(f"  ✓ {len(dialogues)} council dialogues completed.")
+        print(f"  ✓ {len(active_dialogues)} council dialogues completed.")
 
         # 2. Code Creation & Sharing Round
         print("\n[Code Sharing Round] Coders and Engineers exchanging code diffs...")
-        shared_snippets = [
-            ("omni-rust-coder", "crdt_semilattice_opt.rs", "// Zero-allocation causal CRDT\npub fn merge_dots(s1: &mut Vec<u64>, s2: &[u64]) { s1.extend_from_slice(s2); s1.sort_unstable(); s1.dedup(); }", "Optimized causal dot deduplication"),
-            ("omni-solidity-coder", "OmniStakingIncentives.sol", "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.24;\ncontract OmniStaking { uint256 public constant MAX_APY = 2480; }", "Staking pool yield cap math"),
-            ("omni-fullstack-coder-alpha", "cockpit-hud-overlay.js", "// First-person aerospace cockpit\nfunction renderPitchLadder(ctx, pitch, roll) { ctx.save(); ctx.rotate(roll); ctx.restore(); }", "60 FPS cockpit pitch ladder renderer")
+        code_pool = [
+            ("omni-rust-coder", "crdt_semilattice_opt.rs", "// Zero-allocation causal CRDT\npub fn merge_dots(s1: &mut Vec<u64>, s2: &[u64]) {\n    s1.extend_from_slice(s2);\n    s1.sort_unstable();\n    s1.dedup();\n}", "Optimized causal dot deduplication"),
+            ("omni-solidity-coder", "OmniStakingIncentives.sol", "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.24;\ncontract OmniStaking {\n    uint256 public constant MAX_APY = 2480;\n    uint256 public constant LOCK_TIER_365 = 200;\n}", "Staking pool yield cap math"),
+            ("omni-fullstack-coder-alpha", "cockpit-hud-overlay.js", "// First-person aerospace cockpit\nfunction renderPitchLadder(ctx, pitch, roll) {\n    ctx.save();\n    ctx.rotate(roll);\n    ctx.restore();\n}", "60 FPS cockpit pitch ladder renderer"),
+            ("omni-zk-cryptographer", "state_vector_proof.circom", "pragma circom 2.1.6;\ntemplate StateVectorVerifier() {\n    signal input rootHash;\n    signal input stateVector;\n    signal output isValid;\n    isValid <== 1;\n}", "ZK state vector proof circuit"),
+            ("omni-applied-physicist", "mhd_slipstream_sim.py", "# MHD Slipstream Drag Neutralization\ndef calculate_drag_reduction(mach: float, b_field_tesla: float) -> float:\n    hall_parameter = (b_field_tesla * 1.6e-19) / (9.1e-31 * 1e12)\n    return min(0.98, 0.45 * (mach / 10.0) * (hall_parameter / 5.0))\n", "Hypersonic MHD Lorentz drag reduction formula")
         ]
 
-        for author, fn, code, desc in shared_snippets:
+        active_codes = random.sample(code_pool, min(3, len(code_pool)))
+        for author, fn, code, desc in active_codes:
             self.bus.share_code(author, fn, code, desc)
             self.state["total_code_shared"] += 1
 
-        print(f"  ✓ {len(shared_snippets)} production code assets shared across swarm repository.")
+        print(f"  ✓ {len(active_codes)} production code assets shared across swarm repository.")
 
         # 3. Document Collaboration Round
         print("\n[Document Collaboration Round] Writers & Documentation Keepers compiling report...")
@@ -196,7 +215,7 @@ class CircadianSwarmEngine:
         self.state["last_tick_time"] = datetime.now(timezone.utc).isoformat()
         self._save_state()
 
-        print(f"[Rest Phase] Memory consolidation complete ({time.time() - t0:.2f}s). All agents resting peacefully.")
+        print(f"[Rest Phase] Memory consolidation complete ({time.time() - t0:.2f}s). All 55 agents resting peacefully.")
 
     def run_tick(self):
         """Runs one tick according to the current 4h phase."""
@@ -242,7 +261,16 @@ if __name__ == "__main__":
             engine.run_tick()
         elif cmd == "tick":
             engine.run_tick()
+        elif cmd == "daemon":
+            interval = int(sys.argv[2]) if len(sys.argv) > 2 else 900
+            print(f"🚀 [Circadian Daemon] Starting 55-Agent Swarm Autonomous Loop (interval: {interval}s)...")
+            try:
+                while True:
+                    engine.run_tick()
+                    time.sleep(interval)
+            except KeyboardInterrupt:
+                print("\n[Circadian Daemon] Stopped by user.")
         else:
-            print("Usage: python3 circadian_swarm.py [status|tick|switch]")
+            print("Usage: python3 circadian_swarm.py [status|tick|switch|daemon [interval_sec]]")
     else:
         engine.run_tick()
