@@ -1,0 +1,99 @@
+{
+  "timestamp": "2026-10-09T20:16:52.222001+00:00",
+  "timestamp_display": "2026-10-09 20:16:52 UTC",
+  "node_id": "opo-robot-prime",
+  "robot_type": "HYBRID_CYBER_PHYSICAL",
+  "hardware_port": "EMBEDDED_PHYSICAL_SIMULATOR (Virtual HAL)",
+  "battery_pct": 94.4,
+  "temperature_c": 34.77,
+  "mission_status": "PATROLLING_SOVEREIGN_PERIMETER",
+  "emergency_stop": false,
+  "gps": {
+    "latitude": 35.67619508739629,
+    "longitude": 139.65030344239835,
+    "altitude_m": 42.5
+  },
+  "navigation": {
+    "linear_velocity_mps": 1.25,
+    "angular_velocity_radps": 0.15,
+    "heading_deg": 146.7,
+    "min_obstacle_distance_m": 1.4
+  },
+  "imu_6dof": {
+    "euler": {
+      "pitch": 1.11,
+      "roll": -0.74,
+      "yaw": 146.7
+    },
+    "accelerometer_g": {
+      "x": 0.02,
+      "y": -0.01,
+      "z": 0.99
+    },
+    "gyroscope_dps": {
+      "x": 0.1,
+      "y": -0.2,
+      "z": 0.05
+    }
+  },
+  "arm_kinematics": {
+    "joints": [
+      {
+        "name": "joint_1_base_yaw",
+        "angle_deg": 5.71,
+        "velocity": 0.0,
+        "torque_nm": 0.0
+      },
+      {
+        "name": "joint_2_shoulder_pitch",
+        "angle_deg": 56.23,
+        "velocity": 0.0,
+        "torque_nm": 0.0
+      },
+      {
+        "name": "joint_3_elbow_pitch",
+        "angle_deg": -106.08,
+        "velocity": 0.0,
+        "torque_nm": 0.0
+      },
+      {
+        "name": "joint_4_wrist_roll",
+        "angle_deg": -9.91,
+        "velocity": 0.0,
+        "torque_nm": 0.0
+      },
+      {
+        "name": "joint_5_wrist_pitch",
+        "angle_deg": 49.85,
+        "velocity": 0.0,
+        "torque_nm": 0.0
+      },
+      {
+        "name": "joint_6_gripper_yaw",
+        "angle_deg": -0.99,
+        "velocity": 0.0,
+        "torque_nm": 0.0
+      }
+    ],
+    "gripper_aperture_mm": 45.0
+  },
+  "lidar_360_scan": [
+    5.3,
+    4.51,
+    1.63,
+    1.43,
+    4.38,
+    9.22,
+    3.93,
+    6.42,
+    6.29,
+    9.3,
+    5.68,
+    5.03
+  ],
+  "safety_invariants": {
+    "motor_thermal_ok": true,
+    "obstacle_margin_ok": true,
+    "battery_healthy": true
+  }
+}

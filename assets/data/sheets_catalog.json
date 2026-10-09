@@ -1,0 +1,38 @@
+{
+  "Omni_Ecosystem_Telemetry_Tracker.csv": {
+    "filename": "Omni_Ecosystem_Telemetry_Tracker.csv",
+    "title": "Omni Ecosystem Telemetry Tracker",
+    "google_sheet_id": "1Cb95_0YqYxcrL2ew141No0VTl07oDq66k5T5USJiPb0",
+    "google_sheet_url": "https://docs.google.com/spreadsheets/d/1Cb95_0YqYxcrL2ew141No0VTl07oDq66k5T5USJiPb0/edit",
+    "synced_at": "2026-10-09T19:06:16.941950+00:00"
+  },
+  "Omni_Staking_Yield_Models.csv": {
+    "filename": "Omni_Staking_Yield_Models.csv",
+    "title": "Omni Staking Yield Models",
+    "google_sheet_id": "1Q3j2xXClNXXYpPzxIdckqb7vvwVgxXkQiSC0hIY-M3Q",
+    "google_sheet_url": "https://docs.google.com/spreadsheets/d/1Q3j2xXClNXXYpPzxIdckqb7vvwVgxXkQiSC0hIY-M3Q/edit",
+    "synced_at": "2026-10-09T19:06:19.812949+00:00"
+  },
+  "Council_Activity_Matrix.csv": {
+    "filename": "Council_Activity_Matrix.csv",
+    "title": "Council Activity Matrix",
+    "google_sheet_id": "1zKR9Z1Ey22d-SJ06t1dBRzWW8cFVh5YbIvh0e73R03g",
+    "google_sheet_url": "https://docs.google.com/spreadsheets/d/1zKR9Z1Ey22d-SJ06t1dBRzWW8cFVh5YbIvh0e73R03g/edit",
+    "synced_at": "2026-10-09T19:06:22.556169+00:00"
+  },
+  "ecosystem_outreach_ledger.csv": {
+    "filename": "ecosystem_outreach_ledger.csv",
+    "title": "ecosystem outreach ledger",
+    "google_sheet_id": "1SvWUS8knBRFtbOu6CNX2zZQe8aviDIs9xs66Ba6zo8I",
+    "google_sheet_url": "https://docs.google.com/spreadsheets/d/1SvWUS8knBRFtbOu6CNX2zZQe8aviDIs9xs66Ba6zo8I/edit",
+    "synced_at": "2026-10-09T19:26:09.914815+00:00"
+  },
+  "Omni_Robotics_Live_Telemetry.csv": {
+    "filename": "Omni_Robotics_Live_Telemetry.csv",
+    "title": "Omni Robotics Live Telemetry",
+    "google_sheet_id": "1vhxLHfFZEId4AOc5y1NWK3Oi7M3Wng2YzmsApoe8bjo",
+    "google_sheet_url": "https://docs.google.com/spreadsheets/d/1vhxLHfFZEId4AOc5y1NWK3Oi7M3Wng2YzmsApoe8bjo/edit",
+    "synced_at": "2026-10-09T20:16:55.597523+00:00",
+    "records_count": 5
+  }
+}

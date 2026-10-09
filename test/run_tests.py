@@ -32,17 +32,17 @@ print("🛡️  RUNNING OPO MASTER SYSTEM VERIFICATION SUITE")
 print("=" * 70)
 
 # 1. JavaScript Syntax Check
-print("\n[1/10] JavaScript Syntax & Parsing Check...")
+print("\n[1/12] JavaScript Syntax & Parsing Check...")
 res = subprocess.run(["node", "--check", "js/app.js"], cwd=OMNI_WEB_DIR, capture_output=True, text=True)
 record_result("Node --check js/app.js", res.returncode == 0, res.stderr.strip())
 
 # 2. CRDT Mathematical Semilattice Tests
-print("\n[2/10] CRDT Semilattice Math Verification...")
+print("\n[2/12] CRDT Semilattice Math Verification...")
 res = subprocess.run(["node", "test/crdt_sim_test.js"], cwd=OMNI_WEB_DIR, capture_output=True, text=True)
 record_result("Client-Side CRDT Join-Semilattice (S, ⊔, ≤)", res.returncode == 0, "Monotonicity, Commutativity, Idempotency, Deep-Copy")
 
 # 3. All 13 SVGs XML and Gradient Integrity
-print("\n[3/10] SVG Vector Asset & Gradient Reference Validation...")
+print("\n[3/12] SVG Vector Asset & Gradient Reference Validation...")
 svg_files = sorted(glob.glob(os.path.join(OMNI_WEB_DIR, "svg", "*.svg")))
 all_svgs_ok = True
 svg_detail = ""
@@ -65,7 +65,7 @@ for s in svg_files:
 record_result(f"All {len(svg_files)} SVGs (XML Parsing & Gradient IDs)", all_svgs_ok, svg_detail or f"{len(svg_files)} SVGs validated")
 
 # 4. Multi-Page Enterprise Suite (10+ Pages Verification)
-print("\n[4/10] Multi-Page Enterprise Suite Validation (At Least 10 Pages)...")
+print("\n[4/12] Multi-Page Enterprise Suite Validation (At Least 10 Pages)...")
 html_files = sorted(glob.glob(os.path.join(OMNI_WEB_DIR, "*.html")))
 has_at_least_10 = len(html_files) >= 10
 all_pages_valid = True
@@ -89,7 +89,7 @@ record_result(f"Multi-Page Count (Found {len(html_files)} Pages, Required >= 10)
 record_result("HTML Documents Structure & Shared Engine", all_pages_valid, ", ".join(page_errors) if page_errors else "All valid")
 
 # 5. Video Assets & Video Player Integration
-print("\n[5/10] HTML5 Video Assets & Stream Validation...")
+print("\n[5/12] HTML5 Video Assets & Stream Validation...")
 video_files = [
     "assets/videos/hero-ambient-mesh.mp4",
     "assets/videos/hero-ambient-mesh.webm",
@@ -108,7 +108,7 @@ for v in video_files:
 record_result("HTML5 Video Assets (MP4 & WebM)", all_videos_exist, "; ".join(video_details))
 
 # 6. CSS Validation
-print("\n[6/10] CSS Syntax & Design System Variables...")
+print("\n[6/12] CSS Syntax & Design System Variables...")
 with open(os.path.join(OMNI_WEB_DIR, "css", "liquid-glass.css"), encoding='utf-8') as f:
     css_content = f.read()
 
@@ -122,7 +122,7 @@ record_result("CSS Balanced Braces", braces_balanced, f"{open_braces} blocks")
 record_result("CSS Variable Declarations", len(missing_vars) == 0, f"{len(declared_vars)} declared, {len(used_vars)} used")
 
 # 7. Python Multimodal Edge Pipeline Scripts
-print("\n[7/10] Edge Sensor Fusion & Multimodal Pipeline...")
+print("\n[7/12] Edge Sensor Fusion & Multimodal Pipeline...")
 res_ekf = subprocess.run([sys.executable, "pipeline/ekf_tracker.py"], cwd=OMNI_WEB_DIR, capture_output=True, text=True)
 record_result("Python EKF Tracker (Pure-Python Edge Embedded)", res_ekf.returncode == 0)
 
@@ -133,13 +133,13 @@ res_cli = subprocess.run([sys.executable, "pipeline/test_client.py", "--help"], 
 record_result("Python Test Client CLI Help", res_cli.returncode == 0 and "Usage:" in res_cli.stdout)
 
 # 8. Rust opo-stated Daemon Unit Tests
-print("\n[8/10] Rust opo-stated Join-Semilattice Unit Tests...")
+print("\n[8/12] Rust opo-stated Join-Semilattice Unit Tests...")
 res_cargo = subprocess.run(["cargo", "test"], cwd=OPO_STATED_DIR, capture_output=True, text=True)
 has_4_passed = "4 passed" in res_cargo.stdout
 record_result("Rust cargo test in opo-stated", res_cargo.returncode == 0 and has_4_passed, "4 unittests passed: test_state_vector, test_delta_mutation, test_commutative_merge, test_anti_entropy_diff")
 
 # 9. Local HTTP Web Server Multi-Page Availability
-print("\n[9/10] Local HTTP Server Multi-Page Routing (Port 8080)...")
+print("\n[9/12] Local HTTP Server Multi-Page Routing (Port 8080)...")
 server_all_ok = True
 pages_checked = []
 for h in html_files:
@@ -156,12 +156,27 @@ for h in html_files:
 record_result(f"HTTP 200 OK on all {len(html_files)} pages from http://localhost:8080/", server_all_ok, f"{len(html_files)} endpoints served")
 
 # 10. Local Asset Integrity for Index
-print("\n[10/10] Local Asset References & Image Integrity...")
+print("\n[10/12] Local Asset References & Image Integrity...")
 with open(os.path.join(OMNI_WEB_DIR, "index.html"), encoding='utf-8') as f:
     idx_content = f.read()
 srcs = re.findall(r'src=[\"\']([^\"\']+)[\"\']', idx_content)
 missing_local_srcs = [s for s in srcs if not s.startswith("http") and not os.path.exists(os.path.join(OMNI_WEB_DIR, s))]
 record_result("Index Local Image/Script References", len(missing_local_srcs) == 0, f"{len(srcs)} src tags verified")
+
+# 11. OPO Robotics HAL & Inverse Kinematics Verification
+print("\n[11/12] OPO Cyber-Physical Robotics HAL & 6-DOF IK Solver...")
+opo_cli_path = "/data/data/com.termux/files/home/opo-robotics/opo_cli.py"
+res_robot = subprocess.run([sys.executable, opo_cli_path, "robot", "ik", "220", "50", "140"], capture_output=True, text=True)
+robot_ok = res_robot.returncode == 0 and "Inverse Kinematics Solved" in res_robot.stdout
+record_result("OPO 6-DOF Analytical Inverse Kinematics Solver", robot_ok, "Analytical geometric decomposition converged")
+
+# 12. Universal One-Liner Installer Syntax & Dry-Run
+print("\n[12/12] Universal One-Liner Installer Syntax & Dry-Run...")
+install_sh_path = os.path.join(OMNI_WEB_DIR, "install.sh")
+res_sh = subprocess.run(["bash", "-n", install_sh_path], capture_output=True, text=True)
+res_dry = subprocess.run(["bash", install_sh_path, "--dry-run"], capture_output=True, text=True)
+installer_ok = (res_sh.returncode == 0) and (res_dry.returncode == 0) and ("INSTALLED SUCCESSFULLY" in res_dry.stdout)
+record_result("Universal One-Liner Installer (install.sh)", installer_ok, "Bash syntax validated & dry-run executed")
 
 print("\n" + "=" * 70)
 print(f"📊 VERIFICATION SUMMARY: {passed_tests} PASSED, {failed_tests} FAILED")

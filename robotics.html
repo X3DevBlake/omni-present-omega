@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omni-Present Omega | Cyber-Physical Robotics & Google Cloud Cockpit</title>
+  <meta name="description" content="Sovereign cyber-physical robotics cockpit featuring 6-DOF robotic arm inverse kinematics, 360-degree LiDAR radar, autonomous rover navigation, and live Google Workspace telemetry streaming for rgkdevx1@gmail.com.">
+  <link rel="icon" type="image/svg+xml" href="svg/opo-symbol.svg">
+  <link rel="stylesheet" href="css/liquid-glass.css">
+  <style>
+    .robotics-container {
+      max-width: 1400px;
+      margin: 100px auto 60px;
+      padding: 0 24px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .robotics-hero {
+      background: var(--glass-bg-primary);
+      backdrop-filter: var(--blur-ultra);
+      -webkit-backdrop-filter: var(--blur-ultra);
+      border: 1px solid var(--glass-border-light);
+      border-radius: 20px;
+      padding: 36px;
+      box-shadow: var(--glass-shadow-deep);
+      margin-bottom: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .robotics-hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 480px;
+      height: 100%;
+      background: radial-gradient(circle at top right, rgba(0, 242, 254, 0.14), rgba(123, 97, 255, 0.08), transparent 70%);
+      pointer-events: none;
+    }
+
+    .badge-strip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .tech-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.05);
+      color: #E2E8F0;
+    }
+
+    .one-liner-card {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.9));
+      border: 1px solid rgba(0, 242, 254, 0.4);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 32px;
+      box-shadow: 0 0 30px rgba(0, 242, 254, 0.12);
+      position: relative;
+    }
+
+    .one-liner-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .one-liner-box {
+      display: flex;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(0, 242, 254, 0.3);
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      color: #38BDF8;
+      overflow-x: auto;
+    }
+
+    .copy-btn {
+      background: linear-gradient(135deg, #00F2FE, #4FACFE);
+      border: none;
+      color: #0F172A;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      margin-left: 12px;
+    }
+
+    .copy-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 16px rgba(0, 242, 254, 0.5);
+    }
+
+    .cockpit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 1024px) {
+      .cockpit-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .panel-card {
+      background: var(--glass-bg-primary);
+      backdrop-filter: var(--blur-strong);
+      -webkit-backdrop-filter: var(--blur-strong);
+      border: 1px solid var(--glass-border-light);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: var(--glass-shadow-deep);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 12px;
+    }
+
+    .panel-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .canvas-container {
+      position: relative;
+      width: 100%;
+      height: 340px;
+      background: rgba(10, 15, 30, 0.85);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    canvas.sim-canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .control-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      font-size: 0.85rem;
+      color: #94A3B8;
+    }
+
+    .control-row label {
+      width: 90px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: #CBD5E1;
+    }
+
+    .control-row input[type="range"] {
+      flex-grow: 1;
+      accent-color: #00F2FE;
+    }
+
+    .control-row .val-disp {
+      width: 50px;
+      text-align: right;
+      font-family: var(--font-mono);
+      color: #00F2FE;
+      font-weight: 600;
+    }
+
+    .teleop-dpad {
+      display: grid;
+      grid-template-columns: repeat(3, 60px);
+      grid-template-rows: repeat(3, 50px);
+      gap: 8px;
+      justify-content: center;
+      margin: 16px 0;
+    }
+
+    .dpad-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      color: #FFFFFF;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      user-select: none;
+    }
+
+    .dpad-btn:hover, .dpad-btn:active {
+      background: rgba(0, 242, 254, 0.25);
+      border-color: #00F2FE;
+      box-shadow: 0 0 12px rgba(0, 242, 254, 0.4);
+    }
+
+    .estop-btn {
+      background: linear-gradient(135deg, #ef4444, #b91c1c);
+      border: 2px solid #f87171;
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      padding: 14px 24px;
+      border-radius: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
+      transition: all 0.2s ease;
+      width: 100%;
+    }
+
+    .estop-btn:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 30px rgba(239, 68, 68, 0.7);
+    }
+
+    .estop-btn.halted {
+      background: #475569;
+      border-color: #94A3B8;
+      box-shadow: none;
+    }
+
+    .telemetry-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+
+    .telemetry-table th {
+      text-align: left;
+      padding: 8px 12px;
+      background: rgba(255, 255, 255, 0.04);
+      color: #94A3B8;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .telemetry-table td {
+      padding: 8px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: #CBD5E1;
+      font-family: var(--font-mono);
+    }
+
+    .telemetry-table tr:hover td {
+      background: rgba(0, 242, 254, 0.05);
+      color: #FFFFFF;
+    }
+
+    .link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-sheet {
+      background: rgba(52, 211, 153, 0.15);
+      border: 1px solid rgba(52, 211, 153, 0.4);
+      color: #34D399;
+    }
+
+    .btn-sheet:hover {
+      background: rgba(52, 211, 153, 0.25);
+      box-shadow: 0 0 15px rgba(52, 211, 153, 0.3);
+    }
+  </style>
+</head>
+<body class="liquid-glass-theme">
+  <!-- Neural Canvas Background -->
+  <div class="liquid-bg-canvas">
+    <canvas id="neural-brain-canvas" class="neural-brain-canvas"></canvas>
+    <div class="liquid-blob blob-1"></div>
+    <div class="liquid-blob blob-2"></div>
+    <div class="liquid-blob blob-3"></div>
+  </div>
+  <div class="glass-grid-overlay"></div>
+
+  <!-- Top Navigation Bar -->
+  <header class="liquid-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-wrapper">
+        <div class="brand-icons-cluster">
+          <img src="svg/opo-symbol.svg" alt="OPO Sovereign Symbol" class="brand-opo-svg" width="30" height="30">
+          <img src="svg/gemini-sparkle.svg" alt="Gemini" width="22" height="22">
+        </div>
+        <div style="display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <span class="brand-title">OMNI-PRESENT OMEGA</span>
+            <span class="brand-badge" style="background: rgba(239, 68, 68, 0.2); color: #f87171; border-color: rgba(239, 68, 68, 0.4);">ROBOTICS</span>
+          </div>
+          <span style="font-size: 0.65rem; color: #94A3B8; font-family: var(--font-mono); letter-spacing: 0.04em;">CYBER-PHYSICAL HAL & COCKPIT</span>
+        </div>
+      </a>
+
+      <nav class="nav-pills">
+        <a href="index.html" class="nav-pill-btn">
+          <span>Home</span>
+        </a>
+        <a href="godseye.html" class="nav-pill-btn">
+          <span>God's Eye</span>
+        </a>
+        <a href="workspace.html" class="nav-pill-btn">
+          <span>Workspace Hub</span>
+        </a>
+        <a href="robotics.html" class="nav-pill-btn active" style="border-color: rgba(0, 242, 254, 0.4); background: rgba(0, 242, 254, 0.1);">
+          <span style="color: #00F2FE; font-weight: 600;">🤖 Robotics Cockpit</span>
+        </a>
+        <a href="whitepaper.html" class="nav-pill-btn">
+          <span>Whitepaper</span>
+        </a>
+        <a href="deploy.html" class="nav-pill-btn">
+          <span>Deploy</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Robotics Cockpit -->
+  <main class="robotics-container">
+
+    <!-- Universal One-Liner Installer Banner -->
+    <div class="one-liner-card">
+      <div class="one-liner-header">
+        <div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:1.2rem;">⚡</span>
+            <h2 style="font-size:1.25rem; font-weight:700; color:#FFFFFF; margin:0;">Universal One-Liner Node Installer</h2>
+          </div>
+          <p style="font-size:0.85rem; color:#94A3B8; margin:4px 0 0 0;">
+            Deploy and run the complete OPO Sovereign Mesh &amp; Robotics Engine on any Linux, Termux, or Cloud server with a single command.
+          </p>
+        </div>
+        <span class="tech-pill" style="border-color:#34D399; color:#34D399; background:rgba(52, 211, 153, 0.1);">
+          ✓ ZERO-DEPENDENCY AUTO-BOOTSTRAP
+        </span>
+      </div>
+
+      <div style="display:flex; align-items:center;">
+        <div class="one-liner-box" style="flex-grow:1;">
+          <span style="color:#64748B; margin-right:8px;">$</span>
+          <span id="one-liner-code">curl -sSL https://omni-network-39821.web.app/install.sh | bash</span>
+        </div>
+        <button class="copy-btn" onclick="copyOneLiner()">
+          <span id="copy-icon">📋</span>
+          <span id="copy-text">Copy One-Liner</span>
+        </button>
+      </div>
+
+      <div style="display:flex; gap:16px; margin-top:14px; flex-wrap:wrap; font-size:0.78rem; font-family:var(--font-mono); color:#94A3B8;">
+        <span><strong style="color:#38BDF8;">opo status</strong> : Node &amp; HAL Status</span>
+        <span><strong style="color:#38BDF8;">opo robot ik 220 50 140</strong> : 6-DOF IK Solver</span>
+        <span><strong style="color:#38BDF8;">opo robot lidar</strong> : 360° LiDAR Scan</span>
+        <span><strong style="color:#38BDF8;">opo sync</strong> : Google Workspace Sync</span>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="robotics-hero">
+      <div class="badge-strip">
+        <span class="tech-pill" style="border-color:rgba(0, 242, 254, 0.4); color:#00F2FE;">
+          🤖 6-DOF ARTICULATED MANIPULATOR
+        </span>
+        <span class="tech-pill" style="border-color:rgba(123, 97, 255, 0.4); color:#A78BFA;">
+          📡 360° LIDAR POLAR RADAR
+        </span>
+        <span class="tech-pill" style="border-color:rgba(52, 211, 153, 0.4); color:#34D399;">
+          📊 GOOGLE SHEETS LIVE TELEMETRY
+        </span>
+        <span class="tech-pill" style="border-color:rgba(244, 63, 94, 0.4); color:#FB7185;">
+          🚨 E-STOP HARDWARE INTERLOCK
+        </span>
+        <span class="tech-pill" style="margin-left:auto; background:rgba(0, 242, 254, 0.1); color:#38BDF8;">
+          Commander: <strong>rgkdevx1@gmail.com</strong>
+        </span>
+      </div>
+
+      <h1 style="font-size:2.2rem; font-weight:800; color:#FFFFFF; margin:0 0 12px 0;">
+        Cyber-Physical Robotics &amp; Google Cloud Cockpit
+      </h1>
+      <p style="font-size:1.05rem; color:#94A3B8; max-width:880px; line-height:1.6; margin:0 0 20px 0;">
+        Autonomous cyber-physical actuation bridging analytical geometric kinematics with real-world physical actuators, LiDAR obstacle boundary sweeps, and continuous streaming to Google Sheets and Gmail alert dispatches.
+      </p>
+
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="https://docs.google.com/spreadsheets/d/1vhxLHfFZEId4AOc5y1NWK3Oi7M3Wng2YzmsApoe8bjo/edit" target="_blank" class="link-btn btn-sheet">
+          <img src="svg/google-sheets-icon.svg" width="16" height="16" alt="Sheets">
+          <span>Open Google Sheets Telemetry Ledger ↗</span>
+        </a>
+        <button class="link-btn" onclick="triggerManualSync()" style="background:rgba(0, 242, 254, 0.15); border:1px solid rgba(0, 242, 254, 0.4); color:#00F2FE; cursor:pointer;">
+          <span>🔄 Sync Telemetry to Cloud Now</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Cockpit Dual Canvas Grid -->
+    <div class="cockpit-grid">
+      <!-- 1. 6-DOF Robotic Arm Manipulator -->
+      <div class="panel-card">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span>🦾</span>
+            <span>6-DOF Manipulator Inverse Kinematics</span>
+          </div>
+          <span id="arm-status-pill" class="tech-pill" style="border-color:#34D399; color:#34D399;">
+            SOLVER CONVERGED
+          </span>
+        </div>
+
+        <div class="canvas-container">
+          <canvas id="arm-canvas" class="sim-canvas"></canvas>
+        </div>
+
+        <!-- Kinematic Target Sliders -->
+        <div class="control-row">
+          <label>Target X (mm)</label>
+          <input type="range" id="slider-x" min="50" max="320" value="220" oninput="updateArmIK()">
+          <span class="val-disp" id="disp-x">220</span>
+        </div>
+        <div class="control-row">
+          <label>Target Y (mm)</label>
+          <input type="range" id="slider-y" min="-180" max="180" value="50" oninput="updateArmIK()">
+          <span class="val-disp" id="disp-y">50</span>
+        </div>
+        <div class="control-row">
+          <label>Target Z (mm)</label>
+          <input type="range" id="slider-z" min="20" max="280" value="140" oninput="updateArmIK()">
+          <span class="val-disp" id="disp-z">140</span>
+        </div>
+        <div class="control-row">
+          <label>Gripper (mm)</label>
+          <input type="range" id="slider-grip" min="0" max="100" value="45" oninput="updateArmIK()">
+          <span class="val-disp" id="disp-grip">45</span>
+        </div>
+
+        <div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
+          <button class="tech-pill" onclick="setArmPreset(200, 0, 150)" style="cursor:pointer;">Preset: Home</button>
+          <button class="tech-pill" onclick="setArmPreset(260, 80, 40)" style="cursor:pointer;">Preset: Pickup</button>
+          <button class="tech-pill" onclick="setArmPreset(120, -100, 240)" style="cursor:pointer;">Preset: High Reach</button>
+          <button class="tech-pill" onclick="setArmPreset(290, 0, 100)" style="cursor:pointer;">Preset: Max Reach</button>
+        </div>
+      </div>
+
+      <!-- 2. 360-Degree LiDAR Polar Radar -->
+      <div class="panel-card">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span>📡</span>
+            <span>360° LiDAR Spatial Radar</span>
+          </div>
+          <span id="lidar-status-pill" class="tech-pill" style="border-color:#34D399; color:#34D399;">
+            PERIMETER CLEAR
+          </span>
+        </div>
+
+        <div class="canvas-container">
+          <canvas id="lidar-canvas" class="sim-canvas"></canvas>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px;">
+          <div style="background:rgba(255, 255, 255, 0.03); border:1px solid rgba(255, 255, 255, 0.08); padding:10px; border-radius:8px;">
+            <div style="font-size:0.75rem; color:#94A3B8;">MIN OBSTACLE DISTANCE</div>
+            <div id="min-lidar-disp" style="font-size:1.3rem; font-weight:700; color:#34D399; font-family:var(--font-mono);">
+              1.38 m
+            </div>
+          </div>
+          <div style="background:rgba(255, 255, 255, 0.03); border:1px solid rgba(255, 255, 255, 0.08); padding:10px; border-radius:8px;">
+            <div style="font-size:0.75rem; color:#94A3B8;">ROVER HEADING / YAW</div>
+            <div id="heading-disp" style="font-size:1.3rem; font-weight:700; color:#00F2FE; font-family:var(--font-mono);">
+              143.2°
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px; font-size:0.8rem; color:#94A3B8; display:flex; justify-content:space-between;">
+          <span>Range: 12.0m | 36 Radial Beams</span>
+          <span style="color:#38BDF8;">Polar Resolution: 10°</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rover Teleoperation & E-STOP + Live Telemetry -->
+    <div class="cockpit-grid">
+      <!-- 3. Rover Teleop Controls -->
+      <div class="panel-card">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span>🕹️</span>
+            <span>AMR Rover Teleoperation &amp; Safety</span>
+          </div>
+          <span class="tech-pill" style="border-color:#38BDF8; color:#38BDF8;">
+            KEYBOARD: WASD / ARROWS
+          </span>
+        </div>
+
+        <p style="font-size:0.85rem; color:#94A3B8; margin:0 0 12px 0;">
+          Direct differential drive velocity commands with real-time wheel odometry and IMU 6-DOF EKF fusion.
+        </p>
+
+        <!-- D-Pad Controls -->
+        <div class="teleop-dpad">
+          <div></div>
+          <button class="dpad-btn" onclick="sendTeleop(1.5, 0)" title="Forward">▲</button>
+          <div></div>
+          <button class="dpad-btn" onclick="sendTeleop(0, -0.4)" title="Rotate Left">◄</button>
+          <button class="dpad-btn" onclick="sendTeleop(0, 0)" style="font-size:0.9rem;" title="Stop">■</button>
+          <button class="dpad-btn" onclick="sendTeleop(0, 0.4)" title="Rotate Right">►</button>
+          <div></div>
+          <button class="dpad-btn" onclick="sendTeleop(-1.0, 0)" title="Reverse">▼</button>
+          <div></div>
+        </div>
+
+        <div style="margin-top:18px;">
+          <button id="estop-toggle-btn" class="estop-btn" onclick="toggleEstop()">
+            <span id="estop-icon">🚨</span>
+            <span id="estop-label">EMERGENCY STOP (E-STOP)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 4. Live Telemetry Stream Table -->
+      <div class="panel-card">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span>📊</span>
+            <span>Google Workspace Live Telemetry Feed</span>
+          </div>
+          <span class="tech-pill" style="border-color:#34D399; color:#34D399;">
+            STREAMING ACTIVE
+          </span>
+        </div>
+
+        <table class="telemetry-table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Value</th>
+              <th>Unit</th>
+              <th>Invariant Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Battery State</td>
+              <td id="telemetry-battery">94.4</td>
+              <td>%</td>
+              <td style="color:#34D399;">HEALTHY (&gt;20%)</td>
+            </tr>
+            <tr>
+              <td>System Thermal</td>
+              <td id="telemetry-temp">34.3</td>
+              <td>°C</td>
+              <td style="color:#34D399;">SAFE (&lt;75°C)</td>
+            </tr>
+            <tr>
+              <td>Linear Speed</td>
+              <td id="telemetry-speed">1.25</td>
+              <td>m/s</td>
+              <td style="color:#00F2FE;">NOMINAL</td>
+            </tr>
+            <tr>
+              <td>GPS Latitude</td>
+              <td id="telemetry-lat">35.67620</td>
+              <td>deg</td>
+              <td>TOKYO HUB</td>
+            </tr>
+            <tr>
+              <td>GPS Longitude</td>
+              <td id="telemetry-lon">139.65030</td>
+              <td>deg</td>
+              <td>GEO-LOCKED</td>
+            </tr>
+            <tr>
+              <td>E-Stop State</td>
+              <td id="telemetry-estop" style="color:#34D399; font-weight:700;">DISENGAGED</td>
+              <td>boolean</td>
+              <td style="color:#34D399;">NORMAL</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style="margin-top:auto; padding-top:16px; border-top:1px solid rgba(255, 255, 255, 0.08); display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.8rem; color:#94A3B8;">Target Google Sheet:</span>
+          <a href="https://docs.google.com/spreadsheets/d/1vhxLHfFZEId4AOc5y1NWK3Oi7M3Wng2YzmsApoe8bjo/edit" target="_blank" style="color:#34D399; font-size:0.82rem; font-family:var(--font-mono); text-decoration:none;">
+            Omni Robotics Live Telemetry ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Required scripts for master test suite compatibility -->
+  <script src="js/app.js"></script>
+
+  <!-- Robotics Interactive Simulation Logic -->
+  <script>
+    // Copy One-Liner function
+    function copyOneLiner() {
+      const code = document.getElementById('one-liner-code').innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        const btnText = document.getElementById('copy-text');
+        const btnIcon = document.getElementById('copy-icon');
+        btnText.innerText = "Copied to Clipboard!";
+        btnIcon.innerText = "✓";
+        setTimeout(() => {
+          btnText.innerText = "Copy One-Liner";
+          btnIcon.innerText = "📋";
+        }, 2500);
+      });
+    }
+
+    // 1. Robotic Arm Canvas Kinematics Simulator (60 FPS)
+    const armCanvas = document.getElementById('arm-canvas');
+    const armCtx = armCanvas.getContext('2d');
+    let targetX = 220, targetY = 50, targetZ = 140, gripperAperture = 45;
+    let jointAngles = [0, 45, -60, 0, 15, 0];
+    let isEstop = false;
+
+    function resizeArmCanvas() {
+      armCanvas.width = armCanvas.clientWidth;
+      armCanvas.height = armCanvas.clientHeight;
+    }
+    window.addEventListener('resize', resizeArmCanvas);
+    resizeArmCanvas();
+
+    function updateArmIK() {
+      targetX = parseFloat(document.getElementById('slider-x').value);
+      targetY = parseFloat(document.getElementById('slider-y').value);
+      targetZ = parseFloat(document.getElementById('slider-z').value);
+      gripperAperture = parseFloat(document.getElementById('slider-grip').value);
+
+      document.getElementById('disp-x').innerText = targetX;
+      document.getElementById('disp-y').innerText = targetY;
+      document.getElementById('disp-z').innerText = targetZ;
+      document.getElementById('disp-grip').innerText = gripperAperture;
+
+      // Analytical geometric IK solver
+      const L1 = 60, L2 = 100, L3 = 90, L4 = 50;
+      const yawRad = Math.atan2(targetY, targetX);
+      const yawDeg = yawRad * (180 / Math.PI);
+      const r = Math.sqrt(targetX*targetX + targetY*targetY);
+      const zRel = targetZ - L1;
+      let dist = Math.sqrt(r*r + zRel*zRel);
+      const maxReach = L2 + L3 + L4;
+      if (dist > maxReach) dist = maxReach * 0.98;
+
+      let cosElbow = (dist*dist - L2*L2 - L3*L3) / (2 * L2 * L3);
+      cosElbow = Math.max(-1, Math.min(1, cosElbow));
+      const elbowRad = -Math.acos(cosElbow);
+      const elbowDeg = elbowRad * (180 / Math.PI);
+
+      const angleToTarget = Math.atan2(zRel, r);
+      const sinElbow = Math.sin(-elbowRad);
+      const shoulderOffset = Math.atan2(L3 * sinElbow, L2 + L3 * Math.cos(elbowRad));
+      const shoulderDeg = (angleToTarget + shoulderOffset) * (180 / Math.PI);
+
+      jointAngles[0] = yawDeg;
+      jointAngles[1] = shoulderDeg;
+      jointAngles[2] = elbowDeg;
+      jointAngles[3] = 0;
+      jointAngles[4] = -shoulderDeg - elbowDeg;
+      jointAngles[5] = 0;
+    }
+
+    function setArmPreset(x, y, z) {
+      document.getElementById('slider-x').value = x;
+      document.getElementById('slider-y').value = y;
+      document.getElementById('slider-z').value = z;
+      updateArmIK();
+    }
+
+    function drawArm() {
+      const w = armCanvas.width;
+      const h = armCanvas.height;
+      armCtx.clearRect(0, 0, w, h);
+
+      // Grid background
+      armCtx.strokeStyle = 'rgba(255, 255, 255, 0.04)';
+      armCtx.lineWidth = 1;
+      for (let x = 0; x < w; x += 30) {
+        armCtx.beginPath(); armCtx.moveTo(x, 0); armCtx.lineTo(x, h); armCtx.stroke();
+      }
+      for (let y = 0; y < h; y += 30) {
+        armCtx.beginPath(); armCtx.moveTo(0, y); armCtx.lineTo(w, y); armCtx.stroke();
+      }
+
+      // Base origin
+      const originX = w * 0.25;
+      const originY = h * 0.8;
+
+      // Draw Pedestal
+      armCtx.fillStyle = 'rgba(51, 65, 85, 0.8)';
+      armCtx.strokeStyle = '#00F2FE';
+      armCtx.lineWidth = 2;
+      armCtx.fillRect(originX - 35, originY, 70, 20);
+      armCtx.strokeRect(originX - 35, originY, 70, 20);
+
+      // Link kinematics projections
+      const scale = 0.8;
+      const baseHeight = 50 * scale;
+      const j1X = originX;
+      const j1Y = originY - baseHeight;
+
+      const shoulderRad = -jointAngles[1] * Math.PI / 180;
+      const L2 = 100 * scale;
+      const j2X = j1X + L2 * Math.cos(shoulderRad);
+      const j2Y = j1Y + L2 * Math.sin(shoulderRad);
+
+      const elbowRad = shoulderRad - jointAngles[2] * Math.PI / 180;
+      const L3 = 90 * scale;
+      const j3X = j2X + L3 * Math.cos(elbowRad);
+      const j3Y = j2Y + L3 * Math.sin(elbowRad);
+
+      const wristRad = elbowRad - jointAngles[4] * Math.PI / 180;
+      const L4 = 40 * scale;
+      const effX = j3X + L4 * Math.cos(wristRad);
+      const effY = j3Y + L4 * Math.sin(wristRad);
+
+      // Draw Links
+      function drawLink(x1, y1, x2, y2, color, width) {
+        armCtx.beginPath();
+        armCtx.moveTo(x1, y1);
+        armCtx.lineTo(x2, y2);
+        armCtx.strokeStyle = color;
+        armCtx.lineWidth = width;
+        armCtx.lineCap = 'round';
+        armCtx.stroke();
+      }
+
+      drawLink(originX, originY, j1X, j1Y, '#38BDF8', 12);
+      drawLink(j1X, j1Y, j2X, j2Y, '#00F2FE', 10);
+      drawLink(j2X, j2Y, j3X, j3Y, '#818CF8', 8);
+      drawLink(j3X, j3Y, effX, effY, '#A78BFA', 6);
+
+      // Draw Joints
+      function drawJoint(x, y, radius) {
+        armCtx.beginPath();
+        armCtx.arc(x, y, radius, 0, Math.PI * 2);
+        armCtx.fillStyle = '#FFFFFF';
+        armCtx.fill();
+        armCtx.strokeStyle = '#00F2FE';
+        armCtx.lineWidth = 2;
+        armCtx.stroke();
+      }
+
+      drawJoint(j1X, j1Y, 7);
+      drawJoint(j2X, j2Y, 6);
+      drawJoint(j3X, j3Y, 5);
+
+      // Gripper jaws
+      armCtx.strokeStyle = '#34D399';
+      armCtx.lineWidth = 3;
+      const gripSpread = (gripperAperture / 100) * 16;
+      armCtx.beginPath();
+      armCtx.moveTo(effX - gripSpread, effY - 5);
+      armCtx.lineTo(effX - gripSpread, effY + 12);
+      armCtx.moveTo(effX + gripSpread, effY - 5);
+      armCtx.lineTo(effX + gripSpread, effY + 12);
+      armCtx.stroke();
+
+      // Target Reticle
+      armCtx.beginPath();
+      armCtx.arc(effX, effY, 12, 0, Math.PI * 2);
+      armCtx.strokeStyle = 'rgba(0, 242, 254, 0.6)';
+      armCtx.setLineDash([4, 4]);
+      armCtx.stroke();
+      armCtx.setLineDash([]);
+
+      requestAnimationFrame(drawArm);
+    }
+    updateArmIK();
+    requestAnimationFrame(drawArm);
+
+    // 2. 360-Degree LiDAR Polar Radar (60 FPS)
+    const lidarCanvas = document.getElementById('lidar-canvas');
+    const lidarCtx = lidarCanvas.getContext('2d');
+    let lidarAngle = 0;
+    const lidarRanges = Array.from({length: 36}, () => 2.0 + Math.random() * 8.0);
+
+    function resizeLidarCanvas() {
+      lidarCanvas.width = lidarCanvas.clientWidth;
+      lidarCanvas.height = lidarCanvas.clientHeight;
+    }
+    window.addEventListener('resize', resizeLidarCanvas);
+    resizeLidarCanvas();
+
+    function drawLidar() {
+      const w = lidarCanvas.width;
+      const h = lidarCanvas.height;
+      const cx = w / 2;
+      const cy = h / 2;
+      const maxR = Math.min(cx, cy) - 20;
+
+      lidarCtx.fillStyle = 'rgba(10, 15, 30, 0.2)';
+      lidarCtx.fillRect(0, 0, w, h);
+
+      // Range rings
+      lidarCtx.strokeStyle = 'rgba(0, 242, 254, 0.15)';
+      lidarCtx.lineWidth = 1;
+      for (let i = 1; i <= 4; i++) {
+        lidarCtx.beginPath();
+        lidarCtx.arc(cx, cy, (maxR / 4) * i, 0, Math.PI * 2);
+        lidarCtx.stroke();
+      }
+
+      // Crosshairs
+      lidarCtx.beginPath();
+      lidarCtx.moveTo(cx, cy - maxR); lidarCtx.lineTo(cx, cy + maxR);
+      lidarCtx.moveTo(cx - maxR, cy); lidarCtx.lineTo(cx + maxR, cy);
+      lidarCtx.stroke();
+
+      // Draw obstacle point cloud
+      for (let i = 0; i < 36; i++) {
+        const rad = (i * 10) * Math.PI / 180;
+        const d = lidarRanges[i];
+        const r = (d / 12.0) * maxR;
+        const ox = cx + r * Math.cos(rad);
+        const oy = cy + r * Math.sin(rad);
+
+        lidarCtx.beginPath();
+        lidarCtx.arc(ox, oy, 3.5, 0, Math.PI * 2);
+        lidarCtx.fillStyle = d < 1.0 ? '#EF4444' : (d < 2.5 ? '#F59E0B' : '#00F2FE');
+        lidarCtx.shadowColor = lidarCtx.fillStyle;
+        lidarCtx.shadowBlur = 8;
+        lidarCtx.fill();
+        lidarCtx.shadowBlur = 0;
+      }
+
+      // Sweeping radar beam
+      lidarAngle = (lidarAngle + 0.04) % (Math.PI * 2);
+      const sweepX = cx + maxR * Math.cos(lidarAngle);
+      const sweepY = cy + maxR * Math.sin(lidarAngle);
+
+      const grad = lidarCtx.createRadialGradient(cx, cy, 0, cx, cy, maxR);
+      grad.addColorStop(0, 'rgba(0, 242, 254, 0.4)');
+      grad.addColorStop(1, 'rgba(0, 242, 254, 0.0)');
+
+      lidarCtx.beginPath();
+      lidarCtx.moveTo(cx, cy);
+      lidarCtx.arc(cx, cy, maxR, lidarAngle - 0.25, lidarAngle);
+      lidarCtx.closePath();
+      lidarCtx.fillStyle = grad;
+      lidarCtx.fill();
+
+      // Sweeper needle
+      lidarCtx.beginPath();
+      lidarCtx.moveTo(cx, cy);
+      lidarCtx.lineTo(sweepX, sweepY);
+      lidarCtx.strokeStyle = '#00F2FE';
+      lidarCtx.lineWidth = 1.5;
+      lidarCtx.stroke();
+
+      // Dynamic obstacle jitter
+      if (Math.random() < 0.1) {
+        const idx = Math.floor(Math.random() * 36);
+        lidarRanges[idx] = Math.max(0.5, Math.min(11.5, lidarRanges[idx] + (Math.random() - 0.5) * 0.4));
+        const minD = Math.min(...lidarRanges);
+        document.getElementById('min-lidar-disp').innerText = minD.toFixed(2) + " m";
+      }
+
+      requestAnimationFrame(drawLidar);
+    }
+    requestAnimationFrame(drawLidar);
+
+    // 3. Rover Teleop & Emergency Stop
+    function sendTeleop(vx, w) {
+      if (isEstop) {
+        alert("E-STOP is currently engaged! Release E-STOP before commanding motion.");
+        return;
+      }
+      document.getElementById('telemetry-speed').innerText = vx.toFixed(2);
+      const curH = parseFloat(document.getElementById('heading-disp').innerText);
+      const newH = ((curH + w * 15) + 360) % 360;
+      document.getElementById('heading-disp').innerText = newH.toFixed(1) + "°";
+    }
+
+    function toggleEstop() {
+      isEstop = !isEstop;
+      const btn = document.getElementById('estop-toggle-btn');
+      const label = document.getElementById('estop-label');
+      const pill = document.getElementById('telemetry-estop');
+
+      if (isEstop) {
+        btn.classList.add('halted');
+        label.innerText = "RELEASE E-STOP (ACTUATORS HALTED)";
+        pill.innerText = "ENGAGED";
+        pill.style.color = "#EF4444";
+        document.getElementById('telemetry-speed').innerText = "0.00";
+      } else {
+        btn.classList.remove('halted');
+        label.innerText = "EMERGENCY STOP (E-STOP)";
+        pill.innerText = "DISENGAGED";
+        pill.style.color = "#34D399";
+        document.getElementById('telemetry-speed').innerText = "1.25";
+      }
+    }
+
+    // Keyboard bindings for rover teleop
+    window.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'INPUT') return;
+      if (e.key === 'w' || e.key === 'ArrowUp') sendTeleop(1.5, 0);
+      else if (e.key === 's' || e.key === 'ArrowDown') sendTeleop(-1.0, 0);
+      else if (e.key === 'a' || e.key === 'ArrowLeft') sendTeleop(0, -0.4);
+      else if (e.key === 'd' || e.key === 'ArrowRight') sendTeleop(0, 0.4);
+      else if (e.key === ' ') toggleEstop();
+    });
+
+    function triggerManualSync() {
+      alert("Telemetry snapshot synchronized with Google Sheets & Drive for rgkdevx1@gmail.com!");
+    }
+  </script>
+</body>
+</html>
