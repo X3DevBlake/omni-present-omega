@@ -201,6 +201,45 @@
         const clickY = (e.clientY - rect.top) * this.dpr;
         this.handleClick(clickX, clickY);
       });
+
+      // Escape key to exit cockpit
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && this.cockpitMode) {
+          this.exitCockpitMode();
+        }
+      });
+    }
+
+    toggleCockpitMode() {
+      if (this.cockpitMode) {
+        this.exitCockpitMode();
+      } else {
+        this.enterCockpitMode(this.selectedEntity || this.satellites[0]);
+      }
+    }
+
+    enterCockpitMode(entity) {
+      this.cockpitMode = true;
+      this.selectedEntity = entity || this.selectedEntity || this.satellites[0];
+      this.autoRotate = false;
+      const btn = document.getElementById('btn-cockpit-toggle');
+      if (btn) {
+        btn.classList.add('active');
+        btn.innerHTML = '<span>❌ Exit Cockpit</span>';
+      }
+      if (window.soundEngine) window.soundEngine.playSuccess();
+    }
+
+    exitCockpitMode() {
+      this.cockpitMode = false;
+      this.zoom = 1.0;
+      this.autoRotate = true;
+      const btn = document.getElementById('btn-cockpit-toggle');
+      if (btn) {
+        btn.classList.remove('active');
+        btn.innerHTML = '<span>🚀 Cockpit Ride-Along</span>';
+      }
+      if (window.soundEngine) window.soundEngine.playClick();
     }
 
     resize() {
@@ -342,8 +381,24 @@
       this.lastTimestamp = timestamp;
       this.epochTime += dt * 1000;
 
-      // Auto-rotation if user is not dragging
-      if (this.autoRotate) {
+      // Cockpit Ride-Along Camera Tracking & Interpolation
+      if (this.cockpitMode && this.selectedEntity) {
+        let lat = this.selectedEntity.lat || 0;
+        let lon = this.selectedEntity.lon || 0;
+        if (this.selectedEntity.alt && typeof this.selectedEntity.alt === 'number') {
+          lon = (this.selectedEntity.phase * 50 + (this.epochTime * 0.00012 * this.selectedEntity.speed)) % 360 - 180;
+          lat = Math.sin(this.selectedEntity.phase + this.epochTime * 0.00008) * this.selectedEntity.inc;
+        } else if (this.selectedEntity.callsign) {
+          lon = this.selectedEntity.lon + (this.epochTime * 0.00015 * (this.selectedEntity.speed.includes('4') ? 1 : 1.5)) % 60 - 30;
+        }
+        const targetRotY = -((lon + 180) * (Math.PI / 180)) + Math.PI / 2;
+        const targetRotX = (lat * Math.PI) / 180;
+
+        // Smooth camera dampening
+        this.rotY += (targetRotY - this.rotY) * 0.08;
+        this.rotX += (targetRotX - this.rotX) * 0.08;
+        this.zoom += (2.1 - this.zoom) * 0.05;
+      } else if (this.autoRotate) {
         this.rotY += this.autoRotateSpeed;
       }
 
@@ -421,14 +476,113 @@
       }
 
       // 10. Selected Target HUD Reticle
-      if (this.selectedEntity) {
+      if (this.selectedEntity && !this.cockpitMode) {
         this.drawTargetReticle(ctx);
       }
 
       // 11. Scanner Beam Line
-      this.drawScanline(ctx, cx, cy, r);
+      if (!this.cockpitMode) {
+        this.drawScanline(ctx, cx, cy, r);
+      }
+
+      // 12. First-Person Tactical Cockpit HUD Overlay
+      if (this.cockpitMode && this.selectedEntity) {
+        this.drawCockpitHUD(ctx, w, h, cx, cy);
+      }
 
       requestAnimationFrame(this.render.bind(this));
+    }
+
+    drawCockpitHUD(ctx, w, h, cx, cy) {
+      const e = this.selectedEntity;
+      ctx.save();
+
+      // Vignette / Helmet Glass Reflection
+      const vig = ctx.createRadialGradient(cx, cy, h * 0.35, cx, cy, h * 0.85);
+      vig.addColorStop(0, 'rgba(0,0,0,0)');
+      vig.addColorStop(1, 'rgba(0, 229, 255, 0.08)');
+      ctx.fillStyle = vig;
+      ctx.fillRect(0, 0, w, h);
+
+      // Green Aerospace HUD Color
+      ctx.strokeStyle = '#34D399';
+      ctx.fillStyle = '#34D399';
+      ctx.lineWidth = 1.5 * this.dpr;
+
+      // 1. Center Flight Director Reticle
+      ctx.beginPath();
+      ctx.arc(cx, cy, 14 * this.dpr, 0, Math.PI * 2);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(cx - 26 * this.dpr, cy);
+      ctx.lineTo(cx - 14 * this.dpr, cy);
+      ctx.moveTo(cx + 14 * this.dpr, cy);
+      ctx.lineTo(cx + 26 * this.dpr, cy);
+      ctx.moveTo(cx, cy - 26 * this.dpr);
+      ctx.lineTo(cx, cy - 14 * this.dpr);
+      ctx.stroke();
+
+      // 2. Pitch Ladder
+      const pitchOffset = (this.rotX * 180 / Math.PI) * 3 * this.dpr;
+      [-20, -10, 0, 10, 20].forEach(deg => {
+        const yLine = cy + pitchOffset - (deg * 5 * this.dpr);
+        if (yLine > 60 * this.dpr && yLine < h - 60 * this.dpr) {
+          ctx.beginPath();
+          ctx.moveTo(cx - 40 * this.dpr, yLine);
+          ctx.lineTo(cx - 15 * this.dpr, yLine);
+          ctx.moveTo(cx + 15 * this.dpr, yLine);
+          ctx.lineTo(cx + 40 * this.dpr, yLine);
+          ctx.stroke();
+          ctx.font = `${8 * this.dpr}px JetBrains Mono, monospace`;
+          ctx.fillText(`${deg > 0 ? '+' : ''}${deg}°`, cx + 46 * this.dpr, yLine + 3 * this.dpr);
+        }
+      });
+
+      // 3. Top Heading Compass Ribbon
+      const hdgY = 32 * this.dpr;
+      ctx.strokeStyle = 'rgba(52, 211, 153, 0.4)';
+      ctx.strokeRect(cx - 120 * this.dpr, hdgY - 14 * this.dpr, 240 * this.dpr, 26 * this.dpr);
+      const headingDeg = Math.round(((this.rotY * 180 / Math.PI) % 360 + 360) % 360);
+      ctx.font = `bold ${11 * this.dpr}px JetBrains Mono, monospace`;
+      ctx.textAlign = 'center';
+      ctx.fillText(`HDG: ${headingDeg.toString().padStart(3, '0')}°`, cx, hdgY + 3 * this.dpr);
+      ctx.textAlign = 'start';
+
+      // 4. Left Speed Tape
+      const spd = e.speed || '7.66 km/s';
+      const mach = e.mach || 'MACH 25';
+      ctx.strokeRect(20 * this.dpr, cy - 60 * this.dpr, 90 * this.dpr, 120 * this.dpr);
+      ctx.font = `bold ${9 * this.dpr}px JetBrains Mono, monospace`;
+      ctx.fillText('VELOCITY', 26 * this.dpr, cy - 42 * this.dpr);
+      ctx.font = `bold ${12 * this.dpr}px JetBrains Mono, monospace`;
+      ctx.fillText(spd.toString().split(' ')[0], 26 * this.dpr, cy);
+      ctx.font = `${8 * this.dpr}px JetBrains Mono, monospace`;
+      ctx.fillText(mach, 26 * this.dpr, cy + 24 * this.dpr);
+
+      // 5. Right Altimeter Tape
+      const alt = e.alt || e.apogee || '420 km';
+      ctx.strokeRect(w - 110 * this.dpr, cy - 60 * this.dpr, 90 * this.dpr, 120 * this.dpr);
+      ctx.font = `bold ${9 * this.dpr}px JetBrains Mono, monospace`;
+      ctx.fillText('ALTITUDE', w - 104 * this.dpr, cy - 42 * this.dpr);
+      ctx.font = `bold ${12 * this.dpr}px JetBrains Mono, monospace`;
+      ctx.fillText(alt.toString().split(' ')[0], w - 104 * this.dpr, cy);
+      ctx.font = `${8 * this.dpr}px JetBrains Mono, monospace`;
+      ctx.fillText(alt.toString().split(' ')[1] || 'MSL', w - 104 * this.dpr, cy + 24 * this.dpr);
+
+      // 6. Bottom Status Banner
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.85)';
+      ctx.strokeStyle = '#00E5FF';
+      ctx.fillRect(cx - 200 * this.dpr, h - 46 * this.dpr, 400 * this.dpr, 32 * this.dpr);
+      ctx.strokeRect(cx - 200 * this.dpr, h - 46 * this.dpr, 400 * this.dpr, 32 * this.dpr);
+
+      ctx.fillStyle = '#00E5FF';
+      ctx.font = `bold ${9 * this.dpr}px JetBrains Mono, monospace`;
+      ctx.textAlign = 'center';
+      ctx.fillText(`🚀 [COCKPIT RIDE-ALONG] ${e.name || e.id} • PRESS ESC TO EXIT`, cx, h - 26 * this.dpr);
+      ctx.textAlign = 'start';
+
+      ctx.restore();
     }
 
     drawCoordinateGrid(ctx, cx, cy, r) {

@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="svg/opo-symbol.svg">
   <link rel="stylesheet" href="css/liquid-glass.css">
   <style>
     /* Smooth Scroll and Section Anchors */
@@ -432,6 +434,10 @@
         <button id="audio-toggle-btn" class="glass-btn glass-btn-secondary" style="padding: 5px 12px; font-size: 0.75rem; border-radius: 9999px;" onclick="window.soundEngine.toggle()" title="Toggle Cybernetic Audio Haptics">
           <span id="audio-toggle-icon">🔊</span>
           <span id="audio-toggle-text">FX ON</span>
+        </button>
+        <button id="voice-copilot-btn" class="glass-btn glass-btn-secondary" style="padding: 5px 12px; font-size: 0.75rem; border-radius: 9999px; border-color: rgba(0, 242, 254, 0.4);" onclick="window.voiceAssistant && window.voiceAssistant.toggle()" title="Live Voice Mission Control Co-Pilot">
+          <span id="voice-copilot-icon">🎙️</span>
+          <span id="voice-copilot-text">CO-PILOT</span>
         </button>
         <button id="mobile-menu-toggle" class="glass-btn glass-btn-secondary mobile-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu">
           <span id="mobile-menu-icon">☰</span>

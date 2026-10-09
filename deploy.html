@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="svg/opo-symbol.svg">
   <link rel="stylesheet" href="css/liquid-glass.css">
 </head>
 <body>
@@ -423,6 +425,10 @@
           <span id="audio-toggle-icon">🔊</span>
           <span id="audio-toggle-text">FX ON</span>
         </button>
+        <button id="voice-copilot-btn" class="glass-btn glass-btn-secondary" style="padding: 5px 12px; font-size: 0.75rem; border-radius: 9999px; border-color: rgba(0, 242, 254, 0.4);" onclick="window.voiceAssistant && window.voiceAssistant.toggle()" title="Live Voice Mission Control Co-Pilot">
+          <span id="voice-copilot-icon">🎙️</span>
+          <span id="voice-copilot-text">CO-PILOT</span>
+        </button>
         <button id="mobile-menu-toggle" class="glass-btn glass-btn-secondary mobile-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu">
           <span id="mobile-menu-icon">☰</span>
         </button>
@@ -567,6 +573,240 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION: WEB3 SOVEREIGN STAKING & TPM 2.0 HARDWARE ATTESTATION
+         ==================================================================== -->
+    <section id="deploy-staking-portal" class="landing-section" style="margin-top: 3.5rem;">
+      <div style="text-align: center; max-width: 820px; margin: 0 auto 2.5rem;">
+        <div class="hero-tag" style="margin-bottom: 0.5rem;">
+          <img src="svg/opo-symbol.svg" width="14" height="14" alt="OMNI DAO">
+          <span>WEB3 DELEGATED PROOF-OF-STAKE &amp; HARDWARE ENCLAVE ROOT-OF-TRUST</span>
+        </div>
+        <h2 style="font-size: 2.2rem; font-weight: 800; color: #FFF;">
+          $OMNI Sovereign Staking &amp; Hardware Attestation Portal
+        </h2>
+        <p style="color: #94A3B8; font-size: 1rem; margin-top: 0.5rem; line-height: 1.6;">
+          Stake $OMNI tokens to participate in the RedComm Physical Validator Quorum, verify TPM 2.0 / Secure Enclave hardware integrity, and earn up to 24.8% APY yield insured by OmniDAO.
+        </p>
+      </div>
+
+      <!-- Top Web3 Wallet Header Card -->
+      <div class="glass-panel" style="padding: 1.5rem 2rem; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span class="status-dot"></span>
+            <span style="font-family: var(--font-mono); font-size: 0.85rem; color: #FFF; font-weight: 600;">OMNI CHAIN L1 QUORUM</span>
+          </div>
+          <span id="wallet-network-badge" class="brand-badge" style="display: none; background: rgba(0, 242, 254, 0.12); color: var(--gemini-cyan); border-color: rgba(0, 242, 254, 0.3);">
+            CHAIN ID: 39821 (SOVEREIGN)
+          </span>
+          <span id="wallet-address-pill" style="display: none; font-family: var(--font-mono); font-size: 0.78rem; padding: 4px 10px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 9999px; color: #A5B4FC;">
+            0x71C...39821
+          </span>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+          <button id="wallet-connect-btn" class="glass-btn glass-btn-primary" style="padding: 8px 18px; font-size: 0.85rem;" onclick="window.web3Staking.connectWallet()">
+            <span style="color: var(--gemini-cyan);">✦ Connect Web3 Wallet</span>
+          </button>
+          <a href="https://omni-dao-39821.web.app" target="_blank" rel="noopener" class="glass-btn glass-btn-secondary" style="padding: 8px 14px; font-size: 0.85rem;">
+            <span>🏛️ OmniDAO</span>
+          </a>
+          <a href="https://omni-explorer-39821.web.app" target="_blank" rel="noopener" class="glass-btn glass-btn-secondary" style="padding: 8px 14px; font-size: 0.85rem;">
+            <span>🔍 OmniScan</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Grid: Wallet Balances & TPM Attestation Card -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+        
+        <!-- Card 1: Staking Balances & Rewards -->
+        <div class="glass-panel card-3d-tilt" style="padding: 2rem;">
+          <div style="font-size: 0.72rem; font-family: var(--font-mono); color: #94A3B8; letter-spacing: 0.08em; margin-bottom: 0.5rem;">
+            SOVEREIGN ASSET ALLOCATION
+          </div>
+          <h3 style="margin: 0 0 1.5rem 0; font-size: 1.3rem; color: #FFF;">Your Validator Balances</h3>
+
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.06);">
+              <span style="font-size: 0.85rem; color: #94A3B8;">Wallet Balance</span>
+              <span id="wallet-balance-val" style="font-family: var(--font-mono); font-size: 1.1rem; color: #FFF; font-weight: 700;">50,000.00 OMNI</span>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.06);">
+              <span style="font-size: 0.85rem; color: #94A3B8;">Staked in Quorum</span>
+              <span id="wallet-staked-val" style="font-family: var(--font-mono); font-size: 1.1rem; color: var(--gemini-cyan); font-weight: 700;">15,000.00 OMNI</span>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.06);">
+              <div>
+                <span style="font-size: 0.85rem; color: #94A3B8;">Pending Accrued Rewards</span>
+                <div style="font-size: 0.7rem; color: #34D399; font-family: var(--font-mono);">Live Block Stream (Every 3s)</div>
+              </div>
+              <span id="wallet-rewards-val" style="font-family: var(--font-mono); font-size: 1.1rem; color: #34D399; font-weight: 700;">342.85 OMNI</span>
+            </div>
+          </div>
+
+          <!-- Staking Quick Actions -->
+          <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap;">
+            <button class="glass-btn glass-btn-primary" style="flex: 1; padding: 10px 14px; font-size: 0.82rem;" onclick="window.web3Staking.executeClaim()">
+              <span>⚡ Claim Rewards</span>
+            </button>
+            <button class="glass-btn glass-btn-secondary" style="flex: 1; padding: 10px 14px; font-size: 0.82rem;" onclick="window.web3Staking.executeUnstake()">
+              <span>🔓 Unstake</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: TPM 2.0 / Secure Enclave Hardware Attestation -->
+        <div class="glass-panel card-3d-tilt" style="padding: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <div style="font-size: 0.72rem; font-family: var(--font-mono); color: #94A3B8; letter-spacing: 0.08em;">
+              HARDWARE ROOT OF TRUST
+            </div>
+            <span class="brand-badge" style="background: rgba(16, 185, 129, 0.12); color: #34D399; border-color: rgba(16, 185, 129, 0.3);">TPM 2.0 / SE</span>
+          </div>
+          <h3 style="margin: 0 0 1.25rem 0; font-size: 1.3rem; color: #FFF;">Physical Enclave Attestation</h3>
+
+          <p style="font-size: 0.82rem; color: #94A3B8; line-height: 1.5; margin-bottom: 1rem;">
+            Prior to admitting a node into the OPO consensus lattice, the hardware enclave computes cryptographic PCR measurements across firmware, secure boot chain, and the native Rust daemon:
+          </p>
+
+          <div style="background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 0.75rem 1rem; font-family: var(--font-mono); font-size: 0.73rem; line-height: 1.6; margin-bottom: 1.25rem;">
+            <div style="color: #CBD5E1;"><span style="color: var(--gemini-cyan);">PCR-00 (UEFI/BIOS):</span> 0x8f3c7e091b4a...9d5a</div>
+            <div style="color: #CBD5E1;"><span style="color: var(--gemini-cyan);">PCR-02 (Secure Boot):</span> 0x4e12a9d701bb...4bc7</div>
+            <div style="color: #CBD5E1;"><span style="color: var(--gemini-cyan);">PCR-04 (opo-stated):</span> 0x91d063a84e20...19fe</div>
+            <div style="color: #CBD5E1;"><span style="color: var(--gemini-cyan);">PCR-07 (Enclave Key):</span> 0xaa54091c3278...09ca</div>
+          </div>
+
+          <div id="tpm-status-banner" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 10px 14px; margin-bottom: 1.25rem;">
+            <div id="tpm-status-badge" style="font-size: 0.78rem; font-family: var(--font-mono); color: #94A3B8;">
+              STATUS: READY TO INTERROGATE HARDWARE TPM
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <button id="verify-tpm-btn" class="glass-btn glass-btn-primary" style="flex: 1; padding: 10px 14px; font-size: 0.82rem;" onclick="window.web3Staking.verifyHardwareAttestation()">
+              <span>🛡️ Verify Hardware Attestation</span>
+            </button>
+            <button id="download-tpm-cert-btn" class="glass-btn glass-btn-secondary" style="display: none; padding: 10px 14px; font-size: 0.82rem;" onclick="window.web3Staking.downloadAttestationCertificate()">
+              <span>📥 Download Token</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Staking & APY Interactive Calculator Panel -->
+      <div class="glass-panel card-3d-tilt" style="padding: 2.5rem; margin-bottom: 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <div style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--gemini-cyan); letter-spacing: 0.08em; margin-bottom: 4px;">
+              VALIDATOR STAKING TERMINAL
+            </div>
+            <h3 style="margin: 0; font-size: 1.5rem; color: #FFF;">Stake $OMNI into Consensus Pool</h3>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-size: 0.72rem; font-family: var(--font-mono); color: #94A3B8;">ESTIMATED APY RETURN</div>
+            <div id="calc-apy-val" style="font-family: var(--font-mono); font-size: 1.4rem; color: #34D399; font-weight: 700;">18.4% APY (1.5x)</div>
+          </div>
+        </div>
+
+        <!-- Lock Period Selector -->
+        <div style="margin-bottom: 1.75rem;">
+          <label style="display: block; font-size: 0.8rem; font-family: var(--font-mono); color: #94A3B8; margin-bottom: 0.75rem;">SELECT STAKING DURATION &amp; APY MULTIPLIER:</label>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <button type="button" class="glass-btn glass-btn-secondary stake-period-pill" data-days="30" onclick="window.web3Staking.setPeriod(30)">
+              30 Days (12.2% APY • 1.0x)
+            </button>
+            <button type="button" class="glass-btn glass-btn-secondary stake-period-pill" data-days="90" onclick="window.web3Staking.setPeriod(90)">
+              90 Days (15.5% APY • 1.25x)
+            </button>
+            <button type="button" class="glass-btn glass-btn-secondary stake-period-pill active" data-days="180" onclick="window.web3Staking.setPeriod(180)">
+              180 Days (18.4% APY • 1.5x)
+            </button>
+            <button type="button" class="glass-btn glass-btn-secondary stake-period-pill" data-days="365" onclick="window.web3Staking.setPeriod(365)">
+              365 Days (24.8% APY • 2.0x)
+            </button>
+          </div>
+        </div>
+
+        <!-- Amount Input Slider -->
+        <div style="margin-bottom: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <label style="font-size: 0.8rem; font-family: var(--font-mono); color: #94A3B8;">STAKE AMOUNT ($OMNI):</label>
+            <div style="display: flex; gap: 6px;">
+              <button type="button" class="glass-btn glass-btn-secondary" style="font-size: 0.72rem; padding: 2px 8px;" onclick="document.getElementById('stake-amount-input').value = 5000; document.getElementById('stake-amount-slider').value = 5000; window.web3Staking.updateCalculations();">5k</button>
+              <button type="button" class="glass-btn glass-btn-secondary" style="font-size: 0.72rem; padding: 2px 8px;" onclick="document.getElementById('stake-amount-input').value = 10000; document.getElementById('stake-amount-slider').value = 10000; window.web3Staking.updateCalculations();">10k</button>
+              <button type="button" class="glass-btn glass-btn-secondary" style="font-size: 0.72rem; padding: 2px 8px;" onclick="document.getElementById('stake-amount-input').value = 25000; document.getElementById('stake-amount-slider').value = 25000; window.web3Staking.updateCalculations();">25k</button>
+              <button type="button" class="glass-btn glass-btn-secondary" style="font-size: 0.72rem; padding: 2px 8px;" onclick="document.getElementById('stake-amount-input').value = 50000; document.getElementById('stake-amount-slider').value = 50000; window.web3Staking.updateCalculations();">MAX</button>
+            </div>
+          </div>
+          <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 0.75rem;">
+            <input type="number" id="stake-amount-input" value="10000" min="100" max="1000000" step="100" style="width: 180px; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 8px 12px; color: #FFF; font-family: var(--font-mono); font-size: 1.1rem; font-weight: 700;">
+            <input type="range" id="stake-amount-slider" min="100" max="50000" step="100" value="10000" style="flex: 1; accent-color: var(--gemini-cyan);">
+          </div>
+        </div>
+
+        <!-- Real-Time Projection Breakdown -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 1.25rem;">
+          <div>
+            <div style="font-size: 0.72rem; font-family: var(--font-mono); color: #94A3B8;">EST. DAILY RETURN</div>
+            <div id="calc-daily-val" style="font-family: var(--font-mono); font-size: 1.1rem; color: #FFF; font-weight: 700; margin-top: 4px;">+5.04 OMNI</div>
+          </div>
+          <div>
+            <div style="font-size: 0.72rem; font-family: var(--font-mono); color: #94A3B8;">EST. MONTHLY RETURN</div>
+            <div id="calc-monthly-val" style="font-family: var(--font-mono); font-size: 1.1rem; color: #FFF; font-weight: 700; margin-top: 4px;">+153.33 OMNI</div>
+          </div>
+          <div>
+            <div style="font-size: 0.72rem; font-family: var(--font-mono); color: #94A3B8;">EST. ANNUAL RETURN</div>
+            <div id="calc-annual-val" style="font-family: var(--font-mono); font-size: 1.1rem; color: #34D399; font-weight: 700; margin-top: 4px;">+1,840.00 OMNI</div>
+          </div>
+          <div>
+            <div style="font-size: 0.72rem; font-family: var(--font-mono); color: #94A3B8;">OMNIDAO VOTING POWER</div>
+            <div id="calc-votes-val" style="font-family: var(--font-mono); font-size: 1.1rem; color: var(--gemini-cyan); font-weight: 700; margin-top: 4px;">+20,000 vOMNI</div>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+          <div style="font-size: 0.8rem; color: #94A3B8; font-family: var(--font-mono);">
+            🔒 Slashing Protection: 100% ZK-Insured by OmniDAO Staking Reserve
+          </div>
+          <button class="glass-btn glass-btn-primary" style="padding: 12px 28px; font-size: 0.95rem; font-weight: 700;" onclick="window.web3Staking.executeStake()">
+            <span>🥩 Stake $OMNI in Quorum</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Notification Toast Container -->
+      <div id="staking-toast-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; max-width: 360px;"></div>
+
+      <!-- Transaction Success Modal -->
+      <div id="staking-tx-modal" class="importer-modal-backdrop" onclick="if(event.target === this) window.web3Staking.closeTxSuccessModal()">
+        <div class="importer-modal-panel" style="max-width: 520px; text-align: center;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🎉</div>
+          <h3 id="staking-tx-title" style="margin: 0 0 0.5rem 0; font-size: 1.35rem; color: #FFF;">Transaction Broadcast Successful</h3>
+          <p id="staking-tx-detail" style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 1.5rem;"></p>
+          
+          <div style="background: rgba(0,0,0,0.6); border: 1px solid rgba(0, 242, 254, 0.3); border-radius: 8px; padding: 0.75rem; margin-bottom: 1.5rem;">
+            <div style="font-size: 0.7rem; font-family: var(--font-mono); color: #94A3B8; margin-bottom: 4px;">TRANSACTION HASH:</div>
+            <div id="staking-tx-hash" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gemini-cyan); word-break: break-all;"></div>
+          </div>
+
+          <div style="display: flex; gap: 0.5rem; justify-content: center;">
+            <a href="https://omni-explorer-39821.web.app" target="_blank" rel="noopener" class="glass-btn glass-btn-primary" style="font-size: 0.82rem; padding: 7px 16px;">
+              <span>View on OmniScan</span>
+            </a>
+            <button class="glass-btn glass-btn-secondary" style="font-size: 0.82rem; padding: 7px 16px;" onclick="window.web3Staking.closeTxSuccessModal()">
+              <span>Close</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
     </section>
 
       <div class="glass-panel" style="padding: 2.5rem; margin-bottom: 2rem;">
@@ -773,6 +1013,7 @@ response = client.models.generate_content(
 
   <!-- App Logic & 3D Neural Connectome Engine -->
   <script src="js/neural-brain.js"></script>
+  <script src="js/web3-staking.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="svg/opo-symbol.svg">
   <link rel="stylesheet" href="css/liquid-glass.css">
 </head>
 <body>
@@ -423,6 +425,10 @@
           <span id="audio-toggle-icon">🔊</span>
           <span id="audio-toggle-text">FX ON</span>
         </button>
+        <button id="voice-copilot-btn" class="glass-btn glass-btn-secondary" style="padding: 5px 12px; font-size: 0.75rem; border-radius: 9999px; border-color: rgba(0, 242, 254, 0.4);" onclick="window.voiceAssistant && window.voiceAssistant.toggle()" title="Live Voice Mission Control Co-Pilot">
+          <span id="voice-copilot-icon">🎙️</span>
+          <span id="voice-copilot-text">CO-PILOT</span>
+        </button>
         <button id="mobile-menu-toggle" class="glass-btn glass-btn-secondary mobile-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu">
           <span id="mobile-menu-icon">☰</span>
         </button>
@@ -656,6 +662,68 @@
             </button>
           </div>
           <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--gemini-cyan);">P2P CRDT JOIN-SEMILATTICE ACTIVE</span>
+        </div>
+      </div>
+
+      <!-- OMNIKRONOS AUTONOMOUS SWARM MISSION TERMINAL -->
+      <div class="glass-panel" style="padding: 1.75rem; margin-top: 1.75rem; border-color: rgba(168, 85, 247, 0.35);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.75rem; flex-wrap: wrap; gap: 0.75rem;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.4rem;">⚡</span>
+            <div>
+              <div style="font-size: 1.1rem; font-weight: 700; color: #FFF;">OmniKronos Autonomous Mission Dispatch Terminal</div>
+              <div style="font-size: 0.72rem; font-family: var(--font-mono); color: #A855F7;">AGENTIC WORKSPACE // STREAMING MULTI-AGENT SUB-SYSTEMS</div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <a href="https://omni-kronos-39821.web.app" target="_blank" rel="noopener" class="glass-btn glass-btn-secondary" style="font-size: 0.78rem; padding: 6px 14px; border-color: rgba(168, 85, 247, 0.4); color: #A855F7;">
+              <span>Launch OmniKronos IDE ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <p style="font-size: 0.85rem; color: #94A3B8; line-height: 1.5; margin-bottom: 1.25rem;">
+          Direct agentic integration with the <strong>OmniKronos Sub-Agent Ecosystem</strong>. Dispatch automated triage swarms to inspect AST code, verify aerodynamic boundary conditions, re-route SCION crypto-hops, and synthesize monotonic join-semilattice patches:
+        </p>
+
+        <!-- Interactive Dispatch Buttons Bar -->
+        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 1.25rem;">
+          <button class="glass-btn glass-btn-primary" style="font-size: 0.8rem; padding: 8px 16px; background: linear-gradient(135deg, rgba(168, 85, 247, 0.3), rgba(0, 242, 254, 0.3)); border-color: rgba(168, 85, 247, 0.6);" onclick="window.kronosSwarm.dispatchScenario('dispatch')">
+            <span>⚡ Dispatch Autonomous Swarm</span>
+          </button>
+          <button class="glass-btn glass-btn-secondary" style="font-size: 0.8rem; padding: 8px 14px;" onclick="window.kronosSwarm.dispatchScenario('triage')">
+            <span>🛡️ Run Defense Triage</span>
+          </button>
+          <button class="glass-btn glass-btn-secondary" style="font-size: 0.8rem; padding: 8px 14px;" onclick="window.kronosSwarm.dispatchScenario('scan')">
+            <span>🔍 Scan Spatial Anomaly</span>
+          </button>
+          <button class="glass-btn glass-btn-secondary" style="font-size: 0.8rem; padding: 8px 14px;" onclick="window.kronosSwarm.dispatchScenario('patch')">
+            <span>🧬 Synthesize Threat Patch</span>
+          </button>
+        </div>
+
+        <!-- Terminal Console Frame -->
+        <div style="background: rgba(3, 7, 18, 0.95); border: 1px solid rgba(168, 85, 247, 0.25); border-radius: 12px; overflow: hidden; box-shadow: inset 0 2px 10px rgba(0,0,0,0.8);">
+          <div style="background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 8px 14px; display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <span style="width: 8px; height: 8px; border-radius: 50%; background: #EF4444; display: inline-block;"></span>
+              <span style="width: 8px; height: 8px; border-radius: 50%; background: #F59E0B; display: inline-block;"></span>
+              <span style="width: 8px; height: 8px; border-radius: 50%; background: #10B981; display: inline-block;"></span>
+              <span style="font-size: 0.72rem; font-family: var(--font-mono); color: #94A3B8; margin-left: 8px;">kronos-agent-session://swarm-cluster-alpha</span>
+            </div>
+            <div style="display: flex; gap: 6px;">
+              <button class="glass-btn glass-btn-secondary" style="font-size: 0.68rem; padding: 2px 8px;" onclick="window.kronosSwarm.pauseStream()">Pause</button>
+              <button class="glass-btn glass-btn-secondary" style="font-size: 0.68rem; padding: 2px 8px;" onclick="window.kronosSwarm.clearTerminal()">Clear</button>
+            </div>
+          </div>
+
+          <!-- Real-Time ANSI Streaming Log Body -->
+          <div id="kronos-swarm-stream" style="padding: 1rem; height: 220px; overflow-y: auto; font-family: var(--font-mono); font-size: 0.78rem; line-height: 1.6;"></div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; flex-wrap: wrap; gap: 0.5rem; font-size: 0.75rem; font-family: var(--font-mono); color: #94A3B8;">
+          <div>SUBAGENTS ACTIVE: 5 (Kronos, Sentinel, SCION, Invariant, Omni)</div>
+          <div style="color: var(--gemini-cyan);">AUTO-TASKING LATENCY: &lt; 12ms</div>
         </div>
       </div>
     </section>
@@ -1062,6 +1130,7 @@ response = client.models.generate_content(
 
   <!-- App Logic & 3D Neural Connectome Engine -->
   <script src="js/neural-brain.js"></script>
+  <script src="js/kronos-terminal.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="svg/opo-symbol.svg">
   <link rel="stylesheet" href="css/liquid-glass.css">
   <style>
     .godseye-console-container {
@@ -345,6 +347,10 @@
           <span id="audio-toggle-icon">🔊</span>
           <span id="audio-toggle-text">FX ON</span>
         </button>
+        <button id="voice-copilot-btn" class="glass-btn glass-btn-secondary" style="padding: 5px 12px; font-size: 0.75rem; border-radius: 9999px; border-color: rgba(0, 242, 254, 0.4);" onclick="window.voiceAssistant && window.voiceAssistant.toggle()" title="Live Voice Mission Control Co-Pilot">
+          <span id="voice-copilot-icon">🎙️</span>
+          <span id="voice-copilot-text">CO-PILOT</span>
+        </button>
         <button id="mobile-menu-toggle" class="glass-btn glass-btn-secondary mobile-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu">
           <span id="mobile-menu-icon">☰</span>
         </button>
@@ -435,6 +441,11 @@
             <div id="godseye-hud-title" style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Zurich Hermetic Root</div>
             <div id="godseye-hud-meta" style="font-size: 0.72rem; font-family: var(--font-mono); color: #94A3B8; line-height: 1.45;">
               <strong>LAT/LON:</strong> 47.3769°, 8.5417° &bull; <strong>PEERS:</strong> 128 &bull; <strong>RTT:</strong> 1.2ms
+            </div>
+            <div style="margin-top: 8px; display: flex; gap: 6px;">
+              <button id="btn-cockpit-toggle" onclick="toggleCockpit()" style="padding: 4px 10px; border-radius: 6px; font-size: 0.72rem; font-family: var(--font-mono); font-weight: 700; color: #00E5FF; background: rgba(0, 229, 255, 0.15); border: 1px solid rgba(0, 229, 255, 0.4); cursor: pointer; pointer-events: auto;">
+                <span>🚀 Cockpit Ride-Along</span>
+              </button>
             </div>
           </div>
         </div>
@@ -630,6 +641,11 @@
       if (window.soundEngine) window.soundEngine.playClick();
       alert('Mission telemetry packaged with cryptographic proof and copied to clipboard!\n\nLaunching OmniAir to broadcast mission reel...');
       window.open('https://omniair-39821.web.app', '_blank');
+    }
+
+    function toggleCockpit() {
+      if (!window.godsEyeEngine) return;
+      window.godsEyeEngine.toggleCockpitMode();
     }
   </script>
 </body>

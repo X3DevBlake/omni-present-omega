@@ -1,0 +1,24 @@
+{
+  "name": "Omni-Present Omega // Sovereign Intelligence Network",
+  "short_name": "OPO",
+  "description": "Sovereign Physical & Spatial Intelligence Network uniting the Omni Ecosystem, Delta-CRDT Mesh, and God's Eye View.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#030712",
+  "theme_color": "#030712",
+  "icons": [
+    {
+      "src": "svg/opo-symbol.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "svg/godseye-spatial.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["utilities", "productivity", "developer tools"]
+}

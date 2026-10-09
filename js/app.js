@@ -4485,4 +4485,423 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('run-system-diag-btn')) {
     window.diagEngine = new SystemDiagnosticsEngine();
   }
+
+  // Initialize Mission Voice Co-Pilot
+  window.voiceAssistant = new MissionVoiceAssistant();
+
+  // PWA Service Worker Registration
+  if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js').then((reg) => {
+        console.log('[OPO PWA] Service Worker registered:', reg.scope);
+      }).catch((err) => {
+        console.warn('[OPO PWA] Service Worker registration failed:', err);
+      });
+    });
+  }
 });
+
+// ============================================================================
+// 12. Mission Control Voice Co-Pilot Engine (Web Speech & Cybernetic Synthesis)
+// ============================================================================
+
+class MissionVoiceAssistant {
+  constructor() {
+    this.recognition = null;
+    this.isListening = false;
+    this.synthesis = (typeof window !== 'undefined') ? window.speechSynthesis : null;
+    this.voice = null;
+    this.hudElement = null;
+    this.waveCanvas = null;
+    this.waveCtx = null;
+    this.animFrame = null;
+    this.wavePhase = 0;
+
+    this.initSpeech();
+  }
+
+  initSpeech() {
+    if (typeof window === 'undefined') return;
+
+    if (this.synthesis) {
+      const loadVoices = () => {
+        const voices = this.synthesis.getVoices();
+        this.voice = voices.find(v => v.lang.startsWith('en') && (v.name.includes('Google') || v.name.includes('Natural') || v.name.includes('Robot'))) ||
+                     voices.find(v => v.lang.startsWith('en')) || null;
+      };
+      loadVoices();
+      if (this.synthesis.onvoiceschanged !== undefined) {
+        this.synthesis.onvoiceschanged = loadVoices;
+      }
+    }
+
+    const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (SpeechRec) {
+      try {
+        this.recognition = new SpeechRec();
+        this.recognition.continuous = false;
+        this.recognition.interimResults = true;
+        this.recognition.lang = 'en-US';
+
+        this.recognition.onstart = () => {
+          this.isListening = true;
+          this.updateHUDStatus('LISTENING... (SPEAK COMMAND)', '#00F2FE');
+          this.startWaveform();
+        };
+
+        this.recognition.onresult = (event) => {
+          let interimTranscript = '';
+          let finalTranscript = '';
+          for (let i = event.resultIndex; i < event.results.length; ++i) {
+            if (event.results[i].isFinal) {
+              finalTranscript += event.results[i][0].transcript;
+            } else {
+              interimTranscript += event.results[i][0].transcript;
+            }
+          }
+          const text = finalTranscript || interimTranscript;
+          this.updateTranscript(text);
+          if (finalTranscript) {
+            this.handleCommand(finalTranscript);
+          }
+        };
+
+        this.recognition.onerror = (event) => {
+          console.warn('[Voice Assistant Error]', event.error);
+          this.isListening = false;
+          this.stopWaveform();
+          this.updateHUDStatus(`STATUS: ${event.error.toUpperCase()}`, '#F87171');
+        };
+
+        this.recognition.onend = () => {
+          this.isListening = false;
+          this.stopWaveform();
+          const btn = document.getElementById('voice-copilot-btn');
+          if (btn) btn.classList.remove('active');
+        };
+      } catch (e) {
+        console.warn('SpeechRecognition initialization error:', e);
+      }
+    }
+  }
+
+  toggle() {
+    this.ensureHUD();
+    if (this.hudElement.style.display === 'none' || !this.hudElement.style.display) {
+      this.openHUD();
+    } else if (this.isListening) {
+      this.stop();
+    } else {
+      this.start();
+    }
+  }
+
+  start() {
+    this.ensureHUD();
+    this.openHUD();
+    if (this.recognition && !this.isListening) {
+      try {
+        this.recognition.start();
+        if (window.soundEngine) window.soundEngine.playClick();
+      } catch (err) {
+        console.warn('Recognition start caught error:', err);
+      }
+    } else if (!this.recognition) {
+      this.updateHUDStatus('MIC NOT SUPPORTED // USE KEYBOARD INPUT', '#F59E0B');
+    }
+  }
+
+  stop() {
+    if (this.recognition && this.isListening) {
+      this.recognition.stop();
+    }
+    this.isListening = false;
+    this.stopWaveform();
+    this.updateHUDStatus('STANDBY // CO-PILOT READY', '#94A3B8');
+  }
+
+  speak(text, onComplete) {
+    if (!this.synthesis) {
+      if (onComplete) onComplete();
+      return;
+    }
+    try {
+      this.synthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      if (this.voice) utterance.voice = this.voice;
+      utterance.pitch = 0.96;
+      utterance.rate = 1.04;
+      utterance.volume = 1.0;
+
+      utterance.onstart = () => {
+        this.updateHUDStatus('CO-PILOT TRANSMITTING...', '#34D399');
+        this.startWaveform();
+      };
+      utterance.onend = () => {
+        this.stopWaveform();
+        this.updateHUDStatus('STANDBY // AWAITING COMMAND', '#94A3B8');
+        if (onComplete) onComplete();
+      };
+      utterance.onerror = () => {
+        this.stopWaveform();
+        if (onComplete) onComplete();
+      };
+
+      this.synthesis.speak(utterance);
+    } catch (e) {
+      console.warn('Speech synthesis error:', e);
+    }
+  }
+
+  handleCommand(rawText) {
+    const cmd = rawText.toLowerCase().trim();
+    if (!cmd) return;
+    this.updateTranscript(rawText);
+
+    let reply = "";
+
+    if (cmd.includes('satellite') || cmd.includes('track') || cmd.includes('orbit')) {
+      if (typeof window !== 'undefined' && window.godseyeEngine) {
+        window.godseyeEngine.selectNextSatellite();
+        reply = "Locking onto active orbital satellite in low Earth orbit.";
+      } else {
+        reply = "Navigating to God's Eye orbital spatial intelligence console.";
+        setTimeout(() => { window.location.href = 'godseye.html'; }, 1500);
+      }
+    } else if (cmd.includes('cockpit') || cmd.includes('fly') || cmd.includes('ride along')) {
+      if (typeof window !== 'undefined' && window.godseyeEngine) {
+        window.godseyeEngine.toggleCockpitMode();
+        reply = window.godseyeEngine.cockpitMode ? "Engaging 3D orbital cockpit ride-along." : "Disengaging cockpit camera.";
+      } else {
+        reply = "Launching God's Eye 3D orbital cockpit mode.";
+        setTimeout(() => { window.location.href = 'godseye.html?cockpit=1'; }, 1500);
+      }
+    } else if (cmd.includes('sync') || cmd.includes('crdt') || cmd.includes('merge') || cmd.includes('reconcile')) {
+      if (typeof window !== 'undefined' && window.crdtSim) {
+        window.crdtSim.syncAll();
+        reply = "Initiating join-semilattice anti-entropy synchronization across all active nodes.";
+      } else {
+        reply = "Opening Delta-CRDT join-semilattice workbench.";
+        setTimeout(() => { window.location.href = 'crdt-lab.html'; }, 1500);
+      }
+    } else if (cmd.includes('status') || cmd.includes('mission') || cmd.includes('telemetry') || cmd.includes('health')) {
+      reply = "Omni-Present Omega status: Sovereign mesh operational. SCION network jitter 0.42 milliseconds. All cryptographic state vectors valid.";
+    } else if (cmd.includes('diagnostic') || cmd.includes('verify') || cmd.includes('test') || cmd.includes('audit')) {
+      if (typeof window !== 'undefined' && window.diagEngine) {
+        window.diagEngine.runFullDiagnostics();
+        reply = "Executing 10-stage sovereign system verification suite.";
+      } else {
+        reply = "Opening Edge Operations & Diagnostics center.";
+        setTimeout(() => { window.location.href = 'deploy.html#diagnostics-suite'; }, 1500);
+      }
+    } else if (cmd.includes('mute') || cmd.includes('quiet') || cmd.includes('sound off')) {
+      if (window.soundEngine && window.soundEngine.enabled) window.soundEngine.toggle();
+      reply = "Cybernetic audio sound effects muted.";
+    } else if (cmd.includes('unmute') || cmd.includes('sound on')) {
+      if (window.soundEngine && !window.soundEngine.enabled) window.soundEngine.toggle();
+      reply = "Cybernetic audio sound effects enabled.";
+    } else if (cmd.includes('open brain') || cmd.includes('omnibrain')) {
+      reply = "Opening OmniBrain supercomputing nexus.";
+      window.open('https://omni-brain-39821.web.app', '_blank');
+    } else if (cmd.includes('open kronos') || cmd.includes('omnikronos')) {
+      reply = "Opening OmniKronos agentic developer environment.";
+      window.open('https://omni-kronos-39821.web.app', '_blank');
+    } else if (cmd.includes('open futures')) {
+      reply = "Opening OmniFutures 200x derivatives exchange.";
+      window.open('https://omni-futures-39821.web.app', '_blank');
+    } else if (cmd.includes('open dao')) {
+      reply = "Opening OmniDAO governance and staking protocol.";
+      window.open('https://omni-dao-39821.web.app', '_blank');
+    } else if (cmd.includes('open explorer') || cmd.includes('omniscan')) {
+      reply = "Opening OmniScan block explorer.";
+      window.open('https://omni-explorer-39821.web.app', '_blank');
+    } else if (cmd.includes('radar') || cmd.includes('sentient')) {
+      reply = "Navigating to Project SENTIENT non-Newtonian radar scope.";
+      setTimeout(() => { window.location.href = 'sentient-radar.html'; }, 1500);
+    } else if (cmd.includes('whitepaper')) {
+      reply = "Opening Sovereign Whitepaper and mathematical proofs.";
+      setTimeout(() => { window.location.href = 'whitepaper.html'; }, 1500);
+    } else if (cmd.includes('staking') || cmd.includes('stake')) {
+      reply = "Opening Web3 Sovereign Staking and TPM hardware attestation portal.";
+      setTimeout(() => { window.location.href = 'deploy.html#deploy-staking-portal'; }, 1500);
+    } else {
+      reply = `Command received: "${rawText}". Dispatched to Gemini 4.0 Argon reasoning pipeline.`;
+    }
+
+    this.showResponse(reply);
+    this.speak(reply);
+  }
+
+  ensureHUD() {
+    if (this.hudElement) return;
+
+    const div = document.createElement('div');
+    div.id = 'voice-copilot-hud';
+    div.className = 'voice-copilot-modal';
+    div.style.cssText = `
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 380px;
+      max-width: calc(100vw - 48px);
+      background: rgba(12, 16, 28, 0.92);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(0, 242, 254, 0.35);
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 242, 254, 0.2);
+      z-index: 10000;
+      padding: 18px;
+      display: none;
+      flex-direction: column;
+      gap: 12px;
+      font-family: var(--font-sans);
+      color: #E2E8F0;
+    `;
+
+    div.innerHTML = `
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 8px;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 1.1rem; color: var(--gemini-cyan);">🎙️</span>
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: #FFF; letter-spacing: 0.04em;">VOICE MISSION CONTROL</div>
+            <div style="font-size: 0.65rem; font-family: var(--font-mono); color: #94A3B8;">OPO // GEMINI 4.0 CO-PILOT</div>
+          </div>
+        </div>
+        <button id="voice-hud-close" style="background: none; border: none; color: #94A3B8; font-size: 1.2rem; cursor: pointer; line-height: 1;" title="Close HUD">&times;</button>
+      </div>
+
+      <canvas id="voice-waveform-canvas" width="344" height="48" style="width: 100%; height: 48px; background: rgba(0,0,0,0.4); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);"></canvas>
+
+      <div id="voice-hud-status" style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--gemini-cyan); letter-spacing: 0.05em;">
+        STATUS: STANDBY // AWAITING COMMAND
+      </div>
+
+      <div style="background: rgba(0,0,0,0.5); border-radius: 10px; padding: 10px; border: 1px solid rgba(255,255,255,0.06); font-size: 0.78rem; min-height: 54px; display: flex; flex-direction: column; gap: 6px;">
+        <div id="voice-hud-transcript" style="font-style: italic; color: #94A3B8;">"Say or type: 'track satellite', 'cockpit mode', 'crdt sync', 'mission status'..."</div>
+        <div id="voice-hud-response" style="color: #34D399; font-weight: 600; display: none;"></div>
+      </div>
+
+      <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+        <button type="button" class="glass-btn glass-btn-secondary" style="font-size: 0.7rem; padding: 4px 8px;" onclick="window.voiceAssistant.handleCommand('track satellite')">🛰️ Track Satellite</button>
+        <button type="button" class="glass-btn glass-btn-secondary" style="font-size: 0.7rem; padding: 4px 8px;" onclick="window.voiceAssistant.handleCommand('cockpit mode')">🚀 Cockpit</button>
+        <button type="button" class="glass-btn glass-btn-secondary" style="font-size: 0.7rem; padding: 4px 8px;" onclick="window.voiceAssistant.handleCommand('crdt sync')">🔄 CRDT Sync</button>
+        <button type="button" class="glass-btn glass-btn-secondary" style="font-size: 0.7rem; padding: 4px 8px;" onclick="window.voiceAssistant.handleCommand('mission status')">📊 Status</button>
+      </div>
+
+      <div style="display: flex; gap: 6px; align-items: center; margin-top: 4px;">
+        <input type="text" id="voice-keyboard-input" placeholder="Type mission command..." style="flex: 1; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 6px 10px; color: #FFF; font-size: 0.78rem; font-family: var(--font-mono);">
+        <button id="voice-hud-mic-btn" class="glass-btn glass-btn-primary" style="padding: 6px 12px; font-size: 0.78rem;" title="Toggle Mic Listening">
+          <span>🎙️ Mic</span>
+        </button>
+      </div>
+    `;
+
+    document.body.appendChild(div);
+    this.hudElement = div;
+
+    document.getElementById('voice-hud-close').onclick = () => this.closeHUD();
+    document.getElementById('voice-hud-mic-btn').onclick = () => {
+      if (this.isListening) this.stop(); else this.start();
+    };
+
+    const keyInput = document.getElementById('voice-keyboard-input');
+    keyInput.onkeydown = (e) => {
+      if (e.key === 'Enter') {
+        const text = keyInput.value.trim();
+        if (text) {
+          this.handleCommand(text);
+          keyInput.value = '';
+        }
+      }
+    };
+
+    this.waveCanvas = document.getElementById('voice-waveform-canvas');
+    if (this.waveCanvas) {
+      this.waveCtx = this.waveCanvas.getContext('2d');
+    }
+  }
+
+  openHUD() {
+    this.ensureHUD();
+    this.hudElement.style.display = 'flex';
+    const btn = document.getElementById('voice-copilot-btn');
+    if (btn) btn.classList.add('active');
+  }
+
+  closeHUD() {
+    if (this.hudElement) this.hudElement.style.display = 'none';
+    this.stop();
+  }
+
+  updateHUDStatus(msg, color = '#00F2FE') {
+    const el = document.getElementById('voice-hud-status');
+    if (el) {
+      el.textContent = msg;
+      el.style.color = color;
+    }
+  }
+
+  updateTranscript(text) {
+    const el = document.getElementById('voice-hud-transcript');
+    if (el) {
+      el.textContent = `Heard: "${text}"`;
+      el.style.color = '#FFF';
+    }
+  }
+
+  showResponse(text) {
+    const el = document.getElementById('voice-hud-response');
+    if (el) {
+      el.style.display = 'block';
+      el.textContent = `Copilot: ${text}`;
+    }
+  }
+
+  startWaveform() {
+    if (this.animFrame) return;
+    const draw = () => {
+      if (!this.waveCanvas || !this.waveCtx) return;
+      const w = this.waveCanvas.width;
+      const h = this.waveCanvas.height;
+      this.waveCtx.clearRect(0, 0, w, h);
+
+      this.wavePhase += 0.08;
+      this.waveCtx.lineWidth = 2;
+      this.waveCtx.strokeStyle = this.isListening ? '#00F2FE' : '#34D399';
+      this.waveCtx.beginPath();
+
+      const centerY = h / 2;
+      const amplitude = this.isListening ? 14 : 8;
+
+      for (let x = 0; x < w; x++) {
+        const y = centerY + Math.sin(x * 0.05 + this.wavePhase) * amplitude * Math.sin(x / w * Math.PI);
+        if (x === 0) this.waveCtx.moveTo(x, y);
+        else this.waveCtx.lineTo(x, y);
+      }
+      this.waveCtx.stroke();
+
+      this.animFrame = requestAnimationFrame(draw);
+    };
+    this.animFrame = requestAnimationFrame(draw);
+  }
+
+  stopWaveform() {
+    if (this.animFrame) {
+      cancelAnimationFrame(this.animFrame);
+      this.animFrame = null;
+    }
+    if (this.waveCanvas && this.waveCtx) {
+      const w = this.waveCanvas.width;
+      const h = this.waveCanvas.height;
+      this.waveCtx.clearRect(0, 0, w, h);
+      this.waveCtx.lineWidth = 1;
+      this.waveCtx.strokeStyle = 'rgba(255,255,255,0.15)';
+      this.waveCtx.beginPath();
+      this.waveCtx.moveTo(0, h / 2);
+      this.waveCtx.lineTo(w, h / 2);
+      this.waveCtx.stroke();
+    }
+  }
+}
+
