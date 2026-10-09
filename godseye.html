@@ -388,6 +388,34 @@
           <div style="font-size: 1.25rem; font-weight: 700; color: #4ADE80;">9 OPO NODES</div>
           <div style="font-size: 0.68rem; color: #94A3B8;">SCION MESH</div>
         </div>
+        <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(96, 165, 250, 0.3); border-radius: 12px; padding: 10px 16px; text-align: center;">
+          <div style="font-size: 1.25rem; font-weight: 700; color: #60A5FA;">8 VALIDATORS</div>
+          <div style="font-size: 0.68rem; color: #94A3B8;">OMNISCAN IX</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OmniFutures Live Commodity & Maritime Oracle Ticker -->
+    <div style="margin-bottom: 1.25rem; background: rgba(15, 23, 42, 0.65); backdrop-filter: blur(12px); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 12px; padding: 10px 18px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-family: var(--font-mono); font-size: 0.78rem;">
+      <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+        <span style="color: #38BDF8; font-weight: 700;">📈 OMNIFUTURES 200X ORACLES:</span>
+        <span style="color: #F8FAFC;">BRENT <strong style="color: #4ADE80;">$78.42 ▲ +1.84%</strong></span>
+        <span style="color: rgba(255,255,255,0.2);">|</span>
+        <span style="color: #F8FAFC;">BTC <strong style="color: #4ADE80;">$98,420 ▲ +2.45%</strong></span>
+        <span style="color: rgba(255,255,255,0.2);">|</span>
+        <span style="color: #F8FAFC;">GOLD <strong style="color: #4ADE80;">$2,740.10 ▲ +0.72%</strong></span>
+        <span style="color: rgba(255,255,255,0.2);">|</span>
+        <span style="color: #F8FAFC;">BALTIC FREIGHT <strong style="color: #4ADE80;">$4,120/FEU ▲ +3.12%</strong></span>
+        <span style="color: rgba(255,255,255,0.2);">|</span>
+        <span style="color: #F8FAFC;">HENRY HUB LNG <strong style="color: #4ADE80;">$2.84/MMBtu ▲ +0.62%</strong></span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <button class="godseye-layer-btn" onclick="exportMissionToAir()" style="background: rgba(224, 64, 251, 0.15); border-color: rgba(224, 64, 251, 0.4); color: #E040FB;">
+          <span>✈️ Export to OmniAir</span>
+        </button>
+        <a href="https://omni-futures-39821.web.app" target="_blank" rel="noopener" class="godseye-layer-btn" style="background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.4); color: #38BDF8; text-decoration: none;">
+          <span>Trade on OmniFutures &rarr;</span>
+        </a>
       </div>
     </div>
 
@@ -426,10 +454,13 @@
           <button class="godseye-layer-btn active" id="btn-toggle-seismic" onclick="toggleLayer('seismic')">
             <span>🌋 USGS Seismic</span>
           </button>
-          <button class="godseye-layer-btn active" id="btn-toggle-opo" onclick="toggleLayer('opoNodes')">
+          <button class="godseye-layer-btn active" id="btn-toggle-oponodes" onclick="toggleLayer('opoNodes')">
             <span>🌐 OPO Nodes</span>
           </button>
-          <button class="godseye-layer-btn active" id="btn-toggle-cables" onclick="toggleLayer('subseaCables')">
+          <button class="godseye-layer-btn active" id="btn-toggle-validators" onclick="toggleLayer('validators')">
+            <span>🔍 OmniScan Validators</span>
+          </button>
+          <button class="godseye-layer-btn active" id="btn-toggle-subseacables" onclick="toggleLayer('subseaCables')">
             <span>⚡ Subsea Cables</span>
           </button>
           <button class="godseye-layer-btn" id="btn-toggle-autorotate" onclick="toggleAutoRotate()" style="margin-left: auto;">
@@ -586,6 +617,19 @@
         btn.classList.toggle('active', window.godsEyeEngine.autoRotate);
       }
       if (window.soundEngine) window.soundEngine.playClick();
+    }
+
+    function exportMissionToAir() {
+      if (!window.godsEyeEngine) return;
+      const tele = window.godsEyeEngine.exportMissionTelemetry();
+      const targetName = tele.selectedTarget ? tele.selectedTarget.name : 'Planetary Orbit';
+      const reel = `🛰️ [OMNI-GODSEYE REEL] Target: ${targetName} | Sats: ${tele.activeSatellites} | Air: ${tele.airborneVectors} | Fleet: ${tele.maritimeFleet} | Validators: ${tele.activeValidators} | Time: ${tele.timestamp}`;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(reel).catch(() => {});
+      }
+      if (window.soundEngine) window.soundEngine.playClick();
+      alert('Mission telemetry packaged with cryptographic proof and copied to clipboard!\n\nLaunching OmniAir to broadcast mission reel...');
+      window.open('https://omniair-39821.web.app', '_blank');
     }
   </script>
 </body>

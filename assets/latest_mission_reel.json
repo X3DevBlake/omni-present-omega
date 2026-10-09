@@ -1,0 +1,27 @@
+{
+  "network": "Omni-Present Omega Sovereign Intelligence Fabric",
+  "timestamp": "2026-10-09T17:31:14.333003+00:00",
+  "fps": 60,
+  "resolution": "1280x720",
+  "remotion_composition": "GodsEyeTelemetry",
+  "mission": {
+    "title": "Operation Sovereign Singularity",
+    "primary_target": "ISS (ZARYA) & SCION Zurich Hermetic Root",
+    "active_satellites": 7420,
+    "airborne_vectors": 12840,
+    "maritime_vessels": 5,
+    "omniscan_validators": 8,
+    "usgs_seismic_sensors": 3
+  },
+  "oracles": {
+    "brent_crude_200x": "$78.42/bbl (+1.84%)",
+    "btc_usd": "$98,420 (+2.45%)",
+    "baltic_freight_index": "$4,120/FEU (+3.12%)",
+    "henry_hub_lng": "$2.84/MMBtu (+0.62%)"
+  },
+  "dispatch": {
+    "target_app": "OmniAir Social",
+    "url": "https://omniair-39821.web.app",
+    "webrtc_mode": "mission_control_lounge"
+  }
+}

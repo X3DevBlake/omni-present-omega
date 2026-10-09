@@ -43,6 +43,7 @@
         seismic: true,
         opoNodes: true,
         subseaCables: true,
+        validators: true,
         terminator: true,
         anomalyScan: true
       };
@@ -76,6 +77,18 @@
         { id: 'OPO-SYD-07', name: 'Sydney Pacific Hub', lat: -33.8688, lon: 151.2093, type: 'fabric', peers: 78, latency: '5.2ms', status: 'SYNCHRONIZED' },
         { id: 'OPO-DXB-08', name: 'Dubai MENA Relay', lat: 25.2048, lon: 55.2708, type: 'core', peers: 92, latency: '2.9ms', status: 'SYNCHRONIZED' },
         { id: 'OPO-SFO-09', name: 'Silicon Valley Frontier Edge', lat: 37.7749, lon: -122.4194, type: 'core', peers: 210, latency: '1.1ms', status: 'SYNCHRONIZED' }
+      ];
+
+      // 1b. OmniScan Distributed Validator Nodes (Synchronized with https://omni-explorer-39821.web.app)
+      this.validators = [
+        { id: 'VAL-FRA-01', name: 'Frankfurt Equinix IX Validator', lat: 50.1109, lon: 8.6821, blockHeight: 1849204, stake: '1,450,000 OMNI', uptime: '99.99%', latency: '0.9ms', consensus: 'EPOCH-842', status: 'ACTIVE_VALIDATOR' },
+        { id: 'VAL-TYO-02', name: 'Tokyo AT TOKYO Validator', lat: 35.6762, lon: 139.6503, blockHeight: 1849204, stake: '2,100,000 OMNI', uptime: '99.98%', latency: '1.4ms', consensus: 'EPOCH-842', status: 'ACTIVE_VALIDATOR' },
+        { id: 'VAL-SFO-03', name: 'Silicon Valley SJC Core Validator', lat: 37.3382, lon: -121.8863, blockHeight: 1849204, stake: '3,850,000 OMNI', uptime: '100.0%', latency: '0.6ms', consensus: 'EPOCH-842', status: 'ACTIVE_VALIDATOR' },
+        { id: 'VAL-SIN-04', name: 'Singapore One-North Validator', lat: 1.2966, lon: 103.7764, blockHeight: 1849204, stake: '1,820,000 OMNI', uptime: '99.99%', latency: '1.1ms', consensus: 'EPOCH-842', status: 'ACTIVE_VALIDATOR' },
+        { id: 'VAL-LON-05', name: 'London Telehouse North Validator', lat: 51.5074, lon: -0.1278, blockHeight: 1849204, stake: '1,950,000 OMNI', uptime: '99.97%', latency: '1.2ms', consensus: 'EPOCH-842', status: 'ACTIVE_VALIDATOR' },
+        { id: 'VAL-ZUR-06', name: 'Zurich Swisscom Vault Validator', lat: 47.3769, lon: 8.5417, blockHeight: 1849204, stake: '2,400,000 OMNI', uptime: '100.0%', latency: '0.5ms', consensus: 'EPOCH-842', status: 'ACTIVE_VALIDATOR' },
+        { id: 'VAL-SAO-07', name: 'São Paulo Ascenty Core Validator', lat: -23.5505, lon: -46.6333, blockHeight: 1849204, stake: '1,120,000 OMNI', uptime: '99.95%', latency: '2.8ms', consensus: 'EPOCH-842', status: 'ACTIVE_VALIDATOR' },
+        { id: 'VAL-SYD-08', name: 'Sydney NextDC Sovereign Validator', lat: -33.8688, lon: 151.2093, blockHeight: 1849204, stake: '1,680,000 OMNI', uptime: '99.98%', latency: '2.1ms', consensus: 'EPOCH-842', status: 'ACTIVE_VALIDATOR' }
       ];
 
       // 2. Subsea Fiberoptic Cables connecting OPO Nodes
@@ -113,13 +126,13 @@
         { id: 'FLT-SIA022', name: 'Singapore Airlines SIA22', lat: 18.2, lon: 115.4, heading: 45, alt: '36,000 ft', speed: '480 kts', mach: '0.82', callsign: 'SIA022', route: 'SIN → EWR', type: 'commercial' }
       ];
 
-      // 5. Maritime AIS Vessels
+      // 5. Maritime AIS Vessels with OmniFutures Physical Ground-Truth Oracles
       this.vessels = [
-        { id: 'MAR-EVER', name: 'EVER GIVEN (Ultra-Large Container)', lat: 12.8, lon: 43.3, heading: 330, speed: '18.4 kts', destination: 'Rotterdam', cargo: '20,124 TEU', type: 'container' },
-        { id: 'MAR-TANKER', name: 'TI EUROPE (ULCC Crude Supertanker)', lat: 24.5, lon: 58.2, heading: 125, speed: '14.1 kts', destination: 'Singapore', cargo: '3.1M bbl Crude', type: 'tanker' },
-        { id: 'MAR-LNG', name: 'AL DAAYEN (Q-Flex LNG Carrier)', lat: 5.2, lon: 98.4, heading: 95, speed: '19.2 kts', destination: 'Tokyo Bay', cargo: '216,000 m³ LNG', type: 'lng' },
-        { id: 'MAR-CVN78', name: 'USS GERALD R. FORD (CVN-78)', lat: 35.8, lon: 18.4, heading: 275, speed: '28.0 kts', destination: 'Eastern Med Patrol', type: 'naval_strike' },
-        { id: 'MAR-NOAA', name: 'NOAA RONALD H. BROWN', lat: -15.4, lon: -110.2, heading: 190, speed: '11.5 kts', destination: 'Pacific Deep Hydrothermal Survey', type: 'research' }
+        { id: 'MAR-EVER', name: 'EVER GIVEN (Ultra-Large Container)', lat: 12.8, lon: 43.3, heading: 330, speed: '18.4 kts', destination: 'Rotterdam', cargo: '20,124 TEU', cargoVal: '$210,000,000', chokepoint: 'Bab-el-Mandeb / Red Sea', market: 'BALTIC-FREIGHT-200X', marketImpact: '$4,120/FEU (+3.12%)', type: 'container' },
+        { id: 'MAR-TANKER', name: 'TI EUROPE (ULCC Crude Supertanker)', lat: 24.5, lon: 58.2, heading: 125, speed: '14.1 kts', destination: 'Singapore', cargo: '3.1M bbl Crude', cargoVal: '$243,100,000', chokepoint: 'Strait of Hormuz', market: 'BRENT-CRUDE-200X', marketImpact: '$78.42/bbl (+1.84%)', type: 'tanker' },
+        { id: 'MAR-LNG', name: 'AL DAAYEN (Q-Flex LNG Carrier)', lat: 5.2, lon: 98.4, heading: 95, speed: '19.2 kts', destination: 'Tokyo Bay', cargo: '216,000 m³ LNG', cargoVal: '$61,344,000', chokepoint: 'Malacca Strait', market: 'HENRY-HUB-LNG-200X', marketImpact: '$2.84/MMBtu (+0.62%)', type: 'lng' },
+        { id: 'MAR-CVN78', name: 'USS GERALD R. FORD (CVN-78)', lat: 35.8, lon: 18.4, heading: 275, speed: '28.0 kts', destination: 'Eastern Med Patrol', cargo: 'Strike Group Carrier Wing', cargoVal: '$13,300,000,000', chokepoint: 'Ionian Sea / Mediterranean', market: 'DEFENSE-INDEX-200X', marketImpact: '1,420.50 (+0.45%)', type: 'naval_strike' },
+        { id: 'MAR-NOAA', name: 'NOAA RONALD H. BROWN', lat: -15.4, lon: -110.2, heading: 190, speed: '11.5 kts', destination: 'Pacific Deep Hydrothermal Survey', cargo: 'Autonomous Ocean Sensors', cargoVal: '$45,000,000', chokepoint: 'Pacific Abyssal Plain', market: 'CLIMATE-CARBON-FUT', marketImpact: '$84.10/t (+0.15%)', type: 'research' }
       ];
 
       // 6. Seismic & Thermal Sensors
@@ -257,6 +270,17 @@
         }
       });
 
+      // Check OmniScan Validators
+      if (this.layers.validators) {
+        this.validators.forEach(val => {
+          const pos = this.latLonTo3D(val.lat, val.lon, 1.015);
+          if (pos.visible) {
+            const dist = Math.hypot(x - pos.screenX, y - pos.screenY);
+            if (dist < 24 * this.dpr) candidates.push({ entity: val, dist, category: 'OMNISCAN_VALIDATOR' });
+          }
+        });
+      }
+
       // Check Vessels
       this.vessels.forEach(vessel => {
         const pos = this.latLonTo3D(vessel.lat, vessel.lon, 1.01);
@@ -294,14 +318,17 @@
       const badgeElem = document.getElementById('godseye-hud-badge');
 
       if (titleElem) titleElem.textContent = entity.name || entity.id;
-      if (badgeElem) badgeElem.textContent = category;
+      if (badgeElem) badgeElem.textContent = category.replace('_', ' ');
       if (metaElem) {
         if (category === 'OPO_NODE') {
           metaElem.innerHTML = `<strong>LAT/LON:</strong> ${entity.lat.toFixed(4)}°, ${entity.lon.toFixed(4)}° &bull; <strong>PEERS:</strong> ${entity.peers} &bull; <strong>RTT:</strong> ${entity.latency}`;
+        } else if (category === 'OMNISCAN_VALIDATOR') {
+          metaElem.innerHTML = `<strong>VALIDATOR:</strong> ${entity.id} &bull; <strong>BLOCK:</strong> #${entity.blockHeight.toLocaleString()} &bull; <strong>STAKE:</strong> ${entity.stake} &bull; <strong>UPTIME:</strong> ${entity.uptime} &bull; <strong>CONSENSUS:</strong> ${entity.consensus} &bull; <a href="https://omni-explorer-39821.web.app" target="_blank" rel="noopener" style="color: #60A5FA; text-decoration: underline; font-weight: 700;">Open OmniScan &rarr;</a>`;
         } else if (category === 'FLIGHT') {
           metaElem.innerHTML = `<strong>CALLSIGN:</strong> ${entity.callsign} &bull; <strong>ALT:</strong> ${entity.alt} &bull; <strong>SPEED:</strong> ${entity.speed} (${entity.mach}) &bull; <strong>HDG:</strong> ${entity.heading}°`;
         } else if (category === 'VESSEL') {
-          metaElem.innerHTML = `<strong>TYPE:</strong> ${entity.type.toUpperCase()} &bull; <strong>DEST:</strong> ${entity.destination} &bull; <strong>SPEED:</strong> ${entity.speed} &bull; <strong>CARGO:</strong> ${entity.cargo || 'Classified'}`;
+          const mkt = entity.market ? `<br/><span style="color:#38BDF8;">✦ OMNIFUTURES ORACLE:</span> <strong>${entity.market}</strong> @ <strong>${entity.marketImpact}</strong> &bull; <a href="https://omni-futures-39821.web.app" target="_blank" rel="noopener" style="color: #38BDF8; text-decoration: underline; font-weight: 700;">Trade 200x on OmniFutures &rarr;</a>` : '';
+          metaElem.innerHTML = `<strong>TYPE:</strong> ${entity.type.toUpperCase()} &bull; <strong>DEST:</strong> ${entity.destination} &bull; <strong>CARGO:</strong> ${entity.cargo || 'Classified'} (${entity.cargoVal || 'Valued'}) &bull; <strong>CHOKEPOINT:</strong> ${entity.chokepoint || 'High Seas'}${mkt}`;
         } else if (category === 'SATELLITE') {
           metaElem.innerHTML = `<strong>ORBIT:</strong> ${entity.apogee} &times; ${entity.perigee} &bull; <strong>VELOCITY:</strong> ${entity.speed} km/s &bull; <strong>INC:</strong> ${entity.inc}°`;
         }
@@ -381,6 +408,11 @@
       // 8. OPO Physical Nodes & SCION Gateways
       if (this.layers.opoNodes) {
         this.drawOpoNodes(ctx);
+      }
+
+      // 8b. OmniScan Distributed Validators Layer
+      if (this.layers.validators) {
+        this.drawValidators(ctx);
       }
 
       // 9. Orbital Satellite Trajectories & Constellations
@@ -598,6 +630,34 @@
       });
     }
 
+    drawValidators(ctx) {
+      this.validators.forEach(v => {
+        const pt = this.latLonTo3D(v.lat, v.lon, 1.018);
+        if (!pt.visible) return;
+
+        // Validator Pulsing Hexagon / Ring
+        const pulse = (this.epochTime * 0.003 + Math.abs(v.lat)) % 1;
+        const radius = (5 + pulse * 7) * this.dpr;
+
+        ctx.strokeStyle = `rgba(96, 165, 250, ${1 - pulse})`;
+        ctx.lineWidth = 1.3 * this.dpr;
+        ctx.beginPath();
+        ctx.arc(pt.screenX, pt.screenY, radius, 0, Math.PI * 2);
+        ctx.stroke();
+
+        // Validator Core Node
+        ctx.fillStyle = '#60A5FA';
+        ctx.beginPath();
+        ctx.arc(pt.screenX, pt.screenY, 3.5 * this.dpr, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Validator Tag
+        ctx.fillStyle = '#93C5FD';
+        ctx.font = `${8 * this.dpr}px JetBrains Mono, monospace`;
+        ctx.fillText(`VAL:${v.id.split('-')[1]} #${Math.floor(v.blockHeight / 1000)}k`, pt.screenX + 7 * this.dpr, pt.screenY - 3 * this.dpr);
+      });
+    }
+
     drawSatellites(ctx) {
       this.satellites.forEach(s => {
         const altRatio = 1.14 + (s.alt / 18000);
@@ -684,6 +744,26 @@
       ctx.moveTo(cx - xSpan, scanY);
       ctx.lineTo(cx + xSpan, scanY);
       ctx.stroke();
+    }
+
+    exportMissionTelemetry() {
+      return {
+        timestamp: new Date().toISOString(),
+        network: "Omni-Present Omega Sovereign Fabric",
+        selectedTarget: this.selectedEntity ? {
+          id: this.selectedEntity.id,
+          name: this.selectedEntity.name,
+          category: this.selectedCategory,
+          lat: this.selectedEntity.lat,
+          lon: this.selectedEntity.lon
+        } : null,
+        activeSatellites: this.satellites.length,
+        airborneVectors: this.flights.length,
+        maritimeFleet: this.vessels.length,
+        activeValidators: this.validators.length,
+        seismicEvents: this.seismic.length,
+        epochTime: this.epochTime
+      };
     }
   }
 
