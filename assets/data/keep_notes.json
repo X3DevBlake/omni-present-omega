@@ -1,6 +1,6 @@
 {
   "user_email": "rgkdevx1@gmail.com",
-  "last_synced": "2026-10-09T20:16:51.724153+00:00",
+  "last_synced": "2026-10-09T21:26:27.829126+00:00",
   "notes": [
     {
       "id": "keep_610102b5",
@@ -399,6 +399,1486 @@
         },
         {
           "text": "Focus: Join-semilattice algebraic CRDT proofs and zero-allocation dot compaction",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_07c9ca2e",
+      "title": "\ud83e\udd1d Institutional Outreach: Protocol Labs Research",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:25:29.780503+00:00",
+      "updated_at": "2026-10-09T21:25:29.780503+00:00",
+      "items": [
+        {
+          "text": "Contact: research@protocol.ai",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_zero_allocation_causal_crdt_la_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: DISPATCHED",
+          "checked": false
+        },
+        {
+          "text": "Domain: Decentralized Systems & Formal CRDT Verification",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_016748dc",
+      "title": "\ud83e\udd1d Institutional Outreach: Protocol Labs RFP & Grants",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:25:30.198847+00:00",
+      "updated_at": "2026-10-09T21:25:30.198847+00:00",
+      "items": [
+        {
+          "text": "Contact: rfp@protocol.ai",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_sovereign_decentralized_mesh_o_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: DISPATCHED",
+          "checked": false
+        },
+        {
+          "text": "Domain: Decentralized Storage & Network Architecture",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_60dd7c89",
+      "title": "\ud83e\udd1d Institutional Outreach: Open Source Robotics Foundation (OSRF / ROS)",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:25:30.599181+00:00",
+      "updated_at": "2026-10-09T21:25:30.599181+00:00",
+      "items": [
+        {
+          "text": "Contact: info@openrobotics.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_sovereign_decentralized_mesh_o_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: DISPATCHED",
+          "checked": false
+        },
+        {
+          "text": "Domain: Cyber-Physical Robotics & Hardware Abstraction",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_c6ce8809",
+      "title": "\ud83e\udd1d Institutional Outreach: Stanford Robotics Center (SRC)",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:25:31.008808+00:00",
+      "updated_at": "2026-10-09T21:25:31.008808+00:00",
+      "items": [
+        {
+          "text": "Contact: SRC-information@stanford.edu",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_sovereign_decentralized_mesh_o_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: DISPATCHED",
+          "checked": false
+        },
+        {
+          "text": "Domain: Kinematics & Cyber-Physical Motion Control",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_9530b01d",
+      "title": "\ud83e\udd1d Institutional Outreach: MIT CSAIL Alliances",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:25:31.440668+00:00",
+      "updated_at": "2026-10-09T21:25:31.440668+00:00",
+      "items": [
+        {
+          "text": "Contact: alliances@csail.mit.edu",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_omni_swarm_circadian_protocol_2026-10-09_18-30-57.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: DISPATCHED",
+          "checked": false
+        },
+        {
+          "text": "Domain: AI Systems & Multi-Agent Swarm Intelligence",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_0af5ea38",
+      "title": "\ud83e\udd1d Institutional Outreach: MIT CSAIL Research Group",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:25:31.877485+00:00",
+      "updated_at": "2026-10-09T21:25:31.877485+00:00",
+      "items": [
+        {
+          "text": "Contact: info@csail.mit.edu",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_scion_path_aware_internet_prot_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: DISPATCHED",
+          "checked": false
+        },
+        {
+          "text": "Domain: Distributed Computing & Mesh Systems",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_9c9da3d7",
+      "title": "\ud83e\udd1d Institutional Outreach: Rust Foundation",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:25:32.277356+00:00",
+      "updated_at": "2026-10-09T21:25:32.277356+00:00",
+      "items": [
+        {
+          "text": "Contact: contact@rustfoundation.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_zero_allocation_causal_crdt_la_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: DISPATCHED",
+          "checked": false
+        },
+        {
+          "text": "Domain: Systems Programming & Concurrency",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_4037bed7",
+      "title": "\ud83e\udd1d Institutional Outreach: Python Software Foundation (Sponsorships)",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:25:32.717511+00:00",
+      "updated_at": "2026-10-09T21:25:32.717511+00:00",
+      "items": [
+        {
+          "text": "Contact: sponsors@python.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_omni_ecosystem_global_go_to_ma_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: DISPATCHED",
+          "checked": false
+        },
+        {
+          "text": "Domain: Scientific Computing & Robotics Tooling",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_c9b425dc",
+      "title": "\ud83e\udd1d Institutional Outreach: Python Software Foundation (Grants)",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:25:33.141924+00:00",
+      "updated_at": "2026-10-09T21:25:33.141924+00:00",
+      "items": [
+        {
+          "text": "Contact: grants@pyfound.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_sovereign_decentralized_mesh_o_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: DISPATCHED",
+          "checked": false
+        },
+        {
+          "text": "Domain: Open-Source AI & Robotics Education",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_0add9f90",
+      "title": "\ud83e\udd1d Institutional Outreach: NumFOCUS Scientific Computing",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:25:33.499142+00:00",
+      "updated_at": "2026-10-09T21:25:33.499142+00:00",
+      "items": [
+        {
+          "text": "Contact: info@numfocus.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_zero_allocation_causal_crdt_la_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: DISPATCHED",
+          "checked": false
+        },
+        {
+          "text": "Domain: Open Source Scientific Tooling & Mathematics",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_f38c66d0",
+      "title": "\ud83e\udd1d Institutional Outreach: NumFOCUS Institutional Giving",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:25:33.924599+00:00",
+      "updated_at": "2026-10-09T21:25:33.924599+00:00",
+      "items": [
+        {
+          "text": "Contact: giving@numfocus.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_omni_ecosystem_global_go_to_ma_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: DISPATCHED",
+          "checked": false
+        },
+        {
+          "text": "Domain: Open Source Infrastructure & Sustainable Research",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_71fcddb7",
+      "title": "\ud83e\udd1d Institutional Outreach: The Linux Foundation",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:25:34.356700+00:00",
+      "updated_at": "2026-10-09T21:25:34.356700+00:00",
+      "items": [
+        {
+          "text": "Contact: info@linuxfoundation.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_sovereign_decentralized_mesh_o_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: DISPATCHED",
+          "checked": false
+        },
+        {
+          "text": "Domain: Operating Systems & Decentralized Infrastructure",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_b697679f",
+      "title": "\ud83e\udd1d Institutional Outreach: Apache Software Foundation",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:25:34.765483+00:00",
+      "updated_at": "2026-10-09T21:25:34.765483+00:00",
+      "items": [
+        {
+          "text": "Contact: apache@apache.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_sovereign_decentralized_mesh_o_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: DISPATCHED",
+          "checked": false
+        },
+        {
+          "text": "Domain: Distributed Data & High-Throughput Messaging",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_5664e8c4",
+      "title": "\ud83e\udd1d Institutional Outreach: Apache Software Foundation (Sponsorships)",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:25:35.145690+00:00",
+      "updated_at": "2026-10-09T21:25:35.145690+00:00",
+      "items": [
+        {
+          "text": "Contact: fundraising@apache.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_omni_ecosystem_global_go_to_ma_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: DISPATCHED",
+          "checked": false
+        },
+        {
+          "text": "Domain: Community-Led Open Source Infrastructure",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_6693ede5",
+      "title": "\ud83e\udd1d Institutional Outreach: Electronic Frontier Foundation (EFF)",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:25:35.564503+00:00",
+      "updated_at": "2026-10-09T21:25:35.564503+00:00",
+      "items": [
+        {
+          "text": "Contact: info@eff.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_scion_path_aware_internet_prot_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: DISPATCHED",
+          "checked": false
+        },
+        {
+          "text": "Domain: Digital Privacy & Sovereign Decentralization",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_6fc7784f",
+      "title": "\ud83e\udd1d Institutional Outreach: World Wide Web Consortium (W3C Giving)",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:25:35.976065+00:00",
+      "updated_at": "2026-10-09T21:25:35.976065+00:00",
+      "items": [
+        {
+          "text": "Contact: giving@w3.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_scion_path_aware_internet_prot_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: DISPATCHED",
+          "checked": false
+        },
+        {
+          "text": "Domain: Web Standards & Decentralized Identifiers",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_236aa37c",
+      "title": "\ud83e\udd1d Institutional Outreach: W3C Global Liaisons",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:25:36.400679+00:00",
+      "updated_at": "2026-10-09T21:25:36.400679+00:00",
+      "items": [
+        {
+          "text": "Contact: team-liaisons@w3.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_zero_allocation_causal_crdt_la_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: DISPATCHED",
+          "checked": false
+        },
+        {
+          "text": "Domain: Distributed Systems Standards & Interoperability",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_ab2ec9e4",
+      "title": "\ud83e\udd1d Institutional Outreach: Internet Archive",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:25:36.805311+00:00",
+      "updated_at": "2026-10-09T21:25:36.805311+00:00",
+      "items": [
+        {
+          "text": "Contact: info@archive.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_omni_swarm_circadian_protocol_2026-10-09_18-30-57.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: DISPATCHED",
+          "checked": false
+        },
+        {
+          "text": "Domain: Permanent Archival & Digital Preservation",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_d2004a92",
+      "title": "\ud83e\udd1d Institutional Outreach: Filecoin Foundation Grants",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:25:37.223468+00:00",
+      "updated_at": "2026-10-09T21:25:37.223468+00:00",
+      "items": [
+        {
+          "text": "Contact: grants@fil.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_sovereign_decentralized_mesh_o_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: DISPATCHED",
+          "checked": false
+        },
+        {
+          "text": "Domain: Decentralized Storage & Proof-of-Replication",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_7d3f526a",
+      "title": "\ud83e\udd1d Institutional Outreach: Arweave Protocol Team",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:25:37.606664+00:00",
+      "updated_at": "2026-10-09T21:25:37.606664+00:00",
+      "items": [
+        {
+          "text": "Contact: team@arweave.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_zero_allocation_causal_crdt_la_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: DISPATCHED",
+          "checked": false
+        },
+        {
+          "text": "Domain: Permanent Decentralized Data & SmartWeave",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_4520c60d",
+      "title": "\ud83e\udd1d Institutional Outreach: Protocol Labs Research",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:25:59.642514+00:00",
+      "updated_at": "2026-10-09T21:25:59.642514+00:00",
+      "items": [
+        {
+          "text": "Contact: research@protocol.ai",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_zero_allocation_causal_crdt_la_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: 1a1228f012971393",
+          "checked": false
+        },
+        {
+          "text": "Domain: Decentralized Systems & Formal CRDT Verification",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_369e6b9b",
+      "title": "\ud83e\udd1d Institutional Outreach: Protocol Labs RFP & Grants",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:26:01.451578+00:00",
+      "updated_at": "2026-10-09T21:26:01.451578+00:00",
+      "items": [
+        {
+          "text": "Contact: rfp@protocol.ai",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_sovereign_decentralized_mesh_o_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: 1a1228f07c57300b",
+          "checked": false
+        },
+        {
+          "text": "Domain: Decentralized Storage & Network Architecture",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_6f9a69ab",
+      "title": "\ud83e\udd1d Institutional Outreach: Open Source Robotics Foundation (OSRF / ROS)",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:26:02.715620+00:00",
+      "updated_at": "2026-10-09T21:26:02.715620+00:00",
+      "items": [
+        {
+          "text": "Contact: info@openrobotics.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_sovereign_decentralized_mesh_o_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: 1a1228f0dab359ad",
+          "checked": false
+        },
+        {
+          "text": "Domain: Cyber-Physical Robotics & Hardware Abstraction",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_eb92ae3e",
+      "title": "\ud83e\udd1d Institutional Outreach: Stanford Robotics Center (SRC)",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:26:04.200769+00:00",
+      "updated_at": "2026-10-09T21:26:04.200769+00:00",
+      "items": [
+        {
+          "text": "Contact: SRC-information@stanford.edu",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_sovereign_decentralized_mesh_o_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: 1a1228f11ce54fcd",
+          "checked": false
+        },
+        {
+          "text": "Domain: Kinematics & Cyber-Physical Motion Control",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_19f4c504",
+      "title": "\ud83e\udd1d Institutional Outreach: MIT CSAIL Alliances",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:26:05.683574+00:00",
+      "updated_at": "2026-10-09T21:26:05.683574+00:00",
+      "items": [
+        {
+          "text": "Contact: alliances@csail.mit.edu",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_omni_swarm_circadian_protocol_2026-10-09_18-30-57.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: 1a1228f199d7ba04",
+          "checked": false
+        },
+        {
+          "text": "Domain: AI Systems & Multi-Agent Swarm Intelligence",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_4f82ab69",
+      "title": "\ud83e\udd1d Institutional Outreach: MIT CSAIL Research Group",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:26:07.622444+00:00",
+      "updated_at": "2026-10-09T21:26:07.622444+00:00",
+      "items": [
+        {
+          "text": "Contact: info@csail.mit.edu",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_scion_path_aware_internet_prot_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: 1a1228f1da19b9f7",
+          "checked": false
+        },
+        {
+          "text": "Domain: Distributed Computing & Mesh Systems",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_95003672",
+      "title": "\ud83e\udd1d Institutional Outreach: Rust Foundation",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:26:09.045106+00:00",
+      "updated_at": "2026-10-09T21:26:09.045106+00:00",
+      "items": [
+        {
+          "text": "Contact: contact@rustfoundation.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_zero_allocation_causal_crdt_la_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: 1a1228f250f82501",
+          "checked": false
+        },
+        {
+          "text": "Domain: Systems Programming & Concurrency",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_35ae9f41",
+      "title": "\ud83e\udd1d Institutional Outreach: Python Software Foundation (Sponsorships)",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:26:10.480641+00:00",
+      "updated_at": "2026-10-09T21:26:10.480641+00:00",
+      "items": [
+        {
+          "text": "Contact: sponsors@python.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_omni_ecosystem_global_go_to_ma_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: 1a1228f2be174f7e",
+          "checked": false
+        },
+        {
+          "text": "Domain: Scientific Computing & Robotics Tooling",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_1ef4cc25",
+      "title": "\ud83e\udd1d Institutional Outreach: Python Software Foundation (Grants)",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:26:12.123028+00:00",
+      "updated_at": "2026-10-09T21:26:12.123028+00:00",
+      "items": [
+        {
+          "text": "Contact: grants@pyfound.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_sovereign_decentralized_mesh_o_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: 1a1228f30433d7eb",
+          "checked": false
+        },
+        {
+          "text": "Domain: Open-Source AI & Robotics Education",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_6acae132",
+      "title": "\ud83e\udd1d Institutional Outreach: NumFOCUS Scientific Computing",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:26:13.387016+00:00",
+      "updated_at": "2026-10-09T21:26:13.387016+00:00",
+      "items": [
+        {
+          "text": "Contact: info@numfocus.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_zero_allocation_causal_crdt_la_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: 1a1228f363c0fccb",
+          "checked": false
+        },
+        {
+          "text": "Domain: Open Source Scientific Tooling & Mathematics",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_4a66cb36",
+      "title": "\ud83e\udd1d Institutional Outreach: NumFOCUS Institutional Giving",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:26:15.095087+00:00",
+      "updated_at": "2026-10-09T21:26:15.095087+00:00",
+      "items": [
+        {
+          "text": "Contact: giving@numfocus.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_omni_ecosystem_global_go_to_ma_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: 1a1228f3b9a82123",
+          "checked": false
+        },
+        {
+          "text": "Domain: Open Source Infrastructure & Sustainable Research",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_a31f0981",
+      "title": "\ud83e\udd1d Institutional Outreach: The Linux Foundation",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:26:16.439276+00:00",
+      "updated_at": "2026-10-09T21:26:16.439276+00:00",
+      "items": [
+        {
+          "text": "Contact: info@linuxfoundation.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_sovereign_decentralized_mesh_o_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: 1a1228f40d2e484e",
+          "checked": false
+        },
+        {
+          "text": "Domain: Operating Systems & Decentralized Infrastructure",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_7af429fa",
+      "title": "\ud83e\udd1d Institutional Outreach: Apache Software Foundation",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:26:17.841945+00:00",
+      "updated_at": "2026-10-09T21:26:17.841945+00:00",
+      "items": [
+        {
+          "text": "Contact: apache@apache.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_sovereign_decentralized_mesh_o_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: 1a1228f46cdc24e0",
+          "checked": false
+        },
+        {
+          "text": "Domain: Distributed Data & High-Throughput Messaging",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_455aa715",
+      "title": "\ud83e\udd1d Institutional Outreach: Apache Software Foundation (Sponsorships)",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:26:19.114253+00:00",
+      "updated_at": "2026-10-09T21:26:19.114253+00:00",
+      "items": [
+        {
+          "text": "Contact: fundraising@apache.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_omni_ecosystem_global_go_to_ma_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: 1a1228f4c94de1a8",
+          "checked": false
+        },
+        {
+          "text": "Domain: Community-Led Open Source Infrastructure",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_a19eff83",
+      "title": "\ud83e\udd1d Institutional Outreach: Electronic Frontier Foundation (EFF)",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:26:20.650315+00:00",
+      "updated_at": "2026-10-09T21:26:20.650315+00:00",
+      "items": [
+        {
+          "text": "Contact: info@eff.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_scion_path_aware_internet_prot_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: 1a1228f527f224f2",
+          "checked": false
+        },
+        {
+          "text": "Domain: Digital Privacy & Sovereign Decentralization",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_72f3e256",
+      "title": "\ud83e\udd1d Institutional Outreach: World Wide Web Consortium (W3C Giving)",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:26:21.966915+00:00",
+      "updated_at": "2026-10-09T21:26:21.966915+00:00",
+      "items": [
+        {
+          "text": "Contact: giving@w3.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_scion_path_aware_internet_prot_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: 1a1228f57955ec69",
+          "checked": false
+        },
+        {
+          "text": "Domain: Web Standards & Decentralized Identifiers",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_b016501c",
+      "title": "\ud83e\udd1d Institutional Outreach: W3C Global Liaisons",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:26:23.538874+00:00",
+      "updated_at": "2026-10-09T21:26:23.538874+00:00",
+      "items": [
+        {
+          "text": "Contact: team-liaisons@w3.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_zero_allocation_causal_crdt_la_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: 1a1228f5c88defd0",
+          "checked": false
+        },
+        {
+          "text": "Domain: Distributed Systems Standards & Interoperability",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_d245024f",
+      "title": "\ud83e\udd1d Institutional Outreach: Internet Archive",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:26:24.827098+00:00",
+      "updated_at": "2026-10-09T21:26:24.827098+00:00",
+      "items": [
+        {
+          "text": "Contact: info@archive.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_omni_swarm_circadian_protocol_2026-10-09_18-30-57.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: 1a1228f6378167cc",
+          "checked": false
+        },
+        {
+          "text": "Domain: Permanent Archival & Digital Preservation",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_00c23bdb",
+      "title": "\ud83e\udd1d Institutional Outreach: Filecoin Foundation Grants",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:26:26.264979+00:00",
+      "updated_at": "2026-10-09T21:26:26.264979+00:00",
+      "items": [
+        {
+          "text": "Contact: grants@fil.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_sovereign_decentralized_mesh_o_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: 1a1228f683b31652",
+          "checked": false
+        },
+        {
+          "text": "Domain: Decentralized Storage & Proof-of-Replication",
+          "checked": false
+        },
+        {
+          "text": "Follow-up cadence: 72 hours",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "keep_a85e96a6",
+      "title": "\ud83e\udd1d Institutional Outreach: Arweave Protocol Team",
+      "type": "checklist",
+      "color": "teal",
+      "pinned": false,
+      "author": "omni-automated-outreach-envoy",
+      "tags": [
+        "#outreach",
+        "#external",
+        "#partnerships"
+      ],
+      "created_at": "2026-10-09T21:26:27.829052+00:00",
+      "updated_at": "2026-10-09T21:26:27.829052+00:00",
+      "items": [
+        {
+          "text": "Contact: team@arweave.org",
+          "checked": false
+        },
+        {
+          "text": "Attachments: Omni_Present_Omega_Executive_Monograph.html, Doc_zero_allocation_causal_crdt_la_2026-10-09_18-46-35.html",
+          "checked": false
+        },
+        {
+          "text": "Gmail Message ID: 1a1228f6f4279b65",
+          "checked": false
+        },
+        {
+          "text": "Domain: Permanent Decentralized Data & SmartWeave",
           "checked": false
         },
         {
