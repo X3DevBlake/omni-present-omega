@@ -200,7 +200,7 @@ firebase deploy --only hosting
 
 ## 🛠️ GitHub Repository & Remote Setup
 
-To push this integrated repository to your GitHub account (`Gitlawb`):
+To push this integrated repository to your GitHub account (`X3DevBlake`):
 
 ```bash
 # Initialize and commit
@@ -209,7 +209,7 @@ git add .
 git commit -m "feat: OPO x Omni Ecosystem x Godseyeview spatial intelligence integration"
 
 # Link to your GitHub remote
-git remote add origin https://github.com/Gitlawb/omni-present-omega.git
+git remote add origin https://github.com/X3DevBlake/omni-present-omega.git
 
 # Push to main
 git push -u origin main
