@@ -724,20 +724,36 @@ class GoogleWorkspaceSuite:
         self.gmail = GmailManager(user_email=user_email)
 
     def sync_to_web_assets(self):
-        """Syncs all workspace catalog, notes, and metrics to omni-web/assets/data for UI visualization."""
+        """Syncs all workspace catalog, notes, and metrics to omni-web/assets/data and omni-web/docs for UI visualization."""
         os.makedirs(WEB_DATA_DIR, exist_ok=True)
+        web_docs_dir = os.path.join(OMNI_WEB, "docs")
+        os.makedirs(web_docs_dir, exist_ok=True)
 
-        # 1. Sync Keep notes
+        # 1. Sync generated HTML & Markdown documents to web docs folder
+        import shutil
+        for fn in os.listdir(DOCS_DIR):
+            if fn.endswith(".html") or fn.endswith(".md"):
+                src_path = os.path.join(DOCS_DIR, fn)
+                dst_path = os.path.join(web_docs_dir, fn)
+                try:
+                    shutil.copy2(src_path, dst_path)
+                except Exception:
+                    pass
+
+        # 2. Sync Keep notes
         web_keep = os.path.join(WEB_DATA_DIR, "keep_notes.json")
         with open(web_keep, "w", encoding="utf-8") as f:
             json.dump(self.keep.notes, f, indent=2)
 
-        # 2. Sync Docs catalog
+        # 3. Sync Docs catalog with web relative links
+        catalog_copy = json.loads(json.dumps(self.docs.catalog))
+        for doc in catalog_copy.get("documents", []):
+            doc["web_url"] = f"docs/{doc.get('filename_html', '')}"
         web_docs = os.path.join(WEB_DATA_DIR, "docs_catalog.json")
         with open(web_docs, "w", encoding="utf-8") as f:
-            json.dump(self.docs.catalog, f, indent=2)
+            json.dump(catalog_copy, f, indent=2)
 
-        # 3. Sync Sheets models
+        # 4. Sync Sheets models
         sheets_data = {
             "telemetry": self.sheets.get_sheet_data("telemetry")[-15:],
             "staking": self.sheets.get_sheet_data("staking"),
@@ -748,12 +764,12 @@ class GoogleWorkspaceSuite:
         with open(web_sheets, "w", encoding="utf-8") as f:
             json.dump(sheets_data, f, indent=2)
 
-        # 4. Sync Gmail outbox history
+        # 5. Sync Gmail outbox history
         web_gmail = os.path.join(WEB_DATA_DIR, "gmail_history.json")
         with open(web_gmail, "w", encoding="utf-8") as f:
             json.dump(self.gmail.list_outbox()[:15], f, indent=2)
 
-        print(f"[Google Workspace Suite] All assets synced to {WEB_DATA_DIR}")
+        print(f"[Google Workspace Suite] All assets synced to {WEB_DATA_DIR} & {web_docs_dir}")
 
     # Backwards-compatible methods with previous GoogleWorkspaceManager
     def generate_google_doc(self, title, summary, sections):
