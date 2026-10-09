@@ -4905,3 +4905,25 @@ class MissionVoiceAssistant {
   }
 }
 
+// Global Terminal One-Liner Copy Handler
+window.copyOneLiner = function(btn) {
+  const code = "curl -sSL https://omni-network-39821.web.app/install.sh | bash";
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(code).catch(() => {});
+  }
+  const label = btn ? (btn.querySelector('#copyBtnText') || btn.querySelector('span')) : null;
+  if (label) {
+    const orig = label.textContent;
+    label.textContent = "COPIED!";
+    label.style.color = "#34d399";
+    setTimeout(() => {
+      label.textContent = orig;
+      label.style.color = "";
+    }, 2000);
+  }
+  if (window.soundEngine && window.soundEngine.playClick) {
+    window.soundEngine.playClick();
+  }
+};
+
+
