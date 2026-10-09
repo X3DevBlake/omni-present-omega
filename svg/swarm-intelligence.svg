@@ -1,22 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
   <defs>
-    <linearGradient id="swarmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="swarm-hive-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FF5E62"/>
-      <stop offset="50%" stop-color="#FF9966"/>
-      <stop offset="100%" stop-color="#7B61FF"/>
+      <stop offset="50%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#00E5FF"/>
     </linearGradient>
+    <radialGradient id="swarm-queen-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="35%" stop-color="#FF5E62"/>
+      <stop offset="80%" stop-color="#A855F7" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#A855F7" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <circle cx="24" cy="24" r="5" fill="url(#swarmGrad)"/>
-  <circle cx="24" cy="24" r="8" stroke="url(#swarmGrad)" stroke-width="1" stroke-dasharray="2 2" opacity="0.6"/>
-  <circle cx="24" cy="8" r="3.5" fill="#00F2FE"/>
-  <line x1="24" y1="12" x2="24" y2="19" stroke="#00F2FE" stroke-width="1.2" opacity="0.7"/>
-  <circle cx="39" cy="19" r="3.5" fill="#94A3B8"/>
-  <line x1="36" y1="20" x2="29" y2="23" stroke="#94A3B8" stroke-width="1.2" opacity="0.7"/>
-  <circle cx="33" cy="38" r="3.5" fill="#F59E0B"/>
-  <line x1="31" y1="35" x2="26" y2="28" stroke="#F59E0B" stroke-width="1.2" opacity="0.7"/>
-  <circle cx="15" cy="38" r="3.5" fill="#A855F7"/>
-  <line x1="17" y1="35" x2="22" y2="28" stroke="#A855F7" stroke-width="1.2" opacity="0.7"/>
-  <circle cx="9" cy="19" r="3.5" fill="#34D399"/>
-  <line x1="12" y1="20" x2="19" y2="23" stroke="#34D399" stroke-width="1.2" opacity="0.7"/>
-  <polygon points="24,8 39,19 33,38 15,38 9,19" fill="none" stroke="url(#swarmGrad)" stroke-width="1" stroke-dasharray="3 3" opacity="0.4"/>
+
+  <!-- Ambient Outer Orbit -->
+  <circle cx="32" cy="32" r="30" stroke="#A855F7" stroke-width="0.8" stroke-dasharray="2 4" stroke-opacity="0.35"/>
+
+  <!-- Outer Pentagon Mesh Ring -->
+  <polygon points="32,8 54,23 46,48 18,48 10,23" fill="none" stroke="url(#swarm-hive-grad)" stroke-width="1.5" stroke-opacity="0.5"/>
+
+  <!-- Inner Hex Hive Geometric Links -->
+  <line x1="32" y1="32" x2="32" y2="8" stroke="#00E5FF" stroke-width="1.2" stroke-opacity="0.8"/>
+  <line x1="32" y1="32" x2="54" y2="23" stroke="#A855F7" stroke-width="1.2" stroke-opacity="0.8"/>
+  <line x1="32" y1="32" x2="46" y2="48" stroke="#F59E0B" stroke-width="1.2" stroke-opacity="0.8"/>
+  <line x1="32" y1="32" x2="18" y2="48" stroke="#EC4899" stroke-width="1.2" stroke-opacity="0.8"/>
+  <line x1="32" y1="32" x2="10" y2="23" stroke="#34D399" stroke-width="1.2" stroke-opacity="0.8"/>
+
+  <!-- Inter-Agent Cross Links -->
+  <line x1="32" y1="8" x2="46" y2="48" stroke="#00E5FF" stroke-width="0.7" stroke-dasharray="2 2" stroke-opacity="0.3"/>
+  <line x1="32" y1="8" x2="18" y2="48" stroke="#00E5FF" stroke-width="0.7" stroke-dasharray="2 2" stroke-opacity="0.3"/>
+  <line x1="10" y1="23" x2="54" y2="23" stroke="#A855F7" stroke-width="0.7" stroke-dasharray="2 2" stroke-opacity="0.3"/>
+
+  <!-- Peripheral Autonomous Agent Drones -->
+  <!-- Agent 1: Synthesis Lead (Cyan) -->
+  <circle cx="32" cy="8" r="4.5" fill="#0A0F1D" stroke="#00E5FF" stroke-width="1.8"/>
+  <circle cx="32" cy="8" r="2" fill="#00E5FF"/>
+
+  <!-- Agent 2: Reasoning Specialist (Violet) -->
+  <circle cx="54" cy="23" r="4.5" fill="#0A0F1D" stroke="#A855F7" stroke-width="1.8"/>
+  <circle cx="54" cy="23" r="2" fill="#A855F7"/>
+
+  <!-- Agent 3: Critic & Verifier (Amber) -->
+  <circle cx="46" cy="48" r="4.5" fill="#0A0F1D" stroke="#F59E0B" stroke-width="1.8"/>
+  <circle cx="46" cy="48" r="2" fill="#F59E0B"/>
+
+  <!-- Agent 4: Creative Lateral (Pink) -->
+  <circle cx="18" cy="48" r="4.5" fill="#0A0F1D" stroke="#EC4899" stroke-width="1.8"/>
+  <circle cx="18" cy="48" r="2" fill="#EC4899"/>
+
+  <!-- Agent 5: Execution Core (Emerald) -->
+  <circle cx="10" cy="23" r="4.5" fill="#0A0F1D" stroke="#34D399" stroke-width="1.8"/>
+  <circle cx="10" cy="23" r="2" fill="#34D399"/>
+
+  <!-- Central Swarm Overlord Core / Consensus Nexus -->
+  <circle cx="32" cy="32" r="10" fill="url(#swarm-queen-glow)"/>
+  <circle cx="32" cy="32" r="6" fill="#0A0F1D" stroke="#FFFFFF" stroke-width="1.5"/>
+  <circle cx="32" cy="32" r="2.8" fill="#FFFFFF"/>
 </svg>

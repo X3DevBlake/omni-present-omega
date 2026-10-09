@@ -1,26 +1,121 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
   <defs>
-    <linearGradient id="opo-mesh-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00F2FE" />
-      <stop offset="50%" stop-color="#4FACFE" />
-      <stop offset="100%" stop-color="#7B61FF" />
+    <!-- Background Outer Glow -->
+    <radialGradient id="opo-glow-ambient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#7B61FF" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#070A13" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Sovereign Omega Body Gradient -->
+    <linearGradient id="opo-chassis-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE"/>
+      <stop offset="35%" stop-color="#00B4D8"/>
+      <stop offset="70%" stop-color="#7B61FF"/>
+      <stop offset="100%" stop-color="#A855F7"/>
     </linearGradient>
-    <linearGradient id="inner-core" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FF0844" />
-      <stop offset="100%" stop-color="#FFB199" />
+
+    <!-- Specular Bevel Highlight Gradient -->
+    <linearGradient id="opo-specular-edge" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#00F2FE" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#7B61FF" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Core Plasma Singularity -->
+    <radialGradient id="opo-singularity-core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="25%" stop-color="#00F2FE"/>
+      <stop offset="65%" stop-color="#7B61FF"/>
+      <stop offset="100%" stop-color="#4F46E5" stop-opacity="0.4"/>
+    </radialGradient>
+
+    <!-- Terminal Base Foot Grad -->
+    <linearGradient id="opo-terminal-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F2FE"/>
+      <stop offset="50%" stop-color="#4E82EE"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+
+    <!-- Quantum Flare Starburst -->
+    <linearGradient id="opo-flare-h" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#00F2FE" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <!-- Outer glowing ring -->
-  <circle cx="32" cy="32" r="30" stroke="url(#opo-mesh-grad)" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.5" />
-  <!-- Greek Omega Symbol with Sovereign Interlock -->
-  <path d="M12 50 L22 50 C22 44 16 38 16 28 C16 19.16 23.16 12 32 12 C40.84 12 48 19.16 48 28 C48 38 42 44 42 50 L52 50" 
-        stroke="url(#opo-mesh-grad)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- Central Delta-CRDT Quantum Point -->
-  <circle cx="32" cy="28" r="5" fill="url(#inner-core)">
-    <animate attributeName="r" values="4;6;4" dur="2.5s" repeatCount="indefinite" />
-  </circle>
-  <!-- Semilattice Nodes -->
-  <circle cx="22" cy="48" r="3" fill="#00F2FE" />
-  <circle cx="42" cy="48" r="3" fill="#7B61FF" />
-  <circle cx="32" cy="14" r="2.5" fill="#FFB199" />
+
+  <!-- Layer 0: Ambient Energy Field -->
+  <circle cx="64" cy="64" r="62" fill="url(#opo-glow-ambient)"/>
+
+  <!-- Layer 1: Outer Precision Calibration Ring -->
+  <circle cx="64" cy="64" r="58" stroke="#00E5FF" stroke-width="1.2" stroke-opacity="0.35" stroke-dasharray="2 6"/>
+  <circle cx="64" cy="64" r="54" stroke="#7B61FF" stroke-width="1" stroke-opacity="0.25"/>
+
+  <!-- Precision Cardinal Index Ticks -->
+  <line x1="64" y1="4" x2="64" y2="10" stroke="#00F2FE" stroke-width="2" stroke-linecap="round"/>
+  <line x1="64" y1="118" x2="64" y2="124" stroke="#A855F7" stroke-width="2" stroke-linecap="round"/>
+  <line x1="4" y1="64" x2="10" y2="64" stroke="#00F2FE" stroke-width="2" stroke-linecap="round"/>
+  <line x1="118" y1="64" x2="124" y2="64" stroke="#A855F7" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Diagonal Compass Accents -->
+  <circle cx="23" cy="23" r="1.5" fill="#00E5FF" opacity="0.7"/>
+  <circle cx="105" cy="23" r="1.5" fill="#00E5FF" opacity="0.7"/>
+  <circle cx="23" cy="105" r="1.5" fill="#A855F7" opacity="0.7"/>
+  <circle cx="105" cy="105" r="1.5" fill="#A855F7" opacity="0.7"/>
+
+  <!-- Layer 2: Hexagonal Quantum Mesh Lattice (Subtle Background Geometry) -->
+  <polygon points="64,18 98,38 98,78 64,98 30,78 30,38" stroke="url(#opo-chassis-grad)" stroke-width="1" stroke-opacity="0.18" fill="none"/>
+  <line x1="64" y1="18" x2="64" y2="98" stroke="url(#opo-chassis-grad)" stroke-width="0.8" stroke-opacity="0.12"/>
+  <line x1="30" y1="38" x2="98" y2="78" stroke="url(#opo-chassis-grad)" stroke-width="0.8" stroke-opacity="0.12"/>
+  <line x1="30" y1="78" x2="98" y2="38" stroke="url(#opo-chassis-grad)" stroke-width="0.8" stroke-opacity="0.12"/>
+
+  <!-- Layer 3: 3D Volumetric Omega Shadow/Under-Glow -->
+  <path d="M 20 102 L 42 102 C 43 88 32 76 32 54 C 32 36.33 46.33 22 64 22 C 81.67 22 96 36.33 96 54 C 96 76 85 88 86 102 L 108 102"
+        stroke="#4F46E5" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+
+  <!-- Layer 4: Primary Sculpted 3D Omega Chassis -->
+  <path d="M 20 100 L 42 100 C 43 86 32 74 32 52 C 32 34.33 46.33 20 64 20 C 81.67 20 96 34.33 96 52 C 96 74 85 86 86 100 L 108 100"
+        stroke="url(#opo-chassis-grad)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Layer 5: Precision Inner Bevel & High-Gloss Specular Ridge -->
+  <path d="M 22 98 L 41 98 C 42 84 34 72 34 52 C 34 35.5 47.5 22 64 22 C 80.5 22 94 35.5 94 52 C 94 72 86 84 87 98 L 106 98"
+        stroke="url(#opo-specular-edge)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+
+  <!-- Layer 6: Base Bus Terminals (Left & Right Anchors) -->
+  <!-- Left Terminal Hub -->
+  <rect x="14" y="93" width="14" height="14" rx="3.5" fill="#0A0F1D" stroke="#00F2FE" stroke-width="2"/>
+  <circle cx="21" cy="100" r="3" fill="#00F2FE"/>
+  <circle cx="21" cy="100" r="1.2" fill="#FFFFFF"/>
+
+  <!-- Right Terminal Hub -->
+  <rect x="100" y="93" width="14" height="14" rx="3.5" fill="#0A0F1D" stroke="#A855F7" stroke-width="2"/>
+  <circle cx="107" cy="100" r="3" fill="#A855F7"/>
+  <circle cx="107" cy="100" r="1.2" fill="#FFFFFF"/>
+
+  <!-- Layer 7: Central Quantum Singularity / "Eye of Omega" -->
+  <!-- Outer Singularity Resonance Ring -->
+  <circle cx="64" cy="54" r="22" stroke="url(#opo-chassis-grad)" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="3 3"/>
+  <circle cx="64" cy="54" r="16" stroke="#00F2FE" stroke-width="1.8" stroke-opacity="0.7"/>
+
+  <!-- Singularity Glowing Plasma Orb -->
+  <circle cx="64" cy="54" r="11" fill="url(#opo-singularity-core)"/>
+
+  <!-- Photonic Specular Flare Starburst -->
+  <ellipse cx="64" cy="54" rx="20" ry="2.2" fill="url(#opo-flare-h)"/>
+  <ellipse cx="64" cy="54" rx="2.2" ry="20" fill="url(#opo-flare-h)"/>
+  <circle cx="64" cy="54" r="4.2" fill="#FFFFFF"/>
+
+  <!-- Layer 8: Delta-CRDT Mathematical Semilattice Constellation Points -->
+  <!-- Supremum Apex Join Node (Top) -->
+  <circle cx="64" cy="20" r="3.2" fill="#FFFFFF" stroke="#00F2FE" stroke-width="1.8"/>
+  <!-- Left Ingress Replica Node -->
+  <circle cx="43.5" cy="85" r="2.8" fill="#FFFFFF" stroke="#00B4D8" stroke-width="1.5"/>
+  <!-- Right Ingress Replica Node -->
+  <circle cx="84.5" cy="85" r="2.8" fill="#FFFFFF" stroke="#A855F7" stroke-width="1.5"/>
+
+  <!-- Energy Vector Conduits -->
+  <line x1="43.5" y1="85" x2="64" y2="54" stroke="#00E5FF" stroke-width="1" stroke-dasharray="2 2" stroke-opacity="0.6"/>
+  <line x1="84.5" y1="85" x2="64" y2="54" stroke="#A855F7" stroke-width="1" stroke-dasharray="2 2" stroke-opacity="0.6"/>
+  <line x1="64" y1="20" x2="64" y2="54" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="2 2" stroke-opacity="0.7"/>
 </svg>

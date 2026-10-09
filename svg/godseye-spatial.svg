@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <!-- Radial Planetary Aura -->
+    <radialGradient id="ge-planet-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.3"/>
+      <stop offset="65%" stop-color="#7B61FF" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#070A13" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Earth Sphere Shading -->
+    <radialGradient id="ge-earth-sphere" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#003554"/>
+      <stop offset="45%" stop-color="#051923"/>
+      <stop offset="90%" stop-color="#001219"/>
+      <stop offset="100%" stop-color="#000814"/>
+    </radialGradient>
+
+    <!-- Planetary Atmosphere Limb Glow -->
+    <linearGradient id="ge-atmosphere-limb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#4E82EE" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#A855F7" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Targeting Sweep Beam -->
+    <linearGradient id="ge-sweep-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#7B61FF" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Satellite Solar Panel Grad -->
+    <linearGradient id="ge-panel-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00B4D8"/>
+      <stop offset="50%" stop-color="#0077B6"/>
+      <stop offset="100%" stop-color="#023E8A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient Space Glow -->
+  <circle cx="64" cy="64" r="62" fill="url(#ge-planet-glow)"/>
+
+  <!-- Outer HUD Targeting Reticle & Azimuth Scale -->
+  <circle cx="64" cy="64" r="60" stroke="#00E5FF" stroke-width="1.2" stroke-opacity="0.4" stroke-dasharray="3 5"/>
+  <circle cx="64" cy="64" r="54" stroke="#7B61FF" stroke-width="0.8" stroke-opacity="0.3"/>
+
+  <!-- Reticle Corner Crosshair Brackets -->
+  <path d="M 12 24 L 12 12 L 24 12" stroke="#00E5FF" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M 116 24 L 116 12 L 104 12" stroke="#00E5FF" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M 12 104 L 12 116 L 24 116" stroke="#A855F7" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M 116 104 L 116 116 L 104 116" stroke="#A855F7" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- Cardinal Calibrations -->
+  <line x1="64" y1="2" x2="64" y2="8" stroke="#00F2FE" stroke-width="2"/>
+  <line x1="64" y1="120" x2="64" y2="126" stroke="#A855F7" stroke-width="2"/>
+  <line x1="2" y1="64" x2="8" y2="64" stroke="#00F2FE" stroke-width="2"/>
+  <line x1="120" y1="64" x2="126" y2="64" stroke="#A855F7" stroke-width="2"/>
+
+  <!-- Planetary 3D Earth Globe Body -->
+  <circle cx="64" cy="64" r="38" fill="url(#ge-earth-sphere)"/>
+
+  <!-- Earth Atmospheric Rim Specular Ring -->
+  <circle cx="64" cy="64" r="38" stroke="url(#ge-atmosphere-limb)" stroke-width="2.2" stroke-opacity="0.85"/>
+
+  <!-- 3D Latitude Parallels (Ellipses) -->
+  <ellipse cx="64" cy="64" rx="38" ry="14" stroke="#00E5FF" stroke-width="0.9" stroke-opacity="0.35" fill="none"/>
+  <ellipse cx="64" cy="48" rx="35" ry="11" stroke="#00E5FF" stroke-width="0.8" stroke-opacity="0.25" fill="none"/>
+  <ellipse cx="64" cy="80" rx="35" ry="11" stroke="#7B61FF" stroke-width="0.8" stroke-opacity="0.25" fill="none"/>
+
+  <!-- 3D Longitude Meridians -->
+  <ellipse cx="64" cy="64" rx="14" ry="38" stroke="#00E5FF" stroke-width="0.9" stroke-opacity="0.35" fill="none"/>
+  <ellipse cx="64" cy="64" rx="27" ry="38" stroke="#00E5FF" stroke-width="0.8" stroke-opacity="0.25" fill="none"/>
+  <line x1="64" y1="26" x2="64" y2="102" stroke="#00F2FE" stroke-width="1" stroke-opacity="0.45"/>
+
+  <!-- Continental Landmass Contours (Stylized Vector Topology) -->
+  <path d="M 44 48 Q 50 44 56 46 Q 62 48 60 55 Q 52 58 46 54 Z" fill="#00E5FF" fill-opacity="0.18" stroke="#00E5FF" stroke-width="0.8" stroke-opacity="0.5"/>
+  <path d="M 68 52 Q 76 50 82 56 Q 84 66 78 72 Q 72 70 70 60 Z" fill="#00E5FF" fill-opacity="0.18" stroke="#00E5FF" stroke-width="0.8" stroke-opacity="0.5"/>
+  <path d="M 42 70 Q 48 68 54 74 Q 52 84 46 88 Q 40 82 42 70 Z" fill="#7B61FF" fill-opacity="0.18" stroke="#7B61FF" stroke-width="0.8" stroke-opacity="0.5"/>
+
+  <!-- Active Ground Station Telemetry Blips -->
+  <!-- Tokyo Station -->
+  <circle cx="78" cy="54" r="2.5" fill="#00F2FE"/>
+  <circle cx="78" cy="54" r="5" stroke="#00F2FE" stroke-width="0.8" stroke-opacity="0.6"/>
+  <!-- Zurich Station -->
+  <circle cx="56" cy="46" r="2" fill="#38BDF8"/>
+  <!-- Ashburn Station -->
+  <circle cx="44" cy="52" r="2.2" fill="#00F2FE"/>
+  <!-- Southern Seismic Node -->
+  <circle cx="50" cy="80" r="2.5" fill="#EF4444"/>
+  <circle cx="50" cy="80" r="6" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.5"/>
+
+  <!-- Subsea SCION Fiberoptic Interconnect Arch -->
+  <path d="M 44 52 Q 62 38 78 54" stroke="#00E5FF" stroke-width="1.2" stroke-dasharray="2 3" stroke-opacity="0.8" fill="none"/>
+  <path d="M 78 54 Q 66 74 50 80" stroke="#7B61FF" stroke-width="1.2" stroke-dasharray="2 3" stroke-opacity="0.8" fill="none"/>
+
+  <!-- Orbital Ring (LEO / GEO Track) -->
+  <ellipse cx="64" cy="64" rx="52" ry="24" stroke="url(#ge-atmosphere-limb)" stroke-width="1.5" stroke-opacity="0.7" fill="none" transform="rotate(-30 64 64)"/>
+
+  <!-- Orbital Satellite (Upper Right Orbit) -->
+  <!-- Transmit Sensor Cone to Earth -->
+  <polygon points="98,34 68,54 82,62" fill="url(#ge-sweep-grad)" opacity="0.35"/>
+
+  <!-- Satellite Solar Arrays -->
+  <g transform="translate(98, 34) rotate(-30)">
+    <!-- Left Wing Array -->
+    <rect x="-18" y="-4" width="12" height="8" rx="1.5" fill="url(#ge-panel-grad)" stroke="#00F2FE" stroke-width="0.8"/>
+    <line x1="-12" y1="-4" x2="-12" y2="4" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.7"/>
+    <!-- Right Wing Array -->
+    <rect x="6" y="-4" width="12" height="8" rx="1.5" fill="url(#ge-panel-grad)" stroke="#00F2FE" stroke-width="0.8"/>
+    <line x1="12" y1="-4" x2="12" y2="4" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.7"/>
+    <!-- Central Satellite Bus Chassis -->
+    <rect x="-5" y="-5" width="10" height="10" rx="2" fill="#0F172A" stroke="#FFFFFF" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="2.2" fill="#00F2FE"/>
+    <!-- High-Gain Antenna Dish -->
+    <circle cx="0" cy="7" r="3" stroke="#A855F7" stroke-width="1" fill="none"/>
+    <line x1="0" y1="5" x2="0" y2="7" stroke="#A855F7" stroke-width="1"/>
+  </g>
+
+  <!-- Central Target Reticle HUD Cross -->
+  <circle cx="64" cy="64" r="8" stroke="#00F2FE" stroke-width="1" stroke-opacity="0.6" stroke-dasharray="2 2"/>
+  <circle cx="64" cy="64" r="2.5" fill="#FFFFFF"/>
+</svg>

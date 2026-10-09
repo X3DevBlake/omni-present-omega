@@ -44,7 +44,7 @@ NAV_HEADER = '''  <!-- Liquid Ambient Background Engine with 3D Neural Connectom
           <span>Home</span>
         </a>
         <a href="godseye.html" class="nav-pill-btn" style="border-color: rgba(0, 229, 255, 0.4); background: rgba(0, 229, 255, 0.08);">
-          <span style="color: #00E5FF; font-size: 0.95rem; line-height: 1;">🛰️</span>
+          <img src="svg/godseye-spatial.svg" alt="God's Eye" width="16" height="16">
           <span style="color: #00E5FF; font-weight: 600;">God's Eye</span>
         </a>
 
@@ -116,7 +116,9 @@ NAV_HEADER = '''  <!-- Liquid Ambient Background Engine with 3D Neural Connectom
               </div>
             </a>
             <a href="godseye.html" class="dropdown-item">
-              <div class="dropdown-item-icon">🛰️</div>
+              <div class="dropdown-item-icon">
+                <img src="svg/godseye-spatial.svg" alt="God's Eye View" width="18" height="18">
+              </div>
               <div class="dropdown-item-content">
                 <div class="dropdown-item-title">Godseyeview 3D <span class="item-badge" style="color: #00E5FF;">Orbital</span></div>
                 <div class="dropdown-item-desc">Planetary Spatial Intelligence, Satellites &amp; AIS Maritime</div>
@@ -244,7 +246,7 @@ NAV_HEADER = '''  <!-- Liquid Ambient Background Engine with 3D Neural Connectom
             <div class="dropdown-section-title" style="margin-top: 4px;">ORBITAL &amp; ANOMALY INTELLIGENCE</div>
             <a href="godseye.html" class="dropdown-item">
               <div class="dropdown-item-icon">
-                <span style="font-size: 1.1rem;">🛰️</span>
+                <img src="svg/godseye-spatial.svg" alt="God's Eye View" width="18" height="18">
               </div>
               <div class="dropdown-item-content">
                 <div class="dropdown-item-title">God's Eye View <span class="item-badge" style="color: #00E5FF;">3D Planetary</span></div>
@@ -273,7 +275,7 @@ NAV_HEADER = '''  <!-- Liquid Ambient Background Engine with 3D Neural Connectom
           <div class="nav-dropdown-menu">
             <a href="godseye.html" class="dropdown-item">
               <div class="dropdown-item-icon">
-                <span style="font-size: 1.1rem;">🛰️</span>
+                <img src="svg/godseye-spatial.svg" alt="God's Eye Engine" width="18" height="18">
               </div>
               <div class="dropdown-item-content">
                 <div class="dropdown-item-title">Godseyeview Spatial Engine <span class="item-badge" style="color: #00E5FF;">60 FPS</span></div>
@@ -384,7 +386,7 @@ NAV_HEADER = '''  <!-- Liquid Ambient Background Engine with 3D Neural Connectom
               <span>OPO Mesh</span>
             </a>
             <a href="godseye.html" class="eco-app-tile">
-              <span class="eco-icon" style="color: #00E5FF;">🛰️</span>
+              <img src="svg/godseye-spatial.svg" alt="God's Eye" width="22" height="22" style="margin-bottom: 2px;">
               <span>God's Eye</span>
             </a>
             <a href="https://omni-explorer-39821.web.app" target="_blank" rel="noopener" class="eco-app-tile">
