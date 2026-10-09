@@ -442,11 +442,15 @@
           <img src="svg/google-gmail-icon.svg" width="16" height="16" alt="Gmail">
           <span>Gmail</span>
         </div>
-        <div class="user-pill">
+        <div class="user-pill" style="border-color: rgba(52, 211, 153, 0.4); background: rgba(16, 185, 129, 0.15); color: #34D399;">
           Account: <strong>rgkdevx1@gmail.com</strong>
         </div>
-        <button class="action-btn-primary" onclick="openAuthModal()" style="padding:6px 14px; font-size:0.8rem; background:linear-gradient(135deg, #4285F4, #34A853);">
-          <span>🔐 Connect Google Account</span>
+        <div class="service-badge" style="background: rgba(16, 185, 129, 0.2); border-color: rgba(52, 211, 153, 0.4); color: #34D399; font-weight: 700;">
+          <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#10B981; margin-right:4px;"></span>
+          ✓ GOOGLE OAUTH 2.0 CONNECTED
+        </div>
+        <button class="action-btn-primary" onclick="openAuthModal()" style="padding:6px 14px; font-size:0.8rem; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2);">
+          <span>⚙️ Auth Settings</span>
         </button>
       </div>
 
@@ -1027,10 +1031,11 @@
           <td>${new Date(doc.created_at).toLocaleString()}</td>
           <td><code>.html</code> <code>.md</code></td>
           <td>
-            <a href="docs/${escapeHtml(doc.filename_html)}" target="_blank" style="display:inline-flex; align-items:center; gap:6px; color:#00F2FE; text-decoration:none; font-weight:600; font-size:0.85rem;">
-              <span>Open Google Doc</span> ↗
+            <a href="${doc.google_drive_url ? escapeHtml(doc.google_drive_url) : 'docs/' + escapeHtml(doc.filename_html)}" target="_blank" style="display:inline-flex; align-items:center; gap:6px; color:#00F2FE; text-decoration:none; font-weight:600; font-size:0.85rem;">
+              <span>${doc.google_drive_url ? '📄 Open in Google Docs' : '📄 Open Document'}</span> ↗
             </a>
           </td>
+        </tr>
       `).join('');
     }
 
