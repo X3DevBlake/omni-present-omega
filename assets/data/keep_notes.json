@@ -1,6 +1,6 @@
 {
   "user_email": "rgkdevx1@gmail.com",
-  "last_synced": "2026-10-09T18:31:46.894746+00:00",
+  "last_synced": "2026-10-09T19:08:26.299966+00:00",
   "notes": [
     {
       "id": "keep_init_1",
@@ -150,6 +150,21 @@
           "checked": false
         }
       ]
+    },
+    {
+      "id": "keep_dc1ff2a3",
+      "title": "\ud83e\uddea SpCas9-pegRNA Off-Target Audit",
+      "type": "text",
+      "color": "emerald",
+      "pinned": false,
+      "author": "omni-keep-scratchpad-curator",
+      "tags": [
+        "#biotech",
+        "#crispr"
+      ],
+      "created_at": "2026-10-09T19:08:26.299873+00:00",
+      "updated_at": "2026-10-09T19:08:26.299873+00:00",
+      "content": "Off-target cleavage verified < 0.002% across 10,000 synthetic targets."
     }
   ]
 }
