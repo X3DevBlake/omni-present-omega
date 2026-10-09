@@ -1,0 +1,7 @@
+{
+  "job_id": "SHORT-JOB-2026-10-09_18-00-09",
+  "output_path": "/data/data/com.termux/files/home/omni-automation/workspace_output/shorts/omni_short_2026-10-09_18-00-09.mp4",
+  "composition": "OmniShorts",
+  "status": "READY_FOR_ENCODE",
+  "remotion_command": "npx remotion render src/remotion/index.ts OmniShorts /data/data/com.termux/files/home/omni-automation/workspace_output/shorts/omni_short_2026-10-09_18-00-09.mp4 --props='{\"missionTitle\": \"Omni 32-Agent Syndicate Showcase [CYCLE-1791568807]\", \"targetName\": \"All 7 Syndicates & 15 Ecosystem Portals Synchronized\", \"satellitesCount\": 7420, \"flightsCount\": 12840, \"validatorsCount\": 8, \"stakingApy\": \"18.4% APY\"}'"
+}
