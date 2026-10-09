@@ -1,0 +1,665 @@
+/* ==========================================================================
+   HUMANITY TOKEN ($HUMANITY) - AERO-CYBERNETIC LIQUID GLASS STYLESHEET
+   Free Proof-of-Humanity Mining Portal, 360 Hologram, Wallet & Referral Engine
+   ========================================================================== */
+
+/* Custom Palette Extensions */
+:root {
+  --humanity-gold: #fbbf24;
+  --humanity-gold-glow: rgba(251, 191, 36, 0.45);
+  --humanity-cyan: #38bdf8;
+  --humanity-cyan-glow: rgba(56, 189, 248, 0.45);
+  --humanity-purple: #c084fc;
+  --humanity-emerald: #34d399;
+  --humanity-obsidian: #050811;
+  --humanity-glass: rgba(11, 17, 32, 0.78);
+  --humanity-glass-card: rgba(15, 23, 42, 0.65);
+  --humanity-border: rgba(255, 255, 255, 0.1);
+  --humanity-border-active: rgba(56, 189, 248, 0.5);
+  --holo-beam-color: rgba(56, 189, 248, 0.15);
+}
+
+/* Page Container & Background Dynamics */
+.humanity-page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  background: radial-gradient(circle at 50% 10%, #0d1a33 0%, #060a14 50%, #020408 100%);
+  overflow-x: hidden;
+}
+
+.humanity-bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.65;
+}
+
+/* Audio Control Floating Pill */
+.audio-floating-pill {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid var(--humanity-border-active);
+  backdrop-filter: blur(16px);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 15px var(--humanity-cyan-glow);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.audio-floating-pill:hover {
+  transform: translateY(-2px) scale(1.03);
+  border-color: var(--humanity-gold);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 25px var(--humanity-gold-glow);
+}
+
+.audio-equalizer {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 14px;
+}
+
+.audio-bar {
+  width: 3px;
+  background: var(--humanity-cyan);
+  border-radius: 2px;
+  animation: eqPulse 1.2s ease-in-out infinite;
+}
+
+.audio-bar:nth-child(2) { animation-delay: 0.2s; height: 8px; }
+.audio-bar:nth-child(3) { animation-delay: 0.4s; height: 14px; }
+.audio-bar:nth-child(4) { animation-delay: 0.1s; height: 10px; }
+
+@keyframes eqPulse {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+
+.audio-floating-pill.muted .audio-bar {
+  animation: none;
+  transform: scaleY(0.2);
+  background: #64748b;
+}
+
+/* Hero Section & 360 Hologram Layout */
+.humanity-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  padding: 40px 0 60px 0;
+}
+
+@media (min-width: 1024px) {
+  .humanity-hero-grid {
+    grid-template-columns: 1.1fr 1fr;
+  }
+}
+
+/* 360 Hologram Viewport */
+.hologram-stage-container {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  height: 480px;
+  margin: 0 auto;
+  perspective: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hologram-canvas-view {
+  width: 100%;
+  height: 400px;
+  cursor: grab;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 35px rgba(56, 189, 248, 0.4));
+  transition: filter 0.5s ease;
+}
+
+.hologram-canvas-view:active {
+  cursor: grabbing;
+}
+
+.hologram-canvas-view.mining-active {
+  filter: drop-shadow(0 0 50px rgba(251, 191, 36, 0.6)) drop-shadow(0 0 25px rgba(56, 189, 248, 0.8));
+}
+
+/* Holographic Pedestal & Emitter Beams */
+.hologram-pedestal {
+  position: absolute;
+  bottom: 30px;
+  width: 280px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(56, 189, 248, 0.6) 0%, rgba(15, 23, 42, 0.8) 50%, transparent 80%);
+  border: 2px solid rgba(56, 189, 248, 0.5);
+  box-shadow: 0 0 40px var(--humanity-cyan-glow), inset 0 0 20px rgba(56, 189, 248, 0.8);
+  transform: rotateX(65deg);
+  z-index: 1;
+}
+
+.hologram-light-cone {
+  position: absolute;
+  bottom: 60px;
+  width: 320px;
+  height: 340px;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+  background: linear-gradient(to top, rgba(56, 189, 248, 0.22) 0%, rgba(192, 132, 252, 0.08) 60%, transparent 100%);
+  pointer-events: none;
+  animation: coneFlicker 4s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+@keyframes coneFlicker {
+  0% { opacity: 0.7; transform: scaleX(0.98); }
+  50% { opacity: 0.95; transform: scaleX(1.02); }
+  100% { opacity: 0.8; transform: scaleX(1); }
+}
+
+.hologram-scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 4px,
+    rgba(56, 189, 248, 0.08) 5px
+  );
+  pointer-events: none;
+  border-radius: 24px;
+  z-index: 3;
+}
+
+/* Hologram Controls Bar */
+.hologram-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+  z-index: 4;
+}
+
+.holo-pill-btn {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid var(--humanity-border);
+  color: #94a3b8;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  padding: 5px 12px;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.holo-pill-btn:hover, .holo-pill-btn.active {
+  color: var(--humanity-cyan);
+  border-color: var(--humanity-cyan);
+  background: rgba(56, 189, 248, 0.15);
+}
+
+/* Cybernetic Mining Switch & Control */
+.mining-switch-card {
+  background: var(--humanity-glass);
+  border: 1px solid var(--humanity-border);
+  backdrop-filter: var(--blur-mid);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: var(--glass-shadow-deep);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.mining-switch-card.mining-active {
+  border-color: var(--humanity-gold);
+  box-shadow: 0 0 35px rgba(251, 191, 36, 0.25), var(--glass-shadow-deep);
+}
+
+.mining-switch-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--humanity-cyan), var(--humanity-gold), var(--humanity-purple));
+  opacity: 0.8;
+}
+
+.mining-cta-btn {
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+}
+
+.mining-cta-btn.start-state {
+  background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+  color: #0f172a;
+  box-shadow: 0 8px 25px rgba(234, 179, 8, 0.4);
+}
+
+.mining-cta-btn.start-state:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(234, 179, 8, 0.6);
+  filter: brightness(1.1);
+}
+
+.mining-cta-btn.stop-state {
+  background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+  animation: stopPulse 2s infinite alternate;
+}
+
+@keyframes stopPulse {
+  0% { box-shadow: 0 0 20px rgba(239, 68, 68, 0.4); }
+  100% { box-shadow: 0 0 35px rgba(239, 68, 68, 0.7); }
+}
+
+/* Real-Time Accrual Balance Display */
+.balance-hero-block {
+  text-align: center;
+  padding: 18px 0;
+}
+
+.balance-number-display {
+  font-size: clamp(2.4rem, 6vw, 3.8rem);
+  font-weight: 900;
+  font-family: var(--font-mono);
+  background: linear-gradient(135deg, #ffffff 30%, #fde047 80%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+  text-shadow: 0 0 40px rgba(251, 191, 36, 0.3);
+}
+
+.balance-ticker-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(251, 191, 36, 0.15);
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  color: var(--humanity-gold);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+/* Telemetry Dashboard Grid */
+.telemetry-hud-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 18px;
+}
+
+@media (min-width: 640px) {
+  .telemetry-hud-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.telemetry-hud-card {
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid var(--humanity-border);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.telemetry-label {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.telemetry-val {
+  font-size: 1.1rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  color: #ffffff;
+}
+
+/* Humanity Wallet Card & Sections */
+.wallet-card-wrapper {
+  background: var(--humanity-glass);
+  border: 1px solid var(--humanity-border);
+  backdrop-filter: var(--blur-mid);
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: var(--glass-shadow-deep);
+  margin-bottom: 40px;
+}
+
+/* Grayed-Out Withdraw Box with Coming Soon Badge */
+.withdraw-locked-card {
+  position: relative;
+  background: rgba(15, 23, 42, 0.35);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  padding: 24px;
+  margin-top: 24px;
+  filter: grayscale(80%) opacity(0.7);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.withdraw-locked-card:hover {
+  filter: grayscale(40%) opacity(0.85);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.coming-soon-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #0f172a;
+  font-weight: 800;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.withdraw-disabled-input {
+  background: rgba(2, 6, 23, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #64748b;
+  padding: 12px 16px;
+  border-radius: 10px;
+  width: 100%;
+  font-family: var(--font-mono);
+  cursor: not-allowed;
+}
+
+.withdraw-disabled-btn {
+  background: rgba(51, 65, 85, 0.5);
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: not-allowed;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* 10 Billion Total Supply Meter */
+.supply-progress-container {
+  margin: 20px 0;
+}
+
+.supply-bar-bg {
+  height: 12px;
+  background: rgba(15, 23, 42, 0.8);
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.supply-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--humanity-cyan), var(--humanity-gold), var(--humanity-purple));
+  border-radius: 9999px;
+  box-shadow: 0 0 15px var(--humanity-gold-glow);
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Referral Program Card & Callouts */
+.referral-hub-card {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.6) 100%);
+  border: 1px solid var(--humanity-border);
+  backdrop-filter: var(--blur-mid);
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: var(--glass-shadow-deep);
+  position: relative;
+  overflow: hidden;
+}
+
+.referral-bonus-callout {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.15) 0%, rgba(56, 189, 248, 0.15) 100%);
+  border-left: 4px solid var(--humanity-gold);
+  border-radius: 0 12px 12px 0;
+  padding: 16px 20px;
+  margin: 20px 0;
+}
+
+.referral-link-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(2, 6, 23, 0.7);
+  border: 1px solid var(--humanity-border-active);
+  border-radius: 12px;
+  padding: 6px 6px 6px 16px;
+}
+
+.referral-url-text {
+  flex: 1;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: #38bdf8;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.copy-pill-btn {
+  background: var(--humanity-cyan);
+  color: #0f172a;
+  border: none;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.copy-pill-btn:hover {
+  filter: brightness(1.15);
+  box-shadow: 0 0 15px var(--humanity-cyan-glow);
+}
+
+/* User Profile & Image Upload Modal / Drawer */
+.modal-backdrop-custom {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(16px);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-backdrop-custom.active {
+  display: flex;
+}
+
+.profile-modal-card {
+  background: #0b1120;
+  border: 1px solid var(--humanity-border-active);
+  border-radius: 24px;
+  width: 100%;
+  max-width: 540px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9), 0 0 40px var(--humanity-cyan-glow);
+  animation: modalPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes modalPop {
+  0% { transform: scale(0.92); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.profile-banner-uploader {
+  height: 120px;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  position: relative;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+}
+
+.profile-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e2e8f0;
+  font-size: 0.82rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.profile-banner-uploader:hover .profile-banner-overlay {
+  opacity: 1;
+}
+
+.profile-avatar-uploader {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  border: 3px solid var(--humanity-gold);
+  background: #0f172a;
+  position: relative;
+  margin: -42px 0 0 24px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 20px var(--humanity-gold-glow);
+}
+
+.avatar-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-avatar-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 0.75rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.profile-avatar-uploader:hover .profile-avatar-overlay {
+  opacity: 1;
+}
+
+/* Block Rewards Live Ledger Table */
+.mining-ledger-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  margin-top: 14px;
+}
+
+.mining-ledger-table th {
+  text-align: left;
+  padding: 10px 14px;
+  background: rgba(15, 23, 42, 0.7);
+  color: #94a3b8;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mining-ledger-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: #e2e8f0;
+}
+
+.mining-ledger-table tr:hover td {
+  background: rgba(56, 189, 248, 0.05);
+}
+
+/* Toast Notification */
+.humanity-toast {
+  position: fixed;
+  bottom: 84px;
+  right: 24px;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid var(--humanity-cyan);
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 20px var(--humanity-cyan-glow);
+  z-index: 1001;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+}
+
+.humanity-toast.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}

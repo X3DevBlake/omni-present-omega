@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Humanity Token ($HUMANITY) — Free-to-Mine Sovereign Currency &amp; 360° Hologram Portal</title>
+  <meta name="description" content="Mine the Humanity Token ($HUMANITY) for free. 10 Billion total supply, real-time proof-of-humanity mining, 360° holographic token visualization, integrated wallet, and referral incentives.">
+  <link rel="icon" type="image/svg+xml" href="svg/humanity-token.svg">
+  <link rel="stylesheet" href="css/liquid-glass.css">
+  <link rel="stylesheet" href="css/humanity.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="humanity-page-wrapper">
+
+  <!-- Ambient Interactive WebGL/Canvas Stars & Refraction -->
+  <canvas id="humanityBgCanvas" class="humanity-bg-canvas"></canvas>
+
+  <!-- Floating Audio Soundscape Controller Pill -->
+  <div id="audioPill" class="audio-floating-pill muted" title="Click to toggle cybernetic ambient music & sound FX">
+    <div class="audio-equalizer">
+      <div class="audio-bar"></div>
+      <div class="audio-bar"></div>
+      <div class="audio-bar"></div>
+      <div class="audio-bar"></div>
+    </div>
+    <span id="audioPillLabel" style="font-size: 0.78rem; font-weight: 700; font-family: var(--font-mono); color: #e2e8f0;">MUSIC OFF</span>
+  </div>
+
+  <!-- Global Header Navigation -->
+  <header style="position: sticky; top: 0; z-index: 100; backdrop-filter: blur(20px); background: rgba(5, 8, 17, 0.82); border-bottom: 1px solid var(--humanity-border);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between;">
+      <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+        <img src="svg/humanity-token.svg" alt="Humanity Token" style="width: 38px; height: 38px; filter: drop-shadow(0 0 10px var(--humanity-gold-glow));">
+        <div>
+          <span style="font-weight: 900; font-size: 1.15rem; color: #ffffff; letter-spacing: -0.02em;">HUMANITY</span>
+          <span style="font-size: 0.7rem; font-family: var(--font-mono); color: var(--humanity-gold); margin-left: 6px; padding: 2px 6px; background: rgba(251, 191, 36, 0.15); border-radius: 4px; border: 1px solid rgba(251, 191, 36, 0.3);">10B SUPPLY</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav style="display: none; align-items: center; gap: 24px;" class="desktop-nav">
+        <a href="index.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: color 0.2s;">Gateway</a>
+        <a href="humanity.html" style="color: #38bdf8; text-decoration: none; font-size: 0.9rem; font-weight: 700; border-bottom: 2px solid #38bdf8; padding-bottom: 4px;">Humanity Token</a>
+        <a href="robotics.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: color 0.2s;">Robotics Cockpit</a>
+        <a href="whitepaper.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: color 0.2s;">Whitepaper</a>
+        <a href="crdt-lab.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: color 0.2s;">CRDT Lattice</a>
+      </nav>
+
+      <!-- Account / Auth Trigger -->
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button id="authActionBtn" style="background: linear-gradient(135deg, rgba(56, 189, 248, 0.2) 0%, rgba(251, 191, 36, 0.2) 100%); border: 1px solid var(--humanity-cyan); color: #ffffff; padding: 8px 18px; border-radius: 9999px; font-weight: 700; font-size: 0.84rem; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.2s;">
+          <img src="svg/humanity-token.svg" class="user-avatar-img" style="width: 20px; height: 20px; border-radius: 50%;">
+          <span class="user-display-name">SIGN UP / LOGIN</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Hero Container -->
+  <main style="max-width: 1280px; margin: 0 auto; padding: 0 24px;">
+
+    <!-- HERO SECTION: 360 Hologram + Real-Time Free Miner -->
+    <section class="humanity-hero-grid">
+
+      <!-- Left Column: Value Proposition & Live Mining Dashboard -->
+      <div>
+        <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 9999px; padding: 5px 14px; margin-bottom: 20px;">
+          <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #34d399; box-shadow: 0 0 10px #34d399;"></span>
+          <span style="font-size: 0.78rem; font-family: var(--font-mono); font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.05em;">
+            Public Free-To-Mine Genesis Epoch
+          </span>
+        </div>
+
+        <h1 style="font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 900; line-height: 1.15; letter-spacing: -0.03em; color: #ffffff; margin-bottom: 16px;">
+          The <span style="background: linear-gradient(135deg, #fbbf24 20%, #38bdf8 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Humanity Token</span><br>
+          Free to Mine. Owned by All.
+        </h1>
+
+        <p style="font-size: 1.05rem; line-height: 1.7; color: #94a3b8; margin-bottom: 28px; max-width: 580px;">
+          A sovereign digital asset fractioned into <strong>10 Billion tokens</strong>. No expensive ASICs, no electricity burn. Simply sign up with your email, phone, or Google account, launch the miner in your browser, and watch your balance grow in real time.
+        </p>
+
+        <!-- Real-Time Mining Control Cockpit -->
+        <div id="miningSwitchCard" class="mining-switch-card">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+            <span style="font-family: var(--font-mono); font-size: 0.78rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em;">
+              Proof-of-Humanity Engine • Web Worker Rig
+            </span>
+            <span class="balance-ticker-badge">FREE MINING ACTIVE</span>
+          </div>
+
+          <!-- Real-Time Accrual Balance Display -->
+          <div class="balance-hero-block">
+            <div id="liveAccruedBalance" class="balance-number-display">100.00000000</div>
+            <div style="font-size: 0.88rem; color: #94a3b8; font-weight: 600;">
+              HUMANITY ACCRUED BALANCE
+            </div>
+          </div>
+
+          <!-- Start / Stop Miner Toggle Button -->
+          <button id="miningToggleBtn" class="mining-cta-btn start-state">
+            <span style="font-size: 1.25rem;">⛏️</span>
+            <span id="miningToggleLabel">START FREE MINER</span>
+          </button>
+
+          <!-- Telemetry Dashboard -->
+          <div class="telemetry-hud-grid">
+            <div class="telemetry-hud-card">
+              <div class="telemetry-label">Hashrate</div>
+              <div id="liveHashrateVal" class="telemetry-val" style="color: #38bdf8;">0.0 H/s</div>
+            </div>
+            <div class="telemetry-hud-card">
+              <div class="telemetry-label">Valid Shares</div>
+              <div id="liveSharesVal" class="telemetry-val" style="color: #fbbf24;">0</div>
+            </div>
+            <div class="telemetry-hud-card">
+              <div class="telemetry-label">Block Height</div>
+              <div id="liveBlockHeight" class="telemetry-val" style="color: #c084fc;">#849204</div>
+            </div>
+            <div class="telemetry-hud-card">
+              <div class="telemetry-label">Incentive Boost</div>
+              <div id="hashrateBoostVal" class="telemetry-val" style="color: #34d399;">+0% Base</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: 360-Degree Auto-Rotating Hologram of Humanity Token -->
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <div class="hologram-stage-container">
+          <!-- Laser Light Cone Projection -->
+          <div class="hologram-light-cone"></div>
+
+          <!-- Hologram 360 Canvas -->
+          <canvas id="humanityHoloCanvas" class="hologram-canvas-view"></canvas>
+
+          <!-- Hologram Scanline Filter Layer -->
+          <div class="hologram-scanlines"></div>
+
+          <!-- Pedestal Base Emitter -->
+          <div class="hologram-pedestal"></div>
+        </div>
+
+        <!-- 360 Hologram Controls -->
+        <div class="hologram-controls-bar">
+          <span style="font-size: 0.75rem; color: #64748b; font-family: var(--font-mono);">AUTO 360° HOLOGRAM:</span>
+          <button class="holo-pill-btn active" id="toggleRotateBtn">🔄 ROTATE</button>
+          <button class="holo-pill-btn" id="holoFlareBtn">✨ FLARE</button>
+          <span style="font-size: 0.72rem; color: #94a3b8; margin-left: 8px;">(DRAG TO INSPECT)</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SECTION 2: THE ACTUAL HUMANITY WALLET SUITE -->
+    <section id="walletSection" style="margin-top: 50px;">
+      <div style="text-align: center; margin-bottom: 30px;">
+        <span style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--humanity-cyan); text-transform: uppercase; letter-spacing: 0.08em;">
+          DECENTRALIZED ASSET VAULT
+        </span>
+        <h2 style="font-size: 2.2rem; font-weight: 900; color: #ffffff; letter-spacing: -0.02em; margin-top: 6px;">
+          The Official Humanity Wallet
+        </h2>
+        <p style="color: #94a3b8; font-size: 0.95rem; max-width: 600px; margin: 8px auto 0 auto;">
+          Track your real-time accrued balance, monitor unmined token reserves from the 10 Billion total supply, and inspect live confirmed block ledger rewards.
+        </p>
+      </div>
+
+      <div class="wallet-card-wrapper">
+        <div style="display: grid; grid-template-columns: 1fr; gap: 30px;" class="wallet-grid">
+          
+          <!-- Top Row: Balance Card & Supply Allocation -->
+          <div style="display: flex; flex-direction: column; md:flex-row; justify-content: space-between; align-items: flex-start; gap: 24px; border-bottom: 1px solid var(--humanity-border); padding-bottom: 24px;">
+            <div>
+              <div style="font-size: 0.82rem; font-family: var(--font-mono); color: #94a3b8; text-transform: uppercase;">
+                Verified Human Balance
+              </div>
+              <div style="display: flex; align-items: baseline; gap: 12px; margin-top: 6px;">
+                <span id="walletHeroBalance" style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; font-family: var(--font-mono); color: #ffffff;">
+                  100.00000000
+                </span>
+                <span style="font-size: 1.1rem; font-weight: 800; color: var(--humanity-gold);">HUMANITY</span>
+              </div>
+              <div style="font-size: 0.85rem; color: #64748b; margin-top: 4px;">
+                Pre-Market Genesis Distribution • Current Valuation: $0.00 (In Development)
+              </div>
+            </div>
+
+            <!-- Human ID & Profile Snippet -->
+            <div style="background: rgba(2, 6, 23, 0.6); border: 1px solid var(--humanity-border); padding: 14px 20px; border-radius: 14px;">
+              <div style="font-size: 0.72rem; color: #94a3b8; font-family: var(--font-mono); text-transform: uppercase;">
+                Human ID
+              </div>
+              <div class="user-human-id" style="font-family: var(--font-mono); font-weight: 700; color: var(--humanity-cyan); font-size: 1rem; margin-top: 2px;">
+                HUMAN-8921-X9
+              </div>
+              <div style="display: flex; align-items: center; gap: 6px; margin-top: 6px; font-size: 0.78rem; color: #34d399;">
+                <span>●</span> Proof-of-Humanity Status: Verified Active
+              </div>
+            </div>
+          </div>
+
+          <!-- Total 10 Billion Token Allocation Bar -->
+          <div class="supply-progress-container">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; font-size: 0.85rem;">
+              <span style="color: #94a3b8; font-weight: 600;">Unmined Public Reserve (10 Billion Cap)</span>
+              <span id="unminedPoolRemaining" style="font-family: var(--font-mono); font-weight: 700; color: var(--humanity-gold);">
+                9,984,210,482 HUMANITY
+              </span>
+            </div>
+            <div class="supply-bar-bg">
+              <div id="supplyProgressBar" class="supply-bar-fill" style="width: 1.5%;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: 6px; font-size: 0.75rem; color: #64748b; font-family: var(--font-mono);">
+              <span>Genesis Block #0</span>
+              <span>10,000,000,000 Max Cap</span>
+            </div>
+          </div>
+
+          <!-- GRAYED-OUT WITHDRAW SECTION (WITH COMING SOON BADGE) -->
+          <div id="withdrawCard" class="withdraw-locked-card" title="Withdrawals will unlock upon Mainnet Phase II Bridge initialization.">
+            <div class="coming-soon-badge">
+              <span>🔒</span> COMING SOON
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+              <span style="font-size: 1.2rem;">🏛️</span>
+              <h3 style="font-size: 1.1rem; font-weight: 800; color: #e2e8f0; margin: 0;">
+                Mainnet Bridge &amp; Token Withdrawal
+              </h3>
+            </div>
+            <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.6; max-width: 650px; margin-bottom: 16px;">
+              Withdrawals and secondary market liquidity transfers are currently locked during the Free Public Mining Genesis Epoch. Once the 10 Billion token distribution milestone is reached, the decentralized Phase II Bridge contract will unlock to allow transfers to external Ethereum / Solana / SCION wallets.
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 580px;">
+              <div>
+                <label style="font-size: 0.75rem; font-family: var(--font-mono); color: #64748b; display: block; margin-bottom: 4px;">DESTINATION ADDRESS</label>
+                <input type="text" class="withdraw-disabled-input" value="0x0000000000000000000000000000000000000000" disabled>
+              </div>
+              <div>
+                <label style="font-size: 0.75rem; font-family: var(--font-mono); color: #64748b; display: block; margin-bottom: 4px;">WITHDRAW AMOUNT</label>
+                <input type="text" class="withdraw-disabled-input" value="0.00000000 HUMANITY" disabled>
+              </div>
+            </div>
+
+            <button class="withdraw-disabled-btn" disabled>
+              <span>🔒</span> Withdrawals Locked (Mainnet Phase II Bridge Coming Soon)
+            </button>
+          </div>
+
+          <!-- Real-Time Block Mining Ledger -->
+          <div style="margin-top: 24px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+              <h4 style="font-size: 1rem; font-weight: 800; color: #ffffff;">
+                ⚡ Live Confirmed Mining Block Ledger
+              </h4>
+              <span style="font-size: 0.75rem; font-family: var(--font-mono); color: #34d399;">
+                ● REAL-TIME MEMPOOL
+              </span>
+            </div>
+            <div style="overflow-x: auto;">
+              <table class="mining-ledger-table">
+                <thead>
+                  <tr>
+                    <th>Proof Hash</th>
+                    <th>Block Height</th>
+                    <th>Block Reward</th>
+                    <th>Timestamp</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="rewardsLedgerBody">
+                  <tr>
+                    <td style="font-family: var(--font-mono); color: #38bdf8;">0x8a92...f41e</td>
+                    <td style="font-family: var(--font-mono);">#849204</td>
+                    <td style="color: #34d399; font-weight: 700; font-family: var(--font-mono);">+0.002500 HUMANITY</td>
+                    <td style="color: #94a3b8; font-size: 0.8rem;">Just now</td>
+                    <td><span style="font-size: 0.72rem; background: rgba(52, 211, 153, 0.15); color: #34d399; padding: 2px 8px; border-radius: 4px; font-weight: 700;">CONFIRMED</span></td>
+                  </tr>
+                  <tr>
+                    <td style="font-family: var(--font-mono); color: #38bdf8;">0x7c14...e29b</td>
+                    <td style="font-family: var(--font-mono);">#849203</td>
+                    <td style="color: #34d399; font-weight: 700; font-family: var(--font-mono);">+0.002500 HUMANITY</td>
+                    <td style="color: #94a3b8; font-size: 0.8rem;">15s ago</td>
+                    <td><span style="font-size: 0.72rem; background: rgba(52, 211, 153, 0.15); color: #34d399; padding: 2px 8px; border-radius: 4px; font-weight: 700;">CONFIRMED</span></td>
+                  </tr>
+                  <tr>
+                    <td style="font-family: var(--font-mono); color: #38bdf8;">0x33fe...110a</td>
+                    <td style="font-family: var(--font-mono);">#849202</td>
+                    <td style="color: #34d399; font-weight: 700; font-family: var(--font-mono);">+0.002500 HUMANITY</td>
+                    <td style="color: #94a3b8; font-size: 0.8rem;">30s ago</td>
+                    <td><span style="font-size: 0.72rem; background: rgba(52, 211, 153, 0.15); color: #34d399; padding: 2px 8px; border-radius: 4px; font-weight: 700;">CONFIRMED</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: REFERRAL ENGINE & HIGH REWARD INCENTIVES -->
+    <section id="referralSection" style="margin-top: 50px;">
+      <div class="referral-hub-card">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <span style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--humanity-gold); text-transform: uppercase; letter-spacing: 0.08em;">
+              EXPONENTIAL MULTIPLIER PROGRAM
+            </span>
+            <h2 style="font-size: 2rem; font-weight: 900; color: #ffffff; margin-top: 4px; letter-spacing: -0.02em;">
+              Humanity Referral Engine
+            </h2>
+          </div>
+          <button id="simInviteBtn" style="background: rgba(251, 191, 36, 0.18); border: 1px solid var(--humanity-gold); color: var(--humanity-gold); padding: 8px 16px; border-radius: 10px; font-weight: 700; font-size: 0.84rem; cursor: pointer; transition: all 0.2s;">
+            ⚡ Simulate New Friend Invite (+25% Boost)
+          </button>
+        </div>
+
+        <p style="color: #94a3b8; font-size: 0.95rem; margin: 12px 0 20px 0; max-width: 680px; line-height: 1.65;">
+          Every human who joins using your link permanently increases your free mining hashrate by <strong>+25%</strong>, and receives an instant <strong>500 HUMANITY Welcome Bonus</strong> credited straight to their wallet balance upon sign up.
+        </p>
+
+        <!-- Referral Link Display & Copy Button -->
+        <div class="referral-link-box">
+          <span style="font-size: 1.1rem;">🔗</span>
+          <span id="userRefLink" class="referral-url-text">https://omni-network-39821.web.app/humanity.html?ref=HUMAN-8921</span>
+          <button id="copyRefLinkBtn" class="copy-pill-btn">COPY LINK</button>
+        </div>
+
+        <!-- High-Reward Tier Cards -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 24px;">
+          <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 18px;">
+            <div style="font-size: 1.5rem; margin-bottom: 8px;">🥉</div>
+            <div style="font-weight: 800; font-size: 1rem; color: #ffffff;">Bronze Ambassador</div>
+            <div style="font-size: 0.8rem; color: var(--humanity-gold); margin: 4px 0 8px 0;">5 Active Referrals</div>
+            <p style="font-size: 0.82rem; color: #94a3b8; line-height: 1.5;">
+              +125% Hashrate Multiplier + 1,000 HUMANITY milestone bonus.
+            </p>
+          </div>
+
+          <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 14px; padding: 18px;">
+            <div style="font-size: 1.5rem; margin-bottom: 8px;">🥈</div>
+            <div style="font-weight: 800; font-size: 1rem; color: #ffffff;">Silver Pioneer</div>
+            <div style="font-size: 0.8rem; color: var(--humanity-cyan); margin: 4px 0 8px 0;">25 Active Referrals</div>
+            <p style="font-size: 0.82rem; color: #94a3b8; line-height: 1.5;">
+              +625% Hashrate Multiplier + 5,000 HUMANITY milestone bonus + 2x Block rate.
+            </p>
+          </div>
+
+          <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(251, 191, 36, 0.4); border-radius: 14px; padding: 18px;">
+            <div style="font-size: 1.5rem; margin-bottom: 8px;">🥇</div>
+            <div style="font-weight: 800; font-size: 1rem; color: #ffffff;">Gold Sovereign</div>
+            <div style="font-size: 0.8rem; color: #fde047; margin: 4px 0 8px 0;">100 Active Referrals</div>
+            <p style="font-size: 0.82rem; color: #94a3b8; line-height: 1.5;">
+              +2,500% Hashrate Multiplier + 25,000 HUMANITY milestone bonus + Founder Badge.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: TOKENOMICS & 10 BILLION SUPPLY FRACTIONING -->
+    <section style="margin: 60px 0 80px 0;">
+      <div style="text-align: center; margin-bottom: 30px;">
+        <span style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--humanity-gold); text-transform: uppercase; letter-spacing: 0.08em;">
+          MATHEMATICAL TOKENOMICS MATRIX
+        </span>
+        <h2 style="font-size: 2.2rem; font-weight: 900; color: #ffffff; letter-spacing: -0.02em; margin-top: 6px;">
+          10 Billion Humanity Supply Architecture
+        </h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        <div style="background: var(--humanity-glass-card); border: 1px solid var(--humanity-border); border-radius: 18px; padding: 22px;">
+          <div style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--humanity-cyan);">60% POOL</div>
+          <div style="font-size: 1.6rem; font-weight: 900; color: #ffffff; margin: 4px 0;">6,000,000,000</div>
+          <div style="font-weight: 700; color: #e2e8f0; font-size: 0.95rem;">Free Public Mining Pool</div>
+          <p style="font-size: 0.82rem; color: #94a3b8; margin-top: 6px; line-height: 1.5;">
+            Dedicated exclusively to free browser mining by humans globally. Distributed over 8-year halving curve.
+          </p>
+        </div>
+
+        <div style="background: var(--humanity-glass-card); border: 1px solid var(--humanity-border); border-radius: 18px; padding: 22px;">
+          <div style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--humanity-gold);">20% POOL</div>
+          <div style="font-size: 1.6rem; font-weight: 900; color: #ffffff; margin: 4px 0;">2,000,000,000</div>
+          <div style="font-weight: 700; color: #e2e8f0; font-size: 0.95rem;">Referral &amp; Community Incentives</div>
+          <p style="font-size: 0.82rem; color: #94a3b8; margin-top: 6px; line-height: 1.5;">
+            Powers the +25% hashrate boosts, 500 welcome bonuses, and Ambassador milestone achievements.
+          </p>
+        </div>
+
+        <div style="background: var(--humanity-glass-card); border: 1px solid var(--humanity-border); border-radius: 18px; padding: 22px;">
+          <div style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--humanity-purple);">10% POOL</div>
+          <div style="font-size: 1.6rem; font-weight: 900; color: #ffffff; margin: 4px 0;">1,000,000,000</div>
+          <div style="font-weight: 700; color: #e2e8f0; font-size: 0.95rem;">Protocol &amp; Swarm Grants</div>
+          <p style="font-size: 0.82rem; color: #94a3b8; margin-top: 6px; line-height: 1.5;">
+            Allocated for open-source AI, robotics integration, and developer ecosystem infrastructure.
+          </p>
+        </div>
+
+        <div style="background: var(--humanity-glass-card); border: 1px solid var(--humanity-border); border-radius: 18px; padding: 22px;">
+          <div style="font-size: 0.8rem; font-family: var(--font-mono); color: #34d399;">10% POOL</div>
+          <div style="font-size: 1.6rem; font-weight: 900; color: #ffffff; margin: 4px 0;">1,000,000,000</div>
+          <div style="font-weight: 700; color: #e2e8f0; font-size: 0.95rem;">Liquidity Genesis &amp; Bridge</div>
+          <p style="font-size: 0.82rem; color: #94a3b8; margin-top: 6px; line-height: 1.5;">
+            Locked until Phase II Mainnet initiation. Will provide decentralized liquidity across DEXs and CEXs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- AUTH SETUP MODAL: EMAIL, PHONE & GOOGLE LOGIN -->
+  <div id="authModal" class="modal-backdrop-custom">
+    <div class="profile-modal-card">
+      <div style="padding: 24px; border-bottom: 1px solid var(--humanity-border); display: flex; align-items: center; justify-content: space-between;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="svg/humanity-token.svg" style="width: 28px; height: 28px;">
+          <span style="font-weight: 800; font-size: 1.15rem; color: #ffffff;">Humanity Account Portal</span>
+        </div>
+        <button class="modal-close-btn" style="background: none; border: none; color: #94a3b8; font-size: 1.4rem; cursor: pointer;">&times;</button>
+      </div>
+
+      <!-- Auth Tab Navigation -->
+      <div style="display: flex; border-bottom: 1px solid var(--humanity-border); background: rgba(15, 23, 42, 0.4);">
+        <button class="auth-tab-btn active" data-target="emailTab" style="flex: 1; padding: 12px; background: none; border: none; border-bottom: 2px solid var(--humanity-cyan); color: #ffffff; font-weight: 700; font-size: 0.85rem; cursor: pointer;">
+          Email Signup
+        </button>
+        <button class="auth-tab-btn" data-target="phoneTab" style="flex: 1; padding: 12px; background: none; border: none; color: #94a3b8; font-weight: 700; font-size: 0.85rem; cursor: pointer;">
+          Phone Number
+        </button>
+        <button class="auth-tab-btn" data-target="googleTab" style="flex: 1; padding: 12px; background: none; border: none; color: #94a3b8; font-weight: 700; font-size: 0.85rem; cursor: pointer;">
+          Google Login
+        </button>
+      </div>
+
+      <div style="padding: 24px;">
+        <!-- Email Tab Panel -->
+        <div id="emailTab" class="auth-panel">
+          <form id="emailSignupForm">
+            <div style="margin-bottom: 16px;">
+              <label style="display: block; font-size: 0.8rem; font-family: var(--font-mono); color: #94a3b8; margin-bottom: 6px;">DISPLAY NAME</label>
+              <input type="text" id="signupNameInput" placeholder="e.g. Satoshi Human" required style="width: 100%; padding: 12px 14px; background: rgba(15, 23, 42, 0.8); border: 1px solid var(--humanity-border); border-radius: 8px; color: #ffffff; font-size: 0.95rem;">
+            </div>
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; font-size: 0.8rem; font-family: var(--font-mono); color: #94a3b8; margin-bottom: 6px;">EMAIL ADDRESS</label>
+              <input type="email" id="signupEmailInput" placeholder="name@domain.com" required style="width: 100%; padding: 12px 14px; background: rgba(15, 23, 42, 0.8); border: 1px solid var(--humanity-border); border-radius: 8px; color: #ffffff; font-size: 0.95rem;">
+            </div>
+            <button type="submit" style="width: 100%; padding: 14px; background: linear-gradient(135deg, var(--humanity-cyan), #0284c7); border: none; border-radius: 10px; color: #0f172a; font-weight: 800; font-size: 1rem; cursor: pointer;">
+              CREATE HUMANITY ACCOUNT &rarr;
+            </button>
+          </form>
+        </div>
+
+        <!-- Phone Tab Panel -->
+        <div id="phoneTab" class="auth-panel" style="display: none;">
+          <form id="phoneSignupForm">
+            <div style="margin-bottom: 16px;">
+              <label style="display: block; font-size: 0.8rem; font-family: var(--font-mono); color: #94a3b8; margin-bottom: 6px;">DISPLAY NAME</label>
+              <input type="text" id="signupPhoneNameInput" placeholder="e.g. Pioneer One" required style="width: 100%; padding: 12px 14px; background: rgba(15, 23, 42, 0.8); border: 1px solid var(--humanity-border); border-radius: 8px; color: #ffffff; font-size: 0.95rem;">
+            </div>
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; font-size: 0.8rem; font-family: var(--font-mono); color: #94a3b8; margin-bottom: 6px;">MOBILE PHONE NUMBER</label>
+              <input type="tel" id="signupPhoneInput" placeholder="+1 (555) 019-2834" required style="width: 100%; padding: 12px 14px; background: rgba(15, 23, 42, 0.8); border: 1px solid var(--humanity-border); border-radius: 8px; color: #ffffff; font-size: 0.95rem;">
+            </div>
+            <button type="submit" style="width: 100%; padding: 14px; background: linear-gradient(135deg, var(--humanity-gold), #d97706); border: none; border-radius: 10px; color: #0f172a; font-weight: 800; font-size: 1rem; cursor: pointer;">
+              VERIFY PHONE &amp; START MINING &rarr;
+            </button>
+          </form>
+        </div>
+
+        <!-- Google Tab Panel -->
+        <div id="googleTab" class="auth-panel" style="display: none; text-align: center; padding: 10px 0;">
+          <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 24px;">
+            One-click instant authentication with zero passwords. Synchronizes your Human ID across all browser sessions and devices.
+          </p>
+          <button id="googleLoginBtn" style="width: 100%; padding: 14px 20px; background: #ffffff; color: #0f172a; border: none; border-radius: 10px; font-weight: 800; font-size: 0.98rem; display: flex; align-items: center; justify-content: center; gap: 12px; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            <svg width="20" height="20" viewBox="0 0 24 24">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+            </svg>
+            Sign in with Google
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROFILE SETTINGS & AVATAR / BANNER UPLOADER MODAL -->
+  <div id="profileModal" class="modal-backdrop-custom">
+    <div class="profile-modal-card">
+      <!-- Profile Hero Banner (Click to upload) -->
+      <div id="profileBannerUploader" class="profile-banner-uploader user-banner-target">
+        <input type="file" id="bannerFileInput" accept="image/*" style="display: none;">
+        <div class="profile-banner-overlay" onclick="document.getElementById('bannerFileInput').click()">
+          📷 Click to upload custom banner image
+        </div>
+      </div>
+
+      <!-- Avatar & Human ID Info -->
+      <div style="padding: 0 24px 24px 24px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+          <!-- Avatar Uploader -->
+          <div class="profile-avatar-uploader" onclick="document.getElementById('avatarFileInput').click()">
+            <input type="file" id="avatarFileInput" accept="image/*" style="display: none;">
+            <img class="avatar-preview-img user-avatar-img" src="svg/humanity-token.svg" alt="Profile Picture">
+            <div class="profile-avatar-overlay">📷 EDIT</div>
+          </div>
+          <button class="modal-close-btn" style="background: none; border: none; color: #94a3b8; font-size: 1.4rem; cursor: pointer;">&times;</button>
+        </div>
+
+        <form id="profileEditForm" style="margin-top: 18px;">
+          <div style="margin-bottom: 14px;">
+            <label style="display: block; font-size: 0.75rem; font-family: var(--font-mono); color: #94a3b8; margin-bottom: 4px;">DISPLAY NAME</label>
+            <input type="text" id="editProfileName" class="user-display-name" value="Anonymous Human" required style="width: 100%; padding: 10px 14px; background: rgba(15, 23, 42, 0.8); border: 1px solid var(--humanity-border); border-radius: 8px; color: #ffffff;">
+          </div>
+          <div style="margin-bottom: 14px;">
+            <label style="display: block; font-size: 0.75rem; font-family: var(--font-mono); color: #94a3b8; margin-bottom: 4px;">SOVEREIGN HUMAN BIO</label>
+            <textarea id="editProfileBio" class="user-bio-text" rows="2" style="width: 100%; padding: 10px 14px; background: rgba(15, 23, 42, 0.8); border: 1px solid var(--humanity-border); border-radius: 8px; color: #ffffff;">Sovereign Proof-of-Humanity Contributor</textarea>
+          </div>
+          <div style="display: flex; gap: 10px;">
+            <button type="submit" style="flex: 1; padding: 12px; background: var(--humanity-cyan); color: #0f172a; border: none; border-radius: 8px; font-weight: 700; cursor: pointer;">
+              SAVE PROFILE SETTINGS
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Alert -->
+  <div id="humanityToast" class="humanity-toast">
+    <span style="font-size: 1.2rem;">✨</span>
+    <span id="toastMessage">Notification message</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+  <script src="js/humanity.js"></script>
+</body>
+</html>
