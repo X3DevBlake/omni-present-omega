@@ -1,6 +1,163 @@
 {
   "documents": [
     {
+      "id": "gdoc_0788dfff",
+      "title": "Formal Engineering Specification & Architecture Treatise: Phase II: Algorithmic Verification & Zero-Allocation Models - Sovereign Convergence in Analytical 6-DOF Manipulator Inverse Kinemati (Stanford Robotics Center)",
+      "category": "ROBOTICS_KINEMATICS",
+      "author": "omni-lead-roboticist",
+      "summary": "Bespoke peer-reviewed technical architecture specification exploring Phase II: Algorithmic Verification & Zero-Allocation Models: Analytical 6-DOF Manipulator I...",
+      "filename_html": "Doc_formal_engineering_specificati_2026-10-09_22-35-17.html",
+      "filename_md": "Doc_formal_engineering_specificati_2026-10-09_22-35-17.md",
+      "path_html": "/data/data/com.termux/files/home/omni-automation/workspace_output/docs/Doc_formal_engineering_specificati_2026-10-09_22-35-17.html",
+      "path_md": "/data/data/com.termux/files/home/omni-automation/workspace_output/docs/Doc_formal_engineering_specificati_2026-10-09_22-35-17.md",
+      "created_at": "2026-10-09T22:35:17.161890+00:00",
+      "user_email": "rgkdevx1@gmail.com",
+      "tags": [
+        "#technical-specification",
+        "#architecture-treatise",
+        "#stanford",
+        "#formal-proof",
+        "#rob"
+      ],
+      "google_drive_id": "1hBa_m6vQMJwZ8mTvakNw_S-aB-Y1er9JSTr7cKgOyvI",
+      "google_drive_url": "https://docs.google.com/document/d/1hBa_m6vQMJwZ8mTvakNw_S-aB-Y1er9JSTr7cKgOyvI/edit",
+      "web_url": "docs/Doc_formal_engineering_specificati_2026-10-09_22-35-17.html"
+    },
+    {
+      "id": "gdoc_87e9a701",
+      "title": "Formal Engineering Specification & Architecture Treatise: Phase I: Mathematical Foundations & Coordinate Frames - Sovereign Convergence in Analytical 6-DOF Manipulator Inverse Kinemati (Stanford Robotics Center)",
+      "category": "ROBOTICS_KINEMATICS",
+      "author": "omni-lead-roboticist",
+      "summary": "Bespoke peer-reviewed technical architecture specification exploring Phase I: Mathematical Foundations & Coordinate Frames: Analytical 6-DOF Manipulator Inverse...",
+      "filename_html": "Doc_formal_engineering_specificati_2026-10-09_22-35-13.html",
+      "filename_md": "Doc_formal_engineering_specificati_2026-10-09_22-35-13.md",
+      "path_html": "/data/data/com.termux/files/home/omni-automation/workspace_output/docs/Doc_formal_engineering_specificati_2026-10-09_22-35-13.html",
+      "path_md": "/data/data/com.termux/files/home/omni-automation/workspace_output/docs/Doc_formal_engineering_specificati_2026-10-09_22-35-13.md",
+      "created_at": "2026-10-09T22:35:13.737873+00:00",
+      "user_email": "rgkdevx1@gmail.com",
+      "tags": [
+        "#technical-specification",
+        "#architecture-treatise",
+        "#stanford",
+        "#formal-proof",
+        "#rob"
+      ],
+      "google_drive_id": "112UKlfzlJ2z0tL8VMfKJByNOaotwo5ubC6zeGcPVRNc",
+      "google_drive_url": "https://docs.google.com/document/d/112UKlfzlJ2z0tL8VMfKJByNOaotwo5ubC6zeGcPVRNc/edit",
+      "web_url": "docs/Doc_formal_engineering_specificati_2026-10-09_22-35-13.html"
+    },
+    {
+      "id": "gdoc_a72e3b93",
+      "title": "Formal Engineering Specification & Architecture Treatise: Sovereign Convergence in Analytical 6-DOF geometric inverse kinematics, closed-f (Cyber-Physical Robotics Consortium)",
+      "category": "ROBOTICS_KINEMATICS",
+      "author": "omni-lead-roboticist",
+      "summary": "Bespoke peer-reviewed technical architecture specification and formal mathematical proofs exploring Analytical 6-DOF geometric inverse kinematics, closed-form j...",
+      "filename_html": "Doc_formal_engineering_specificati_2026-10-09_22-26-14.html",
+      "filename_md": "Doc_formal_engineering_specificati_2026-10-09_22-26-14.md",
+      "path_html": "/data/data/com.termux/files/home/omni-automation/workspace_output/docs/Doc_formal_engineering_specificati_2026-10-09_22-26-14.html",
+      "path_md": "/data/data/com.termux/files/home/omni-automation/workspace_output/docs/Doc_formal_engineering_specificati_2026-10-09_22-26-14.md",
+      "created_at": "2026-10-09T22:26:14.131454+00:00",
+      "user_email": "rgkdevx1@gmail.com",
+      "tags": [
+        "#technical-specification",
+        "#architecture-treatise",
+        "#cyber-physical",
+        "#formal-proof",
+        "#rob"
+      ],
+      "google_drive_id": "1J1vQykcMXXFV4U1sfXdf1ZyyivUiyy3TTVWhAFW0at0",
+      "google_drive_url": "https://docs.google.com/document/d/1J1vQykcMXXFV4U1sfXdf1ZyyivUiyy3TTVWhAFW0at0/edit",
+      "web_url": "docs/Doc_formal_engineering_specificati_2026-10-09_22-26-14.html"
+    },
+    {
+      "id": "gdoc_06b7993c",
+      "title": "Formal Engineering Specification & Architecture Treatise: Sovereign Convergence in Zero-allocation causal CRDT join-semilattices (S, \u2294, \u2264) (Formal Verification Consortium)",
+      "category": "DISTRIBUTED_CRDT",
+      "author": "omni-rust-coder",
+      "summary": "Bespoke peer-reviewed technical architecture specification and formal mathematical proofs exploring Zero-allocation causal CRDT join-semilattices (S, \u2294, \u2264), mon...",
+      "filename_html": "Doc_formal_engineering_specificati_2026-10-09_22-26-10.html",
+      "filename_md": "Doc_formal_engineering_specificati_2026-10-09_22-26-10.md",
+      "path_html": "/data/data/com.termux/files/home/omni-automation/workspace_output/docs/Doc_formal_engineering_specificati_2026-10-09_22-26-10.html",
+      "path_md": "/data/data/com.termux/files/home/omni-automation/workspace_output/docs/Doc_formal_engineering_specificati_2026-10-09_22-26-10.md",
+      "created_at": "2026-10-09T22:26:10.451339+00:00",
+      "user_email": "rgkdevx1@gmail.com",
+      "tags": [
+        "#technical-specification",
+        "#architecture-treatise",
+        "#formal",
+        "#formal-proof",
+        "#crdt"
+      ],
+      "google_drive_id": "1eSJietPvz8I9E3CSGwG4liA-gMqU-HL_KWR_gnCTdzQ",
+      "google_drive_url": "https://docs.google.com/document/d/1eSJietPvz8I9E3CSGwG4liA-gMqU-HL_KWR_gnCTdzQ/edit",
+      "web_url": "docs/Doc_formal_engineering_specificati_2026-10-09_22-26-10.html"
+    },
+    {
+      "id": "gdoc_23980fe7",
+      "title": "Formal Engineering Specification & Architecture Treatise: Sovereign Convergence in Analytical 6-DOF Manipulator Inverse Kinematics & LiDAR (Stanford Robotics Center)",
+      "category": "ROBOTICS_KINEMATICS",
+      "author": "omni-lead-roboticist",
+      "summary": "Bespoke peer-reviewed technical architecture specification and formal mathematical proofs exploring Analytical 6-DOF Manipulator Inverse Kinematics & LiDAR SLAM...",
+      "filename_html": "Doc_formal_engineering_specificati_2026-10-09_22-24-58.html",
+      "filename_md": "Doc_formal_engineering_specificati_2026-10-09_22-24-58.md",
+      "path_html": "/data/data/com.termux/files/home/omni-automation/workspace_output/docs/Doc_formal_engineering_specificati_2026-10-09_22-24-58.html",
+      "path_md": "/data/data/com.termux/files/home/omni-automation/workspace_output/docs/Doc_formal_engineering_specificati_2026-10-09_22-24-58.md",
+      "created_at": "2026-10-09T22:24:58.850404+00:00",
+      "user_email": "rgkdevx1@gmail.com",
+      "tags": [
+        "#technical-specification",
+        "#architecture-treatise",
+        "#stanford",
+        "#formal-proof",
+        "#rob"
+      ],
+      "google_drive_id": "1aIXH2PWbxqhjeUsa4-QcYXIrakR-GnnDiNAiDYyE8WA",
+      "google_drive_url": "https://docs.google.com/document/d/1aIXH2PWbxqhjeUsa4-QcYXIrakR-GnnDiNAiDYyE8WA/edit",
+      "web_url": "docs/Doc_formal_engineering_specificati_2026-10-09_22-24-58.html"
+    },
+    {
+      "id": "gdoc_06a0908b",
+      "title": "Formal Research Monograph: Sovereign Convergence in Analytical 6-DOF geometric inverse kinematics (Cyber-Physical Robotics Consortium)",
+      "category": "ROBOTICS_KINEMATICS",
+      "author": "omni-lead-roboticist",
+      "summary": "Bespoke peer-reviewed engineering specification and formal mathematical proofs exploring Analytical 6-DOF geometric inverse kinematics, closed-form joint space ...",
+      "filename_html": "Doc_formal_research_monograph__sov_2026-10-09_22-06-58.html",
+      "filename_md": "Doc_formal_research_monograph__sov_2026-10-09_22-06-58.md",
+      "path_html": "/data/data/com.termux/files/home/omni-automation/workspace_output/docs/Doc_formal_research_monograph__sov_2026-10-09_22-06-58.html",
+      "path_md": "/data/data/com.termux/files/home/omni-automation/workspace_output/docs/Doc_formal_research_monograph__sov_2026-10-09_22-06-58.md",
+      "created_at": "2026-10-09T22:06:58.832090+00:00",
+      "user_email": "rgkdevx1@gmail.com",
+      "tags": [
+        "#granular-research",
+        "#cyber-physical",
+        "#formal-proof"
+      ],
+      "google_drive_id": "1M_U8gSsGOoBFlZZewpRUwOpvIlKUaf1txNs0kQHHr0k",
+      "google_drive_url": "https://docs.google.com/document/d/1M_U8gSsGOoBFlZZewpRUwOpvIlKUaf1txNs0kQHHr0k/edit",
+      "web_url": "docs/Doc_formal_research_monograph__sov_2026-10-09_22-06-58.html"
+    },
+    {
+      "id": "gdoc_cbe3078e",
+      "title": "Formal Research Monograph: Sovereign Convergence in Cryptographically verifiable SCION path beaco (Decentralized SCION Working Group)",
+      "category": "SCION_MESH",
+      "author": "omni-systems-architect",
+      "summary": "Bespoke peer-reviewed engineering specification and formal mathematical proofs exploring Cryptographically verifiable SCION path beacons, Byzantine-resistant AS...",
+      "filename_html": "Doc_formal_research_monograph__sov_2026-10-09_22-06-55.html",
+      "filename_md": "Doc_formal_research_monograph__sov_2026-10-09_22-06-55.md",
+      "path_html": "/data/data/com.termux/files/home/omni-automation/workspace_output/docs/Doc_formal_research_monograph__sov_2026-10-09_22-06-55.html",
+      "path_md": "/data/data/com.termux/files/home/omni-automation/workspace_output/docs/Doc_formal_research_monograph__sov_2026-10-09_22-06-55.md",
+      "created_at": "2026-10-09T22:06:55.052997+00:00",
+      "user_email": "rgkdevx1@gmail.com",
+      "tags": [
+        "#granular-research",
+        "#decentralized",
+        "#formal-proof"
+      ],
+      "google_drive_id": "1ws9YfRXvSrEwu3bpFF-oOCSRK0n1qUpddsoyI_iqc58",
+      "google_drive_url": "https://docs.google.com/document/d/1ws9YfRXvSrEwu3bpFF-oOCSRK0n1qUpddsoyI_iqc58/edit",
+      "web_url": "docs/Doc_formal_research_monograph__sov_2026-10-09_22-06-55.html"
+    },
+    {
       "id": "gdoc_1a1eba72",
       "title": "Formal Research Monograph: Sovereign Convergence in Analytical 6-DOF Manipulator Inverse Kinemati (Stanford Robotics Center)",
       "category": "ROBOTICS_KINEMATICS",
@@ -392,5 +549,5 @@
       "web_url": "docs/Doc_omni_swarm_circadian_protocol_2026-10-09_18-30-57.html"
     }
   ],
-  "last_updated": "2026-10-09T21:59:49.732585+00:00"
+  "last_updated": "2026-10-09T22:36:25.555564+00:00"
 }
