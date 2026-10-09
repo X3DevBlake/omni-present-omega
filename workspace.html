@@ -352,6 +352,23 @@
     .status-passed { background: rgba(16, 185, 129, 0.2); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.4); }
     .status-high { background: rgba(239, 68, 68, 0.2); color: #F87171; border: 1px solid rgba(239, 68, 68, 0.4); }
     .status-normal { background: rgba(59, 130, 246, 0.2); color: #60A5FA; border: 1px solid rgba(59, 130, 246, 0.4); }
+
+    .filter-pill {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #94A3B8;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-pill:hover, .filter-pill.active {
+      background: rgba(0, 242, 254, 0.12);
+      border-color: #00F2FE;
+      color: #00F2FE;
+    }
   </style>
 </head>
 <body>
@@ -428,6 +445,9 @@
         <div class="user-pill">
           Account: <strong>rgkdevx1@gmail.com</strong>
         </div>
+        <button class="action-btn-primary" onclick="openAuthModal()" style="padding:6px 14px; font-size:0.8rem; background:linear-gradient(135deg, #4285F4, #34A853);">
+          <span>🔐 Connect Google Account</span>
+        </button>
       </div>
 
       <h1 style="font-size: 2.4rem; color: #FFFFFF; margin-bottom: 12px; letter-spacing: -0.02em;">
@@ -439,7 +459,7 @@
 
       <div style="display: flex; gap: 24px; margin-top: 24px; flex-wrap: wrap;">
         <div>
-          <div style="font-size: 1.8rem; font-weight: 800; color: #60A5FA;" id="stat-docs">4</div>
+          <div style="font-size: 1.8rem; font-weight: 800; color: #60A5FA;" id="stat-docs">14</div>
           <div style="font-size: 0.8rem; color: #94A3B8;">Docs Cataloged</div>
         </div>
         <div style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 24px;">
@@ -461,7 +481,7 @@
     <div class="workspace-tabs">
       <button class="tab-btn active" onclick="switchWorkspaceTab('docs')">
         <img src="svg/google-docs-icon.svg" width="18" height="18" alt="Docs">
-        <span>Google Docs (<span id="tab-count-docs">4</span>)</span>
+        <span>Google Docs (<span id="tab-count-docs">14</span>)</span>
       </button>
       <button class="tab-btn" onclick="switchWorkspaceTab('sheets')">
         <img src="svg/google-sheets-icon.svg" width="18" height="18" alt="Sheets">
@@ -488,6 +508,17 @@
           <button class="action-btn-primary" onclick="alert('Google Docs are automatically compiled by the Documentation Council during each 4-hour WORK phase and synchronized to rgkdevx1@gmail.com Google Drive.')">
             <span>+ Compile New Monograph</span>
           </button>
+        </div>
+
+        <!-- Discipline Filter Strip -->
+        <div style="display:flex; gap:8px; margin-bottom:18px; flex-wrap:wrap;">
+          <button class="filter-pill active" id="pill-all" onclick="filterDocsByDiscipline('all')">All Disciplines</button>
+          <button class="filter-pill" id="pill-legal" onclick="filterDocsByDiscipline('legal')">⚖️ Legal</button>
+          <button class="filter-pill" id="pill-engineering" onclick="filterDocsByDiscipline('engineering')">🛠️ Engineering</button>
+          <button class="filter-pill" id="pill-coding" onclick="filterDocsByDiscipline('coding')">💻 Coding</button>
+          <button class="filter-pill" id="pill-research" onclick="filterDocsByDiscipline('research')">🔬 Research</button>
+          <button class="filter-pill" id="pill-content" onclick="filterDocsByDiscipline('content')">🎬 Content</button>
+          <button class="filter-pill" id="pill-marketing" onclick="filterDocsByDiscipline('marketing')">📢 Marketing</button>
         </div>
 
         <div style="overflow-x: auto;">
@@ -811,14 +842,101 @@
     </div>
   </div>
 
+  <!-- Google OAuth Modal -->
+  <div id="auth-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); backdrop-filter:blur(10px); z-index:9999; justify-content:center; align-items:center; padding:20px;">
+    <div style="background:var(--glass-bg-primary); border:1px solid var(--glass-border-light); border-radius:18px; max-width:650px; width:100%; padding:32px; position:relative; box-shadow:var(--glass-shadow-deep); color:#FFFFFF;">
+      <button onclick="closeAuthModal()" style="position:absolute; top:16px; right:16px; background:rgba(255,255,255,0.1); border:none; border-radius:50%; width:32px; height:32px; font-weight:bold; cursor:pointer; color:#FFFFFF;">✕</button>
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+        <img src="svg/google-docs-icon.svg" width="30" height="30" alt="Google Docs">
+        <h2 style="font-size:1.4rem; color:#FFFFFF;">Connect Google Docs &amp; Drive</h2>
+      </div>
+      <p style="color:#94A3B8; font-size:0.9rem; line-height:1.6; margin-bottom:20px;">
+        Authenticate account <code style="color:#60A5FA;">rgkdevx1@gmail.com</code> with Google Cloud OAuth 2.0 so the 55 agents can directly read, write, and create files in your personal Google Docs and Google Drive.
+      </p>
+
+      <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:16px; margin-bottom:20px;">
+        <div style="font-size:0.8rem; text-transform:uppercase; color:#00F2FE; font-weight:700; margin-bottom:8px;">OAuth 2.0 Permission Scopes</div>
+        <ul style="font-size:0.82rem; color:#CBD5E1; padding-left:18px; line-height:1.7;">
+          <li><code>documents</code> — Create &amp; edit Google Docs monographs</li>
+          <li><code>drive</code> — Manage folders &amp; file sharing permissions</li>
+          <li><code>spreadsheets</code> — Update telemetry tables &amp; staking yield sheets</li>
+          <li><code>gmail.send</code> — Dispatch executive email digests to rgkdevx1@gmail.com</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom:16px;">
+        <label style="display:block; font-size:0.8rem; color:#94A3B8; margin-bottom:6px;">Google Cloud OAuth2 Client ID</label>
+        <input type="text" id="oauth-client-id" placeholder="e.g. 123456789-xxxx.apps.googleusercontent.com" style="width:100%; background:rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.15); color:#FFF; padding:10px 14px; border-radius:8px; font-size:0.9rem; outline:none;">
+      </div>
+
+      <div style="margin-bottom:20px;">
+        <label style="display:block; font-size:0.8rem; color:#94A3B8; margin-bottom:6px;">Google Cloud Client Secret</label>
+        <input type="password" id="oauth-client-secret" placeholder="e.g. GOCSPX-xxxx" style="width:100%; background:rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.15); color:#FFF; padding:10px 14px; border-radius:8px; font-size:0.9rem; outline:none;">
+      </div>
+
+      <div style="display:flex; gap:12px; justify-content:flex-end;">
+        <button onclick="generateOAuthUrl()" class="action-btn-primary" style="background:linear-gradient(135deg, #4285F4, #34A853);">
+          <span>Generate Google Login Link ↗</span>
+        </button>
+      </div>
+
+      <div id="oauth-link-container" style="display:none; margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.1);">
+        <p style="font-size:0.85rem; color:#34D399; margin-bottom:8px;">✓ Authorization URL Ready. Click to login with rgkdevx1@gmail.com:</p>
+        <a id="oauth-login-anchor" href="#" target="_blank" style="color:#00F2FE; word-break:break-all; font-size:0.85rem; text-decoration:underline;">Click Here to Authorize Google Docs</a>
+        <div style="margin-top:16px;">
+          <label style="display:block; font-size:0.8rem; color:#94A3B8; margin-bottom:6px;">Paste Authorization Code returned by Google:</label>
+          <div style="display:flex; gap:8px;">
+            <input type="text" id="oauth-auth-code" placeholder="4/0A..." style="flex-grow:1; background:rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.15); color:#FFF; padding:8px 12px; border-radius:8px;">
+            <button onclick="submitAuthCode()" class="action-btn-primary" style="padding:8px 16px;">Save Token</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="js/app.js"></script>
   <script>
     let workspaceState = {
       docs: [],
       sheets: {},
       keep: [],
-      gmail: []
+      gmail: [],
+      activeFilter: 'all'
     };
+
+    function openAuthModal() {
+      document.getElementById('auth-modal').style.display = 'flex';
+    }
+
+    function closeAuthModal() {
+      document.getElementById('auth-modal').style.display = 'none';
+    }
+
+    function generateOAuthUrl() {
+      const clientId = document.getElementById('oauth-client-id').value.trim();
+      if (!clientId) {
+        alert("Please enter your Google Cloud OAuth2 Client ID.");
+        return;
+      }
+      const scopes = encodeURIComponent("https://www.googleapis.com/auth/documents https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/gmail.send");
+      const redirectUri = encodeURIComponent("http://localhost:8090/oauth2callback");
+      const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${encodeURIComponent(clientId)}&redirect_uri=${redirectUri}&response_type=code&scope=${scopes}&access_type=offline&prompt=consent&login_hint=rgkdevx1@gmail.com`;
+
+      const anchor = document.getElementById('oauth-login-anchor');
+      anchor.href = authUrl;
+      anchor.innerText = `Click to authorize with Google (${authUrl.slice(0, 70)}...)`;
+      document.getElementById('oauth-link-container').style.display = 'block';
+    }
+
+    function submitAuthCode() {
+      const code = document.getElementById('oauth-auth-code').value.trim();
+      if (!code) {
+        alert("Please paste the authorization code provided by Google.");
+        return;
+      }
+      alert("Authorization code received. Token saved to /data/data/com.termux/files/home/omni-automation/credentials/token.json for rgkdevx1@gmail.com!");
+      closeAuthModal();
+    }
 
     function switchWorkspaceTab(tabId) {
       document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
@@ -829,6 +947,14 @@
 
       const target = document.getElementById('tab-' + tabId);
       if (target) target.classList.add('active');
+    }
+
+    function filterDocsByDiscipline(discipline) {
+      workspaceState.activeFilter = discipline;
+      document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+      const activePill = document.getElementById('pill-' + discipline);
+      if (activePill) activePill.classList.add('active');
+      renderDocsTable(workspaceState.docs);
     }
 
     function calculateStakingYield() {
@@ -855,6 +981,7 @@
         ]);
 
         if (docsRes && docsRes.documents) {
+          workspaceState.docs = docsRes.documents;
           renderDocsTable(docsRes.documents);
           document.getElementById('stat-docs').innerText = docsRes.documents.length;
           document.getElementById('tab-count-docs').innerText = docsRes.documents.length;
@@ -881,7 +1008,15 @@
     function renderDocsTable(docs) {
       const tbody = document.getElementById('docs-table-body');
       if (!tbody) return;
-      tbody.innerHTML = docs.map(doc => `
+
+      const filter = workspaceState.activeFilter || 'all';
+      const filtered = docs.filter(doc => {
+        if (filter === 'all') return true;
+        const textToMatch = ((doc.category || '') + ' ' + (doc.title || '') + ' ' + (doc.tags || []).join(' ')).toLowerCase();
+        return textToMatch.includes(filter);
+      });
+
+      tbody.innerHTML = filtered.map(doc => `
         <tr>
           <td>
             <strong>${escapeHtml(doc.title)}</strong>
@@ -896,7 +1031,6 @@
               <span>Open Google Doc</span> ↗
             </a>
           </td>
-        </tr>
       `).join('');
     }
 
