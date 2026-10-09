@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="gmail-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EA4335" />
+      <stop offset="50%" stop-color="#C5221F" />
+      <stop offset="100%" stop-color="#80100E" />
+    </linearGradient>
+    <linearGradient id="gmail-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4285F4" />
+      <stop offset="100%" stop-color="#1A73E8" />
+    </linearGradient>
+    <linearGradient id="gmail-yellow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBC04" />
+      <stop offset="100%" stop-color="#F29900" />
+    </linearGradient>
+    <linearGradient id="gmail-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34A853" />
+      <stop offset="100%" stop-color="#188038" />
+    </linearGradient>
+    <filter id="gmail-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Envelope Body Base -->
+  <rect x="12" y="16" width="40" height="32" rx="4" fill="#FFFFFF" fill-opacity="0.9" />
+
+  <!-- Left pillar (Blue) -->
+  <path d="M12 20 V44 C12 46.2 13.8 48 16 48 H20 V26 L12 20 Z" fill="url(#gmail-blue)" filter="url(#gmail-glow)" />
+
+  <!-- Right pillar (Green) -->
+  <path d="M52 20 V44 C52 46.2 50.2 48 48 48 H44 V26 L52 20 Z" fill="url(#gmail-green)" filter="url(#gmail-glow)" />
+
+  <!-- Top envelope fold flap (Red) -->
+  <path d="M20 26 L32 35 L44 26 V18 C44 16.9 43.1 16 42 16 H22 C20.9 16 20 16.9 20 18 V26 Z" fill="url(#gmail-red)" filter="url(#gmail-glow)" />
+
+  <!-- Flap side corners (Yellow/Red) -->
+  <path d="M12 20 L20 26 V18 L16 16 C13.8 16 12 17.8 12 20 Z" fill="url(#gmail-yellow)" />
+  <path d="M52 20 L44 26 V18 L48 16 C50.2 16 52 17.8 52 20 Z" fill="url(#gmail-red)" />
+</svg>

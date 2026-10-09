@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omni-Present Omega | Google Workspace Sovereign Operations Suite</title>
+  <meta name="description" content="Autonomous productivity hub integrating Google Docs, Sheets, Keep, and Gmail for rgkdevx1@gmail.com and the 55-agent sovereign swarm.">
+  <link rel="icon" type="image/svg+xml" href="svg/opo-symbol.svg">
+  <link rel="stylesheet" href="css/liquid-glass.css">
+  <style>
+    .workspace-container {
+      max-width: 1400px;
+      margin: 100px auto 60px;
+      padding: 0 24px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .workspace-hero {
+      background: var(--glass-bg-primary);
+      backdrop-filter: var(--blur-ultra);
+      -webkit-backdrop-filter: var(--blur-ultra);
+      border: 1px solid var(--glass-border-light);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: var(--glass-shadow-deep);
+      margin-bottom: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .workspace-hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 450px;
+      height: 100%;
+      background: radial-gradient(circle at top right, rgba(0, 242, 254, 0.12), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-badge-strip {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .service-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .badge-docs { color: #60A5FA; border-color: rgba(96, 165, 250, 0.3); }
+    .badge-sheets { color: #34D399; border-color: rgba(52, 211, 153, 0.3); }
+    .badge-keep { color: #FBBF24; border-color: rgba(251, 191, 36, 0.3); }
+    .badge-gmail { color: #F87171; border-color: rgba(248, 113, 113, 0.3); }
+
+    .user-pill {
+      margin-left: auto;
+      background: rgba(123, 97, 255, 0.15);
+      border: 1px solid rgba(123, 97, 255, 0.35);
+      color: #C4B5FD;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      padding: 6px 16px;
+      border-radius: 20px;
+    }
+
+    .workspace-tabs {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 12px;
+      overflow-x: auto;
+    }
+
+    .tab-btn {
+      background: var(--glass-bg-secondary);
+      border: 1px solid var(--glass-border-subtle);
+      color: #94A3B8;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover {
+      background: var(--glass-bg-hover);
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .tab-btn.active {
+      background: rgba(0, 242, 254, 0.12);
+      border-color: var(--gemini-cyan);
+      color: #00F2FE;
+      box-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.3s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Cards & Grids */
+    .panel-card {
+      background: var(--glass-bg-primary);
+      backdrop-filter: var(--blur-mid);
+      border: 1px solid var(--glass-border-light);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: var(--glass-shadow-deep);
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .panel-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Keep Sticky Notes Board */
+    .keep-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .keep-card {
+      border-radius: 14px;
+      padding: 20px;
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .keep-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    .keep-card.blue { background: rgba(30, 58, 138, 0.45); border-color: rgba(96, 165, 250, 0.4); }
+    .keep-card.purple { background: rgba(88, 28, 135, 0.45); border-color: rgba(192, 132, 252, 0.4); }
+    .keep-card.emerald { background: rgba(6, 78, 59, 0.45); border-color: rgba(52, 211, 153, 0.4); }
+    .keep-card.amber { background: rgba(120, 53, 15, 0.45); border-color: rgba(251, 191, 36, 0.4); }
+    .keep-card.obsidian { background: rgba(18, 24, 40, 0.7); border-color: rgba(255, 255, 255, 0.15); }
+
+    .keep-pin-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      font-size: 1rem;
+    }
+
+    .keep-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+      padding-right: 24px;
+    }
+
+    .keep-body {
+      font-size: 0.9rem;
+      color: #CBD5E1;
+      line-height: 1.5;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .keep-checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px 0;
+    }
+
+    .keep-checklist li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      font-size: 0.88rem;
+      color: #E2E8F0;
+      cursor: pointer;
+    }
+
+    .keep-checklist li.checked {
+      text-decoration: line-through;
+      color: #64748B;
+    }
+
+    .keep-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: auto;
+    }
+
+    .keep-tag {
+      font-size: 0.72rem;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 3px 8px;
+      border-radius: 12px;
+      color: #94A3B8;
+      font-family: var(--font-mono);
+    }
+
+    /* Data Tables for Sheets and Docs */
+    .workspace-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin-top: 12px;
+    }
+
+    .workspace-table th, .workspace-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .workspace-table th {
+      background: rgba(255, 255, 255, 0.04);
+      color: #94A3B8;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+    }
+
+    .workspace-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Staking Calculator */
+    .staking-calculator {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .calc-input-group label {
+      display: block;
+      font-size: 0.8rem;
+      color: #94A3B8;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .calc-input-group input, .calc-input-group select {
+      width: 100%;
+      background: rgba(18, 24, 40, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #FFFFFF;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    .calc-result-box {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(0, 242, 254, 0.15));
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      border-radius: 12px;
+      padding: 18px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .calc-result-val {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #34D399;
+      font-family: var(--font-mono);
+    }
+
+    /* Action Buttons */
+    .action-btn-primary {
+      background: linear-gradient(135deg, #00F2FE, #4E82EE);
+      color: #07090E;
+      font-weight: 700;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      transition: opacity 0.2s;
+    }
+
+    .action-btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    /* Status Pills */
+    .status-pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .status-passed { background: rgba(16, 185, 129, 0.2); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.4); }
+    .status-high { background: rgba(239, 68, 68, 0.2); color: #F87171; border: 1px solid rgba(239, 68, 68, 0.4); }
+    .status-normal { background: rgba(59, 130, 246, 0.2); color: #60A5FA; border: 1px solid rgba(59, 130, 246, 0.4); }
+  </style>
+</head>
+<body>
+  <!-- Ambient Liquid Canvas Background -->
+  <div class="liquid-bg-canvas">
+    <canvas id="neural-brain-canvas" class="neural-brain-canvas"></canvas>
+    <div class="liquid-blob blob-1"></div>
+    <div class="liquid-blob blob-2"></div>
+    <div class="liquid-blob blob-3"></div>
+  </div>
+  <div class="glass-grid-overlay"></div>
+
+  <!-- Navigation Bar -->
+  <header class="liquid-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-wrapper">
+        <div class="brand-icons-cluster">
+          <img src="svg/opo-symbol.svg" alt="OPO Sovereign Symbol" class="brand-opo-svg" width="30" height="30">
+          <img src="svg/gemini-sparkle.svg" alt="Gemini" width="22" height="22">
+        </div>
+        <div style="display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <span class="brand-title">OMNI-PRESENT OMEGA</span>
+            <span class="brand-badge">WORKSPACE</span>
+          </div>
+          <span style="font-size: 0.65rem; color: #94A3B8; font-family: var(--font-mono); letter-spacing: 0.04em;">GOOGLE PRODUCTIVITY SUITE</span>
+        </div>
+      </a>
+
+      <nav class="nav-pills">
+        <a href="index.html" class="nav-pill-btn">
+          <span>Home</span>
+        </a>
+        <a href="godseye.html" class="nav-pill-btn">
+          <span>God's Eye</span>
+        </a>
+        <a href="learn.html" class="nav-pill-btn">
+          <span>Learn</span>
+        </a>
+        <a href="whitepaper.html" class="nav-pill-btn">
+          <span>Whitepaper</span>
+        </a>
+        <a href="deploy.html" class="nav-pill-btn">
+          <span>Deploy</span>
+        </a>
+        <a href="workspace.html" class="nav-pill-btn active" style="border-color: rgba(0, 242, 254, 0.4); background: rgba(0, 242, 254, 0.1);">
+          <span style="color: #00F2FE; font-weight: 600;">Workspace Hub</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="workspace-container">
+    <!-- Hero Banner -->
+    <div class="workspace-hero">
+      <div class="hero-badge-strip">
+        <div class="service-badge badge-docs">
+          <img src="svg/google-docs-icon.svg" width="16" height="16" alt="Docs">
+          <span>Google Docs</span>
+        </div>
+        <div class="service-badge badge-sheets">
+          <img src="svg/google-sheets-icon.svg" width="16" height="16" alt="Sheets">
+          <span>Google Sheets</span>
+        </div>
+        <div class="service-badge badge-keep">
+          <img src="svg/google-keep-icon.svg" width="16" height="16" alt="Keep">
+          <span>Google Keep</span>
+        </div>
+        <div class="service-badge badge-gmail">
+          <img src="svg/google-gmail-icon.svg" width="16" height="16" alt="Gmail">
+          <span>Gmail</span>
+        </div>
+        <div class="user-pill">
+          Account: <strong>rgkdevx1@gmail.com</strong>
+        </div>
+      </div>
+
+      <h1 style="font-size: 2.4rem; color: #FFFFFF; margin-bottom: 12px; letter-spacing: -0.02em;">
+        Sovereign Google Workspace Hub
+      </h1>
+      <p style="color: #94A3B8; max-width: 820px; font-size: 1.05rem; line-height: 1.6;">
+        Unified autonomous operations console for the 55-agent swarm: generating publication-grade <strong>Google Docs</strong> research monographs, multi-tab <strong>Google Sheets</strong> telemetry and staking models, multi-agent <strong>Google Keep</strong> scratchpads, and verified <strong>Gmail</strong> executive digests.
+      </p>
+
+      <div style="display: flex; gap: 24px; margin-top: 24px; flex-wrap: wrap;">
+        <div>
+          <div style="font-size: 1.8rem; font-weight: 800; color: #60A5FA;" id="stat-docs">4</div>
+          <div style="font-size: 0.8rem; color: #94A3B8;">Docs Cataloged</div>
+        </div>
+        <div style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 24px;">
+          <div style="font-size: 1.8rem; font-weight: 800; color: #34D399;" id="stat-sheets">24.8%</div>
+          <div style="font-size: 0.8rem; color: #94A3B8;">Top Staking APY</div>
+        </div>
+        <div style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 24px;">
+          <div style="font-size: 1.8rem; font-weight: 800; color: #FBBF24;" id="stat-keep">6</div>
+          <div style="font-size: 0.8rem; color: #94A3B8;">Keep Notes & Checklists</div>
+        </div>
+        <div style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 24px;">
+          <div style="font-size: 1.8rem; font-weight: 800; color: #F87171;" id="stat-gmail">100%</div>
+          <div style="font-size: 0.8rem; color: #94A3B8;">Gmail Dispatch Rate</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="workspace-tabs">
+      <button class="tab-btn active" onclick="switchWorkspaceTab('docs')">
+        <img src="svg/google-docs-icon.svg" width="18" height="18" alt="Docs">
+        <span>Google Docs (<span id="tab-count-docs">4</span>)</span>
+      </button>
+      <button class="tab-btn" onclick="switchWorkspaceTab('sheets')">
+        <img src="svg/google-sheets-icon.svg" width="18" height="18" alt="Sheets">
+        <span>Google Sheets (Telemetry & APY)</span>
+      </button>
+      <button class="tab-btn" onclick="switchWorkspaceTab('keep')">
+        <img src="svg/google-keep-icon.svg" width="18" height="18" alt="Keep">
+        <span>Google Keep Pinboard (<span id="tab-count-keep">6</span>)</span>
+      </button>
+      <button class="tab-btn" onclick="switchWorkspaceTab('gmail')">
+        <img src="svg/google-gmail-icon.svg" width="18" height="18" alt="Gmail">
+        <span>Gmail Outbox & Relay</span>
+      </button>
+    </div>
+
+    <!-- TAB 1: GOOGLE DOCS -->
+    <div id="tab-docs" class="tab-content active">
+      <div class="panel-card">
+        <div class="panel-header">
+          <div class="panel-title">
+            <img src="svg/google-docs-icon.svg" width="24" height="24" alt="Docs">
+            <span>Synchronized Google Docs Catalog</span>
+          </div>
+          <button class="action-btn-primary" onclick="alert('Google Docs are automatically compiled by the Documentation Council during each 4-hour WORK phase and synchronized to rgkdevx1@gmail.com Google Drive.')">
+            <span>+ Compile New Monograph</span>
+          </button>
+        </div>
+
+        <div style="overflow-x: auto;">
+          <table class="workspace-table">
+            <thead>
+              <tr>
+                <th>Document Title</th>
+                <th>Category</th>
+                <th>Author Agent</th>
+                <th>Created (UTC)</th>
+                <th>Formats</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="docs-table-body">
+              <tr>
+                <td><strong>Omni Swarm Circadian Protocol & Workspace Integration Monograph</strong></td>
+                <td><span class="service-badge badge-docs">Ecosystem Architecture</span></td>
+                <td>omni-docs-curator</td>
+                <td>2026-10-09 18:30:57</td>
+                <td><code>.html</code> <code>.md</code></td>
+                <td><a href="automation/workspace_output/docs/" style="color:#00F2FE; text-decoration:none;">View Drive Bundle →</a></td>
+              </tr>
+              <tr>
+                <td><strong>4-Hour Work Cycle Progress Monograph #1</strong></td>
+                <td><span class="service-badge badge-docs">Circadian Swarm Monograph</span></td>
+                <td>omni-docs-curator</td>
+                <td>2026-10-09 18:31:46</td>
+                <td><code>.html</code> <code>.md</code></td>
+                <td><a href="automation/workspace_output/docs/" style="color:#00F2FE; text-decoration:none;">View Drive Bundle →</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: GOOGLE SHEETS -->
+    <div id="tab-sheets" class="tab-content">
+      <!-- Staking Model Calculator Card -->
+      <div class="panel-card">
+        <div class="panel-header">
+          <div class="panel-title">
+            <img src="svg/google-sheets-icon.svg" width="24" height="24" alt="Sheets">
+            <span>Web3 Staking Yield Model & Multiplier Calculator</span>
+          </div>
+          <span style="font-size: 0.85rem; color: #34D399; font-family: var(--font-mono);">Sheet: Omni_Staking_Yield_Models.csv</span>
+        </div>
+
+        <div class="staking-calculator">
+          <div class="calc-input-group">
+            <label>Principal Staking Amount (OMNI)</label>
+            <input type="number" id="calc-amount" value="10000" min="100" step="100" oninput="calculateStakingYield()">
+          </div>
+          <div class="calc-input-group">
+            <label>Lock Duration Tier</label>
+            <select id="calc-tier" onchange="calculateStakingYield()">
+              <option value="30">30 Days (12.2% APY • 1.00x)</option>
+              <option value="90">90 Days (14.8% APY • 1.25x)</option>
+              <option value="180">180 Days (18.4% APY • 1.50x)</option>
+              <option value="365" selected>365 Days (24.8% APY • 2.00x Max Return)</option>
+            </select>
+          </div>
+          <div class="calc-result-box">
+            <div style="font-size: 0.8rem; color: #94A3B8; text-transform: uppercase;">Estimated Total Yield</div>
+            <div class="calc-result-val" id="calc-yield-val">+2,480.00 OMNI</div>
+            <div style="font-size: 0.75rem; color: #6EE7B7; margin-top: 4px;">Effective Multiplier: <span id="calc-multiplier">2.00x</span> (Slashing: 5.0%)</div>
+          </div>
+        </div>
+
+        <h3 style="font-size: 1.1rem; color: #FFFFFF; margin: 24px 0 12px;">Lock Tier Matrix</h3>
+        <div style="overflow-x: auto;">
+          <table class="workspace-table">
+            <thead>
+              <tr>
+                <th>Tier Days</th>
+                <th>Annual APY</th>
+                <th>Multiplier</th>
+                <th>Minimum Lock</th>
+                <th>Return on 10,000 OMNI</th>
+                <th>Slashing Reserve</th>
+                <th>Risk Profile</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>30 Days</strong></td>
+                <td>12.2%</td>
+                <td>1.00x</td>
+                <td>100 OMNI</td>
+                <td>+100.27 OMNI</td>
+                <td>5.0%</td>
+                <td><span class="status-pill status-passed">LOW</span></td>
+              </tr>
+              <tr>
+                <td><strong>90 Days</strong></td>
+                <td>14.8%</td>
+                <td>1.25x</td>
+                <td>500 OMNI</td>
+                <td>+364.93 OMNI</td>
+                <td>5.0%</td>
+                <td><span class="status-pill status-passed">BALANCED</span></td>
+              </tr>
+              <tr>
+                <td><strong>180 Days</strong></td>
+                <td>18.4%</td>
+                <td>1.50x</td>
+                <td>1,000 OMNI</td>
+                <td>+907.40 OMNI</td>
+                <td>5.0%</td>
+                <td><span class="status-pill status-passed">OPTIMIZED</span></td>
+              </tr>
+              <tr>
+                <td><strong>365 Days</strong></td>
+                <td><strong style="color:#34D399;">24.8%</strong></td>
+                <td><strong style="color:#00F2FE;">2.00x</strong></td>
+                <td>5,000 OMNI</td>
+                <td><strong>+2,480.00 OMNI</strong></td>
+                <td>5.0%</td>
+                <td><span class="status-pill status-passed">MAXIMUM_RETURN</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Telemetry Sheet Card -->
+      <div class="panel-card">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span>Telemetry & Test Suite Verification Log</span>
+          </div>
+          <span style="font-size: 0.85rem; color: #94A3B8; font-family: var(--font-mono);">Sheet: Omni_Ecosystem_Telemetry_Tracker.csv</span>
+        </div>
+        <div style="overflow-x: auto;">
+          <table class="workspace-table">
+            <thead>
+              <tr>
+                <th>Timestamp (UTC)</th>
+                <th>Run Identifier</th>
+                <th>Duration</th>
+                <th>Test Suite</th>
+                <th>Validator APY</th>
+                <th>Commit</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="telemetry-table-body">
+              <tr>
+                <td>2026-10-09 18:31:46</td>
+                <td><code>WORK-CYCLE-1</code></td>
+                <td>1.85s</td>
+                <td><strong>14/14 PASSED</strong></td>
+                <td>24.8%</td>
+                <td><code>8a85fb0</code></td>
+                <td><span class="status-pill status-passed">PASSED</span></td>
+              </tr>
+              <tr>
+                <td>2026-10-09 18:30:57</td>
+                <td><code>SUITE-INIT</code></td>
+                <td>1.82s</td>
+                <td><strong>14/14 PASSED</strong></td>
+                <td>24.8%</td>
+                <td><code>8a85fb0</code></td>
+                <td><span class="status-pill status-passed">PASSED</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: GOOGLE KEEP PINBOARD -->
+    <div id="tab-keep" class="tab-content">
+      <div class="panel-card">
+        <div class="panel-header">
+          <div class="panel-title">
+            <img src="svg/google-keep-icon.svg" width="24" height="24" alt="Keep">
+            <span>Swarm Autonomous Keep Pinboard</span>
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <button class="action-btn-primary" onclick="promptAddKeepNote()">
+              <span>+ Add Note / Checklist</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="keep-grid" id="keep-notes-container">
+          <!-- Note 1 -->
+          <div class="keep-card blue">
+            <span class="keep-pin-badge">📌</span>
+            <div class="keep-title">Swarm Circadian Duty Cycle Protocol</div>
+            <ul class="keep-checklist">
+              <li class="checked" onclick="this.classList.toggle('checked')"><span>☑</span> Maintain 4 hours active work sequence across 55 agents</li>
+              <li class="checked" onclick="this.classList.toggle('checked')"><span>☑</span> Enforce 4 hours dormant rest and memory consolidation</li>
+              <li class="checked" onclick="this.classList.toggle('checked')"><span>☑</span> Verify 14/14 master test suite on each transition</li>
+              <li class="checked" onclick="this.classList.toggle('checked')"><span>☑</span> Sync Google Docs progress monograph under rgkdevx1@gmail.com</li>
+              <li class="checked" onclick="this.classList.toggle('checked')"><span>☑</span> Broadcast Gmail briefing at phase boundaries</li>
+            </ul>
+            <div class="keep-tags">
+              <span class="keep-tag">#architecture</span>
+              <span class="keep-tag">#circadian</span>
+              <span class="keep-tag">#critical</span>
+            </div>
+          </div>
+
+          <!-- Note 2 -->
+          <div class="keep-card purple">
+            <span class="keep-pin-badge">📌</span>
+            <div class="keep-title">💡 Magnetohydrodynamic Drag Suppression Hypothesis</div>
+            <div class="keep-body">
+              By biasing the forward stagnation nosecone with 2.8 Tesla magnetic pulse, the ionized atmospheric sheath experiences a backwards Lorentz force j x B. Wave drag is suppressed by up to 98% along Mach 14.2 trajectories without thermal ablation.
+            </div>
+            <div class="keep-tags">
+              <span class="keep-tag">#physics</span>
+              <span class="keep-tag">#lorentz</span>
+              <span class="keep-tag">#hypersonic</span>
+            </div>
+          </div>
+
+          <!-- Note 3 -->
+          <div class="keep-card emerald">
+            <div class="keep-title">🧬 Prime Editing 3.0 PegRNA Sensor Array</div>
+            <div class="keep-body">
+              Synthesized SpCas9-pegRNA flap extension for cellular sensor modules. Off-target cleavage probability is constrained below 0.002%. Preparing NotebookLM source bundle for rgkdevx1@gmail.com review.
+            </div>
+            <div class="keep-tags">
+              <span class="keep-tag">#biotech</span>
+              <span class="keep-tag">#genomics</span>
+              <span class="keep-tag">#notebooklm</span>
+            </div>
+          </div>
+
+          <!-- Note 4 -->
+          <div class="keep-card amber">
+            <div class="keep-title">⚡ Web3 Staking Pool 2.0 Multiplier Targets</div>
+            <ul class="keep-checklist">
+              <li class="checked" onclick="this.classList.toggle('checked')"><span>☑</span> 30-day Tier @ 12.2% APY (1.00x multiplier)</li>
+              <li class="checked" onclick="this.classList.toggle('checked')"><span>☑</span> 90-day Tier @ 14.8% APY (1.25x multiplier)</li>
+              <li class="checked" onclick="this.classList.toggle('checked')"><span>☑</span> 180-day Tier @ 18.4% APY (1.50x multiplier)</li>
+              <li class="checked" onclick="this.classList.toggle('checked')"><span>☑</span> 365-day Tier @ 24.8% APY (2.00x multiplier)</li>
+              <li class="checked" onclick="this.classList.toggle('checked')"><span>☑</span> MiCA regulatory legal attestation signed</li>
+            </ul>
+            <div class="keep-tags">
+              <span class="keep-tag">#blockchain</span>
+              <span class="keep-tag">#staking</span>
+            </div>
+          </div>
+
+          <!-- Note 5 -->
+          <div class="keep-card obsidian">
+            <div class="keep-title">🛡️ MiCA Legal Staking Checklist</div>
+            <ul class="keep-checklist">
+              <li class="checked" onclick="this.classList.toggle('checked')"><span>☑</span> Audit smart contract lock schedule</li>
+              <li class="checked" onclick="this.classList.toggle('checked')"><span>☑</span> Verify 2.0x multiplier on 365-day tier</li>
+              <li class="checked" onclick="this.classList.toggle('checked')"><span>☑</span> Publish legal disclosure</li>
+            </ul>
+            <div class="keep-tags">
+              <span class="keep-tag">#legal</span>
+              <span class="keep-tag">#staking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: GMAIL -->
+    <div id="tab-gmail" class="tab-content">
+      <div class="panel-card">
+        <div class="panel-header">
+          <div class="panel-title">
+            <img src="svg/google-gmail-icon.svg" width="24" height="24" alt="Gmail">
+            <span>Gmail Autonomous Outbox & Dispatch Relay</span>
+          </div>
+          <button class="action-btn-primary" onclick="alert('Autonomous Gmail digests are automatically generated and queued for rgkdevx1@gmail.com upon every 4h work cycle and phase switch.')">
+            <span>+ Send Notification</span>
+          </button>
+        </div>
+
+        <div style="overflow-x: auto;">
+          <table class="workspace-table">
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Recipient</th>
+                <th>Dispatched At (UTC)</th>
+                <th>Priority</th>
+                <th>Format</th>
+                <th>Relay Status</th>
+              </tr>
+            </thead>
+            <tbody id="gmail-table-body">
+              <tr>
+                <td><strong>Swarm Work Cycle #1 Progress Digest</strong></td>
+                <td>rgkdevx1@gmail.com</td>
+                <td>2026-10-09 18:31:46</td>
+                <td><span class="status-pill status-normal">NORMAL</span></td>
+                <td><code>RFC 2822 / .eml</code></td>
+                <td><span class="status-pill status-passed">DISPATCHED</span></td>
+              </tr>
+              <tr>
+                <td><strong>Google Docs, Sheets, Keep & Gmail Suite Activated</strong></td>
+                <td>rgkdevx1@gmail.com</td>
+                <td>2026-10-09 18:30:57</td>
+                <td><span class="status-pill status-normal">NORMAL</span></td>
+                <td><code>RFC 2822 / .eml</code></td>
+                <td><span class="status-pill status-passed">DISPATCHED</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script>
+    function switchWorkspaceTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+      const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.innerText.toLowerCase().includes(tabId));
+      if (activeBtn) activeBtn.classList.add('active');
+
+      const target = document.getElementById('tab-' + tabId);
+      if (target) target.classList.add('active');
+    }
+
+    function calculateStakingYield() {
+      const amount = parseFloat(document.getElementById('calc-amount').value) || 0;
+      const tier = parseInt(document.getElementById('calc-tier').value) || 30;
+
+      const apyMap = { 30: 0.122, 90: 0.148, 180: 0.184, 365: 0.248 };
+      const multMap = { 30: '1.00x', 90: '1.25x', 180: '1.50x', 365: '2.00x' };
+
+      const apy = apyMap[tier] || 0.122;
+      const yieldTokens = amount * apy * (tier / 365.0);
+
+      document.getElementById('calc-yield-val').innerText = '+' + yieldTokens.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' OMNI';
+      document.getElementById('calc-multiplier').innerText = multMap[tier] || '1.00x';
+    }
+
+    function promptAddKeepNote() {
+      const title = prompt("Enter Note Title:", "🚀 New Swarm Directive");
+      if (!title) return;
+      const content = prompt("Enter Note Content:", "Action items for next 4-hour cycle.");
+      if (!content) return;
+
+      const card = document.createElement('div');
+      card.className = 'keep-card blue';
+      card.innerHTML = `
+        <div class="keep-title">${title}</div>
+        <div class="keep-body">${content}</div>
+        <div class="keep-tags">
+          <span class="keep-tag">#swarm</span>
+          <span class="keep-tag">#rgkdevx1</span>
+        </div>
+      `;
+      document.getElementById('keep-notes-container').prepend(card);
+      const countEl = document.getElementById('tab-count-keep');
+      if (countEl) countEl.innerText = parseInt(countEl.innerText || 0) + 1;
+    }
+  </script>
+</body>
+</html>

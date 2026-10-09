@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="keep-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4B400" />
+      <stop offset="50%" stop-color="#E37400" />
+      <stop offset="100%" stop-color="#B06000" />
+    </linearGradient>
+    <filter id="keep-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Google Keep Lightbulb Bulb Note Contour -->
+  <path d="M32 10 C21 10 14 18 14 28 C14 34 18 39 21 43 L21 47 C21 48 22 49 23 49 H41 C42 49 43 48 43 47 L43 43 C46 39 50 34 50 28 C50 18 43 10 32 10 Z" fill="url(#keep-grad)" filter="url(#keep-glow)" />
+
+  <!-- Base contacts -->
+  <rect x="25" y="51" width="14" height="3" rx="1.5" fill="#E2E8F0" />
+  <rect x="27" y="55" width="10" height="2" rx="1" fill="#CBD5E1" />
+
+  <!-- Filament / Note symbol -->
+  <path d="M28 28 L32 22 L36 28 M30 34 H34" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
