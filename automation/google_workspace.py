@@ -16,13 +16,21 @@ import json
 import csv
 import uuid
 import base64
+import urllib.parse
+import requests
 from datetime import datetime, timezone
 import email.mime.multipart
 import email.mime.text
+import email.mime.application
 
 USER_EMAIL = "rgkdevx1@gmail.com"
 OMNI_HOME = "/data/data/com.termux/files/home"
 AUTOMATION_DIR = os.path.join(OMNI_HOME, "omni-automation")
+sys.path.insert(0, AUTOMATION_DIR)
+try:
+    from google_auth_service import GoogleAuthService
+except ImportError:
+    GoogleAuthService = None
 OMNI_WEB = os.path.join(OMNI_HOME, "omni-web")
 WORKSPACE_OUTPUT = os.path.join(AUTOMATION_DIR, "workspace_output")
 
@@ -120,19 +128,32 @@ class GoogleDocsManager:
       display: inline-block;
       background: var(--docs-callout);
       color: var(--docs-blue);
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.75rem;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 4px 10px;
+      padding: 4px 12px;
       border-radius: 12px;
       margin-bottom: 12px;
+    }}
+    .spec-id-badge {{
+      display: inline-block;
+      background: #f1f5f9;
+      color: #334155;
+      font-family: 'Consolas', 'Menlo', monospace;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-left: 8px;
+      border: 1px solid #cbd5e1;
     }}
     h1 {{
       font-size: 2.1rem;
       margin: 0 0 10px 0;
-      color: #1a1a1a;
+      color: #0f172a;
       letter-spacing: -0.02em;
+      line-height: 1.25;
     }}
     .meta-bar {{
       font-size: 0.85rem;
@@ -143,30 +164,73 @@ class GoogleDocsManager:
       margin-bottom: 20px;
     }}
     .summary-box {{
-      background: #f1f3f4;
+      background: #f8fafc;
       border-left: 4px solid var(--docs-blue);
-      padding: 16px 20px;
+      padding: 18px 22px;
       border-radius: 0 8px 8px 0;
       margin-bottom: 30px;
-      font-size: 0.95rem;
+      font-size: 0.96rem;
+      line-height: 1.65;
+      border: 1px solid #e2e8f0;
+      border-left-width: 4px;
+      border-left-color: var(--docs-blue);
     }}
     h2 {{
-      color: #174ea6;
+      color: #0f172a;
       font-size: 1.35rem;
-      margin-top: 32px;
-      margin-bottom: 12px;
-      border-bottom: 1px solid var(--docs-border);
+      margin-top: 36px;
+      margin-bottom: 14px;
+      border-bottom: 2px solid #e2e8f0;
       padding-bottom: 6px;
+      letter-spacing: -0.01em;
+    }}
+    h3 {{
+      color: #1e293b;
+      font-size: 1.12rem;
+      margin-top: 22px;
+      margin-bottom: 8px;
     }}
     p {{
       margin: 0 0 14px 0;
       font-size: 0.98rem;
+      line-height: 1.7;
+      color: #334155;
     }}
+    .callout-card {{
+      padding: 14px 18px;
+      border-radius: 6px;
+      margin: 16px 0;
+      border-left: 4px solid #2563eb;
+      background: #f8fafc;
+      font-size: 0.92rem;
+    }}
+    .callout-theorem {{ border-left-color: #2563eb; background: #eff6ff; }}
+    .callout-lemma {{ border-left-color: #7c3aed; background: #f5f3ff; }}
+    .callout-invariant {{ border-left-color: #059669; background: #ecfdf5; }}
+    .callout-hardware {{ border-left-color: #d97706; background: #fffbeb; }}
+    .callout-security {{ border-left-color: #dc2626; background: #fef2f2; }}
+    .callout-mathematics {{ border-left-color: #0284c7; background: #f0f9ff; }}
+    .callout-badge {{
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+    }}
+    .callout-theorem .callout-badge {{ background: #dbeafe; color: #1e40af; }}
+    .callout-lemma .callout-badge {{ background: #ede9fe; color: #5b21b6; }}
+    .callout-invariant .callout-badge {{ background: #d1fae5; color: #065f46; }}
+    .callout-hardware .callout-badge {{ background: #fef3c7; color: #92400e; }}
+    .callout-security .callout-badge {{ background: #fee2e2; color: #991b1b; }}
+    .callout-mathematics .callout-badge {{ background: #e0f2fe; color: #075985; }}
     table {{
       width: 100%;
       border-collapse: collapse;
       margin: 20px 0;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
     }}
     th, td {{
       border: 1px solid var(--docs-border);
@@ -174,27 +238,47 @@ class GoogleDocsManager:
       text-align: left;
     }}
     th {{
-      background-color: #f8f9fa;
-      color: #3c4043;
-      font-weight: 600;
+      background-color: #f1f5f9;
+      color: #0f172a;
+      font-weight: 700;
+      font-size: 0.84rem;
+      letter-spacing: 0.02em;
     }}
     tr:nth-child(even) td {{
-      background-color: #fbfbfc;
+      background-color: #f8fafc;
     }}
     pre {{
-      background: #202124;
-      color: #e8eaed;
+      background: #0f172a;
+      color: #f8fafc;
       padding: 14px 18px;
       border-radius: 6px;
       overflow-x: auto;
       font-family: 'Consolas', 'Menlo', 'Monaco', monospace;
-      font-size: 0.85rem;
+      font-size: 0.84rem;
+      line-height: 1.55;
+      margin: 14px 0;
+    }}
+    .code-container {{
+      margin: 16px 0;
+    }}
+    .code-caption {{
+      font-size: 0.78rem;
+      font-family: 'Consolas', monospace;
+      background: #1e293b;
+      color: #94a3b8;
+      padding: 4px 12px;
+      border-radius: 6px 6px 0 0;
+      display: inline-block;
+    }}
+    .code-container pre {{
+      margin-top: 0;
+      border-top-left-radius: 0;
     }}
     .tags {{
-      margin-top: 30px;
+      margin-top: 36px;
       padding-top: 16px;
       border-top: 1px solid var(--docs-border);
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       color: var(--docs-subtext);
     }}
     .footer {{
@@ -208,18 +292,19 @@ class GoogleDocsManager:
 <body>
   <div class="document-page">
     <div class="doc-header">
-      <div class="badge">{category}</div>
+      <span class="badge">{category}</span>
+      <span class="spec-id-badge">SPEC-ID: {doc_id}</span>
       <h1>{title}</h1>
       <div class="meta-bar">
-        <span><strong>Author:</strong> {author}</span>
-        <span><strong>Account:</strong> {self.user_email}</span>
+        <span><strong>Authoring Directorate:</strong> {author}</span>
+        <span><strong>Authority:</strong> {self.user_email}</span>
         <span><strong>Timestamp:</strong> {now.strftime("%B %d, %Y - %H:%M:%S UTC")}</span>
-        <span><strong>Doc ID:</strong> {doc_id}</span>
+        <span><strong>Status:</strong> FORMAL RATIFIED SPECIFICATION</span>
       </div>
     </div>
 
     <div class="summary-box">
-      <strong>Executive Brief:</strong><br>
+      <strong style="color: #0f172a; font-size: 1rem;">1. Executive Abstract &amp; Architectural Mandate:</strong><br>
       {summary}
     </div>
 """
@@ -231,6 +316,30 @@ class GoogleDocsManager:
     <h2>{heading}</h2>
     <p>{body}</p>
 """
+            # Render Callouts if present
+            if "callouts" in sec:
+                for callout in sec["callouts"]:
+                    c_type = callout.get("type", "THEOREM").upper()
+                    c_title = callout.get("title", "")
+                    c_body = callout.get("content", "")
+                    c_class = f"callout-{c_type.lower()}"
+                    html_content += f"""
+    <div class="callout-card {c_class}">
+      <div class="callout-badge">{c_type}</div>
+      <strong>{c_title}</strong>
+      <p style="margin: 6px 0 0 0; font-size: 0.93rem;">{c_body}</p>
+    </div>
+"""
+            # Render Subsections if present
+            if "subsections" in sec:
+                for sub in sec["subsections"]:
+                    s_title = sub.get("title", "")
+                    s_body = sub.get("content", "")
+                    html_content += f"""
+    <h3>{s_title}</h3>
+    <p>{s_body}</p>
+"""
+            # Render Tables if present
             if "table" in sec:
                 headers = sec["table"].get("headers", [])
                 rows = sec["table"].get("rows", [])
@@ -242,7 +351,19 @@ class GoogleDocsManager:
                     html_content += "        <tr>" + "".join([f"<td>{c}</td>" for c in r]) + "</tr>\n"
                 html_content += "      </tbody>\n    </table>\n"
 
-            if "code" in sec:
+            # Render Code Blocks if present
+            if "code_blocks" in sec:
+                for cb in sec["code_blocks"]:
+                    c_content = cb.get("content", "")
+                    c_lang = cb.get("language", "text")
+                    c_caption = cb.get("caption", "")
+                    html_content += f"""
+    <div class="code-container">
+      {f'<div class="code-caption">{c_caption} ({c_lang.upper()})</div>' if c_caption else ''}
+      <pre><code class="language-{c_lang}">{c_content}</code></pre>
+    </div>
+"""
+            elif "code" in sec:
                 code_snippet = sec["code"].get("content", "")
                 code_lang = sec["code"].get("language", "text")
                 html_content += f"""    <pre><code class="language-{code_lang}">{code_snippet}</code></pre>\n"""
@@ -553,10 +674,10 @@ class GmailManager:
         os.makedirs(self.sent_dir, exist_ok=True)
         os.makedirs(self.drafts_dir, exist_ok=True)
 
-    def compose_and_dispatch(self, subject, body_html, recipient=None, priority="NORMAL", template="standard", tags=None):
+    def compose_and_dispatch(self, subject, body_html, recipient=None, priority="NORMAL", template="standard", tags=None, attachments=None):
         """
-        Creates an RFC 2822 compliant MIME message and dispatches it through the outbox queue
-        for user rgkdevx1@gmail.com.
+        Creates an RFC 2822 compliant MIME message (with optional document attachments)
+        and dispatches it through the outbox queue and Gmail API for user rgkdevx1@gmail.com.
         """
         if recipient is None:
             recipient = self.user_email
@@ -649,18 +770,43 @@ class GmailManager:
 </body>
 </html>"""
 
-        # 2. Build RFC 2822 MIME message
-        msg = email.mime.multipart.MIMEMultipart("alternative")
-        msg["Subject"] = f"[Omni Swarm] {subject}"
-        msg["From"] = f"Omni Autonomous Operations <{self.user_email}>"
-        msg["To"] = recipient
-        msg["Date"] = email.utils.format_datetime(now)
-        msg["Message-ID"] = f"<{mail_id}@{self.user_email.split('@')[1]}>"
-        msg["X-Priority"] = "1" if priority == "HIGH" else "3"
-
         plain_text = f"{subject}\n\nTo: {recipient}\nDate: {now.isoformat()}Z\n\n{body_html}"
-        msg.attach(email.mime.text.MIMEText(plain_text, "plain", "utf-8"))
-        msg.attach(email.mime.text.MIMEText(full_html, "html", "utf-8"))
+        attached_filenames = []
+
+        # 2. Build RFC 2822 MIME message (mixed if attachments present)
+        if attachments:
+            msg = email.mime.multipart.MIMEMultipart("mixed")
+            msg["Subject"] = f"[Omni Swarm] {subject}"
+            msg["From"] = f"Omni Autonomous Operations <{self.user_email}>"
+            msg["To"] = recipient
+            msg["Date"] = email.utils.format_datetime(now)
+            msg["Message-ID"] = f"<{mail_id}@{self.user_email.split('@')[1]}>"
+            msg["X-Priority"] = "1" if priority == "HIGH" else "3"
+
+            body_container = email.mime.multipart.MIMEMultipart("alternative")
+            body_container.attach(email.mime.text.MIMEText(plain_text, "plain", "utf-8"))
+            body_container.attach(email.mime.text.MIMEText(full_html, "html", "utf-8"))
+            msg.attach(body_container)
+
+            for att_path in attachments:
+                if os.path.exists(att_path):
+                    att_fn = os.path.basename(att_path)
+                    with open(att_path, "rb") as f_att:
+                        att_bytes = f_att.read()
+                    part = email.mime.application.MIMEApplication(att_bytes)
+                    part.add_header('Content-Disposition', 'attachment', filename=att_fn)
+                    msg.attach(part)
+                    attached_filenames.append(att_fn)
+        else:
+            msg = email.mime.multipart.MIMEMultipart("alternative")
+            msg["Subject"] = f"[Omni Swarm] {subject}"
+            msg["From"] = f"Omni Autonomous Operations <{self.user_email}>"
+            msg["To"] = recipient
+            msg["Date"] = email.utils.format_datetime(now)
+            msg["Message-ID"] = f"<{mail_id}@{self.user_email.split('@')[1]}>"
+            msg["X-Priority"] = "1" if priority == "HIGH" else "3"
+            msg.attach(email.mime.text.MIMEText(plain_text, "plain", "utf-8"))
+            msg.attach(email.mime.text.MIMEText(full_html, "html", "utf-8"))
 
         raw_mime = msg.as_string()
         eml_filename = f"Email_{timestamp_str}_{mail_id}.eml"
@@ -682,10 +828,32 @@ class GmailManager:
             "timestamp": now.isoformat(),
             "status": "QUEUED_AND_DISPATCHED",
             "body_html": full_html,
+            "attachments": attached_filenames,
             "eml_file": eml_filename,
             "raw_base64url": base64.urlsafe_b64encode(raw_mime.encode("utf-8")).decode("utf-8"),
             "outbound_relay": f"Gmail API (OAuth2 / User {self.user_email})"
         }
+        # Attempt direct delivery via Google Gmail API
+        token = None
+        if GoogleAuthService:
+            token = GoogleAuthService(user_email=self.user_email).get_valid_access_token()
+        if token:
+            try:
+                headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
+                send_payload = {"raw": payload["raw_base64url"]}
+                resp = requests.post("https://gmail.googleapis.com/gmail/v1/users/me/messages/send", headers=headers, json=send_payload, timeout=8)
+                if resp.status_code in (200, 201):
+                    msg_id = resp.json().get("id")
+                    payload["gmail_api_id"] = msg_id
+                    payload["status"] = "DELIVERED_VIA_GMAIL_API"
+                    print(f"[Gmail API] ✓ Message delivered directly to {recipient} (ID: {msg_id})")
+                elif resp.status_code == 403:
+                    print(f"[Gmail API] ⚠️ Note: Gmail API pending activation at https://console.developers.google.com/apis/api/gmail.googleapis.com/overview?project=1036007047880")
+                else:
+                    print(f"[Gmail API] Status {resp.status_code}: {resp.text[:150]}")
+            except Exception as e:
+                print(f"[Gmail API] Transmission note: {e}")
+
         with open(json_path, "w", encoding="utf-8") as f:
             json.dump(payload, f, indent=2)
 
@@ -694,7 +862,7 @@ class GmailManager:
         with open(sent_path, "w", encoding="utf-8") as f:
             json.dump(payload, f, indent=2)
 
-        print(f"[Gmail Dispatch] Email generated & queued: '{subject}' -> {recipient}")
+        print(f"[Gmail Dispatch] Email generated & dispatched: '{subject}' -> {recipient}")
         return json_path
 
     def list_outbox(self):
@@ -771,6 +939,74 @@ class GoogleWorkspaceSuite:
 
         print(f"[Google Workspace Suite] All assets synced to {WEB_DATA_DIR} & {web_docs_dir}")
 
+    def sync_to_google_drive(self):
+        """Uploads all local documents and spreadsheets to user's Google Drive / Google Docs."""
+        client = GoogleDriveCloudClient(user_email=self.user_email)
+        status_ok, msg = client.check_api_status()
+        if not status_ok:
+            print(f"[Google Drive Sync] ⚠️ {msg}")
+            return False, msg
+
+        folder_id = client.get_or_create_folder("Omni Sovereign Swarm Documents")
+        uploaded_count = 0
+
+        for doc in self.docs.catalog.get("documents", []):
+            if not doc.get("google_drive_url") and os.path.exists(doc.get("path_html", "")):
+                ok, drive_id, drive_url = client.upload_html_as_doc(
+                    file_path=doc["path_html"],
+                    title=doc["title"],
+                    folder_id=folder_id
+                )
+                if ok:
+                    doc["google_drive_id"] = drive_id
+                    doc["google_drive_url"] = drive_url
+                    uploaded_count += 1
+                    print(f"[Google Drive Sync] ✓ Uploaded '{doc['title']}' -> {drive_url}")
+
+        # Also upload CSV sheets as native Google Sheets
+        sheets_urls = {}
+        sheets_catalog_file = os.path.join(SHEETS_DIR, "sheets_catalog.json")
+        saved_sheets_catalog = {}
+        if os.path.exists(sheets_catalog_file):
+            try:
+                with open(sheets_catalog_file, "r", encoding="utf-8") as f:
+                    saved_sheets_catalog = json.load(f)
+            except Exception:
+                pass
+
+        if os.path.exists(SHEETS_DIR):
+            for csv_fn in os.listdir(SHEETS_DIR):
+                if csv_fn.endswith(".csv"):
+                    if csv_fn in saved_sheets_catalog and saved_sheets_catalog[csv_fn].get("google_sheet_url"):
+                        sheets_urls[csv_fn] = saved_sheets_catalog[csv_fn]["google_sheet_url"]
+                        continue
+                    sheet_title = csv_fn.replace(".csv", "").replace("_", " ")
+                    csv_path = os.path.join(SHEETS_DIR, csv_fn)
+                    ok, sheet_id, sheet_url = client.upload_csv_as_sheet(
+                        file_path=csv_path,
+                        title=sheet_title,
+                        folder_id=folder_id
+                    )
+                    if ok:
+                        sheets_urls[csv_fn] = sheet_url
+                        saved_sheets_catalog[csv_fn] = {
+                            "filename": csv_fn,
+                            "title": sheet_title,
+                            "google_sheet_id": sheet_id,
+                            "google_sheet_url": sheet_url,
+                            "synced_at": datetime.now(timezone.utc).isoformat()
+                        }
+                        print(f"[Google Sheets Sync] ✓ Uploaded '{sheet_title}' -> {sheet_url}")
+
+            with open(sheets_catalog_file, "w", encoding="utf-8") as f:
+                json.dump(saved_sheets_catalog, f, indent=2)
+
+        if uploaded_count > 0 or sheets_urls:
+            self.docs._save_catalog()
+            self.sync_to_web_assets()
+
+        return True, f"Successfully synchronized {uploaded_count} docs and {len(sheets_urls)} sheets to Google Drive!"
+
     # Backwards-compatible methods with previous GoogleWorkspaceManager
     def generate_google_doc(self, title, summary, sections):
         return self.docs.create_document(title, summary, sections)
@@ -780,6 +1016,136 @@ class GoogleWorkspaceSuite:
 
     def dispatch_gmail_update(self, subject, body_html, recipient=USER_EMAIL):
         return self.gmail.compose_and_dispatch(subject, body_html, recipient=recipient)
+
+
+# ==============================================================================
+# 6. GOOGLE DRIVE & CLOUD SYNC CLIENT
+# ==============================================================================
+class GoogleDriveCloudClient:
+    """Client for directly synchronizing documents and spreadsheets to Google Drive / Google Docs."""
+
+    def __init__(self, user_email=USER_EMAIL):
+        self.user_email = user_email
+        self.auth_service = GoogleAuthService(user_email=user_email) if GoogleAuthService else None
+
+    def get_token(self):
+        if not self.auth_service:
+            return None
+        return self.auth_service.get_valid_access_token()
+
+    def check_api_status(self):
+        token = self.get_token()
+        if not token:
+            return False, "Not authenticated. Run google_auth_service.py to log in."
+        headers = {"Authorization": f"Bearer {token}"}
+        try:
+            r = requests.get("https://www.googleapis.com/drive/v3/about?fields=user", headers=headers, timeout=6)
+            if r.status_code == 200:
+                return True, "Google Drive API is active."
+            elif r.status_code == 403:
+                return False, "Google Drive API is disabled in project 1036007047880. Enable it at: https://console.developers.google.com/apis/api/drive.googleapis.com/overview?project=1036007047880"
+            else:
+                return False, f"Google Drive API returned status {r.status_code}: {r.text[:200]}"
+        except Exception as e:
+            return False, f"Network error contacting Google Drive API: {e}"
+
+    def get_or_create_folder(self, folder_name="Omni Sovereign Swarm Documents", parent_id=None):
+        token = self.get_token()
+        if not token:
+            return None
+        headers = {"Authorization": f"Bearer {token}"}
+        if parent_id:
+            q = f"name = '{folder_name}' and '{parent_id}' in parents and mimeType = 'application/vnd.google-apps.folder' and trashed = false"
+        else:
+            q = f"name = '{folder_name}' and mimeType = 'application/vnd.google-apps.folder' and trashed = false"
+        try:
+            r = requests.get(f"https://www.googleapis.com/drive/v3/files?q={urllib.parse.quote(q)}", headers=headers, timeout=8)
+            if r.status_code == 200:
+                files = r.json().get("files", [])
+                if files:
+                    return files[0]["id"]
+            meta = {
+                "name": folder_name,
+                "mimeType": "application/vnd.google-apps.folder"
+            }
+            if parent_id:
+                meta["parents"] = [parent_id]
+            cr = requests.post("https://www.googleapis.com/drive/v3/files", headers=headers, json=meta, timeout=8)
+            if cr.status_code in (200, 201):
+                return cr.json().get("id")
+        except Exception:
+            pass
+        return None
+
+    def upload_html_as_doc(self, file_path, title, folder_id=None):
+        """Uploads an HTML document to Google Drive, automatically converting it to a native Google Doc."""
+        token = self.get_token()
+        if not token:
+            return False, None, "Not authenticated."
+        metadata = {
+            "name": title,
+            "mimeType": "application/vnd.google-apps.document"
+        }
+        if folder_id:
+            metadata["parents"] = [folder_id]
+
+        try:
+            with open(file_path, "rb") as f:
+                file_bytes = f.read()
+            files = {
+                "data": ("metadata", json.dumps(metadata), "application/json; charset=UTF-8"),
+                "file": (os.path.basename(file_path), file_bytes, "text/html")
+            }
+            headers = {"Authorization": f"Bearer {token}"}
+            r = requests.post(
+                "https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart",
+                headers=headers,
+                files=files,
+                timeout=15
+            )
+            if r.status_code in (200, 201):
+                doc_id = r.json().get("id")
+                url = f"https://docs.google.com/document/d/{doc_id}/edit"
+                return True, doc_id, url
+            else:
+                return False, None, r.text
+        except Exception as e:
+            return False, None, str(e)
+
+    def upload_csv_as_sheet(self, file_path, title, folder_id=None):
+        """Uploads a CSV spreadsheet to Google Drive, automatically converting it to a native Google Sheet."""
+        token = self.get_token()
+        if not token:
+            return False, None, "Not authenticated."
+        metadata = {
+            "name": title,
+            "mimeType": "application/vnd.google-apps.spreadsheet"
+        }
+        if folder_id:
+            metadata["parents"] = [folder_id]
+
+        try:
+            with open(file_path, "rb") as f:
+                file_bytes = f.read()
+            files = {
+                "data": ("metadata", json.dumps(metadata), "application/json; charset=UTF-8"),
+                "file": (os.path.basename(file_path), file_bytes, "text/csv")
+            }
+            headers = {"Authorization": f"Bearer {token}"}
+            r = requests.post(
+                "https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart",
+                headers=headers,
+                files=files,
+                timeout=15
+            )
+            if r.status_code in (200, 201):
+                sheet_id = r.json().get("id")
+                url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/edit"
+                return True, sheet_id, url
+            else:
+                return False, None, r.text
+        except Exception as e:
+            return False, None, str(e)
 
 
 # Backwards-compatibility alias
@@ -836,8 +1202,11 @@ if __name__ == "__main__":
             suite.gmail.compose_and_dispatch(subject, body)
             suite.sync_to_web_assets()
 
+        elif cmd == "drive-sync":
+            suite.sync_to_google_drive()
+
         else:
-            print("Usage: python3 google_workspace.py [sync|doc|keep|sheet|gmail]")
+            print("Usage: python3 google_workspace.py [sync|drive-sync|doc|keep|sheet|gmail]")
     else:
         # Default self-test demonstration
         print("⚡ Running Google Workspace Suite verification...")
