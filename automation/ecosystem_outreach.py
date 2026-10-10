@@ -3567,6 +3567,447 @@ MASTER_LEAD_POOL = [
         "focus": "Immunology, cancer biology, and computational genomic discovery",
         "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
         "priority": "HIGH"
+    },
+    {
+        "org": "IQM Quantum Computers Research",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "research@meetiqm.com",
+        "recipient_name": "IQM Quantum Architecture Group",
+        "focus": "Co-design quantum processors, superconducting circuits, and quantum error mitigation",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Xanadu Quantum Technologies",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "press@xanadu.ai",
+        "recipient_name": "Xanadu Photonic Quantum Team",
+        "focus": "Photonic quantum computing, Strawberry Fields, and PennyLane quantum machine learning",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Alice & Bob Cat Qubits",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "contact@alice-bob.com",
+        "recipient_name": "Alice & Bob Scientific Directorate",
+        "focus": "Self-correcting cat qubits, superconducting bosonic hardware, and quantum fault tolerance",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Pasqal Neutral Atoms Quantum Computing",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "contact@pasqal.com",
+        "recipient_name": "Pasqal Quantum Processors Board",
+        "focus": "Neutral atom optical tweezer arrays, analog quantum simulation, and quantum advantage",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Oxford Quantum Circuits (OQC)",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "info@oxfordquantumcircuits.com",
+        "recipient_name": "OQC Engineering Directorate",
+        "focus": "Coaxmon superconducting quantum processors and enterprise quantum-as-a-service",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Alpine Quantum Technologies (AQT)",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "office@aqt.eu",
+        "recipient_name": "AQT Trapped-Ion Research Group",
+        "focus": "Trapped-ion quantum hardware, high-fidelity optical qubit control, and laser stabilization",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Riverlane Quantum Error Correction",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "info@riverlane.com",
+        "recipient_name": "Riverlane Deltaflow Architecture Team",
+        "focus": "Quantum error correction operating systems, real-time syndrome decoding, and FPGA control",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Q-CTRL Quantum Infrastructure",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "info@q-ctrl.com",
+        "recipient_name": "Q-CTRL Firmware & Quantum Control Directorate",
+        "focus": "Quantum firmware, pulse shape optimization, and software-defined quantum control",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Quantinuum System Architecture",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "inquiries@quantinuum.com",
+        "recipient_name": "Quantinuum H-Series Trapped-Ion Division",
+        "focus": "High quantum volume trapped-ion architectures and mid-circuit measurement reset",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "von Karman Institute for Fluid Dynamics (VKI)",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "secretariat@vki.ac.be",
+        "recipient_name": "VKI Directorate & Faculty",
+        "focus": "Hypersonic aerothermodynamics, magnetohydrodynamic plasma boundary layers, and wind tunnels",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "DLR Institute of Aerodynamics and Flow Technology",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "as-info@dlr.de",
+        "recipient_name": "DLR Aerodynamics Scientific Board",
+        "focus": "Numerical fluid mechanics, high-speed plasma flow control, and laminar flow wing design",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "ONERA French Aerospace Lab",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "communication@onera.fr",
+        "recipient_name": "ONERA Scientific Leadership",
+        "focus": "Hypersonic propulsion, plasma physics actuators, and computational aeroacoustics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "ISAS - JAXA Institute of Space and Astronautical Science",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "isas-info@jaxa.jp",
+        "recipient_name": "ISAS JAXA Directorate",
+        "focus": "Interplanetary trajectory optimization, space plasma physics, and deep-space telemetry",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "ESA European Space Operations Centre (ESOC)",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "esoc.communication@esa.int",
+        "recipient_name": "ESOC Mission Operations Directorate",
+        "focus": "Autonomous spacecraft constellation orbit determination and SCION mesh telemetry",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UK Space Agency Exploration & Technology",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "info@ukspaceagency.gov.uk",
+        "recipient_name": "UK Space Agency Technology Directorate",
+        "focus": "Space robotics, radiation-hardened autonomous compute nodes, and sovereign comms",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Fraunhofer IPA Robot and Assistive Systems",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "info@ipa.fraunhofer.de",
+        "recipient_name": "Fraunhofer IPA Robotics Directorate",
+        "focus": "Industrial kinematics, ROS2 real-time middleware, and multi-robot fleet synchronization",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "LAAS-CNRS Robotics and Cyber-Physical Systems",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "contact@laas.fr",
+        "recipient_name": "LAAS-CNRS Robotics Department",
+        "focus": "Humanoid locomotion, optimal control algorithms, and formal verification of robot architectures",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Italian Institute of Technology (IIT) Advanced Robotics",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "advr-info@iit.it",
+        "recipient_name": "IIT ADVR Research Line Directorate",
+        "focus": "Whole-body humanoid control, compliant actuators, and analytical inverse kinematics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "DFKI Robotics Innovation Center Bremen",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "robotik@dfki.de",
+        "recipient_name": "DFKI Robotics Leadership",
+        "focus": "Maritime and space robotics, autonomous underwater manipulation, and cyber-physical AI",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "CSIRO Data61 Robotics and Autonomous Systems",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "data61-robotics@csiro.au",
+        "recipient_name": "CSIRO Robotics Group Leader",
+        "focus": "Subterranean autonomous exploration, 3D LiDAR SLAM, and decentralised multi-agent mapping",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "AIST National Institute of Advanced Industrial Science Cybernetics",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "aist-cybernetics@aist.go.jp",
+        "recipient_name": "AIST Robotics & Cybernetics Directorate",
+        "focus": "Humanoid dynamic walking, force-torque control sensors, and cybernetic interfaces",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "KAIST Humanoid Robotics Research Center (Hubo Lab)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "hubolab@kaist.ac.kr",
+        "recipient_name": "KAIST Hubo Lab Directorate",
+        "focus": "Full-size bipedal humanoid engineering, high-torque joint actuators, and balance stabilization",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Seoul National University Biorobotics Laboratory",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "biorobotics@snu.ac.kr",
+        "recipient_name": "SNU Biorobotics Faculty",
+        "focus": "Soft wearable robotics, tendon-driven mechanisms, and human-in-the-loop biofeedback",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "IACR International Association for Cryptologic Research",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "iacr-info@iacr.org",
+        "recipient_name": "IACR Executive Committee",
+        "focus": "Post-quantum lattice cryptography, zero-knowledge snarks, and multiparty computation",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "COSIC KU Leuven Computer Security & Industrial Cryptography",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "cosic-info@esat.kuleuven.be",
+        "recipient_name": "COSIC Research Group Directorate",
+        "focus": "Hardware security modules, side-channel attacks, and threshold post-quantum cryptography",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Inria SECRET Project Cryptography",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "secret-contact@inria.fr",
+        "recipient_name": "Inria SECRET Project Team Leader",
+        "focus": "Code-based and symmetric cryptography, quantum cryptanalysis, and Boolean functions",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Horst G\u00f6rtz Institute for IT Security (HGI) Ruhr University Bochum",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "hgi-info@rub.de",
+        "recipient_name": "HGI Managing Directorate",
+        "focus": "Post-quantum public key algorithms, embedded hardware security, and formal verification",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Technion Hiroshi Fujiwara Cyber Security Research Center",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "cyber-center@technion.ac.il",
+        "recipient_name": "Technion Cyber Security Directorate",
+        "focus": "Distributed ledger consensus, zero-knowledge proofs of execution, and privacy protocols",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Weizmann Institute of Science Cryptography Group",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "crypto-weizmann@weizmann.ac.il",
+        "recipient_name": "Weizmann Crypto Faculty",
+        "focus": "Theoretical foundation of cryptography, zero-knowledge interactive proofs, and PCPs",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "EPFL Decentralized and Distributed Systems (DEDIS)",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "dedis-info@epfl.ch",
+        "recipient_name": "EPFL DEDIS Laboratory Head",
+        "focus": "Byzantine fault tolerance, verifiable collective signing (CoSi), and scalable public ledgers",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Zcash Foundation Research",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "contact@zfnd.org",
+        "recipient_name": "Zcash Foundation Engineering Group",
+        "focus": "Halo recursive zero-knowledge proofs, privacy-preserving state transitions, and light clients",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Starknet Foundation Research & Ecosystem",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "info@starknet.io",
+        "recipient_name": "Starknet Core Research & Engineering",
+        "focus": "STARK validity rollups, Cairo algebraic virtual machine, and scalable execution layers",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "SCION Association Zurich",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "info@scion.org",
+        "recipient_name": "SCION Association Executive Committee",
+        "focus": "Path-aware secure inter-domain routing, AES-CMAC hop fields, and DDoS-immune internet",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "RIPE NCC Research & Standards",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "research@ripe.net",
+        "recipient_name": "RIPE NCC Technical Directorate",
+        "focus": "Internet routing measurements, BGP security, RPKI ROA validation, and IPv6 deployment",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "APNIC Labs Network Research",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "research@apnic.net",
+        "recipient_name": "APNIC Chief Scientist & Labs Team",
+        "focus": "Global DNS resolution latency, cryptographic certificate transparency, and routing ecology",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Internet2 Network Architecture & Research",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "research@internet2.edu",
+        "recipient_name": "Internet2 Architecture Advisory Council",
+        "focus": "400Gbps research networking, software-defined optical switching, and packet telemetry",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "CANARIE National Research and Education Network",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "info@canarie.ca",
+        "recipient_name": "CANARIE Advanced Networks Directorate",
+        "focus": "High-speed scientific data exchange, federated identity fabric, and research computing",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "G\u00c9ANT Pan-European Research and Education Network",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "info@geant.org",
+        "recipient_name": "G\u00c9ANT Network Engineering Directorate",
+        "focus": "Multi-terabit optical spine, quantum key distribution testbeds, and trust & identity",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "CERN openlab Distributed Computing",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "openlab.info@cern.ch",
+        "recipient_name": "CERN openlab Steering Committee",
+        "focus": "Exabyte-scale High Energy Physics data pipelines, distributed computing grids, and high-throughput analytics",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Max Planck Institute for Plasma Physics (IPP) Greifswald",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "info@ipp.mpg.de",
+        "recipient_name": "IPP Greifswald Directorate",
+        "focus": "Wendelstein 7-X stellarator optimization, superconducting magnet coils, and plasma equilibrium",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Culham Centre for Fusion Energy (CCFE) / UKAEA",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "enquiries@ukaea.uk",
+        "recipient_name": "CCFE Scientific Directorate",
+        "focus": "Spherical tokamaks, remote handling robotics in fusion environments, and magnetics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "CEA Cadarache Institute for Magnetic Fusion Research (IRFM)",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "irfm-info@cea.fr",
+        "recipient_name": "IRFM CEA Directorate",
+        "focus": "WEST tokamak operations, actively cooled tungsten divertors, and RF heating systems",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "National Institute for Fusion Science (NIFS) Toki Japan",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "nifs-info@nifs.ac.jp",
+        "recipient_name": "NIFS Director General",
+        "focus": "Large Helical Device (LHD) plasma confinement, high-temperature superconductors, and cryogenics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "ITER Organization Science & Operation Division",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "iter-science@iter.org",
+        "recipient_name": "ITER Science Directorate",
+        "focus": "Burning plasma physics, central solenoid electromagnetic fields, and cryostat engineering",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Max Planck Institute for Brain Research Frankfurt",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "contact@brain.mpg.de",
+        "recipient_name": "MPI Brain Research Managing Director",
+        "focus": "Synaptic connectomics, neural computation, and automated serial section electron microscopy",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Kavli Institute for Systems Neuroscience NTNU",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "kavli-contact@medisin.ntnu.no",
+        "recipient_name": "Kavli Institute Directorate",
+        "focus": "Grid cells, cognitive spatial mapping architectures, and high-density neural recordings",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Sainsbury Wellcome Centre (SWC) UCL",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "swc-enquiries@ucl.ac.uk",
+        "recipient_name": "SWC UCL Scientific Directorate",
+        "focus": "Neural circuits of behavior, high-throughput behavioral kinematics, and computational modeling",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Okinawa Institute of Science and Technology (OIST) Computational Neuroscience",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "cnu@oist.jp",
+        "recipient_name": "OIST Computational Neuroscience Unit Head",
+        "focus": "Biophysically detailed cerebellar models, spiking neural networks, and reinforcement learning",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Cold Spring Harbor Laboratory (CSHL) Quantitative Biology",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "cshl-quantbio@cshl.edu",
+        "recipient_name": "CSHL Simons Center Directorate",
+        "focus": "Deep learning in genomics, mathematical modeling of neural circuitry, and biostatistics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
     }
 ]
 
