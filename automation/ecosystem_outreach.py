@@ -4935,6 +4935,447 @@ MASTER_LEAD_POOL = [
         "focus": "Cognitive systems, neural data analysis, and embodied artificial intelligence",
         "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
         "priority": "HIGH"
+    },
+    {
+        "org": "Harvard School of Engineering and Applied Sciences",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "seas-info@seas.harvard.edu",
+        "recipient_name": "Harvard SEAS Directorate",
+        "focus": "Soft robotics, bio-inspired engineering, and distributed sensor networks",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "MIT Department of EECS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "eecs-info@mit.edu",
+        "recipient_name": "MIT EECS Department Head",
+        "focus": "Distributed algorithms, quantum computing hardware, and programming systems",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Stanford Department of Computer Science",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "cs-info@cs.stanford.edu",
+        "recipient_name": "Stanford CS Directorate",
+        "focus": "Foundation models, distributed systems, and formal program verification",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UC Berkeley EECS Department",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "eecs-info@berkeley.edu",
+        "recipient_name": "Berkeley EECS Chair",
+        "focus": "Sky Computing, distributed operating systems, and RISC-V architectures",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Carnegie Mellon School of Computer Science",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "scs-info@cs.cmu.edu",
+        "recipient_name": "CMU SCS Dean & Faculty",
+        "focus": "Autonomous robotics, analytical kinematics, and software verification",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Princeton Department of Computer Science",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "cs-info@cs.princeton.edu",
+        "recipient_name": "Princeton CS Faculty",
+        "focus": "Theoretical computer science, cryptography, and network architectures",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Cornell Bowers College of Computing and Information Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cis-info@cornell.edu",
+        "recipient_name": "Cornell CIS Directorate",
+        "focus": "Byzantine fault tolerance, asynchronous distributed systems, and security",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Washington Paul G. Allen School of CSE",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "allen-info@cs.washington.edu",
+        "recipient_name": "UW Allen School Directorate",
+        "focus": "Ubiquitous computing, cloud systems, and machine learning infrastructure",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UIUC Siebel School of Computing and Data Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "siebel-info@cs.illinois.edu",
+        "recipient_name": "UIUC Siebel School Head",
+        "focus": "Parallel computing, distributed data structures, and compiler optimization",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UT Austin Department of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@cs.utexas.edu",
+        "recipient_name": "UT Austin CS Faculty",
+        "focus": "Formal methods, autonomous multi-agent systems, and operating systems",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Michigan CSE Division",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cse-info@umich.edu",
+        "recipient_name": "UMich CSE Chair",
+        "focus": "Embedded systems, computer vision, and autonomous vehicle safety",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Columbia University Computer Science Department",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "cs-info@cs.columbia.edu",
+        "recipient_name": "Columbia CS Directorate",
+        "focus": "Cryptographic protocols, quantum computing architectures, and software systems",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UPenn Computer and Information Science",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cis-info@seas.upenn.edu",
+        "recipient_name": "Penn CIS Faculty",
+        "focus": "GRASP lab aerial swarms, formal verification, and secure network programming",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Johns Hopkins Department of Computer Science",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "cs-info@cs.jhu.edu",
+        "recipient_name": "JHU CS Faculty",
+        "focus": "Computational biology, medical robotics, and distributed systems",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Brown University Department of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@cs.brown.edu",
+        "recipient_name": "Brown CS Directorate",
+        "focus": "Data management, theoretical computer science, and distributed consensus",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Duke University Department of Computer Science",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "cs-info@cs.duke.edu",
+        "recipient_name": "Duke CS Leadership",
+        "focus": "Autonomous systems, computer architecture, and algorithm design",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Northwestern Department of Computer Science",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "cs-info@cs.northwestern.edu",
+        "recipient_name": "Northwestern CS Faculty",
+        "focus": "Swarm robotics, human-computer interaction, and distributed intelligence",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Chicago Department of Computer Science",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "cs-info@cs.uchicago.edu",
+        "recipient_name": "UChicago CS Faculty",
+        "focus": "Quantum computing architectures, distributed data systems, and security",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Georgia Tech College of Computing",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "computing-info@cc.gatech.edu",
+        "recipient_name": "Georgia Tech Computing Dean",
+        "focus": "Robotics perception, cyber-physical control, and high-performance computing",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Purdue Department of Computer Science",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "cs-info@purdue.edu",
+        "recipient_name": "Purdue CS Head",
+        "focus": "Information security, software engineering, and distributed systems",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UW-Madison Department of Computer Sciences",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@cs.wisc.edu",
+        "recipient_name": "UW-Madison CS Chair",
+        "focus": "Database systems, operating systems, and computer architecture",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UMD Department of Computer Science",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "cs-info@cs.umd.edu",
+        "recipient_name": "UMD CS Faculty",
+        "focus": "Quantum information, cybersecurity, and distributed algorithms",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UNC Chapel Hill Department of Computer Science",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cs-info@cs.unc.edu",
+        "recipient_name": "UNC CS Faculty",
+        "focus": "Robotics motion planning, real-time operating systems, and graphics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Virginia Department of Computer Science",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cs-info@virginia.edu",
+        "recipient_name": "UVA CS Leadership",
+        "focus": "Cyber-physical systems, secure smart grids, and software engineering",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UCSD Department of Computer Science and Engineering",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cse-info@eng.ucsd.edu",
+        "recipient_name": "UCSD CSE Chair",
+        "focus": "Non-volatile memory systems, cryptography, and network telemetry",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UCLA Computer Science Department",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@cs.ucla.edu",
+        "recipient_name": "UCLA CS Chair",
+        "focus": "Internet routing protocols, ARPANET heritage, and decentralized networks",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UCSB Department of Computer Science",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "cs-info@cs.ucsb.edu",
+        "recipient_name": "UCSB CS Chair",
+        "focus": "Quantum computing software stacks, security, and distributed computing",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UCI Donald Bren School of ICS",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "ics-info@ics.uci.edu",
+        "recipient_name": "UCI ICS Dean",
+        "focus": "Ubiquitous computing, software architecture, and artificial intelligence",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UC Davis Department of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@cs.ucdavis.edu",
+        "recipient_name": "UC Davis CS Chair",
+        "focus": "Visualization, network security, and distributed software engineering",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Rice University Department of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@cs.rice.edu",
+        "recipient_name": "Rice CS Faculty",
+        "focus": "Programming languages, compiler optimization, and distributed systems",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Vanderbilt Department of Computer Science",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cs-info@vanderbilt.edu",
+        "recipient_name": "Vanderbilt CS Chair",
+        "focus": "Model-integrated computing, autonomous systems, and biomedical informatics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "WUSTL Department of Computer Science & Engineering",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cse-info@cse.wustl.edu",
+        "recipient_name": "WashU CSE Department Chair",
+        "focus": "Real-time embedded systems, cyber-physical networking, and cloud architectures",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Notre Dame Department of Computer Science and Engineering",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "cse-info@nd.edu",
+        "recipient_name": "Notre Dame CSE Chair",
+        "focus": "Biometrics, complex networks, and wireless communications",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Dartmouth Department of Computer Science",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "cs-info@cs.dartmouth.edu",
+        "recipient_name": "Dartmouth CS Faculty",
+        "focus": "Security and privacy, robotics, and mobile computing",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "CU Boulder Department of Computer Science",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cs-info@colorado.edu",
+        "recipient_name": "CU Boulder CS Chair",
+        "focus": "Aerospace robotics, autonomous swarms, and programming systems",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Utah School of Computing",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "soc-info@cs.utah.edu",
+        "recipient_name": "Utah SoC Director",
+        "focus": "Robotics, scientific computing, and computer architecture",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Arizona Department of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@cs.arizona.edu",
+        "recipient_name": "UArizona CS Head",
+        "focus": "Systems software, data visualization, and algorithm engineering",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "ASU School of Computing and Augmented Intelligence",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "scai-info@asu.edu",
+        "recipient_name": "ASU SCAI Director",
+        "focus": "Autonomous agent swarms, cybersecurity, and embedded software",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Minnesota Department of CSE",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cs-info@cs.umn.edu",
+        "recipient_name": "UMN CSE Department Head",
+        "focus": "Robotics and spatial computing, distributed data mining, and storage systems",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Ohio State Department of CSE",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cse-info@cse.osu.edu",
+        "recipient_name": "Ohio State CSE Chair",
+        "focus": "High-performance interconnects, MPI communications, and cloud virtualization",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Penn State School of EECS",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "eecs-info@psu.edu",
+        "recipient_name": "Penn State EECS Head",
+        "focus": "Computer architecture, cybersecurity, and quantum technologies",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Pittsburgh Department of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@cs.pitt.edu",
+        "recipient_name": "Pitt CS Chair",
+        "focus": "Parallel systems, operating systems, and ubiquitous computing",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Rutgers Department of Computer Science",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "cs-info@cs.rutgers.edu",
+        "recipient_name": "Rutgers CS Chair",
+        "focus": "Robotics manipulation, machine learning theory, and distributed data",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Stony Brook Department of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@cs.stonybrook.edu",
+        "recipient_name": "Stony Brook CS Chair",
+        "focus": "Storage and distributed systems, verification, and cybersecurity",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Rochester Department of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@cs.rochester.edu",
+        "recipient_name": "Rochester CS Chair",
+        "focus": "Synchronization algorithms, non-blocking synchronization, and computer systems",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Georgetown Department of Computer Science",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "cs-info@cs.georgetown.edu",
+        "recipient_name": "Georgetown CS Chair",
+        "focus": "Security and privacy, distributed consensus, and cryptography",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Tufts Department of Computer Science",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cs-info@cs.tufts.edu",
+        "recipient_name": "Tufts CS Chair",
+        "focus": "Human-robot interaction, programming languages, and computational biology",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "RPI Department of Computer Science",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "cs-info@cs.rpi.edu",
+        "recipient_name": "RPI CS Department Head",
+        "focus": "Cognitive computing, semantic graph networks, and high-performance algorithms",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Stevens Institute of Technology Department of Computer Science",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "cs-info@stevens.edu",
+        "recipient_name": "Stevens CS Directorate",
+        "focus": "Quantum computing communications, cybersecurity, and artificial intelligence",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
     }
 ]
 
