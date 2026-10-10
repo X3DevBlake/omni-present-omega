@@ -1,6 +1,6 @@
 {
   "user_email": "rgkdevx1@gmail.com",
-  "last_synced": "2026-10-10T01:57:42.561104+00:00",
+  "last_synced": "2026-10-10T04:00:08.062410+00:00",
   "notes": [
     {
       "id": "keep_610102b5",
@@ -1994,6 +1994,21 @@
       "created_at": "2026-10-10T01:57:42.561006+00:00",
       "updated_at": "2026-10-10T01:57:42.561006+00:00",
       "content": "Closed-form wrist center p_wc decoupled from orientation angles (theta4, theta5, theta6)."
+    },
+    {
+      "id": "keep_17af4ea9",
+      "title": "\ud83e\uddea SpCas9-pegRNA Off-Target Audit",
+      "type": "text",
+      "color": "emerald",
+      "pinned": false,
+      "author": "omni-keep-scratchpad-curator",
+      "tags": [
+        "#biotech",
+        "#crispr"
+      ],
+      "created_at": "2026-10-10T04:00:08.062284+00:00",
+      "updated_at": "2026-10-10T04:00:08.062284+00:00",
+      "content": "Off-target cleavage verified < 0.002% across 10,000 synthetic targets."
     }
   ]
 }
