@@ -4008,6 +4008,510 @@ MASTER_LEAD_POOL = [
         "focus": "Deep learning in genomics, mathematical modeling of neural circuitry, and biostatistics",
         "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
         "priority": "HIGH"
+    },
+    {
+        "org": "Vector Institute for Artificial Intelligence Toronto",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "info@vectorinstitute.ai",
+        "recipient_name": "Vector Institute Research Directorate",
+        "focus": "Foundation models, distributed deep learning, and privacy-preserving machine learning",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Amii - Alberta Machine Intelligence Institute",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "hello@amii.ca",
+        "recipient_name": "Amii Executive Leadership",
+        "focus": "Reinforcement learning, continual learning algorithms, and autonomous systems",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "RIKEN Center for Advanced Intelligence Project (AIP)",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "aip-info@riken.jp",
+        "recipient_name": "RIKEN AIP Director",
+        "focus": "Mathematical foundations of machine learning, few-shot reasoning, and ethical AI architectures",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "AIST Artificial Intelligence Research Center (AIRC)",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "airc-info@aist.go.jp",
+        "recipient_name": "AIRC AIST Leadership",
+        "focus": "Embedded neuromorphic computing, cognitive robotics, and knowledge graph integration",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Centrum Wiskunde & Informatica (CWI) Amsterdam",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "info@cwi.nl",
+        "recipient_name": "CWI Scientific Directorate",
+        "focus": "Distributed algorithms, quantum algorithms, and computational mathematics",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Simula Research Laboratory Norway",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "post@simula.no",
+        "recipient_name": "Simula Research Management",
+        "focus": "High-performance scientific computing, resilient communication networks, and software engineering",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "IMEC Nanoelectronics & Digital Technologies",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "info@imec-int.com",
+        "recipient_name": "IMEC Executive Board",
+        "focus": "Sub-2nm semiconductor lithography, silicon photonics, and quantum dot compute arrays",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Max Planck Institute for Solid State Research Stuttgart",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "solidstate-info@fkf.mpg.de",
+        "recipient_name": "MPI Solid State Research Directorate",
+        "focus": "Quantum materials, high-temperature superconductivity, and nanoscale 2D heterostructures",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Paul Drude Institute for Solid State Electronics Berlin",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "pdi-info@pdi-berlin.de",
+        "recipient_name": "PDI Scientific Board",
+        "focus": "Semiconductor epitaxy, acoustic phonon control in nanostructures, and spintronics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "National Institute for Materials Science (NIMS) Tsukuba",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "nims-info@nims.go.jp",
+        "recipient_name": "NIMS Executive Directorate",
+        "focus": "Computational materials design, thermoelectric devices, and topological quantum insulators",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "London Centre for Nanotechnology (LCN)",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "lcn-enquiries@ucl.ac.uk",
+        "recipient_name": "LCN Directorate",
+        "focus": "Quantum spintronics, bio-nanotechnology, and nanoscale scanning probe instrumentation",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Tyndall National Institute Cork",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "tyndall-info@tyndall.ie",
+        "recipient_name": "Tyndall Research Leadership",
+        "focus": "Photonic integrated circuits (PICs), micro-power energy harvesting, and RF sensors",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Fraunhofer ENAS Electronic Nano Systems",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "info@enas.fraunhofer.de",
+        "recipient_name": "Fraunhofer ENAS Directorate",
+        "focus": "MEMS/NEMS smart systems integration, micro-actuators, and advanced packaging",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Mcity Autonomous Vehicle Proving Ground University of Michigan",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "mcity-info@umich.edu",
+        "recipient_name": "Mcity Leadership Team",
+        "focus": "Connected mobility testbeds, edge vehicle telemetry, and sensor safety validation",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "VTT Technical Research Centre of Finland Autonomous Systems",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "info@vtt.fi",
+        "recipient_name": "VTT Autonomous Systems Directorate",
+        "focus": "All-weather autonomous driving in harsh subarctic conditions and sensor fusion",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "TNO Integrated Vehicle Safety & Automated Driving Netherlands",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "info@tno.nl",
+        "recipient_name": "TNO Mobility Directorate",
+        "focus": "Cooperative driving protocols, physical testing of ADAS algorithms, and cyber safety",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Fraunhofer IVI Transportation and Infrastructure Systems Dresden",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "info@ivi.fraunhofer.de",
+        "recipient_name": "Fraunhofer IVI Directorate",
+        "focus": "Electric commercial vehicle architectures, smart city telemetry grids, and battery management",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Fraunhofer ISE Institute for Solar Energy Systems Freiburg",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "info@ise.fraunhofer.de",
+        "recipient_name": "Fraunhofer ISE Directorate",
+        "focus": "Tandem photovoltaic cells, hydrogen electrolyzer control, and smart microgrid inverters",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "SINTEF Energy Research Norway",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "energy.research@sintef.no",
+        "recipient_name": "SINTEF Energy Directorate",
+        "focus": "Offshore HVDC transmission meshes, subsea power electronics, and hydro power dispatch",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "DTU Wind Energy Technical University of Denmark",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "wind@dtu.dk",
+        "recipient_name": "DTU Wind Department Board",
+        "focus": "Aeroelastic rotor kinematics, computational wind farm wake modeling, and structural health",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "AIT Austrian Institute of Technology Center for Energy",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "energy@ait.ac.at",
+        "recipient_name": "AIT Energy Directorate",
+        "focus": "Digitalized electrical distribution grids, real-time hardware-in-the-loop power simulation",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "GEOMAR Helmholtz Centre for Ocean Research Kiel",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "info@geomar.de",
+        "recipient_name": "GEOMAR Directorate",
+        "focus": "Deep-sea autonomous underwater vehicles (AUVs), benthic telemetry landers, and biogeochemistry",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "National Oceanography Centre (NOC) UK Autonomous Fleet",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "noc-info@noc.ac.uk",
+        "recipient_name": "NOC Marine Autonomous Systems Head",
+        "focus": "Long-range ocean gliders, autonomous polar exploration, and marine sensor networks",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "JAMSTEC Japan Agency for Marine-Earth Science and Technology",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "jamstec-info@jamstec.go.jp",
+        "recipient_name": "JAMSTEC Executive Directorate",
+        "focus": "Trench submersible robotic manipulators, real-time seismic seafloor cable networks, and ocean dynamics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Spring-8 / RIKEN Synchrotron Radiation Center",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "spring8-info@spring8.or.jp",
+        "recipient_name": "Spring-8 Synchrotron Directorate",
+        "focus": "X-ray free-electron lasers (SACLA), sub-picosecond structural imaging, and beamline optics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "European XFEL Hamburg",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "contact@xfel.eu",
+        "recipient_name": "European XFEL Managing Directors",
+        "focus": "Femtosecond X-ray pulses, ultrafast chemical kinetics, and superconducting accelerator cavities",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Diamond Light Source UK National Synchrotron",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "diamond-info@diamond.ac.uk",
+        "recipient_name": "Diamond Light Source Directorate",
+        "focus": "High-brightness synchrotron radiation, automated robotic macromolecular crystallography, and cryo-EM",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "MAX IV Laboratory Lund University",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "info@maxiv.lu.se",
+        "recipient_name": "MAX IV Directorate",
+        "focus": "Multi-bend achromat magnetic lattices, coherent soft/hard X-ray spectroscopy, and nanoscopy",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Wyss Institute for Biologically Inspired Engineering Harvard",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "wyss-info@wyss.harvard.edu",
+        "recipient_name": "Wyss Institute Directorate",
+        "focus": "Soft robotics, organ-on-a-chip microfluidics, and biologically inspired engineering",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Broad Institute Technology Labs",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "tech-info@broadinstitute.org",
+        "recipient_name": "Broad Tech Labs Directorate",
+        "focus": "Next-generation sequencing instrumentation, pooled CRISPR screens, and spatial profiling",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Francis Crick Institute Automation Core",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "automation@crick.ac.uk",
+        "recipient_name": "Crick Automation Lead",
+        "focus": "High-throughput robotic liquid handling, automated microscopic imaging, and cell screening",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Pasteur Microfluidics & Single-Cell Center",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "microfluidics@pasteur.fr",
+        "recipient_name": "Pasteur Microfluidics Directorate",
+        "focus": "Droplet microfluidics, single-microbe transcriptomics, and real-time kinetic sensing",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "EMBL Heidelberg Advanced Light Microscopy Facility",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "almf@embl.de",
+        "recipient_name": "EMBL ALMF Head of Facility",
+        "focus": "Super-resolution STED microscopy, light-sheet imaging, and automated image processing",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "MPI of Neurobiology Martinsried",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "neuro-info@neuro.mpg.de",
+        "recipient_name": "MPI Neurobiology Directors",
+        "focus": "Optogenetic circuit manipulation, two-photon in vivo imaging, and neural computation",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "MPI for the Structure and Dynamics of Matter Hamburg",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "mpsd-info@mpsd.mpg.de",
+        "recipient_name": "MPSD Managing Directorate",
+        "focus": "Ultrafast laser-induced phase transitions, non-equilibrium quantum states, and terahertz optics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Helmholtz-Zentrum Berlin (HZB) Energy Materials",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "hzb-info@helmholtz-berlin.de",
+        "recipient_name": "HZB Directorate",
+        "focus": "BESSY II synchrotron operando spectroscopy, solar fuel catalysts, and quantum spintronics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Helmholtz-Zentrum Dresden-Rossendorf (HZDR) High Magnetic Fields",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "hzdr-info@hzdr.de",
+        "recipient_name": "HZDR High Magnetic Field Lab Board",
+        "focus": "Pulsed 100-Tesla magnetic fields, condensed matter physics, and laser-plasma accelerators",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "GSI Helmholtz Centre for Heavy Ion Research",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "gsi-info@gsi.de",
+        "recipient_name": "GSI Scientific Directorate",
+        "focus": "Heavy ion accelerator physics, FAIR facility construction, and nuclear astrophysics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "KIT Institute of Nanotechnology (INT)",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "int-info@kit.edu",
+        "recipient_name": "KIT INT Directorate",
+        "focus": "Molecular electronics, self-assembled supramolecular nanostructures, and quantum transport",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "RWTH Aachen Cybernetic Cluster of Excellence",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cybernetics@rwth-aachen.de",
+        "recipient_name": "RWTH Cybernetics Faculty",
+        "focus": "Cyber-physical production networks, deterministic real-time telemetry, and robotics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Kyoto University iCeMS (Institute for Integrated Cell-Material Sciences)",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "icems-info@icems.kyoto-u.ac.jp",
+        "recipient_name": "Kyoto iCeMS Director",
+        "focus": "Porous coordination polymers (MOFs), mesoscopic physics, and cellular control interfaces",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Osaka University QIQB (Quantum Information and Quantum Biology)",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "qiqb-info@qiqb.osaka-u.ac.jp",
+        "recipient_name": "Osaka QIQB Directorate",
+        "focus": "Superconducting quantum computing, quantum error mitigation, and quantum biophysics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Tohoku University AIMR (Advanced Institute for Materials Research)",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "aimr-info@aimr.tohoku.ac.jp",
+        "recipient_name": "Tohoku AIMR Directorate",
+        "focus": "Mathematical materials science, metallic glasses, and topological electronic properties",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Nagoya University ITbM (Transformative Bio-Molecules)",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "itbm-info@itbm.nagoya-u.ac.jp",
+        "recipient_name": "Nagoya ITbM Directorate",
+        "focus": "Chemical synthetic biology, circadian clock molecular switches, and live bio-imaging",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "NUS Centre for Quantum Technologies (CQT) Singapore",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "cqt-info@cqt.nus.edu.sg",
+        "recipient_name": "CQT Director & Research Faculty",
+        "focus": "Quantum satellite key distribution, atomic quantum sensors, and relativistic quantum info",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "NTU Energy Research Institute (ERI@N) Singapore",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "eri-info@ntu.edu.sg",
+        "recipient_name": "ERI@N Executive Directorate",
+        "focus": "Autonomous electric grids, energy storage materials, and smart micro-mesh power dispatch",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "A*STAR Institute of High Performance Computing (IHPC)",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "ihpc-info@ihpc.a-star.edu.sg",
+        "recipient_name": "A*STAR IHPC Leadership",
+        "focus": "Fluid-structure computational dynamics, quantum computing simulation, and AI model acceleration",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "A*STAR Institute of Microelectronics (IME)",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "ime-info@ime.a-star.edu.sg",
+        "recipient_name": "A*STAR IME Executive Board",
+        "focus": "Heterogeneous chiplet integration, 2.5D/3D semiconductor packaging, and silicon photonics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "HKUST Robotics Institute",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "robotics-info@ust.hk",
+        "recipient_name": "HKUST Robotics Directorate",
+        "focus": "Autonomous aerial drones, multi-sensor SLAM, and cooperative swarm manipulation",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "CUHK T Stone Robotics Institute",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "robotics@cuhk.edu.hk",
+        "recipient_name": "CUHK Robotics Institute Faculty",
+        "focus": "Surgical microrobotics, flexible continuum manipulators, and medical cybernetics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "ANU Research School of Physics Australia",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "physics-info@anu.edu.au",
+        "recipient_name": "ANU Physics Directorate",
+        "focus": "Nonlinear optics, metamaterials, and quantum memory storage lattices",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Sydney Quantum Science Group",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "quantum-info@sydney.edu.au",
+        "recipient_name": "Sydney Quantum Directorate",
+        "focus": "Quantum control architectures, spin qubit microwave pulse engineering, and logic gates",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UNSW Centre for Quantum Computation (CQC2T)",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "cqc2t-info@unsw.edu.au",
+        "recipient_name": "CQC2T Director & Faculty",
+        "focus": "Silicon phosphorus atom qubits, atomic-precision scanning tunneling lithography, and spin readout",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Melbourne Quantum Materials",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "materials-info@unimelb.edu.au",
+        "recipient_name": "Melbourne Quantum Materials Directorate",
+        "focus": "Diamond NV center quantum sensors, low-dimensional electronic lattices, and spintronics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Monash Institute of Medical Engineering (MIME)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "mime-info@monash.edu",
+        "recipient_name": "Monash MIME Leadership",
+        "focus": "Bionic vision implants, neural engineering interfaces, and assistive robotic kinematics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Queensland Institute for Molecular Bioscience (IMB)",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "imb-info@imb.uq.edu.au",
+        "recipient_name": "UQ IMB Directorate",
+        "focus": "Structural biology, automated peptide synthesis robotics, and single-molecule dynamics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
     }
 ]
 
