@@ -813,6 +813,2760 @@ MASTER_LEAD_POOL = [
         "focus": "Multi-agent circadian duty cycles, autonomous Google Workspace publishing, and cross-council consensus",
         "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
         "priority": "HIGH"
+    },
+    {
+        "org": "Cornell University Autonomous Systems Lab",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "asl-cornell@cornell.edu",
+        "recipient_name": "Cornell ASL Research Directorate",
+        "focus": "Closed-form inverse kinematics, non-holonomic mobile navigation, and real-time state estimation",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Michigan Robotics Institute",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "robotics-contact@umich.edu",
+        "recipient_name": "Michigan Robotics Institute Faculty & Research Labs",
+        "focus": "Bipedal and articulated manipulator trajectory synthesis, LiDAR occupancy grids, and safety interlocks",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UPenn GRASP Laboratory",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "grasp-info@seas.upenn.edu",
+        "recipient_name": "Penn GRASP Lab Operations & Research Alliances",
+        "focus": "Micro-aerial multi-agent swarms, distributed coordination, and geometric kinematic solvers",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Brown University Humanity-Centered Robotics",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "robotics-inquiries@brown.edu",
+        "recipient_name": "Brown Robotics Research Group",
+        "focus": "Human-in-the-loop teleoperation, safety boundary enforcement, and sovereign edge computing",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Georgia Tech IRIM (Institute for Robotics & Intelligent Machines)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "robotics-info@gatech.edu",
+        "recipient_name": "Georgia Tech IRIM Industry Relations",
+        "focus": "Adaptive motion planning, 6-DOF geometric decoupling, and real-time embedded HAL",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Oxford Robotics Institute (ORI)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "inquiries@robots.ox.ac.uk",
+        "recipient_name": "Oxford Robotics Institute Research Committee",
+        "focus": "Robust LiDAR SLAM, sovereign edge autonomy, and distributed field robotics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Cambridge Machine Intelligence Lab",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "mil-admin@eng.cam.ac.uk",
+        "recipient_name": "Cambridge Engineering & Robotics Directorate",
+        "focus": "Optimal control of robotic manipulators, sensory feedback loops, and probabilistic state estimation",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "TUM Chair of Robotics, AI and Real-time Systems",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "contact@in.tum.de",
+        "recipient_name": "TUM Robotics & Real-time Systems Secretariat",
+        "focus": "Formal verification of autonomous vehicles, real-time Linux kernels, and deterministic actuation",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "EPFL Robotic Systems Laboratory (LSRO)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "info.lsro@epfl.ch",
+        "recipient_name": "EPFL LSRO Research Directorate",
+        "focus": "High-precision micro-manipulation, kinematic singularity analysis, and haptic feedback",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "ETH Zurich Autonomous Systems Lab (ASL)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "asl-info@mavt.ethz.ch",
+        "recipient_name": "ETH ASL Research Steering Committee",
+        "focus": "Autonomous mobile robot navigation in GPS-denied environments, LiDAR-inertial sensor fusion",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UC San Diego Contextual Robotics Institute",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cri-info@eng.ucsd.edu",
+        "recipient_name": "UCSD CRI Faculty Directorate",
+        "focus": "Edge computing for connected autonomous swarms, soft manipulators, and formal safety envelopes",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Worcester Polytechnic Institute (WPI) Robotics",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "robotics@wpi.edu",
+        "recipient_name": "WPI Robotics Engineering Department",
+        "focus": "Medical robotics, industrial manipulation, and unified ROS2 / micro-ROS driver stacks",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Northwestern University Center for Robotics and Biosystems",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "robotics@northwestern.edu",
+        "recipient_name": "Northwestern Robotics Research Faculty",
+        "focus": "Lie group formulation of spatial kinematics, contact mechanics, and decentralized coordination",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Rensselaer Polytechnic Institute (RPI) CAT",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cat-info@rpi.edu",
+        "recipient_name": "RPI Center for Automation Technologies",
+        "focus": "Real-time robotics motion interpolation, digital twin synchronization, and industrial fieldbuses",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Virginia Tech TREC Lab",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "trec-info@me.vt.edu",
+        "recipient_name": "Virginia Tech Terrestrial Robotics Engineering",
+        "focus": "Humanoid locomotion, dynamic stabilization, and edge-native embedded sensor suites",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "CU Boulder Autonomous Systems Interdisciplinary Research Theme",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "autonomous-irt@colorado.edu",
+        "recipient_name": "CU Boulder Autonomous Systems Directorate",
+        "focus": "Safe multi-agent flight arrays, verifiable autonomous cyber-physical decision making",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Columbia University Robotics Group",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "robotics-lab@cs.columbia.edu",
+        "recipient_name": "Columbia CS Robotics Lab",
+        "focus": "Multi-finger grasp synthesis, articulated arm kinematics, and tactile perception arrays",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Princeton University Robotics & Intelligent Systems",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "robotics-dept@princeton.edu",
+        "recipient_name": "Princeton Robotics Faculty & Researchers",
+        "focus": "Provably safe motion planning, Hamilton-Jacobi reachability, and autonomous control",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Caltech CAST (Center for Autonomous Systems & Tech)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cast-info@caltech.edu",
+        "recipient_name": "Caltech CAST Administrative & Research Office",
+        "focus": "Bio-inspired flight, extreme-environment rover navigation, and distributed Kalman filters",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Washington Robotics Lab",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "robotics-admin@cs.washington.edu",
+        "recipient_name": "UW Paul G. Allen School Robotics Directorate",
+        "focus": "Closed-loop visual SLAM, GPU-accelerated kinematics, and cloud robotics telemetry",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Cornell Tech IC3 (Initiative for Cryptocurrencies & Contracts)",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "info@initc3.org",
+        "recipient_name": "IC3 Technical Steering Committee",
+        "focus": "Lattice-based state replication, formal verification of smart contracts, and asynchronous consensus",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UCL Centre for Blockchain Technologies (CBT)",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "blockchain@ucl.ac.uk",
+        "recipient_name": "UCL CBT Executive & Research Board",
+        "focus": "Byzantine fault tolerance, causal CRDT dot compaction, and cross-chain atomic execution",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Berkeley RDI (Center for Decentralized Intelligence)",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "rdi-info@berkeley.edu",
+        "recipient_name": "Berkeley RDI Faculty Directorate",
+        "focus": "Zero-knowledge proofs for decentralized computation, autonomous agent coordination",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Oxford Centre for Technology & Global Affairs",
+        "domain": "SCION Path-Aware Routing & Mesh",
+        "contact_email": "techaffairs@politics.ox.ac.uk",
+        "recipient_name": "Oxford Tech & Global Affairs Research Team",
+        "focus": "Sovereign internet architecture, SCION routing immunity to BGP hijacking, and resilient mesh fabrics",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Cambridge Centre for Alternative Finance (CCAF)",
+        "domain": "Sovereign Staking & Formal Audit",
+        "contact_email": "ccaf@jbs.cam.ac.uk",
+        "recipient_name": "CCAF Research Fellows & Policy Leads",
+        "focus": "Proof-of-Stake economic security, validator slashing mechanics, and multi-asset staking matrices",
+        "doc_match": "Sovereign_Staking_APY_and_Validato.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "MIT Cryptography & Information Security (CIS) Group",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cis-info@csail.mit.edu",
+        "recipient_name": "MIT CIS Faculty & Cryptography Fellows",
+        "focus": "Post-quantum threshold cryptography, verifiable random beacons, and join-semilattice algebraic proofs",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Harvard Privacy Tools Project",
+        "domain": "Distributed Systems & Privacy",
+        "contact_email": "privacytools@seas.harvard.edu",
+        "recipient_name": "Harvard Privacy Tools Research Directorate",
+        "focus": "Differential privacy in distributed ledgers, zero-knowledge verifiable computation",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "NYU Center for Cybersecurity (CCS)",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "ccs-info@nyu.edu",
+        "recipient_name": "NYU CCS Academic Board",
+        "focus": "Hardware root of trust, formally verified microkernels, and SCION AS boundary routing",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Johns Hopkins Information Security Institute (ISI)",
+        "domain": "Distributed Systems & Cryptography",
+        "contact_email": "isi-info@jhu.edu",
+        "recipient_name": "JHU ISI Research Faculty",
+        "focus": "Applied post-quantum cryptography, distributed consensus in lossy topologies",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Purdue CERIAS",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "info@cerias.purdue.edu",
+        "recipient_name": "Purdue CERIAS Executive Committee",
+        "focus": "Autonomous swarm security, runtime invariant monitoring, and memory-safe Rust execution",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UIUC Distributed Protocols Research Group",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "dprg-info@cs.illinois.edu",
+        "recipient_name": "UIUC DPRG Faculty & Research Staff",
+        "focus": "Causal state replication, anti-entropy protocols, and join-semilattice monotonic merges",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Waterloo Distributed Systems Group",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "dsg-info@cs.uwaterloo.ca",
+        "recipient_name": "Waterloo DSG Secretariat",
+        "focus": "High-throughput Paxos and Raft variants, delta-CRDT optimization in wide-area networks",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "TU Delft Distributed Systems Group",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "ds-ewi@tudelft.nl",
+        "recipient_name": "TU Delft Distributed Systems Directorate",
+        "focus": "Zero-trust edge data lattices, gossip-based peer discovery, and monotonic state trees",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "KTH Distributed Computing Group",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "dc-kth@eecs.kth.se",
+        "recipient_name": "KTH Distributed Computing Group Leads",
+        "focus": "Formal verification of TLA+ specifications, CRDT state lattices, and lock-free concurrency",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Inria Regal / Spirals Distributed Systems Lab",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "regal-contact@inria.fr",
+        "recipient_name": "Inria Distributed Systems Research Board",
+        "focus": "Conflict-free replicated data types, causal consistency, and dot store garbage collection",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Mila - Quebec AI Institute",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "partnerships@mila.quebec",
+        "recipient_name": "Mila Strategic Alliances Directorate",
+        "focus": "Decentralized reinforcement learning, multimodal agent memory consolidation, and LLM edge inference",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Vector Institute for Artificial Intelligence",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "industry@vectorinstitute.ai",
+        "recipient_name": "Vector Institute Industry Programs",
+        "focus": "Scalable deep learning architectures, multimodal sensor fusion, and autonomous swarm policy trees",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Alan Turing Institute",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "info@turing.ac.uk",
+        "recipient_name": "Alan Turing Institute Research Alliances",
+        "focus": "Formal mathematical foundations of AI, autonomous multi-agent systems, and ethical governance",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Max Planck Institute for Intelligent Systems",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "info@is.mpg.de",
+        "recipient_name": "MPI for Intelligent Systems Scientific Directorate",
+        "focus": "Physical intelligence, autonomous multi-agent synchronization, and synthetic bio-inspired control",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "RIKEN Center for Advanced Intelligence Project (AIP)",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "aip-contact@ml.riken.jp",
+        "recipient_name": "RIKEN AIP Directorate",
+        "focus": "Mathematical foundations of machine learning, robust continuous control, and quantum-inspired AI",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Edinburgh School of Informatics Multi-Agent Systems Group",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "mas-info@inf.ed.ac.uk",
+        "recipient_name": "Edinburgh MAS Research Group",
+        "focus": "Epistemic multi-agent logic, circadian sleep/wake memory consolidation cycles, and automated theorem proving",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Southampton Agents, Interaction and Complexity (AIC) Group",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "aic-enquiries@ecs.soton.ac.uk",
+        "recipient_name": "Southampton AIC Research Leads",
+        "focus": "Decentralized consensus mechanisms in swarms, mechanism design, and game-theoretic staking matrices",
+        "doc_match": "Sovereign_Staking_APY_and_Validato.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Oxford Machine Learning Research Group",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "mlrg-admin@robots.ox.ac.uk",
+        "recipient_name": "Oxford MLRG Directorate",
+        "focus": "Bayesian neural networks, probabilistic sensor tracking, and multimodal audio/visual embeddings",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Cambridge Machine Learning Group",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "mlg-admin@eng.cam.ac.uk",
+        "recipient_name": "Cambridge MLG Scientific Committee",
+        "focus": "Scalable Gaussian processes, active learning, and robotic state estimation under high uncertainty",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Chicago Quantum Exchange (CQE)",
+        "domain": "Quantum Photonics & Hardware Engineering",
+        "contact_email": "quantum@uchicago.edu",
+        "recipient_name": "Chicago Quantum Exchange Directorate",
+        "focus": "Quantum repeater networks, photonic waveguide circuits, and post-quantum cryptographic primitives",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Bristol Quantum Engineering Technology Labs (QET Labs)",
+        "domain": "Quantum Photonics & Hardware Engineering",
+        "contact_email": "qetlabs-enquiries@bristol.ac.uk",
+        "recipient_name": "Bristol QET Labs Executive",
+        "focus": "Integrated photonic quantum chips, Mach-Zehnder interferometers, and cryogenic CMOS interfaces",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Institute for Quantum Computing (IQC) Waterloo",
+        "domain": "Quantum Photonics & Hardware Engineering",
+        "contact_email": "iqc-info@uwaterloo.ca",
+        "recipient_name": "IQC Waterloo Research Faculty",
+        "focus": "Superconducting qubits, quantum key distribution over satellite mesh, and quantum error mitigation",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Yale Quantum Institute (YQI)",
+        "domain": "Quantum Photonics & Hardware Engineering",
+        "contact_email": "quantum@yale.edu",
+        "recipient_name": "Yale Quantum Institute Directorate",
+        "focus": "Circuit QED, bosonic error correction, and quantum hardware orchestration",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Harvard Quantum Initiative (HQI)",
+        "domain": "Quantum Photonics & Hardware Engineering",
+        "contact_email": "quantum@harvard.edu",
+        "recipient_name": "Harvard Quantum Initiative Science Committee",
+        "focus": "Neutral atom arrays, optical quantum memory, and diamond NV center magnetometry",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Maryland Joint Quantum Institute (JQI)",
+        "domain": "Quantum Photonics & Hardware Engineering",
+        "contact_email": "jqi-info@umd.edu",
+        "recipient_name": "JQI Operations Office",
+        "focus": "Trapped-ion quantum simulation, non-linear optics, and topological quantum materials",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "QuTech (TU Delft & TNO)",
+        "domain": "Quantum Photonics & Hardware Engineering",
+        "contact_email": "info@qutech.nl",
+        "recipient_name": "QuTech Executive Board",
+        "focus": "Quantum Internet testbeds, fault-tolerant topological braiding, and spin qubit processors",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Oxford Quantum Information Group",
+        "domain": "Quantum Photonics & Hardware Engineering",
+        "contact_email": "quantum-info@materials.ox.ac.uk",
+        "recipient_name": "Oxford Materials Quantum Group",
+        "focus": "Cavity QED, solid-state photonic interfaces, and quantum sensor networks",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Broad Institute of MIT and Harvard",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "broadinfo@broadinstitute.org",
+        "recipient_name": "Broad Institute Strategic Partnerships",
+        "focus": "High-throughput single-cell RNA sequencing, CRISPR base editing, and epigenomic lattice modeling",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Wyss Institute for Biologically Inspired Engineering",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "info@wyss.harvard.edu",
+        "recipient_name": "Wyss Institute Academic & Clinical Collaborations",
+        "focus": "Bio-hybrid robotic actuators, organ-on-a-chip microfluidics, and living cellular sensor arrays",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Imperial College Centre for Synthetic Biology",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "synbiocentre@imperial.ac.uk",
+        "recipient_name": "Imperial SynBio Centre Management",
+        "focus": "Automated DNA foundry pipelines, metabolic pathway engineering, and synthetic genetic circuits",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Stanford Department of Bioengineering",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "bioengineering@stanford.edu",
+        "recipient_name": "Stanford BioE Department Office",
+        "focus": "Biomolecular computing, cellular state machine programming, and computational genomics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "EMBL (European Molecular Biology Laboratory)",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "info@embl.de",
+        "recipient_name": "EMBL International Relations",
+        "focus": "Cryo-EM structural determination, massive-scale genomic databases, and distributed biology grids",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Linux Foundation (Decentralized & Edge)",
+        "domain": "Sovereign Systems & Open Standards",
+        "contact_email": "edge-info@linuxfoundation.org",
+        "recipient_name": "LF Edge Technical Advisory Board",
+        "focus": "Edge virtualization, open-source embedded kernels, and SCION routing interoperability",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Eclipse Foundation IoT & Edge Working Group",
+        "domain": "Cyber-Physical Robotics & IoT",
+        "contact_email": "iot-contact@eclipse.org",
+        "recipient_name": "Eclipse IoT Steering Committee",
+        "focus": "Open-source robotics middleware, Zenoh distributed pub/sub, and embedded HAL standards",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "ACM Special Interest Group on Operating Systems (SIGOPS)",
+        "domain": "Distributed Systems & Systems Software",
+        "contact_email": "sigops-chair@acm.org",
+        "recipient_name": "ACM SIGOPS Executive Committee",
+        "focus": "High-performance operating system kernels, zero-allocation memory allocators, and causal data consistency",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Stanford AI Lab (SAIL)",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "sail-info@cs.stanford.edu",
+        "recipient_name": "Stanford AI Lab Directorate",
+        "focus": "Multimodal agent planning, reinforcement learning, and distributed cognition",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "CMU Robotics Institute",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "ri-info@cs.cmu.edu",
+        "recipient_name": "CMU RI Faculty & Research Directorate",
+        "focus": "Autonomous manipulation, closed-form 6-DOF kinematics, and LiDAR point-cloud perception",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "CMU CyLab Security & Privacy Institute",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "cylab-info@andrew.cmu.edu",
+        "recipient_name": "CMU CyLab Research Operations",
+        "focus": "Formally verified microkernels, cryptographic protocol verification, and SCION routing",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Harvard SEAS Distributed Systems",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "distsys@seas.harvard.edu",
+        "recipient_name": "Harvard SEAS Systems Faculty",
+        "focus": "Causal data consistency, join-semilattices, and fault-tolerant distributed consensus",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Yale CS Distributed Systems Group",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@yale.edu",
+        "recipient_name": "Yale Distributed Systems Leads",
+        "focus": "Asynchronous replication, verifiable consensus algorithms, and zero-allocation structures",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Princeton Systems Group",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "systems@cs.princeton.edu",
+        "recipient_name": "Princeton Computer Systems Research",
+        "focus": "Programmable network fabrics, hardware-accelerated consensus, and causal state replication",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Caltech CMS (Computing + Mathematical Sciences)",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "cms-info@caltech.edu",
+        "recipient_name": "Caltech CMS Faculty Committee",
+        "focus": "Optimization algorithms, dynamical systems, and formal algebraic invariants",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UT Austin Distributed Systems Lab",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "dsys@cs.utexas.edu",
+        "recipient_name": "UT Austin Systems Directorate",
+        "focus": "Byzantine fault tolerance, state machine replication, and CRDT dot compaction",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UIUC Systems & Networking Group",
+        "domain": "SCION Path-Aware Routing & Mesh",
+        "contact_email": "systems-info@cs.illinois.edu",
+        "recipient_name": "UIUC Systems & Networking Faculty",
+        "focus": "Path-aware routing, verifiable inter-domain topologies, and high-performance kernel bypass",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Wisconsin Computer Systems Lab",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "systems@cs.wisc.edu",
+        "recipient_name": "UW-Madison Systems Research Group",
+        "focus": "Persistent memory architectures, lock-free data structures, and distributed storage lattices",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UCSD Systems and Networking Group",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "sysnet@cs.ucsd.edu",
+        "recipient_name": "UCSD SysNet Directorate",
+        "focus": "Data center network architectures, causal broadcast protocols, and zero-copy packet processing",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UCLA Network Research Lab",
+        "domain": "SCION Path-Aware Routing & Mesh",
+        "contact_email": "nrl-info@cs.ucla.edu",
+        "recipient_name": "UCLA NRL Faculty Leads",
+        "focus": "Named data networking, decentralized mesh routing, and resilient multipath fabrics",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "USC Information Sciences Institute (ISI)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "isi-info@isi.edu",
+        "recipient_name": "USC ISI Research Directorate",
+        "focus": "Autonomous systems, heterogeneous robotics swarms, and distributed telemetry streaming",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Duke Distributed Systems Lab",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "dsys@cs.duke.edu",
+        "recipient_name": "Duke Systems Faculty",
+        "focus": "Disaggregated memory systems, edge-native consensus, and state replication lattices",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Johns Hopkins Distributed Systems & Networks",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "dsn-info@cs.jhu.edu",
+        "recipient_name": "JHU DSN Research Directorate",
+        "focus": "Resilient wide-area state replication, Byzantine fault recovery, and formal protocol proofs",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Maryland Systems Group",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "sys-info@cs.umd.edu",
+        "recipient_name": "UMD Systems Faculty Committee",
+        "focus": "Decentralized consensus, microkernel virtualization, and deterministic scheduling",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Virginia DSA Lab",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "dsa-info@virginia.edu",
+        "recipient_name": "UVA Dependable Systems & Analytics",
+        "focus": "Safety-critical software assurance, cyber-physical invariant proofs, and real-time execution",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Georgia Tech School of Cybersecurity",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "scp-info@gatech.edu",
+        "recipient_name": "Georgia Tech SCP Leadership",
+        "focus": "Cryptographic protocol analysis, post-quantum signatures, and hardware attestation",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Penn Distributed Systems Lab (DSL)",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "dsl-info@seas.upenn.edu",
+        "recipient_name": "Penn DSL Faculty & Fellows",
+        "focus": "Declarative networking, verified distributed systems, and join-semilattice state synchronizers",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Brown Systems Research Group",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "systems@cs.brown.edu",
+        "recipient_name": "Brown Systems Faculty Directorate",
+        "focus": "Distributed tracing, low-latency streaming engines, and causal state reconciliation",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Rice Computer Systems Group",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "systems@rice.edu",
+        "recipient_name": "Rice Computer Systems Faculty",
+        "focus": "Memory disaggregation, high-performance distributed runtimes, and Rust concurrency",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Northwestern Distributed Systems Lab",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "dsl-info@cs.northwestern.edu",
+        "recipient_name": "Northwestern DSL Directorate",
+        "focus": "Overlay networks, autonomic computing, and high-performance multicast topologies",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Vanderbilt ISIS (Software Integrated Systems)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "isis-info@vanderbilt.edu",
+        "recipient_name": "Vanderbilt ISIS Directorate",
+        "focus": "Model-integrated computing, cyber-physical systems verification, and autonomous edge HAL",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Oxford Automated Verification Group",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "avg-info@cs.ox.ac.uk",
+        "recipient_name": "Oxford Verification Research Group",
+        "focus": "Model checking, automated theorem proving, and monotonic join-semilattice algebraic invariants",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Cambridge Systems Research Group",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "srg-admin@cl.cam.ac.uk",
+        "recipient_name": "Cambridge Computer Laboratory SRG",
+        "focus": "Operating system microkernels, capability-based security, and causal consensus lattices",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Imperial Systems & Algorithms Group",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "sysalg@imperial.ac.uk",
+        "recipient_name": "Imperial College Computing Directorate",
+        "focus": "Decentralized consensus algorithms, scalable state stores, and formal verification",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UCL Systems & Networks Research Group",
+        "domain": "SCION Path-Aware Routing & Mesh",
+        "contact_email": "sn-info@cs.ucl.ac.uk",
+        "recipient_name": "UCL Systems & Networks Leads",
+        "focus": "Internet routing protocols, multipath transport, and sovereign edge computing",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Edinburgh LFCS (Laboratory for Foundations of CS)",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "lfcs-info@inf.ed.ac.uk",
+        "recipient_name": "Edinburgh LFCS Research Committee",
+        "focus": "Category theory, type theory, concurrency algebras, and semilattice monotonicity proofs",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Bristol Cryptography & Information Security",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "crypto-info@bristol.ac.uk",
+        "recipient_name": "Bristol Crypto Group Directorate",
+        "focus": "Multi-party computation, post-quantum zero-knowledge proofs, and threshold signatures",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "EPFL Distributed Computing Lab (DCL)",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "dcl-info@epfl.ch",
+        "recipient_name": "EPFL DCL Scientific Directorate",
+        "focus": "Byzantine state machine replication, causal broadcast primitives, and monotonic lattices",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "ETH Zurich Systems Group",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "systems-info@inf.ethz.ch",
+        "recipient_name": "ETH Zurich Systems Faculty",
+        "focus": "Heterogeneous multicore operating systems, rack-scale computing, and formal system verification",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "ETH Zurich Networked Systems Group (NSG)",
+        "domain": "SCION Path-Aware Routing & Mesh",
+        "contact_email": "ns-info@ee.ethz.ch",
+        "recipient_name": "ETH Zurich NSG Directorate",
+        "focus": "SCION routing architecture, programmable data planes, and path-aware inter-domain networks",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "TUM Chair of Connected Mobility",
+        "domain": "SCION Path-Aware Routing & Mesh",
+        "contact_email": "cm-contact@in.tum.de",
+        "recipient_name": "TUM Connected Mobility Secretariat",
+        "focus": "Decentralized mesh networks, automotive edge intelligence, and resilient pub/sub topologies",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Karlsruhe Institute of Technology (KIT) Telematics",
+        "domain": "SCION Path-Aware Routing & Mesh",
+        "contact_email": "telematics-info@kit.edu",
+        "recipient_name": "KIT Telematics Research Staff",
+        "focus": "Self-organizing decentralized overlay networks, cryptographic routing, and IoT mesh",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "RWTH Aachen Distributed Systems",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "comsys-info@rwth-aachen.de",
+        "recipient_name": "RWTH Aachen COMSYS Directorate",
+        "focus": "Trustworthy edge computing, networked cyber-physical systems, and privacy-preserving protocols",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "TU Berlin Distributed & Operating Systems",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "dos-info@tu-berlin.de",
+        "recipient_name": "TU Berlin DOS Group",
+        "focus": "Cloud-edge continuum computing, resource-efficient microkernels, and causal CRDT trees",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "TU Darmstadt Cryptography & Complexity",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "ccs-info@informatik.tu-darmstadt.de",
+        "recipient_name": "TU Darmstadt CCS Leadership",
+        "focus": "Provable security, post-quantum cryptographic primitives, and formal audit frameworks",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "KTH Networked Systems Security (NSS)",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "nss-info@eecs.kth.se",
+        "recipient_name": "KTH NSS Faculty",
+        "focus": "Decentralized network security, intrusion detection in robotic swarms, and secure hardware enclaves",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Chalmers Computer Systems & Networks",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "csn-info@chalmers.se",
+        "recipient_name": "Chalmers CSN Department Office",
+        "focus": "Dependable real-time computing, distributed synchronization, and formal state models",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Uppsala Distributed Systems Group",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "distsys@it.uu.se",
+        "recipient_name": "Uppsala Systems Faculty",
+        "focus": "Actor-based concurrency models, formally verified distributed consensus, and lock-free trees",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Aalto Secure Systems Group",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "secsys-info@aalto.fi",
+        "recipient_name": "Aalto Secure Systems Leads",
+        "focus": "Platform security, confidential computing, and cryptographic validation of distributed state",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Helsinki Network & Security Research",
+        "domain": "SCION Path-Aware Routing & Mesh",
+        "contact_email": "netsec-info@cs.helsinki.fi",
+        "recipient_name": "Helsinki NetSec Directorate",
+        "focus": "5G/6G edge networks, multipath routing, and decentralized authentication protocols",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Copenhagen Department of CS (DIKU) Systems",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "diku-info@di.ku.dk",
+        "recipient_name": "DIKU Systems Faculty",
+        "focus": "Pure functional programming, zero-cost concurrency abstractions, and monotonic state trees",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Aarhus Distributed & Embedded Systems",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "des-info@cs.au.dk",
+        "recipient_name": "Aarhus DES Research Directorate",
+        "focus": "Cyber-physical modeling, hybrid dynamical systems, and embedded real-time robotics HAL",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Oslo Networks & Distributed Systems",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "nd-info@ifi.uio.no",
+        "recipient_name": "UiO ND Research Leads",
+        "focus": "Autonomous adaptive middleware, edge intelligence, and distributed state replication",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "NTNU Department of Computer Science (IDI)",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "idi-info@idi.ntnu.no",
+        "recipient_name": "NTNU IDI Leadership",
+        "focus": "Autonomous marine robotics, distributed edge computing, and real-time sensory fusion",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Leiden Institute of Advanced Computer Science",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "liacs-info@liacs.leidenuniv.nl",
+        "recipient_name": "LIACS Directorate",
+        "focus": "Evolutionary computation, distributed swarm optimization, and multi-agent coordination",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Amsterdam Multiscale Networked Systems",
+        "domain": "SCION Path-Aware Routing & Mesh",
+        "contact_email": "mns-info@uva.nl",
+        "recipient_name": "UvA MNS Scientific Committee",
+        "focus": "Complex network topologies, sovereign routing architectures, and resilient mesh transit",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Eindhoven System Architecture & Networking",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "san-info@tue.nl",
+        "recipient_name": "TU/e SAN Research Leads",
+        "focus": "Predictable embedded architectures, real-time wireless fieldbuses, and robotics teleop",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Leuven DistriNet Research Group",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "distrinet-info@cs.kuleuven.be",
+        "recipient_name": "KU Leuven DistriNet Directorate",
+        "focus": "Secure software engineering, distributed systems resilience, and causal CRDT dot stores",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Sorbonne LIP6 Laboratoire d'Informatique",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "lip6-info@lip6.fr",
+        "recipient_name": "Sorbonne LIP6 Directorate",
+        "focus": "Conflict-free replicated data types, distributed algorithm proofs, and formal verification",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Paris-Saclay LRI Laboratoire de Recherche",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "lri-info@lri.fr",
+        "recipient_name": "LRI Paris-Saclay Leads",
+        "focus": "Automated theorem proving in Coq/Isabelle, algebraic semilattice invariants, and algorithm correctness",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Inria Sophia Antipolis Mediterranean",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "sophia-info@inria.fr",
+        "recipient_name": "Inria Sophia Research Directorate",
+        "focus": "Robotics vision, autonomous navigation, and geometric inverse kinematics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Inria Rennes - Bretagne Atlantique",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "rennes-info@inria.fr",
+        "recipient_name": "Inria Rennes Scientific Leads",
+        "focus": "Large-scale distributed systems, cloud computing, and peer-to-peer data synchronization",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Inria Grenoble - Rh\u00f4ne-Alpes",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "grenoble-info@inria.fr",
+        "recipient_name": "Inria Grenoble Directorate",
+        "focus": "Embedded sensor fusion, real-time cyber-physical simulation, and Bayesian robotic filtering",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Bologna DISI Department of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "disi-info@unibo.it",
+        "recipient_name": "Unibo DISI Research Faculty",
+        "focus": "Self-healing distributed systems, gossip protocols, and causal state reconciliation",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Politecnico di Milano DEIB",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "deib-info@polimi.it",
+        "recipient_name": "PoliMi DEIB Robotics Directorate",
+        "focus": "Industrial automation, mobile manipulator path planning, and autonomous safety zones",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Sapienza University of Rome DIAG",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "diag-info@diag.uniroma1.it",
+        "recipient_name": "Sapienza DIAG Robotics Faculty",
+        "focus": "Human-robot collaboration, non-linear control, and articulated manipulator dynamics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "IMDEA Networks Institute",
+        "domain": "SCION Path-Aware Routing & Mesh",
+        "contact_email": "info.networks@imdea.org",
+        "recipient_name": "IMDEA Networks Director & Faculty",
+        "focus": "Millimeter-wave communications, path-aware routing, and decentralized wireless mesh",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Barcelona Supercomputing Center (BSC)",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "info@bsc.es",
+        "recipient_name": "BSC Operations & Research Directorate",
+        "focus": "High-performance computing architectures, parallel execution models, and large-scale AI",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "TU Wien Distributed Systems Group (DSG)",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "dsg-info@infosys.tuwien.ac.at",
+        "recipient_name": "TU Wien DSG Research Directorate",
+        "focus": "Elastic cloud-edge workflows, autonomous microservice management, and causal state trees",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Graz IAIK Institute of Applied Information Processing",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "iaik-info@iaik.tugraz.at",
+        "recipient_name": "IAIK TU Graz Research Staff",
+        "focus": "Side-channel attack mitigation, hardware security enclaves, and cryptographic proofs",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Prague Czech Technical University AIC",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "aic-info@fel.cvut.cz",
+        "recipient_name": "CTU AIC Faculty & Researchers",
+        "focus": "Multi-agent game theory, autonomous vehicle coordination, and decentralized planning",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Tokyo IIS (Institute of Industrial Science)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "iis-info@iis.u-tokyo.ac.jp",
+        "recipient_name": "UTokyo IIS Research Leads",
+        "focus": "Spatial robotics manipulation, real-time sensing, and cyber-physical IoT architectures",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Tokyo Institute of Technology Computing",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "info@c.titech.ac.jp",
+        "recipient_name": "Tokyo Tech CS Department Office",
+        "focus": "Supercomputing runtime systems, graph processing, and lock-free concurrency",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Tohoku University RIEC",
+        "domain": "Quantum Photonics & Hardware Engineering",
+        "contact_email": "riec-info@riec.tohoku.ac.jp",
+        "recipient_name": "RIEC Tohoku Directorate",
+        "focus": "Spintronics, quantum information hardware, and ultra-high-speed photonics",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "KAIST School of Computing",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@kaist.ac.kr",
+        "recipient_name": "KAIST CS Directorate",
+        "focus": "Mobile edge systems, verified distributed transactions, and monotonic CRDT stores",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "POSTECH Computer Science & Engineering",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cse-info@postech.ac.kr",
+        "recipient_name": "POSTECH CSE Leadership",
+        "focus": "Distributed machine learning, decentralized storage, and resilient edge mesh topologies",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Tsinghua Department of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@tsinghua.edu.cn",
+        "recipient_name": "Tsinghua CS Academic Committee",
+        "focus": "Large-scale distributed systems, blockchain scalability, and formal verification",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Peking University School of Computer Science",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "cs-info@pku.edu.cn",
+        "recipient_name": "PKU CS Academic Directorate",
+        "focus": "Autonomous swarm intelligence, multimodal perception, and distributed inference engines",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Fudan School of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@fudan.edu.cn",
+        "recipient_name": "Fudan CS Faculty Office",
+        "focus": "Network security, causal state replication, and data privacy in edge computing",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "HKU Department of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@cs.hku.hk",
+        "recipient_name": "HKU CS General Office",
+        "focus": "Distributed algorithms, high-throughput consensus, and post-quantum cryptographic primitives",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "HKUST Department of Computer Science & Engineering",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cse-info@cse.ust.hk",
+        "recipient_name": "HKUST CSE Directorate",
+        "focus": "Autonomous aerial robotics, 3D LiDAR mapping, and real-time kinematic control",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "CUHK Department of Computer Science & Engineering",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "dept@cse.cuhk.edu.hk",
+        "recipient_name": "CUHK CSE General Office",
+        "focus": "System security, verifiable outsourced computation, and formal audit frameworks",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Sydney School of Computer Science",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cs-admin@sydney.edu.au",
+        "recipient_name": "Sydney CS Administration",
+        "focus": "Field robotics, autonomous maritime systems, and real-world kinematic solvers",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Melbourne School of Computing & Information Systems",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cis-info@unimelb.edu.au",
+        "recipient_name": "UniMelb CIS Research Leads",
+        "focus": "Distributed computing, cloud-edge continuum, and monotonic join-semilattice state stores",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UNSW School of Computer Science & Engineering",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "cse.admin@unsw.edu.au",
+        "recipient_name": "UNSW CSE Head of School",
+        "focus": "Formally verified seL4 microkernels, capability security, and zero-allocation memory models",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Queensland School of ITEE",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "eecs-info@eecs.uq.edu.au",
+        "recipient_name": "UQ ITEE Research Faculty",
+        "focus": "Biologically-inspired navigation, vision-based SLAM, and embedded robotics HAL",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Monash Faculty of Information Technology",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "fit-info@monash.edu",
+        "recipient_name": "Monash FIT Research Leads",
+        "focus": "Discrete optimization, automated agent reasoning, and multi-agent coordination lattices",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Auckland School of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@cs.auckland.ac.nz",
+        "recipient_name": "Auckland CS Research Leads",
+        "focus": "Parallel computing, cryptographic protocol verification, and decentralized consensus",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Hebrew University of Jerusalem CS & Engineering",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "info@cs.huji.ac.il",
+        "recipient_name": "HUJI CSE Directorate",
+        "focus": "Distributed consensus, lattice-based cryptography, and Byzantine fault tolerance",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Technion - Israel Institute of Technology",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "info@cs.technion.ac.il",
+        "recipient_name": "Technion CS Directorate",
+        "focus": "Autonomous robotics, motion planning algorithms, and geometric kinematic models",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Tel Aviv University Blavatnik School of CS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "info@cs.tau.ac.il",
+        "recipient_name": "TAU CS Faculty Directorate",
+        "focus": "Cryptographic protocols, algorithmic game theory, and formal verification",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Weizmann Institute of Science Math & CS",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "math.cs@weizmann.ac.il",
+        "recipient_name": "Weizmann Scientific Directorate",
+        "focus": "Theoretical computer science, zero-knowledge proofs, and algebraic invariants",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "IIT Bombay Department of CSE",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "office@cse.iitb.ac.in",
+        "recipient_name": "IIT Bombay CSE Faculty",
+        "focus": "Distributed databases, operating systems, and join-semilattice algebraic models",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "IIT Delhi Department of CSE",
+        "domain": "SCION Path-Aware Routing & Mesh",
+        "contact_email": "hodcse@cse.iitd.ac.in",
+        "recipient_name": "IIT Delhi CSE Leadership",
+        "focus": "Computer networks, formal methods, and high-performance routing protocols",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "IIT Madras Department of CSE",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cseoffice@iitm.ac.in",
+        "recipient_name": "IIT Madras CSE Directorate",
+        "focus": "Cyber-physical systems, robotics motion control, and embedded sensor fusion",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "IISc Bangalore Computational & Data Sciences",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "office.cds@iisc.ac.in",
+        "recipient_name": "IISc CDS Research Directorate",
+        "focus": "High-performance scientific computing, multi-agent systems, and scalable AI models",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Tata Institute of Fundamental Research (TIFR)",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "info@tifr.res.in",
+        "recipient_name": "TIFR Faculty of Technology & CS",
+        "focus": "Formal verification, quantum information theory, and distributed algorithmic models",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Tsinghua Institute for AI Industry Research (AIR)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "air@tsinghua.edu.cn",
+        "recipient_name": "Tsinghua AIR Leadership",
+        "focus": "Embodied AI, autonomous vehicle coordination, and cyber-physical robotics platforms",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Shanghai AI Laboratory",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "contact@pjlab.org.cn",
+        "recipient_name": "Shanghai AI Lab Scientific Board",
+        "focus": "Large-scale foundation models, embodied intelligence, and multi-agent systems",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Beijing Academy of Artificial Intelligence (BAAI)",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "contact@baai.ac.cn",
+        "recipient_name": "BAAI Strategic Alliances",
+        "focus": "Brain-inspired AI, multimodal agent reasoning, and autonomous multi-agent synchronization",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "CASIA (Institute of Automation, Chinese Academy of Sciences)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "casia-info@ia.ac.cn",
+        "recipient_name": "CASIA Research Faculty",
+        "focus": "Pattern recognition, intelligent robotics control, and biomimetic kinematics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "AIST Artificial Intelligence Research Center Japan",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "airc-info-ml@aist.go.jp",
+        "recipient_name": "AIST AIRC Directorate",
+        "focus": "Embedded robotics, sensory perception, and autonomous industrial actuation",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "RIKEN Center for Quantum Computing (RQC)",
+        "domain": "Quantum Photonics & Hardware Engineering",
+        "contact_email": "rqc_info@ml.riken.jp",
+        "recipient_name": "RIKEN RQC Scientific Leads",
+        "focus": "Superconducting qubits, optical quantum processors, and quantum error mitigation",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "National Taiwan University (NTU) CSIE",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "contact@csie.ntu.edu.tw",
+        "recipient_name": "NTU CSIE Department Office",
+        "focus": "Network systems, distributed computing, and monotonic state trees",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "National Tsing Hua University (NTHU) CS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs@cs.nthu.edu.tw",
+        "recipient_name": "NTHU CS Faculty Office",
+        "focus": "Cloud computing, embedded systems, and distributed state consensus",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "KAIST Robotics Program",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "robotics@kaist.ac.kr",
+        "recipient_name": "KAIST Robotics Academic Office",
+        "focus": "Humanoid robotics kinematics, bipedal locomotion, and multi-sensor fusion",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "DGIST Department of Robotics Engineering",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "robotics@dgist.ac.kr",
+        "recipient_name": "DGIST Robotics Faculty",
+        "focus": "Micro-robotics, bio-robotics, and autonomous physical manipulation",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UNIST Department of Artificial Intelligence",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "ai@unist.ac.kr",
+        "recipient_name": "UNIST AI Department Office",
+        "focus": "Autonomous machine learning, industrial AI, and intelligent edge systems",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "GIST School of EECS",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "eecs@gist.ac.kr",
+        "recipient_name": "GIST EECS Leadership",
+        "focus": "Robot intelligence, computer vision, and autonomous vehicle systems",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Waterloo Artificial Intelligence Institute (Waterloo.AI)",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "ai@uwaterloo.ca",
+        "recipient_name": "Waterloo.AI Directorate",
+        "focus": "Autonomous systems, multi-agent reinforcement learning, and edge AI hardware",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Toronto Robotics Institute",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "robotics@utoronto.ca",
+        "recipient_name": "UToronto Robotics Directorate",
+        "focus": "Surgical robotics, autonomous mobile manipulators, and real-time state estimation",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "McGill Centre for Intelligent Machines (CIM)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cim@cim.mcgill.ca",
+        "recipient_name": "McGill CIM Directorate",
+        "focus": "Robotics systems, computer vision, and autonomous motion control",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UBC ICICS (Institute for Computing, Info & Cognitive Systems)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "info@icics.ubc.ca",
+        "recipient_name": "UBC ICICS Leadership",
+        "focus": "Advanced robotics, human-robot interaction, and distributed cyber-physical systems",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Simon Fraser University School of Computing Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs_office@sfu.ca",
+        "recipient_name": "SFU CS Directorate",
+        "focus": "Big data systems, database architectures, and distributed state consensus",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Alberta Computing Science",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "cs-info@ualberta.ca",
+        "recipient_name": "UAlberta CS Faculty Office",
+        "focus": "Reinforcement learning, autonomous agents, and game playing algorithms",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Dalhousie Faculty of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs.admissions@dal.ca",
+        "recipient_name": "Dalhousie CS Academic Office",
+        "focus": "Network security, big data processing, and distributed computing architectures",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Queen's University School of Computing",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "info@cs.queensu.ca",
+        "recipient_name": "Queen's Computing Directorate",
+        "focus": "Biomedical computing, robotics control, and distributed systems software",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Trinity College Dublin School of CS & Statistics",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "enquiries@scss.tcd.ie",
+        "recipient_name": "TCD SCSS Directorate",
+        "focus": "Distributed systems, network routing, and software architecture verification",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University College Dublin School of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs.enquiries@ucd.ie",
+        "recipient_name": "UCD CS Faculty Office",
+        "focus": "Cloud computing, cybersecurity, and distributed state consensus",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "TUM MIRMI (Munich Institute of Robotics & Machine Intelligence)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "info@mirmi.tum.de",
+        "recipient_name": "TUM MIRMI Executive Board",
+        "focus": "Tactile robotics, cyber-physical perception, and autonomous humanoid systems",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Stuttgart IPVS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "ipvs-sekretariat@ipvs.uni-stuttgart.de",
+        "recipient_name": "Stuttgart IPVS Directorate",
+        "focus": "Parallel and distributed systems, real-time data streaming, and join-semilattice synchronization",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Freiburg Autonomous Intelligent Systems",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "ais-info@informatik.uni-freiburg.de",
+        "recipient_name": "Freiburg AIS Directorate",
+        "focus": "Mobile robot navigation, 3D SLAM point-cloud mapping, and autonomous manipulation",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Bonn Autonomous Intelligent Systems",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "contact@ais.uni-bonn.de",
+        "recipient_name": "Bonn AIS Research Faculty",
+        "focus": "Humanoid robotics, cognitive systems, and real-time kinematic control",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Bielefeld University Cognitive Systems Group",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cogsys@techfak.uni-bielefeld.de",
+        "recipient_name": "Bielefeld Cognitive Systems Faculty",
+        "focus": "Cognitive robotics, human-robot interaction, and multimodal sensor feedback",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "DFKI Robotics Innovation Center (RIC) Bremen",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "ric-kontakt@dfki.de",
+        "recipient_name": "DFKI RIC Scientific Board",
+        "focus": "Underwater robotics, space exploration robotics, and autonomous mobility platforms",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Saarland University Department of CS",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "cs-info@cs.uni-saarland.de",
+        "recipient_name": "Saarland CS Directorate",
+        "focus": "Automated reasoning, formal software verification, and security guarantees",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Max Planck Institute for Informatics (MPI-INF)",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "info@mpi-inf.mpg.de",
+        "recipient_name": "MPI-INF Directorate",
+        "focus": "Algorithms and complexity, computer vision, and mathematical logic",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Max Planck Institute for Software Systems (MPI-SWS)",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "contact@mpi-sws.org",
+        "recipient_name": "MPI-SWS Scientific Directorate",
+        "focus": "Operating systems, distributed systems verification, and causal consistency",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Zurich Department of Informatics (IFI)",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "info@ifi.uzh.ch",
+        "recipient_name": "UZH IFI Directorate",
+        "focus": "Artificial intelligence, autonomous robotics swarms, and decentralized computing",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Geneva Computer Science (CUI)",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "info-cui@unige.ch",
+        "recipient_name": "UNIGE CUI Directorate",
+        "focus": "Ubiquitous computing, distributed services, and cybersecurity architectures",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Basel Department of Mathematics & CS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs@unibas.ch",
+        "recipient_name": "UNIBAS CS Faculty Office",
+        "focus": "High-performance computing, distributed networks, and computational mathematics",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Radboud University Computing & Data Science",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "secr@cs.ru.nl",
+        "recipient_name": "Radboud CS Secretariat",
+        "focus": "Software science, formal verification, and cryptographic protocol analysis",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Vrije Universiteit Amsterdam Computer Systems",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "secr.cs.few@vu.nl",
+        "recipient_name": "VU Amsterdam Systems Directorate",
+        "focus": "Dependable systems, operating system architectures, and fault-tolerant computing",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Groningen Bernoulli Institute",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "secr-bernoulli@rug.nl",
+        "recipient_name": "Bernoulli Institute Directorate",
+        "focus": "Distributed software architecture, autonomous systems, and formal methods",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Ghent University IDLab",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "info@idlab.ugent.be",
+        "recipient_name": "Ghent IDLab Directorate",
+        "focus": "Distributed AI, IoT networks, and real-time cyber-physical robotics actuation",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "DTU Compute (Technical University of Denmark)",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "compute@compute.dtu.dk",
+        "recipient_name": "DTU Compute Leadership",
+        "focus": "Embedded systems engineering, formal methods, and autonomous system verification",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Link\u00f6ping University Department of CS (IDA)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "ida-info@ida.liu.se",
+        "recipient_name": "LiU IDA Faculty Directorate",
+        "focus": "Autonomous systems, artificial intelligence, and robotic vehicle control",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Ume\u00e5 University Department of Computing Science",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "info@cs.umu.se",
+        "recipient_name": "Ume\u00e5 CS Directorate",
+        "focus": "Distributed systems, autonomous agents, and high-performance computing",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Tampere University Computing Sciences",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cs.tau@tuni.fi",
+        "recipient_name": "Tampere CS Faculty Office",
+        "focus": "Software engineering, autonomous systems, and sensor fusion algorithms",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Oulu Center for Ubiquitous Computing",
+        "domain": "SCION Path-Aware Routing & Mesh",
+        "contact_email": "ubicomp@oulu.fi",
+        "recipient_name": "Oulu UBICOMP Directorate",
+        "focus": "6G wireless mesh, ubiquitous edge systems, and decentralized networking",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Bergen Department of Informatics",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "post@ii.uib.no",
+        "recipient_name": "UiB Informatics Directorate",
+        "focus": "Cryptology, formal verification algorithms, and secure software development",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Scuola Superiore Sant'Anna BioRobotics Institute",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "biorobotics@santannapisa.it",
+        "recipient_name": "Sant'Anna BioRobotics Directorate",
+        "focus": "Bio-inspired robotics, soft manipulation, and closed-form kinematic actuation",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Italian Institute of Technology (IIT) Robotics Labs",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "iit-robotics@iit.it",
+        "recipient_name": "IIT Robotics Scientific Directorate",
+        "focus": "Humanoid robotics platforms, dynamic walking, and tactile sensor arrays",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Naples Federico II PRISMA Lab",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "prisma@unina.it",
+        "recipient_name": "PRISMA Lab Directorate",
+        "focus": "Industrial robotics manipulation, aerial robotics, and sensor-based control",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UPM Centre for Automation and Robotics (CAR)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "car@car.upm-csic.es",
+        "recipient_name": "CAR UPM-CSIC Directorate",
+        "focus": "Industrial automation, mobile robotics navigation, and cyber-physical systems",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Universidad Carlos III de Madrid Robotics Lab",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "roboticslab@uc3m.es",
+        "recipient_name": "UC3M Robotics Lab Directorate",
+        "focus": "Autonomous mobile robotics, service robotics, and humanoid kinematics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Seville GRVC Robotics Lab",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "grvc-info@us.es",
+        "recipient_name": "GRVC Robotics Directorate",
+        "focus": "Aerial robotic manipulators, multi-robot swarm coordination, and vision-based control",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Instituto Superior T\u00e9cnico (IST) Lisbon",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "contacto@tecnico.ulisboa.pt",
+        "recipient_name": "IST Lisbon Engineering Directorate",
+        "focus": "Robotics systems, autonomous marine craft, and nonlinear control systems",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UW Sensor Systems Laboratory",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "sensors-info@cs.washington.edu",
+        "recipient_name": "UW Sensor Systems Faculty",
+        "focus": "Wireless sensor networks, battery-free edge sensing, and embedded cyber-physical telemetry",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Georgia Tech Institute for Data Engineering",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "data-info@gatech.edu",
+        "recipient_name": "GT IDE Research Directorate",
+        "focus": "Large-scale data engineering, causal consistency, and high-throughput state lattices",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Purdue CCAT (Center for Connected Transportation)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "ccat-contact@purdue.edu",
+        "recipient_name": "Purdue CCAT Leadership",
+        "focus": "Connected autonomous vehicles, real-time kinematics, and cooperative swarm navigation",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Ohio State Center for Automotive Research (CAR)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "car-info@osu.edu",
+        "recipient_name": "OSU CAR Executive Directorate",
+        "focus": "Autonomous vehicle control, cyber-physical safety envelopes, and sensor fusion algorithms",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Clemson University ICAR (CU-ICAR)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cuicar@clemson.edu",
+        "recipient_name": "CU-ICAR Research Operations",
+        "focus": "Automotive cyber-physical systems, drive-by-wire actuation, and vehicle telemetry streaming",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Virginia Tech Transportation Institute (VTTI)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "vtti-info@vtti.vt.edu",
+        "recipient_name": "VTTI Executive Leadership",
+        "focus": "Autonomous mobility platforms, LiDAR sensor validation, and real-time obstacle avoidance",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Texas A&M Transportation Institute (TTI)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "tti-info@tti.tamu.edu",
+        "recipient_name": "TTI Autonomous Systems Group",
+        "focus": "Intelligent transportation systems, vehicle-to-everything (V2X) mesh, and automated guidance",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UMTRI (University of Michigan Transportation Research)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "umtri-info@umich.edu",
+        "recipient_name": "UMTRI Research Committee",
+        "focus": "Connected autonomous vehicles, kinematic safety envelopes, and real-world edge telemetry",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Berkeley PATH Transportation Research",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "path-info@berkeley.edu",
+        "recipient_name": "PATH Berkeley Directorate",
+        "focus": "Automated highway platooning, decentralized swarm coordination, and vehicle kinematics",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Stanford Center for Automotive Research (CARS)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cars-info@stanford.edu",
+        "recipient_name": "Stanford CARS Faculty",
+        "focus": "Autonomous vehicle control architectures, motion prediction, and cyber-physical security",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "MIT Mobility Initiative",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "mobility@mit.edu",
+        "recipient_name": "MIT Mobility Steering Committee",
+        "focus": "Autonomous mobility swarms, edge computing transit, and multi-agent coordination",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "CMU Mobility21 UTC",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "mobility21@andrew.cmu.edu",
+        "recipient_name": "CMU Mobility21 Directorate",
+        "focus": "Smart mobility architectures, edge-native sensor fusion, and autonomous rover fleets",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Penn State Applied Research Lab (ARL)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "arl-info@arl.psu.edu",
+        "recipient_name": "Penn State ARL Directorate",
+        "focus": "Autonomous undersea vehicles, robotic kinematics, and real-time embedded HAL",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Johns Hopkins Applied Physics Lab (JHU/APL)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "apl-info@jhuapl.edu",
+        "recipient_name": "JHU/APL Autonomous Systems Group",
+        "focus": "Space robotics, resilient autonomous systems, and cyber-physical trajectory synthesis",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Georgia Tech Research Institute (GTRI)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "gtri-info@gtri.gatech.edu",
+        "recipient_name": "GTRI Autonomous Systems Division",
+        "focus": "Unmanned aerial vehicles, autonomous swarm control, and resilient mesh communications",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Southwest Research Institute (SwRI) Robotics",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "swri-robotics@swri.org",
+        "recipient_name": "SwRI Autonomous Systems Directorate",
+        "focus": "Industrial automation, mobile manipulator kinematics, and ROS-Industrial leadership",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "SRI International Robotics & Autonomous Systems",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "sri-robotics@sri.com",
+        "recipient_name": "SRI Robotics Laboratory Directorate",
+        "focus": "Telemanipulation, soft robotics, and closed-form 6-DOF geometric inverse kinematics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Draper Laboratory Autonomous Systems",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "draper-info@draper.com",
+        "recipient_name": "Draper Autonomous Systems Group",
+        "focus": "Precision guidance, inertial navigation, and fault-tolerant cyber-physical controllers",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Woods Hole Oceanographic Institution (WHOI) Deep Submergence",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "whoi-robotics@whoi.edu",
+        "recipient_name": "WHOI Deep Submergence Lab",
+        "focus": "Autonomous underwater exploration, acoustic telemetry mesh, and inertial kinematics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "MBARI Autonomous Systems Group",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "mbari-robotics@mbari.org",
+        "recipient_name": "MBARI Autonomous Systems Leads",
+        "focus": "Oceanographic autonomous vehicles, sensor payload integration, and resilient telemetry",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "NREL Autonomous Energy Systems (AES)",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "nrel-aes@nrel.gov",
+        "recipient_name": "NREL AES Research Directorate",
+        "focus": "Decentralized grid control, autonomous multi-agent optimization, and distributed state consensus",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "PNNL Distributed Systems Research",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "pnnl-distrib@pnnl.gov",
+        "recipient_name": "PNNL Computing Directorate",
+        "focus": "Grid architecture, distributed state estimation, and cyber-resilient control lattices",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Oak Ridge National Laboratory (ORNL) Quantum Science Center",
+        "domain": "Quantum Photonics & Hardware Engineering",
+        "contact_email": "ornl-quantum@ornl.gov",
+        "recipient_name": "ORNL QSC Directorate",
+        "focus": "Topological quantum materials, quantum algorithm simulation, and quantum communication testbeds",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Argonne National Laboratory (ANL) MCS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "mcs-info@anl.gov",
+        "recipient_name": "ANL MCS Leadership",
+        "focus": "Exascale distributed computing, parallel linear algebra, and formal mathematical modeling",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Brookhaven National Laboratory (BNL) CSI",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "bnl-csi@bnl.gov",
+        "recipient_name": "BNL CSI Leadership",
+        "focus": "High-throughput data streaming, quantum computing architectures, and scientific AI",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Lawrence Berkeley National Lab (LBNL) Computing",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "lbnl-computing@lbl.gov",
+        "recipient_name": "LBNL Computing Sciences Directorate",
+        "focus": "High-performance computing software, distributed scientific data management, and network mesh",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "LLNL Center for Applied Scientific Computing (CASC)",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "llnl-casc@llnl.gov",
+        "recipient_name": "LLNL CASC Directorate",
+        "focus": "Parallel algorithms, scalable scientific computing, and fault-tolerant system runtimes",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "LANL Advanced Computing Solutions",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "lanl-acs@lanl.gov",
+        "recipient_name": "LANL ACS Leadership",
+        "focus": "High-assurance system design, quantum information processing, and cryptographic verification",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Sandia National Laboratories Center for Cyber Defenders",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "sandia-ccd@sandia.gov",
+        "recipient_name": "Sandia CCD Leadership",
+        "focus": "Critical infrastructure protection, hardware security, and formal mathematical audit",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "NASA Jet Propulsion Laboratory (JPL) Robotics",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "jpl-robotics@jpl.nasa.gov",
+        "recipient_name": "NASA JPL Robotics Systems Directorate",
+        "focus": "Planetary rover mobility, autonomous manipulator kinematics, and extreme environment HAL",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "NASA Ames Intelligent Systems Division",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "ames-isd@nasa.gov",
+        "recipient_name": "NASA Ames ISD Directorate",
+        "focus": "Autonomous systems, automated planning and scheduling, and robust swarm coordination",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "NASA Goddard Autonomous Systems",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "goddard-autonomy@nasa.gov",
+        "recipient_name": "NASA Goddard Autonomy Group",
+        "focus": "Satellite constellation swarms, distributed orbital state estimation, and sensor mesh",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "ESA Advanced Concepts Team (ACT)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "act-info@esa.int",
+        "recipient_name": "ESA ACT Directorate",
+        "focus": "Biomimetic space robotics, autonomous swarm guidance, and advanced AI architectures",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "DLR Institute of Robotics & Mechatronics",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "dlr-robotics@dlr.de",
+        "recipient_name": "DLR Robotics Scientific Directorate",
+        "focus": "Lightweight robot arms, articulated humanoid dexterity, and torque-controlled manipulation",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "CNES Space Robotics Division",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cnes-robotics@cnes.fr",
+        "recipient_name": "CNES Space Robotics Directorate",
+        "focus": "Planetary exploration systems, autonomous docking, and closed-form kinematic solvers",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "JAXA Space Exploration Center Robotics",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "jaxa-robotics@jaxa.jp",
+        "recipient_name": "JAXA Space Robotics Leads",
+        "focus": "Lunar surface robotics, autonomous sample handling, and real-time kinematic control",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UK Space Agency Robotics & Autonomous Systems",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "uksa-robotics@ukspaceagency.gov.uk",
+        "recipient_name": "UKSA Robotics Advisory Board",
+        "focus": "In-orbit servicing, autonomous space debris remediation, and reliable cyber-physical systems",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Australian Space Agency Systems Division",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "space-systems@space.gov.au",
+        "recipient_name": "ASA Systems Directorate",
+        "focus": "Remote autonomous operations, lunar rover robotics, and sovereign communications mesh",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "CERN Information Technology Department",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cern-it@cern.ch",
+        "recipient_name": "CERN IT Directorate",
+        "focus": "Worldwide LHC computing grid, exascale distributed data replication, and high-throughput networking",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Fermilab Quantum Institute",
+        "domain": "Quantum Photonics & Hardware Engineering",
+        "contact_email": "fnal-quantum@fnal.gov",
+        "recipient_name": "Fermilab Quantum Leadership",
+        "focus": "Quantum teleportation networks, superconducting cavities, and cryogenic quantum instrumentation",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "SLAC National Accelerator Laboratory",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "slac-computing@slac.stanford.edu",
+        "recipient_name": "SLAC Scientific Computing",
+        "focus": "Ultrafast data acquisition, photon science computing, and distributed data pipelines",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "DESY German Electron Synchrotron IT",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "desy-it@desy.de",
+        "recipient_name": "DESY IT Directorate",
+        "focus": "Distributed accelerator control systems, real-time data streaming, and grid computing",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "KEK Computing Research Center Japan",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "kek-info@kek.jp",
+        "recipient_name": "KEK Computing Directorate",
+        "focus": "High energy physics computing grids, large-scale storage lattices, and network fabrics",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "INFN National Institute for Nuclear Physics Italy",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "infn-computing@infn.it",
+        "recipient_name": "INFN Computing Committee",
+        "focus": "Distributed scientific data grids, high-performance networking, and cloud computing",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "STFC Rutherford Appleton Laboratory UK",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "stfc-computing@stfc.ac.uk",
+        "recipient_name": "STFC Scientific Computing",
+        "focus": "Large-scale scientific infrastructure, high-throughput distributed state management, and edge mesh",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Paul Scherrer Institute (PSI) Switzerland",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "psi-computing@psi.ch",
+        "recipient_name": "PSI Scientific Computing Directorate",
+        "focus": "Real-time beamline data acquisition, distributed storage lattices, and high-performance computing",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "ESRF European Synchrotron Radiation Facility",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "esrf-computing@esrf.fr",
+        "recipient_name": "ESRF Computing Services",
+        "focus": "Synchrotron data reduction, distributed scientific streaming, and cyber-physical controls",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Institut Laue-Langevin (ILL)",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "ill-computing@ill.fr",
+        "recipient_name": "ILL Scientific Computing",
+        "focus": "Neutron science instrument control, distributed experimental data pipelines, and telemetry",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "EMBL-EBI European Bioinformatics Institute",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "ebi-info@ebi.ac.uk",
+        "recipient_name": "EMBL-EBI Directorate",
+        "focus": "Massive biomolecular sequence archives, distributed genomics grids, and computational biology",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Wellcome Sanger Institute",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "sanger-info@sanger.ac.uk",
+        "recipient_name": "Sanger Strategic Partnerships",
+        "focus": "High-throughput genome sequencing, tree of life assembly, and cellular genetics modeling",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Francis Crick Institute Computational Biology",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "crick-compbio@crick.ac.uk",
+        "recipient_name": "Crick Computational Biology Leads",
+        "focus": "Cancer genomics, structural bioinformatics, and distributed cellular modeling pipelines",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Institut Pasteur Computational Biology",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "pasteur-compbio@pasteur.fr",
+        "recipient_name": "Pasteur Computational Biology Directorate",
+        "focus": "Epidemiological modeling, microbial genomics, and distributed bioinformatics pipelines",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Institut Curie Bioinformatics & Systems Biology",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "curie-sysbio@curie.fr",
+        "recipient_name": "Curie Systems Biology Leads",
+        "focus": "Single-cell multiomics, epigenomic data lattices, and computational cancer biology",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Max Delbr\u00fcck Center for Molecular Medicine (MDC)",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "mdc-bioinfo@mdc-berlin.de",
+        "recipient_name": "MDC Bioinformatics Group",
+        "focus": "Systems biology of gene regulatory networks, medical genomics, and distributed computation",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Karolinska Institute Department of MBB",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "mbb-info@ki.se",
+        "recipient_name": "Karolinska MBB Directorate",
+        "focus": "Single-cell RNA transcriptomics, developmental biology, and computational genomics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "SciLifeLab (Science for Life Laboratory)",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "scilifelab-info@scilifelab.se",
+        "recipient_name": "SciLifeLab Directorate",
+        "focus": "National molecular bioscience infrastructure, high-throughput sequencing, and data driven life science",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "VIB-UGent Center for Plant Systems Biology",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "vib-sysbio@vib-ugent.be",
+        "recipient_name": "VIB-UGent Directorate",
+        "focus": "Synthetic biology circuits, comparative genomics, and metabolic pathway engineering",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "CRG Centre for Genomic Regulation Barcelona",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "crg-info@crg.eu",
+        "recipient_name": "CRG Strategic Partnerships",
+        "focus": "Genome architecture, quantitative biology, and high-performance computational genomics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Cold Spring Harbor Laboratory (CSHL) Genomics",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "cshl-genomics@cshl.edu",
+        "recipient_name": "CSHL Genomics Directorate",
+        "focus": "Quantitative biology, plant and mammalian epigenomics, and CRISPR technologies",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "The Jackson Laboratory (JAX) Computational Biology",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "jax-compbio@jax.org",
+        "recipient_name": "JAX Computational Biology Faculty",
+        "focus": "Mammalian genetics, single-cell genomics modeling, and distributed bioinformatics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Salk Institute for Biological Studies",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "salk-info@salk.edu",
+        "recipient_name": "Salk Scientific Directorate",
+        "focus": "Epigenomic regulation, plant synthetic biology, and high-throughput computational biology",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Gladstone Institutes Data Science & Biotechnology",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "gladstone-datasci@gladstone.ucsf.edu",
+        "recipient_name": "Gladstone Data Science Directorate",
+        "focus": "Cellular state reprograming, deep learning in genomics, and CRISPR base editing",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Allen Institute for Brain Science",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "info@alleninstitute.org",
+        "recipient_name": "Allen Institute Directorate",
+        "focus": "Massive-scale cell types database, spatial transcriptomics, and neural connectomics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Chan Zuckerberg Biohub",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "info@czbiohub.org",
+        "recipient_name": "CZ Biohub Leadership",
+        "focus": "Cell atlas projects, infectious disease genomics, and single-cell sequencing pipelines",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "New York Genome Center (NYGC)",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "info@nygenome.org",
+        "recipient_name": "NYGC Scientific Operations",
+        "focus": "Whole-genome sequencing, multimodal single-cell data integration, and genomic analytics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "HudsonAlpha Institute for Biotechnology",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "info@hudsonalpha.org",
+        "recipient_name": "HudsonAlpha Directorate",
+        "focus": "Genomic medicine, plant and sustainable agriculture genomics, and bioinformatics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Morgridge Institute for Research",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "info@morgridge.org",
+        "recipient_name": "Morgridge Institute Leadership",
+        "focus": "Regenerative biology, biomedical imaging, and high-throughput scientific computing",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "St. Jude Children's Research Hospital Computational Biology",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "compbio-info@stjude.org",
+        "recipient_name": "St. Jude CompBio Faculty",
+        "focus": "Genomic discovery, cloud-scale bioinformatics pipelines, and structural biology",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Janelia Research Campus (HHMI)",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "janelia-info@janelia.hhmi.org",
+        "recipient_name": "Janelia Scientific Leadership",
+        "focus": "Optical microscopy instrumentation, connectomics, and high-speed robotic image processing",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Oxford Big Data Institute (BDI)",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "bdi-info@bdi.ox.ac.uk",
+        "recipient_name": "Oxford BDI Directorate",
+        "focus": "Massive-scale epidemiological modeling, genomic datasets, and distributed machine learning",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Cambridge Stem Cell Institute",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "csci-info@stemcells.cam.ac.uk",
+        "recipient_name": "CSCI Cambridge Directorate",
+        "focus": "Pluripotency mechanisms, cellular reprogramming, and regenerative therapeutics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "EMBL Grenoble Structural Biology",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "embl-grenoble@embl.fr",
+        "recipient_name": "EMBL Grenoble Head of Outstation",
+        "focus": "Cryo-EM, automated crystallographic beamline robotics, and macromolecular complexes",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "EMBL Rome Epigenetics & Neurobiology",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "embl-rome@embl.it",
+        "recipient_name": "EMBL Rome Directorate",
+        "focus": "Chromatin architecture, neural circuit mapping, and epigenetic inheritance",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "EMBL Barcelona Tissue Biology",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "embl-barcelona@embl.es",
+        "recipient_name": "EMBL Barcelona Directorate",
+        "focus": "Organoid engineering, 3D bio-imaging, and computer modeling of morphogenesis",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "MPI-CBG Molecular Cell Biology & Genetics Dresden",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "mpi-cbg@mpi-cbg.de",
+        "recipient_name": "MPI-CBG Board of Directors",
+        "focus": "Phase separation in cell biology, automated high-throughput screening, and developmental mechanics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "MPI-IE Immunobiology & Epigenetics Freiburg",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "mpi-ie@ie-freiburg.mpg.de",
+        "recipient_name": "MPI-IE Managing Directorate",
+        "focus": "Chromatin modifications, transcriptional regulation, and epigenetic signaling networks",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "MPI of Biochemistry Munich",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "mpi-biochem@biochem.mpg.de",
+        "recipient_name": "MPI Biochem Directorate",
+        "focus": "Structural biology, mass spectrometry proteomics, and molecular machines",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Institute of Molecular Biotechnology (IMBA) Vienna",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "imba-info@imba.oeaw.ac.at",
+        "recipient_name": "IMBA Scientific Directorate",
+        "focus": "Organoid modeling, stem cell biology, and functional genomic discovery",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Research Institute of Molecular Pathology (IMP) Vienna",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "imp-info@imp.ac.at",
+        "recipient_name": "IMP Scientific Director",
+        "focus": "Gene expression, structural biochemistry, and neural circuits modeling",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "CeMM Research Center for Molecular Medicine Vienna",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "cemm-info@cemm.oeaw.ac.at",
+        "recipient_name": "CeMM Administrative Directorate",
+        "focus": "Chemical biology, precision medicine genomics, and network biology",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Friedrich Miescher Institute (FMI) Basel",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "fmi-info@fmi.ch",
+        "recipient_name": "FMI Basel Directorate",
+        "focus": "Epigenetics, neurobiology, and quantitative biology models",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Swiss Institute of Bioinformatics (SIB)",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "sib-info@sib.swiss",
+        "recipient_name": "SIB Swiss Bioinformatics Directorate",
+        "focus": "Biological data infrastructure, federated databases, and computational biology",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Center for Integrative Genomics (CIG) Lausanne",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "cig-info@unil.ch",
+        "recipient_name": "CIG UNIL Directorate",
+        "focus": "Functional genomics, circadian gene expression lattices, and systems physiology",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Hubrecht Institute Utrecht",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "hubrecht-info@hubrecht.eu",
+        "recipient_name": "Hubrecht Institute Directorate",
+        "focus": "Developmental biology, single-cell sequencing technologies, and stem cell dynamics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Netherlands Cancer Institute (NKI)",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "nki-info@nki.nl",
+        "recipient_name": "NKI Scientific Directorate",
+        "focus": "Functional genetic screens, structural biology, and computational oncology",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Princess M\u00e1xima Center Utrecht",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "maxima-info@prinsesmaximacentrum.nl",
+        "recipient_name": "Princess M\u00e1xima Research Board",
+        "focus": "Pediatric oncology genomics, organoid modeling, and immunotherapy targets",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Flanders Institute for Biotechnology (VIB)",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "vib-info@vib.be",
+        "recipient_name": "VIB Managing Directorate",
+        "focus": "Biotechnology research, plant synthetic biology, and computational single-cell biology",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "de Duve Institute Brussels",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "deduve-info@uclouvain.be",
+        "recipient_name": "de Duve Directorate",
+        "focus": "Cellular biochemistry, tumor immunology, and genetic disease mechanisms",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Institut Gustave Roussy France",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "gustaveroussy-info@gustaveroussy.fr",
+        "recipient_name": "Gustave Roussy Research Directorate",
+        "focus": "Translational cancer genomics, immunotherapy, and biobanking infrastructure",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "IGBMC Strasbourg France",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "igbmc-info@igbmc.fr",
+        "recipient_name": "IGBMC Directorate",
+        "focus": "Integrative structural biology, functional genomics, and biomedical diagnostics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "IBENS Paris (Biology Institute of ENS)",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "ibens-info@biologie.ens.fr",
+        "recipient_name": "IBENS Directorate",
+        "focus": "Computational neuroscience, functional genomics, and evolutionary systems biology",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Institut Cochin Paris",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "cochin-info@inserm.fr",
+        "recipient_name": "Institut Cochin Directorate",
+        "focus": "Endocrinology, cell biology, and molecular genetics of human diseases",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "European Institute of Oncology (IEO) Milan",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "ieo-info@ieo.it",
+        "recipient_name": "IEO Scientific Directorate",
+        "focus": "Molecular oncology, epigenetic modifications, and clinical genomic profiling",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "IFOM Institute of Molecular Oncology Milan",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "ifom-info@ifom.eu",
+        "recipient_name": "IFOM Scientific Directorate",
+        "focus": "DNA repair mechanisms, spatial genomics, and cellular mechanobiology",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "San Raffaele SR-Tiget Milan",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "tiget-info@hsr.it",
+        "recipient_name": "SR-Tiget Directorate",
+        "focus": "Gene therapy, lentiviral vectors, and targeted epigenetic genome editing",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "National Cancer Research Center (CNIO) Madrid",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "cnio-info@cnio.es",
+        "recipient_name": "CNIO Scientific Directorate",
+        "focus": "Genomic instability, molecular therapeutics, and structural biology",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "IRB Barcelona (Institute for Research in Biomedicine)",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "irb-info@irbbarcelona.org",
+        "recipient_name": "IRB Barcelona Directorate",
+        "focus": "Mechanisms of disease, structural bioinformatics, and chemical biology",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Champalimaud Centre for the Unknown Lisbon",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "champalimaud-info@fchampalimaud.org",
+        "recipient_name": "Champalimaud Foundation Board",
+        "focus": "Systems neuroscience, neural behavioral swarms, and clinical oncology",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Gulbenkian Institute of Science (IGC)",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "igc-info@igc.gulbenkian.pt",
+        "recipient_name": "IGC Scientific Directorate",
+        "focus": "Evolutionary genomics, host-pathogen interactions, and cell biology",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "RIKEN Center for Integrative Medical Sciences (IMS)",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "ims-info@riken.jp",
+        "recipient_name": "RIKEN IMS Directorate",
+        "focus": "Genomic medicine, immunogenetics, and high-throughput transcriptomics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "RIKEN Center for Biosystems Dynamics Research (BDR)",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "bdr-info@riken.jp",
+        "recipient_name": "RIKEN BDR Directorate",
+        "focus": "Organismal developmental dynamics, molecular kinetics, and synthetic biology",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Genome Institute of Singapore (GIS)",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "gis-info@gis.a-star.edu.sg",
+        "recipient_name": "GIS Executive Directorate",
+        "focus": "Human genomics, functional genomics, and single-cell sequencing technologies",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Institute of Molecular and Cell Biology (IMCB) Singapore",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "imcb-info@imcb.a-star.edu.sg",
+        "recipient_name": "IMCB A*STAR Directorate",
+        "focus": "Cell signaling, disease models, and translational synthetic biology",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Bioinformatics Institute (BII) Singapore",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "bii-info@bii.a-star.edu.sg",
+        "recipient_name": "BII A*STAR Directorate",
+        "focus": "Computational biology, biomolecular modeling, and deep learning for life sciences",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "CSIRO Health & Biosecurity Australia",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "csiro-health@csiro.au",
+        "recipient_name": "CSIRO Health Directorate",
+        "focus": "Digital health, disease surveillance, and synthetic biology applications",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Walter & Eliza Hall Institute (WEHI) Melbourne",
+        "domain": "Synthetic Biology & Epigenomics",
+        "contact_email": "wehi-info@wehi.edu.au",
+        "recipient_name": "WEHI Directorate",
+        "focus": "Immunology, cancer biology, and computational genomic discovery",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
     }
 ]
 
