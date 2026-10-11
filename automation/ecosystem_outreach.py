@@ -6528,6 +6528,402 @@ MASTER_LEAD_POOL = [
         "focus": "FORTH-ICS heritage, computer architectures, and distributed systems",
         "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
         "priority": "HIGH"
+    },
+    {
+        "org": "University of Tokyo IST",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "is-info@i.u-tokyo.ac.jp",
+        "recipient_name": "UTokyo IST Dean",
+        "focus": "Humanoid robotics (JSK lab heritage), autonomous driving, and cyber-physical systems",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Kyoto University Informatics",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "informatics-info@i.kyoto-u.ac.jp",
+        "recipient_name": "Kyoto Informatics Dean",
+        "focus": "Quantum information, theoretical computer science, and complex dynamical systems",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Tokyo Tech School of Computing",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "comp-info@c.titech.ac.jp",
+        "recipient_name": "Tokyo Tech Computing Dean",
+        "focus": "TSUBAME supercomputing, large-scale deep learning, and graph algorithms",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Nagoya University Informatics",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "i-info@i.nagoya-u.ac.jp",
+        "recipient_name": "Nagoya Informatics Dean",
+        "focus": "Automotive software engineering, formal methods, and dependable embedded systems",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Kyushu University ISEE",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "isee-info@isee.kyushu-u.ac.jp",
+        "recipient_name": "Kyushu ISEE Dean",
+        "focus": "System LSI, computer architecture, and distributed algorithmics",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Hokkaido University Graduate School of IST",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "ist-info@ist.hokudai.ac.jp",
+        "recipient_name": "Hokkaido IST Dean",
+        "focus": "Complex systems, bio-information, and theoretical computation",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Tsukuba Pure & Applied Sciences",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "pas-info@pas.tsukuba.ac.jp",
+        "recipient_name": "Tsukuba PAS Chair",
+        "focus": "Quantum information science, semiconductor physics, and grid computing",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "NAIST Information Science",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "is-info@is.naist.jp",
+        "recipient_name": "NAIST IS Dean",
+        "focus": "Computational linguistics, robotics learning, and distributed middleware",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "JAIST Information Science",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "is-info@jaist.ac.jp",
+        "recipient_name": "JAIST IS Dean",
+        "focus": "Formal verification, constructive logic, and software security",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Waseda University FSE",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "fse-info@fse.waseda.jp",
+        "recipient_name": "Waseda FSE Dean",
+        "focus": "WABOT humanoid robotics heritage, biomechatronics, and smart IoT",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Keio University Science and Technology",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "st-info@st.keio.ac.jp",
+        "recipient_name": "Keio ST Dean",
+        "focus": "JUNET/WIDE internet heritage, distributed computing, and autonomic networks",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "AIST Information Tech and Human Factors",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "aist-info@aist.go.jp",
+        "recipient_name": "AIST Director General",
+        "focus": "OpenHRP humanoid robotics, cyber-physical security, and standards",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "KAIST School of Computing",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@cs.kaist.ac.kr",
+        "recipient_name": "KAIST CS Head",
+        "focus": "Distributed systems, network virtualization, and secure operating systems",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Korea University Department of CSE",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "cse-info@korea.ac.kr",
+        "recipient_name": "Korea Univ CSE Chair",
+        "focus": "Information security, software engineering, and database systems",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "SKKU College of Computing",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "computing-info@skku.edu",
+        "recipient_name": "SKKU Computing Dean",
+        "focus": "Decentralized consensus, mobile computing, and intelligent systems",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UNIST School of CS and Engineering",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "cse-info@unist.ac.kr",
+        "recipient_name": "UNIST CSE Dean",
+        "focus": "Next-generation computing, data analytics, and computational science",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "DGIST Department of EECS",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "eecs-info@dgist.ac.kr",
+        "recipient_name": "DGIST EECS Head",
+        "focus": "Cyber-physical systems, autonomous robotics, and sensor networks",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "GIST School of EECS",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "eecs-info@gist.ac.kr",
+        "recipient_name": "GIST EECS Dean",
+        "focus": "Optical telecommunications, quantum information, and machine learning",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Hanyang University CSE",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cse-info@hanyang.ac.kr",
+        "recipient_name": "Hanyang CSE Chair",
+        "focus": "Cloud computing, embedded systems, and network protocols",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "National Taiwan University CSIE",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "csie-info@csie.ntu.edu.tw",
+        "recipient_name": "NTU CSIE Chair",
+        "focus": "Distributed algorithms, theoretical computer science, and network systems",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "National Tsing Hua University CS",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "cs-info@cs.nthu.edu.tw",
+        "recipient_name": "NTHU CS Chair",
+        "focus": "Formal verification, software engineering, and information security",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "National Yang Ming Chiao Tung University CS",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "cs-info@cs.nycu.edu.tw",
+        "recipient_name": "NYCU CS Dean",
+        "focus": "VLSI design, artificial intelligence, and parallel computing architectures",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "National Cheng Kung University CSIE",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "csie-info@csie.ncku.edu.tw",
+        "recipient_name": "NCKU CSIE Chair",
+        "focus": "Embedded systems, autonomous robotics, and medical informatics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Academia Sinica Institute of Information Science",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "iis-info@iis.sinica.edu.tw",
+        "recipient_name": "Academia Sinica IIS Director",
+        "focus": "Quantum algorithms, bioinformatics, and theoretical computer science",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Academia Sinica CITI",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "citi-info@citi.sinica.edu.tw",
+        "recipient_name": "Academia Sinica CITI Director",
+        "focus": "Cryptographic protocols, post-quantum security, and wireless networks",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "National Central University CSIE",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "csie-info@csie.ncu.edu.tw",
+        "recipient_name": "NCU CSIE Chair",
+        "focus": "Software engineering, distributed systems, and network multimedia",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "National Sun Yat-sen University CSE",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cse-info@cse.nsysu.edu.tw",
+        "recipient_name": "NSYSU CSE Chair",
+        "focus": "Marine robotics, sensor networks, and computer architectures",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "National Taiwan University of Science & Tech CSIE",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@csie.ntust.edu.tw",
+        "recipient_name": "Taiwan Tech CSIE Chair",
+        "focus": "Information security, mobile networks, and software engineering",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "National Taipei University of Tech CSIE",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "cs-info@csie.ntut.edu.tw",
+        "recipient_name": "Taipei Tech CSIE Chair",
+        "focus": "Cloud computing, internet of things, and artificial intelligence",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "City University of Macau Faculty of Innovation",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "fod-info@cityu.edu.mo",
+        "recipient_name": "CityU Macau Dean",
+        "focus": "Smart city technologies, design robotics, and sustainable IoT",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Macau Faculty of Science & Tech",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "fst-info@um.edu.mo",
+        "recipient_name": "UMacau FST Dean",
+        "focus": "State Key Lab analog microelectronics, Internet of Things, and distributed systems",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Macau University of Science & Tech FIE",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "fie-info@must.edu.mo",
+        "recipient_name": "MUST FIE Dean",
+        "focus": "Artificial intelligence, space science computing, and intelligent systems",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "VinUniversity College of Engineering & CS",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "cecs-info@vinuni.edu.vn",
+        "recipient_name": "VinUni CECS Dean",
+        "focus": "Smart health, autonomous driving, and cutting-edge machine learning",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Hanoi University of Science and Tech SOICT",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "soict-info@soict.hust.edu.vn",
+        "recipient_name": "HUST SOICT Dean",
+        "focus": "Software engineering, cybersecurity, and distributed data systems",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Vietnam National University HUS",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "hus-info@hus.vnu.edu.vn",
+        "recipient_name": "VNU HUS Rector",
+        "focus": "Theoretical physics, applied mathematics, and computational modeling",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "VNU University of Engineering and Tech UET",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "uet-info@uet.vnu.edu.vn",
+        "recipient_name": "VNU UET Rector",
+        "focus": "Robotics automation, nano-electronics, and embedded control",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Chulalongkorn University Computer Engineering",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cp-info@cp.eng.chula.ac.th",
+        "recipient_name": "Chula CP Head",
+        "focus": "High-performance computing, network protocols, and distributed databases",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Kasetsart University Computer Engineering",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "cpe-info@cpe.ku.ac.th",
+        "recipient_name": "KU CPE Head",
+        "focus": "Intelligent systems, software engineering, and sensor networks",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "KMITL Computer Engineering",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "ce-info@ce.kmitl.ac.th",
+        "recipient_name": "KMITL CE Head",
+        "focus": "Robotics and automation, telecommunications, and computer systems",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Universiti Malaya Faculty of CS & IT",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "fsktm-info@um.edu.my",
+        "recipient_name": "UM FSKTM Dean",
+        "focus": "Software engineering, computer networks, and artificial intelligence",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Universiti Teknologi Malaysia Computing",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "computing-info@utm.my",
+        "recipient_name": "UTM Computing Dean",
+        "focus": "Informatics, cyber-physical systems, and data engineering",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Universiti Sains Malaysia CS",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "cs-info@cs.usm.my",
+        "recipient_name": "USM CS Dean",
+        "focus": "Parallel and distributed computing, computational intelligence, and cybersecurity",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Universiti Putra Malaysia FSKTM",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "fsktm-info@upm.edu.my",
+        "recipient_name": "UPM FSKTM Dean",
+        "focus": "Wireless networks, parallel computing, and computer security",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "NUST SEECS",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "seecs-info@seecs.nust.edu.pk",
+        "recipient_name": "NUST SEECS Principal",
+        "focus": "Information security, cryptography, and artificial intelligence",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
     }
 ]
 
