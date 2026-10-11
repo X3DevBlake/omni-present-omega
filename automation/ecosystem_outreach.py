@@ -8499,7 +8499,7 @@ MASTER_LEAD_POOL = [
         "focus": "Autonomous robotics, real-time control HAL, and distributed cybernetics",
         "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
         "priority": "HIGH"
-    },,
+    },
     {
         "org": "Technical University of Munich School of Computation, Information and Technology (CIT)",
         "domain": "Cyber-Physical Robotics & HAL",
