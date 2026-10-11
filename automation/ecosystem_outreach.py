@@ -7293,6 +7293,456 @@ MASTER_LEAD_POOL = [
         "focus": "Computational science, remote sensing, and distributed sensor networks",
         "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
         "priority": "HIGH"
+    },
+    {
+        "org": "UNICAMP Mechanical Engineering & Mechatronics",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "fem-info@fem.unicamp.br",
+        "recipient_name": "UNICAMP FEM Dean",
+        "focus": "Robotics mechatronics, control systems, and biomechanics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UFRJ COPPE Systems Engineering",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "coppe-info@coppe.ufrj.br",
+        "recipient_name": "UFRJ COPPE Director",
+        "focus": "Parallel computing, computational methods, and system engineering",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UFSC Informatics & Statistics",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "ine-info@inf.ufsc.br",
+        "recipient_name": "UFSC INE Head",
+        "focus": "Software engineering, formal verification, and distributed systems",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UFRGS Informatics Institute",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "inf-info@inf.ufrgs.br",
+        "recipient_name": "UFRGS INF Director",
+        "focus": "Embedded systems, computer networks, and microelectronics",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UFPE Center of Informatics CIN",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "cin-info@cin.ufpe.br",
+        "recipient_name": "UFPE CIN Director",
+        "focus": "Artificial intelligence, computer vision, and cryptographic software",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Bras\u00edlia UnB Computer Science",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cic-info@cic.unb.br",
+        "recipient_name": "UnB CIC Head",
+        "focus": "Robotics automation, theoretical computer science, and data networks",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UFPR Department of Informatics",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "dinf-info@inf.ufpr.br",
+        "recipient_name": "UFPR DInf Head",
+        "focus": "Distributed algorithms, high-performance computing, and computer security",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "PUC Chile School of Engineering",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "ing-info@ing.puc.cl",
+        "recipient_name": "PUC Chile Engineering Dean",
+        "focus": "Mathematical modeling, cyber-physical infrastructure, and computational science",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Concepci\u00f3n Department of CS",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "di-info@inf.udec.cl",
+        "recipient_name": "UdeC DI Head",
+        "focus": "Data science, artificial intelligence, and software engineering",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UTFSM Department of Informatics",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "inf-info@inf.utfsm.cl",
+        "recipient_name": "UTFSM Informatics Director",
+        "focus": "Dependable software systems, computer networks, and data analytics",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UdelaR Institute of Computing InCo",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "inco-info@fing.edu.uy",
+        "recipient_name": "UdelaR InCo Director",
+        "focus": "High-performance computing, distributed algorithms, and formal semantics",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UniAndes Systems and Computing Engineering",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "sisc-info@uniandes.edu.co",
+        "recipient_name": "UniAndes SISC Chair",
+        "focus": "Cloud architectures, cybersecurity, and intelligent software systems",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UNAL Systems and Industrial Engineering",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "disi-info@unal.edu.co",
+        "recipient_name": "UNAL DISI Director",
+        "focus": "Complex systems, optimization, and software architecture",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Antioquia Faculty of Engineering",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "decanaturaing-info@udea.edu.co",
+        "recipient_name": "UdeA Engineering Dean",
+        "focus": "Robotics kinematics, automation, and bioengineering systems",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "PUJ Javeriana Computer Science",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "dcc-info@javeriana.edu.co",
+        "recipient_name": "Javeriana DCC Chair",
+        "focus": "Formal verification, information security, and software architecture",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Costa Rica ECCI",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "ecci-info@ecci.ucr.cr",
+        "recipient_name": "UCR ECCI Director",
+        "focus": "Distributed networks, bioinformatics, and computing theory",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Wits School of Electrical & Info Engineering",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "eie-info@wits.ac.za",
+        "recipient_name": "Wits EIE Head",
+        "focus": "Telecommunications, robotics control, and machine intelligence",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Johannesburg Applied IS",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "dais-info@uj.ac.za",
+        "recipient_name": "UJ DAIS Head",
+        "focus": "4th industrial revolution, cyber security, and intelligent systems",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Rhodes University Department of CS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@cs.ru.ac.za",
+        "recipient_name": "Rhodes CS Head",
+        "focus": "Mobile networks, computer security, and distributed multimedia",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Nelson Mandela University Computing Sciences",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "cs-info@mandela.ac.za",
+        "recipient_name": "NMU CS Head",
+        "focus": "Security engineering, automated assessment, and computational thinking",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Nairobi SCI",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "sci-info@uonbi.ac.ke",
+        "recipient_name": "UoN SCI Director",
+        "focus": "Distributed computing, financial technology, and mobile sensor networks",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Strathmore University @iLabAfrica",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "ilab-info@strathmore.edu",
+        "recipient_name": "@iLabAfrica Director",
+        "focus": "IoT research, artificial intelligence, and digital innovation",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Makerere University CoCIS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cocis-info@cis.mak.ac.ug",
+        "recipient_name": "Makerere CoCIS Principal",
+        "focus": "Artificial intelligence in health, software engineering, and networking",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Ibadan Department of CS",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "cs-info@sci.ui.edu.ng",
+        "recipient_name": "UI CS Head",
+        "focus": "Algorithms, computer security, and information systems",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Lagos Department of CS",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "cs-info@unilag.edu.ng",
+        "recipient_name": "UNILAG CS Head",
+        "focus": "Machine learning, network systems, and software engineering",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Covenant University Department of CIS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cis-info@covenantuniversity.edu.ng",
+        "recipient_name": "Covenant CIS Head",
+        "focus": "Cybersecurity, mobile computing, and intelligent data systems",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Ashesi University Computer Science",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "cs-info@ashesi.edu.gh",
+        "recipient_name": "Ashesi CS Head",
+        "focus": "Ethical AI, software architectures, and distributed systems",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "KNUST Department of Computer Science",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cs-info@knust.edu.gh",
+        "recipient_name": "KNUST CS Head",
+        "focus": "Telecommunications, robotics automation, and embedded systems",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Addis Ababa University AAIT SITE",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "site-info@aait.edu.et",
+        "recipient_name": "AAIT SITE Dean",
+        "focus": "Software engineering, computer networks, and telecommunications",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Rwanda College of Science and Tech",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "cst-info@ur.ac.rw",
+        "recipient_name": "UR CST Principal",
+        "focus": "Applied physics, mathematics, and high-performance computing",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "King Abdulaziz University FCIT",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "fcit-info@kau.edu.sa",
+        "recipient_name": "KAU FCIT Dean",
+        "focus": "Aziz supercomputer, high-performance computing, and cybersecurity",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Imam Abdulrahman Bin Faisal University CCSIT",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "ccsit-info@iau.edu.sa",
+        "recipient_name": "IAU CCSIT Dean",
+        "focus": "Computer networks, information security, and cloud systems",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Princess Nourah University CCIS",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "ccis-info@pnu.edu.sa",
+        "recipient_name": "PNU CCIS Dean",
+        "focus": "Cybersecurity, data science, and formal system verification",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Qatar University College of Engineering CSE",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cse-info@qu.edu.qa",
+        "recipient_name": "QU CSE Head",
+        "focus": "Autonomous robotics, computer engineering, and wireless networks",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Hamad Bin Khalifa University CSE",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "cse-info@hbku.edu.qa",
+        "recipient_name": "HBKU CSE Dean",
+        "focus": "Artificial intelligence, computational health, and cybersecurity",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Sultan Qaboos University Department of CS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@squ.edu.om",
+        "recipient_name": "SQU CS Head",
+        "focus": "Database systems, network architectures, and information security",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Kuwait University CCSE",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "ccse-info@ku.edu.kw",
+        "recipient_name": "KU CCSE Acting Dean",
+        "focus": "Computer engineering, information sciences, and formal verification",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Jordan KASIT",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "it-info@ju.edu.jo",
+        "recipient_name": "UJ KASIT Dean",
+        "focus": "Artificial intelligence, computer networks, and business informatics",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "JUST Faculty of Computer & IT",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cit-info@just.edu.jo",
+        "recipient_name": "JUST CIT Dean",
+        "focus": "Embedded systems, autonomous robotics, and network security",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "AUB Maroun Semaan FEA ECE",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "ece-info@aub.edu.lb",
+        "recipient_name": "AUB ECE Chair",
+        "focus": "Applied electromagnetics, communications, and cryptographic systems",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "LAU Department of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@lau.edu.lb",
+        "recipient_name": "LAU CS Chair",
+        "focus": "Distributed algorithms, cryptography, and computer graphics",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Bilkent UNAM Nanotechnology Research Center",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "unam-info@unam.bilkent.edu.tr",
+        "recipient_name": "UNAM Director",
+        "focus": "Nanophotonics, quantum materials, and optoelectronic devices",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "METU Center for Robotics & AI",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "robotics-info@metu.edu.tr",
+        "recipient_name": "METU ROMER Director",
+        "focus": "Mobile robotics, multi-robot systems, and cognitive control",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Bo\u011fazi\u00e7i TETAM Center",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "tetam-info@boun.edu.tr",
+        "recipient_name": "TETAM Director",
+        "focus": "Telecommunications networks, cloud computing, and cybersecurity",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Ko\u00e7 University KUIS AI Center",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "ai-info@ku.edu.tr",
+        "recipient_name": "KUIS AI Director",
+        "focus": "Deep learning, natural language processing, and medical imaging",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Sabanc\u0131 VERIM Data Analytics Center",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "verim-info@sabanciuniv.edu",
+        "recipient_name": "VERIM Director",
+        "focus": "Data analytics, blockchain systems, and formal verification",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Istanbul University Computer Engineering",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "bilgisayar-info@istanbul.edu.tr",
+        "recipient_name": "IU CE Department Head",
+        "focus": "Operating systems, database architectures, and distributed networking",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Hacettepe University Computer Engineering",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cs-info@cs.hacettepe.edu.tr",
+        "recipient_name": "Hacettepe CS Chair",
+        "focus": "Computer vision, robotics, and high-performance computing",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Ankara University Computer Engineering",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "comp-info@eng.ankara.edu.tr",
+        "recipient_name": "Ankara Univ CE Chair",
+        "focus": "Algorithms, computational physics, and intelligent systems",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Gebze Technical University Computer Engineering",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "bilgisayar-info@gtu.edu.tr",
+        "recipient_name": "GTU CE Department Head",
+        "focus": "Software architectures, wireless sensor networks, and computer security",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
     }
 ]
 
