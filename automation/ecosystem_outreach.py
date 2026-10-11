@@ -6924,6 +6924,375 @@ MASTER_LEAD_POOL = [
         "focus": "Information security, cryptography, and artificial intelligence",
         "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
         "priority": "HIGH"
+    },
+    {
+        "org": "York University Lassonde School of Engineering EECS",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "eecs-info@eecs.yorku.ca",
+        "recipient_name": "York Lassonde EECS Chair",
+        "focus": "Space robotics, autonomous navigation, and vision systems",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Manitoba Department of CS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@cs.umanitoba.ca",
+        "recipient_name": "UManitoba CS Head",
+        "focus": "Autonomous agents, human-robot interaction, and distributed networks",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Saskatchewan Department of CS",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "cs-info@cs.usask.ca",
+        "recipient_name": "USask CS Head",
+        "focus": "Software analytics, computational biology, and intelligent agents",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Concordia University Gina Cody School CSE",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "cse-info@concordia.ca",
+        "recipient_name": "Concordia CSE Chair",
+        "focus": "Information systems security, formal verification, and software engineering",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "\u00c9cole de technologie sup\u00e9rieure \u00c9TS Montreal",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "ets-info@etsmtl.ca",
+        "recipient_name": "\u00c9TS Director of Research",
+        "focus": "Industrial robotics, aerospace systems, and telecommunications",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Universit\u00e9 Laval Department of IFT",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "ift-info@ift.ulaval.ca",
+        "recipient_name": "ULaval IFT Director",
+        "focus": "Statistical machine learning, software engineering, and robotics",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Bristol School of Computer Science",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "sceem-info@bristol.ac.uk",
+        "recipient_name": "Bristol CS Head",
+        "focus": "Quantum photonics, cryptography, and microelectronics architectures",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Southampton School of ECS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "ecs-info@ecs.soton.ac.uk",
+        "recipient_name": "Southampton ECS Head",
+        "focus": "Web science, pervasive computing, and optical communications",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Birmingham School of Computer Science",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "cs-info@cs.bham.ac.uk",
+        "recipient_name": "Birmingham CS Head",
+        "focus": "Theory of computation, formal verification, and cybersecurity",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Sheffield Department of CS",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "dcs-info@sheffield.ac.uk",
+        "recipient_name": "Sheffield CS Head",
+        "focus": "Natural language processing, autonomous robotics, and computational biology",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Leeds School of Computing",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "comp-info@leeds.ac.uk",
+        "recipient_name": "Leeds Computing Head",
+        "focus": "Distributed algorithms, computational geometry, and visualization",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Nottingham School of Computer Science",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "cs-info@nottingham.ac.uk",
+        "recipient_name": "Nottingham CS Head",
+        "focus": "Functional programming, type theory, and human-computer systems",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Newcastle University School of Computing",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@newcastle.ac.uk",
+        "recipient_name": "Newcastle Computing Head",
+        "focus": "Dependable systems (Brian Randell heritage), cloud computing, and cybersecurity",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Warwick Department of Computer Science",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "dcs-info@dcs.warwick.ac.uk",
+        "recipient_name": "Warwick CS Head",
+        "focus": "Theory of computation, algorithm design, and quantum computing",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Queen Mary University of London EECS",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "eecs-info@qmul.ac.uk",
+        "recipient_name": "QMUL EECS Head",
+        "focus": "Cognitive science, audio engineering, and distributed AI",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "King's College London Department of Informatics",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "inf-info@kcl.ac.uk",
+        "recipient_name": "KCL Informatics Head",
+        "focus": "Autonomous systems, medical robotics, and formal cybersecurity",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Lancaster University School of Computing and Comms",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "scc-info@lancaster.ac.uk",
+        "recipient_name": "Lancaster SCC Head",
+        "focus": "Network architecture, distributed systems, and pervasive computing",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of York Department of Computer Science",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "cs-info@york.ac.uk",
+        "recipient_name": "York CS Head",
+        "focus": "Safety-critical systems, real-time architectures, and formal methods",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Bath Department of Computer Science",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "cs-info@bath.ac.uk",
+        "recipient_name": "Bath CS Head",
+        "focus": "Mathematical foundations, visual computing, and human-agent interaction",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Exeter Department of Computer Science",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "cs-info@exeter.ac.uk",
+        "recipient_name": "Exeter CS Head",
+        "focus": "Machine learning, optimization, and environmental data science",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of St Andrews School of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@st-andrews.ac.uk",
+        "recipient_name": "St Andrews CS Head",
+        "focus": "Distributed networks, human-computer interaction, and programming languages",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Glasgow School of Computing Science",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "socs-info@dcs.gla.ac.uk",
+        "recipient_name": "Glasgow CS Head",
+        "focus": "Formal modeling, information retrieval, and systems software",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Strathclyde CIS",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cis-info@strath.ac.uk",
+        "recipient_name": "Strathclyde CIS Head",
+        "focus": "Autonomous systems, industrial informatics, and information science",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Heriot-Watt University MACS",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "macs-info@hw.ac.uk",
+        "recipient_name": "Heriot-Watt MACS Head",
+        "focus": "National Robotarium, conversational AI, and actuarial mathematics",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Queen's University Belfast EEECS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "eeecs-info@qub.ac.uk",
+        "recipient_name": "QUB EEECS Head",
+        "focus": "Cybersecurity (CSIT heritage), data science, and telecommunications",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Cardiff University School of Computer Science",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "comsc-info@cardiff.ac.uk",
+        "recipient_name": "Cardiff COMSC Head",
+        "focus": "Informatics, visual computing, and cybersecurity analytics",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Swansea University Department of Computer Science",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "compsci-info@swansea.ac.uk",
+        "recipient_name": "Swansea CS Head",
+        "focus": "Foundational computer science, railway formal verification, and HCI",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Adelaide School of CMS",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cms-info@adelaide.edu.au",
+        "recipient_name": "Adelaide CMS Head",
+        "focus": "Australian Institute for Machine Learning AIML, computer vision, and robotics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Western Australia CSSE",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "csse-info@uwa.edu.au",
+        "recipient_name": "UWA CSSE Head",
+        "focus": "Mobile robotics, software engineering, and distributed data systems",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UTS Faculty of Engineering & IT",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "feit-info@uts.edu.au",
+        "recipient_name": "UTS FEIT Dean",
+        "focus": "Quantum software, artificial intelligence, and cyber security",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "RMIT School of Computing Technologies",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "sct-info@rmit.edu.au",
+        "recipient_name": "RMIT SCT Dean",
+        "focus": "Cloud and decentralized computing, cybersecurity, and data science",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Macquarie University School of Computing",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "comp-info@mq.edu.au",
+        "recipient_name": "Macquarie Computing Head",
+        "focus": "Cybersecurity, natural language processing, and formal system verification",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Wollongong SCIT",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "scit-info@uow.edu.au",
+        "recipient_name": "UOW SCIT Head",
+        "focus": "Information security, cryptography, and multimedia signal processing",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Queensland University of Technology CS",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "qut-info@qut.edu.au",
+        "recipient_name": "QUT CS Head",
+        "focus": "QUT Centre for Robotics, autonomous vision, and spatial intelligence",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Deakin University School of IT",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "sit-info@deakin.edu.au",
+        "recipient_name": "Deakin SIT Head",
+        "focus": "Applied artificial intelligence institute A2I2, cyber security, and IoT",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Swinburne University CS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@swinburne.edu.au",
+        "recipient_name": "Swinburne CS Chair",
+        "focus": "Software engineering, cybersecurity, and internet of things",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Curtin University EECS",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "eecs-info@curtin.edu.au",
+        "recipient_name": "Curtin EECS Head",
+        "focus": "Spatial sciences, embedded robotics, and computing infrastructure",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Griffith University School of ICT",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "ict-info@griffith.edu.au",
+        "recipient_name": "Griffith ICT Head",
+        "focus": "Artificial intelligence, big data analytics, and microelectronics",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "La Trobe University Computer Science",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "cs-info@latrobe.edu.au",
+        "recipient_name": "La Trobe CS Head",
+        "focus": "Mathematical modeling, cyber security, and data analytics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Flinders University CSE",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cse-info@flinders.edu.au",
+        "recipient_name": "Flinders CSE Dean",
+        "focus": "Autonomous marine systems, medical device technology, and robotics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Tasmania ICT",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "ict-info@utas.edu.au",
+        "recipient_name": "UTAS ICT Head",
+        "focus": "Computational science, remote sensing, and distributed sensor networks",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
     }
 ]
 
