@@ -8499,6 +8499,393 @@ MASTER_LEAD_POOL = [
         "focus": "Autonomous robotics, real-time control HAL, and distributed cybernetics",
         "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
         "priority": "HIGH"
+    },,
+    {
+        "org": "Technical University of Munich School of Computation, Information and Technology (CIT)",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "dekanat@cit.tum.de",
+        "recipient_name": "TUM CIT Dean",
+        "focus": "Autonomous robotics, cyber-physical systems, and formal methods",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "LMU Munich Department of Informatics",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "sekretariat@ifi.lmu.de",
+        "recipient_name": "LMU Informatics Chair",
+        "focus": "Distributed algorithms, database systems, and mobile networking",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "RWTH Aachen University Computer Science Department",
+        "domain": "SCION Path-Aware Protocols & Mesh Networks",
+        "contact_email": "info@informatik.rwth-aachen.de",
+        "recipient_name": "RWTH CS Chair",
+        "focus": "Path-aware network protocols, verified security, and operating systems",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Karlsruhe Institute of Technology (KIT) Department of Informatics",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "dekanat@informatik.kit.edu",
+        "recipient_name": "KIT Informatics Dean",
+        "focus": "Humanoid robotics, sensor fusion, and cyber-physical HAL",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "TU Berlin Faculty IV Electrical Engineering and Computer Science",
+        "domain": "Autonomous Swarm Protocols & Duty Cycles",
+        "contact_email": "dekanat@eecs.tu-berlin.de",
+        "recipient_name": "TU Berlin EECS Dean",
+        "focus": "Swarm intelligence, autonomous agents, and distributed computing",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Heidelberg University Department of Mathematics and Computer Science",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "dekanat-mathinf@uni-heidelberg.de",
+        "recipient_name": "Heidelberg Math/CS Dean",
+        "focus": "Mathematical modeling, theoretical computing, and quantum algorithms",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Bonn Computer Science Institute",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "verwaltung@cs.uni-bonn.de",
+        "recipient_name": "Bonn CS Chair",
+        "focus": "Autonomous robotics, computer vision, and cognitive systems",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "TU Darmstadt Department of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "dekanat@informatik.tu-darmstadt.de",
+        "recipient_name": "TU Darmstadt CS Dean",
+        "focus": "Cryptography, distributed software systems, and causal consistency",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Universidad Politécnica de Madrid ETSI Telecomunicación",
+        "domain": "SCION Path-Aware Protocols & Mesh Networks",
+        "contact_email": "direccion@etsit.upm.es",
+        "recipient_name": "UPM ETSIT Director",
+        "focus": "Next-generation network architectures, path routing, and wireless mesh",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Universitat Politècnica de Catalunya BarcelonaTech FIB",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "deganat.fib@upc.edu",
+        "recipient_name": "UPC FIB Dean",
+        "focus": "High-throughput distributed systems, CRDT lattices, and computer architecture",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Universidad Carlos III de Madrid Department of Computer Science",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "inf@inf.uc3m.es",
+        "recipient_name": "UC3M CS Chair",
+        "focus": "Robotics manipulation, real-time kinematics, and distributed control",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Politecnico di Torino Department of Control and Computer Engineering (DAUIN)",
+        "domain": "Autonomous Swarm Protocols & Duty Cycles",
+        "contact_email": "segreteria.dauin@polito.it",
+        "recipient_name": "PoliTo DAUIN Head",
+        "focus": "Autonomous swarm agents, control systems, and distributed ledger tech",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Sapienza University of Rome DIAG Department",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "direzione-diag@uniroma1.it",
+        "recipient_name": "Sapienza DIAG Director",
+        "focus": "Automation and robotics, geometric inverse kinematics, and artificial intelligence",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Bologna DISI Department",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "disi.segreteria@unibo.it",
+        "recipient_name": "Unibo DISI Director",
+        "focus": "Distributed algorithms, peer-to-peer lattices, and causal semantics",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Padua Department of Information Engineering (DEI)",
+        "domain": "SCION Path-Aware Protocols & Mesh Networks",
+        "contact_email": "direzione@dei.unipd.it",
+        "recipient_name": "UniPD DEI Director",
+        "focus": "Telecommunications networks, path-aware protocols, and quantum communications",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Pisa Department of Computer Science",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "segreteria@di.unipi.it",
+        "recipient_name": "UniPi CS Chair",
+        "focus": "Formal semantics, algorithm complexity, and high-performance computing",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Scuola Normale Superiore di Pisa Faculty of Sciences",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "presidenza.scienze@sns.it",
+        "recipient_name": "SNS Pisa Science Dean",
+        "focus": "Theoretical physics, quantum mechanics, and mathematical physics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Bern Institute of Computer Science (INF)",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "info@inf.unibe.ch",
+        "recipient_name": "UniBe INF Director",
+        "focus": "Distributed software, consensus protocols, and software composition",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Università della Svizzera italiana Faculty of Informatics (USI)",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "decanato.inf@usi.ch",
+        "recipient_name": "USI Informatics Dean",
+        "focus": "Dependable distributed systems, CRDT lattices, and software verification",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Warwick Department of Computer Science",
+        "domain": "Autonomous Swarm Protocols & Duty Cycles",
+        "contact_email": "dcs-enquiries@warwick.ac.uk",
+        "recipient_name": "Warwick CS Head",
+        "focus": "Multi-agent systems, theoretical computing, and autonomous coordination",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Glasgow School of Computing Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "school-office@dcs.gla.ac.uk",
+        "recipient_name": "Glasgow Computing Head",
+        "focus": "Distributed computing, formal programming languages, and networked systems",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Sheffield Department of Computer Science",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "com-enquiries@sheffield.ac.uk",
+        "recipient_name": "Sheffield CS Head",
+        "focus": "Autonomous robotics, bio-inspired algorithms, and testing verification",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Birmingham School of Computer Science",
+        "domain": "Autonomous Swarm Protocols & Duty Cycles",
+        "contact_email": "info@cs.bham.ac.uk",
+        "recipient_name": "Birmingham CS Head",
+        "focus": "Security and privacy, autonomous systems, and formal methods",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Queen Mary University of London School of EECS",
+        "domain": "SCION Path-Aware Protocols & Mesh Networks",
+        "contact_email": "info@eecs.qmul.ac.uk",
+        "recipient_name": "QMUL EECS Head",
+        "focus": "Next-generation networks, path-aware protocols, and multimedia communications",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Durham University Department of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs.office@durham.ac.uk",
+        "recipient_name": "Durham CS Head",
+        "focus": "Algorithms and complexity, scientific computing, and formal lattices",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Newcastle University School of Computing",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "cs.enquiries@newcastle.ac.uk",
+        "recipient_name": "Newcastle Computing Head",
+        "focus": "Cyber-physical systems, dependable distributed computing, and cloud architectures",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "McMaster University Department of Computing and Software",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cas@mcmaster.ca",
+        "recipient_name": "McMaster CAS Chair",
+        "focus": "Software engineering, formal verification, and distributed safety-critical systems",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Ottawa School of EECS",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "site@uottawa.ca",
+        "recipient_name": "uOttawa EECS Director",
+        "focus": "Autonomous robotics, telecommunications, and machine learning",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Western University Department of Computer Science",
+        "domain": "SCION Path-Aware Protocols & Mesh Networks",
+        "contact_email": "cs-dept@uwo.ca",
+        "recipient_name": "Western CS Chair",
+        "focus": "Distributed networks, algorithms, and cybersecurity",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Calgary Department of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cpsc@cpsc.ucalgary.ca",
+        "recipient_name": "Calgary CS Department Head",
+        "focus": "Distributed algorithms, high-assurance systems, and security",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Simon Fraser University School of Computing Science",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "cs-info@sfu.ca",
+        "recipient_name": "SFU CS Director",
+        "focus": "Computational robotics, computer vision, and distributed systems",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Dalhousie University Faculty of Computer Science",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "cs@cs.dal.ca",
+        "recipient_name": "Dalhousie CS Dean",
+        "focus": "Network communications, ocean data telemetry, and theoretical computing",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Victoria Department of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "csc@uvic.ca",
+        "recipient_name": "UVic CS Chair",
+        "focus": "Software architecture, distributed database systems, and algorithms",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Monash University Faculty of Information Technology",
+        "domain": "Autonomous Swarm Protocols & Duty Cycles",
+        "contact_email": "fit-enquiries@monash.edu",
+        "recipient_name": "Monash IT Dean",
+        "focus": "Swarm intelligence, cyber-security, and autonomous agent coordination",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Queensland School of ITEE",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "enquiries@itee.uq.edu.au",
+        "recipient_name": "UQ ITEE Head",
+        "focus": "Robotics and autonomous systems, sensor fusion, and cybernetics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Western Australia CSSE",
+        "domain": "SCION Path-Aware Protocols & Mesh Networks",
+        "contact_email": "admin-csse@uwa.edu.au",
+        "recipient_name": "UWA CSSE Head",
+        "focus": "Network security, distributed systems, and path routing protocols",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Adelaide School of Computer and Mathematical Sciences",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "maths.compsci@adelaide.edu.au",
+        "recipient_name": "Adelaide CMS Head",
+        "focus": "CRDT semilattices, formal methods, and Australian Institute for Machine Learning",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Technology Sydney (UTS) School of Computer Science",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "feit@uts.edu.au",
+        "recipient_name": "UTS CS Head",
+        "focus": "Centre for Autonomous Systems, Field robotics, and real-time HAL",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "RMIT University School of Computing Technologies",
+        "domain": "Autonomous Swarm Protocols & Duty Cycles",
+        "contact_email": "computingtechnologies@rmit.edu.au",
+        "recipient_name": "RMIT Computing Dean",
+        "focus": "Autonomous swarms, edge intelligence, and distributed cloud computing",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Hong Kong (HKU) Department of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "enquiry@cs.hku.hk",
+        "recipient_name": "HKU CS Head",
+        "focus": "Distributed algorithms, verifiable computing, and high-performance computing",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Hong Kong University of Science and Technology (HKUST) CSE Department",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "csdept@cse.ust.hk",
+        "recipient_name": "HKUST CSE Head",
+        "focus": "Autonomous robotics, geometric kinematics, and AI computer systems",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Hong Kong Polytechnic University (PolyU) Department of Computing",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "enquiry@comp.polyu.edu.hk",
+        "recipient_name": "PolyU Computing Head",
+        "focus": "Blockchain technology, causal CRDT semilattices, and distributed consensus",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "City University of Hong Kong (CityU) Department of Computer Science",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "cs@cityu.edu.hk",
+        "recipient_name": "CityU CS Head",
+        "focus": "Cloud computing, theoretical algorithms, and quantum information",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
     },
 ]
 
