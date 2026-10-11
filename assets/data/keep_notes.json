@@ -1,6 +1,6 @@
 {
   "user_email": "rgkdevx1@gmail.com",
-  "last_synced": "2026-10-11T16:00:29.855388+00:00",
+  "last_synced": "2026-10-11T16:04:28.607958+00:00",
   "notes": [
     {
       "id": "keep_610102b5",
@@ -2216,6 +2216,21 @@
       "created_at": "2026-10-11T16:00:29.855287+00:00",
       "updated_at": "2026-10-11T16:00:29.855287+00:00",
       "content": "Cockpit pitch ladder rendered at 60 FPS with roll angle damping."
+    },
+    {
+      "id": "keep_aa00a2ba",
+      "title": "\ud83e\udd16 6-DOF Pieper Decoupling Proof",
+      "type": "text",
+      "color": "cyan",
+      "pinned": false,
+      "author": "omni-keep-scratchpad-curator",
+      "tags": [
+        "#robotics",
+        "#kinematics"
+      ],
+      "created_at": "2026-10-11T16:04:28.607915+00:00",
+      "updated_at": "2026-10-11T16:04:28.607915+00:00",
+      "content": "Closed-form wrist center p_wc decoupled from orientation angles (theta4, theta5, theta6)."
     }
   ]
 }
