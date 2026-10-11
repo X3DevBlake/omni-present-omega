@@ -1,6 +1,6 @@
 {
   "user_email": "rgkdevx1@gmail.com",
-  "last_synced": "2026-10-10T22:22:30.507995+00:00",
+  "last_synced": "2026-10-11T00:47:27.332063+00:00",
   "notes": [
     {
       "id": "keep_610102b5",
@@ -2105,6 +2105,21 @@
       "created_at": "2026-10-10T22:22:30.507956+00:00",
       "updated_at": "2026-10-10T22:22:30.507956+00:00",
       "content": "Closed-form wrist center p_wc decoupled from orientation angles (theta4, theta5, theta6)."
+    },
+    {
+      "id": "keep_80cd7ab5",
+      "title": "\u26a1 QPU Optical Waveguide Calibration",
+      "type": "text",
+      "color": "blue",
+      "pinned": false,
+      "author": "omni-keep-scratchpad-curator",
+      "tags": [
+        "#quantum",
+        "#qpu"
+      ],
+      "created_at": "2026-10-11T00:47:27.331996+00:00",
+      "updated_at": "2026-10-11T00:47:27.331996+00:00",
+      "content": "16 waveguides stabilized at 99.4% gate fidelity for Grover search kernel."
     }
   ]
 }
