@@ -6204,6 +6204,330 @@ MASTER_LEAD_POOL = [
         "focus": "Computer security, human-robot interaction, and software engineering",
         "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
         "priority": "HIGH"
+    },
+    {
+        "org": "Trinity College Dublin SCSS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-enquiries@scss.tcd.ie",
+        "recipient_name": "TCD SCSS Directorate",
+        "focus": "Distributed systems, network security, and intelligent systems",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University College Dublin School of CS",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "cs-info@ucd.ie",
+        "recipient_name": "UCD CS Head",
+        "focus": "Cloud computing, data science, and complex adaptive systems",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Helsinki Department of CS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@cs.helsinki.fi",
+        "recipient_name": "UH CS Directorate",
+        "focus": "Linux kernel heritage, distributed algorithms, and edge AI",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Lund University Department of CS",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cs-info@cs.lth.se",
+        "recipient_name": "Lund CS Chair",
+        "focus": "Robotics kinematics, autonomous control, and software engineering",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Technical University of Denmark DTU Compute",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "compute-info@compute.dtu.dk",
+        "recipient_name": "DTU Compute Head",
+        "focus": "Cognitive systems, cyber-physical control, and scientific computing",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Radboud University ICIS",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "icis-info@cs.ru.nl",
+        "recipient_name": "ICIS Director",
+        "focus": "Digital security, model checking, and mathematical foundations",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Delft University of Technology EEMCS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "eemcs-info@tudelft.nl",
+        "recipient_name": "TU Delft EEMCS Dean",
+        "focus": "Decentralized consensus, blockchain scalability, and quantum computing",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Groningen Bernoulli Institute",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "bernoulli-info@rug.nl",
+        "recipient_name": "Bernoulli Institute Director",
+        "focus": "Autonomous systems, neural networks, and mathematical modeling",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Vrije Universiteit Amsterdam Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@few.vu.nl",
+        "recipient_name": "VU CS Chair",
+        "focus": "Minix OS heritage, large-scale distributed systems, and computer security",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Antwerp Department of CS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-info@uantwerpen.be",
+        "recipient_name": "UAntwerpen CS Head",
+        "focus": "Distributed and mobile systems, data science, and computational modeling",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Ghent University Applied Math & CS",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "tw06-info@ugent.be",
+        "recipient_name": "UGent TW06 Head",
+        "focus": "Applied cryptography, discrete mathematics, and computational science",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Vrije Universiteit Brussel Department of CS",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "dinf-info@vub.be",
+        "recipient_name": "VUB DINF Chair",
+        "focus": "Artificial intelligence lab heritage, multi-agent systems, and software languages",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Vienna Faculty of CS",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "informatik-info@univie.ac.at",
+        "recipient_name": "UniVie CS Dean",
+        "focus": "Scientific computing, neural networks, and security",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "TU Graz Faculty of CS & Biomedical Eng",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "csbme-info@tugraz.at",
+        "recipient_name": "TU Graz CSBME Dean",
+        "focus": "Hardware security (Spectre/Meltdown discovery), applied cryptography, and autonomous systems",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Innsbruck Department of CS",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "cs-info@uibk.ac.at",
+        "recipient_name": "UIBK CS Head",
+        "focus": "Quantum computing architectures, programming languages, and distributed systems",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Basel Department of Math & CS",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "dmi-info@unibas.ch",
+        "recipient_name": "UniBas DMI Head",
+        "focus": "Computational physics, high-performance computing, and algorithms",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Geneva Computer Science CUI",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "cui-info@unige.ch",
+        "recipient_name": "UNIGE CUI Director",
+        "focus": "Computer vision, robotics simulation, and distributed information systems",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "USI Universit\u00e0 della Svizzera italiana Faculty of Informatics",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "decanato-info@inf.usi.ch",
+        "recipient_name": "USI Informatics Dean",
+        "focus": "Distributed algorithms, software systems, and dependable computing",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Charles University Faculty of Math & Physics",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "mff-info@mff.cuni.cz",
+        "recipient_name": "Charles University MFF Dean",
+        "focus": "Theoretical computer science, formal semantics, and distributed algorithms",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Czech Technical University FIT",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "fit-info@fit.cvut.cz",
+        "recipient_name": "CTU FIT Dean",
+        "focus": "Autonomous systems, computer networks, and embedded security",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Warsaw University of Technology Faculty of MiNI",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "mini-info@mini.pw.edu.pl",
+        "recipient_name": "WUT MiNI Dean",
+        "focus": "Mathematical modeling, cryptography, and parallel algorithms",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Jagiellonian University Faculty of Math & CS",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "wmii-info@uj.edu.pl",
+        "recipient_name": "UJ WMII Dean",
+        "focus": "Theoretical computer science, machine learning, and computational physics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "AGH University of Krakow Faculty of CS",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "iet-info@agh.edu.pl",
+        "recipient_name": "AGH IET Dean",
+        "focus": "Prometheus supercomputing, distributed AI, and cloud architectures",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "E\u00f6tv\u00f6s Lor\u00e1nd University Faculty of Informatics",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "inf-info@inf.elte.hu",
+        "recipient_name": "ELTE Informatics Dean",
+        "focus": "Distributed systems, functional programming, and data mining",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Budapest University of Technology and Economics VIK",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "vik-info@vik.bme.hu",
+        "recipient_name": "BME VIK Dean",
+        "focus": "Embedded systems, autonomous control, and telecommunications",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Ljubljana Faculty of Computer & IS",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "dekanat-info@fri.uni-lj.si",
+        "recipient_name": "Uni-Lj FRI Dean",
+        "focus": "Computer vision, artificial intelligence, and distributed networks",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Zagreb Faculty of EE & Computing FER",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "fer-info@fer.hr",
+        "recipient_name": "FER Dean",
+        "focus": "Decentralized architectures, cyber-physical systems, and power grids",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Belgrade School of EE",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "dekanat-info@etf.bg.ac.rs",
+        "recipient_name": "ETF Belgrade Dean",
+        "focus": "Robotics control, signal processing, and computer engineering",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Porto Department of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "dcc-info@fc.up.pt",
+        "recipient_name": "UPorto DCC Head",
+        "focus": "CRDT research heritage (INESC TEC), distributed databases, and concurrency",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Lisbon Faculty of Sciences DI",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "di-info@ciencias.ulisboa.pt",
+        "recipient_name": "FCUL DI Head",
+        "focus": "Large-scale fault tolerance, distributed ledger technologies, and security",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Coimbra Department of Informatics Engineering",
+        "domain": "Formal Mathematical & Security Audit",
+        "contact_email": "dei-info@dei.uc.pt",
+        "recipient_name": "UC DEI Head",
+        "focus": "Dependable software systems, security audits, and communications",
+        "doc_match": "OmniStaking_EVM_Smart_Contract_Secu.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "NOVA University Lisbon NOVA LINCS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "nova-lincs-info@fct.unl.pt",
+        "recipient_name": "NOVA LINCS Director",
+        "focus": "Conflict-free replicated data types, causal consistency, and cloud storage",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "National and Kapodistrian University of Athens DIT",
+        "domain": "AI Supercomputing & Swarm Intelligence",
+        "contact_email": "secret-info@di.uoa.gr",
+        "recipient_name": "NKUA DIT Chair",
+        "focus": "Data management, distributed AI, and telecommunications",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "National Technical University of Athens ECE",
+        "domain": "Cyber-Physical Robotics & Kinematics",
+        "contact_email": "ece-info@ece.ntua.gr",
+        "recipient_name": "NTUA ECE Dean",
+        "focus": "Control systems, robotics kinematics, and microelectronics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Aristotle University of Thessaloniki Informatics",
+        "domain": "Quantum Engineering & Cryptography",
+        "contact_email": "info-dept@csd.auth.gr",
+        "recipient_name": "AUTH CSD Head",
+        "focus": "Information security, quantum cryptography, and parallel computing",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Crete Computer Science Department",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "csd-info@csd.uoc.gr",
+        "recipient_name": "UOC CSD Chair",
+        "focus": "FORTH-ICS heritage, computer architectures, and distributed systems",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
     }
 ]
 
