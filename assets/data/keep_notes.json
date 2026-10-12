@@ -1,6 +1,6 @@
 {
   "user_email": "rgkdevx1@gmail.com",
-  "last_synced": "2026-10-12T03:13:10.886955+00:00",
+  "last_synced": "2026-10-12T04:00:09.176358+00:00",
   "notes": [
     {
       "id": "keep_610102b5",
@@ -2293,6 +2293,21 @@
       ],
       "created_at": "2026-10-12T03:13:10.886832+00:00",
       "updated_at": "2026-10-12T03:13:10.886832+00:00",
+      "content": "Cockpit pitch ladder rendered at 60 FPS with roll angle damping."
+    },
+    {
+      "id": "keep_ca2baba7",
+      "title": "\ud83d\udef0\ufe0f Hypersonic HUD Angle-of-Attack",
+      "type": "text",
+      "color": "amber",
+      "pinned": false,
+      "author": "omni-keep-scratchpad-curator",
+      "tags": [
+        "#aerospace",
+        "#hud"
+      ],
+      "created_at": "2026-10-12T04:00:09.176248+00:00",
+      "updated_at": "2026-10-12T04:00:09.176248+00:00",
       "content": "Cockpit pitch ladder rendered at 60 FPS with roll angle damping."
     }
   ]
