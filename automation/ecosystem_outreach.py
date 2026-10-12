@@ -9229,6 +9229,429 @@ MASTER_LEAD_POOL = [
         "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
         "priority": "HIGH"
     },
+    {
+        "org": "Rensselaer Polytechnic Institute (RPI) CS",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "dept-info@cs.rpi.edu",
+        "recipient_name": "RPI CS Chair",
+        "focus": "Robotics manipulation, cyber-physical HAL, and computer graphics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Stevens Institute of Technology Department of CS",
+        "domain": "SCION Path-Aware Protocols & Mesh Networks",
+        "contact_email": "cs@stevens.edu",
+        "recipient_name": "Stevens CS Director",
+        "focus": "Cryptographic routing, path-aware protocols, and cyber-security",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Worcester Polytechnic Institute (WPI) CS",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "cs@wpi.edu",
+        "recipient_name": "WPI CS Department Head",
+        "focus": "Autonomous robotics, sensor fusion, and real-time embedded systems",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Northeastern University Khoury College",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "khoury-inquiry@northeastern.edu",
+        "recipient_name": "Khoury College Dean",
+        "focus": "Distributed systems, formal programming languages, and network security",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Case Western Reserve University CSE",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "cse@case.edu",
+        "recipient_name": "Case Western CSE Chair",
+        "focus": "High-performance computing, theoretical algorithms, and quantum info",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Lehigh University Department of CSE",
+        "domain": "Autonomous Swarm Protocols & Duty Cycles",
+        "contact_email": "incomp@lehigh.edu",
+        "recipient_name": "Lehigh CSE Chair",
+        "focus": "Multi-agent systems, autonomous coordination, and distributed algorithms",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Rochester Department of CS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "csdept@cs.rochester.edu",
+        "recipient_name": "Rochester CS Chair",
+        "focus": "Concurrency, synchronization lattices, and computer systems architecture",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Tufts University Department of Computer Science",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "info@cs.tufts.edu",
+        "recipient_name": "Tufts CS Chair",
+        "focus": "Human-robot interaction, embedded cybernetics, and autonomous systems",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Delaware CIS Department",
+        "domain": "SCION Path-Aware Protocols & Mesh Networks",
+        "contact_email": "cis-info@udel.edu",
+        "recipient_name": "UDel CIS Chair",
+        "focus": "High-assurance network protocols, path routing, and computer systems",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "George Washington University Department of CS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs@gwu.edu",
+        "recipient_name": "GWU CS Chair",
+        "focus": "Distributed algorithms, cyber-security, and high-assurance software",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Drexel University College of Computing & Informatics",
+        "domain": "Autonomous Swarm Protocols & Duty Cycles",
+        "contact_email": "cciinfo@drexel.edu",
+        "recipient_name": "Drexel CCI Dean",
+        "focus": "Autonomous agents, data science, and distributed software engineering",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Syracuse University Department of EECS",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "eecs@syr.edu",
+        "recipient_name": "Syracuse EECS Chair",
+        "focus": "Cyber-physical systems, assurance, and embedded sensor fusion",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Pittsburgh School of Computing and Information",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "sci-info@pitt.edu",
+        "recipient_name": "Pitt SCI Dean",
+        "focus": "Distributed systems, network resilience, and verifiable computing",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Stony Brook University Department of CS",
+        "domain": "SCION Path-Aware Protocols & Mesh Networks",
+        "contact_email": "info@cs.stonybrook.edu",
+        "recipient_name": "Stony Brook CS Chair",
+        "focus": "Storage and distributed systems, path-aware protocols, and algorithms",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Indiana University Luddy School of Informatics",
+        "domain": "Autonomous Swarm Protocols & Duty Cycles",
+        "contact_email": "luddyinfo@indiana.edu",
+        "recipient_name": "Luddy School Dean",
+        "focus": "Swarm intelligence, intelligent systems, and autonomous coordination",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Connecticut Department of CSE",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "engr-cse-info@uconn.edu",
+        "recipient_name": "UConn CSE Head",
+        "focus": "Cyber-physical security, robotics HAL, and embedded hardware",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Florida International University SCIS",
+        "domain": "SCION Path-Aware Protocols & Mesh Networks",
+        "contact_email": "scis-info@cis.fiu.edu",
+        "recipient_name": "FIU SCIS Director",
+        "focus": "Advanced network architectures, cyber-security, and high-speed telemetry",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Miami Department of Computer Science",
+        "domain": "Autonomous Swarm Protocols & Duty Cycles",
+        "contact_email": "cs-info@cs.miami.edu",
+        "recipient_name": "UMiami CS Chair",
+        "focus": "Autonomous agents, neural computation, and distributed bioinformatics",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Exeter Department of Computer Science",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "computerscience@exeter.ac.uk",
+        "recipient_name": "Exeter CS Head",
+        "focus": "Autonomous field systems, computational robotics, and machine learning",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of York Department of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-enquiries@york.ac.uk",
+        "recipient_name": "York CS Head",
+        "focus": "Safety-critical software, formal verification, and dependable distributed systems",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Lancaster University School of Computing and Communications",
+        "domain": "SCION Path-Aware Protocols & Mesh Networks",
+        "contact_email": "scc-enquiries@lancaster.ac.uk",
+        "recipient_name": "Lancaster SCC Head",
+        "focus": "Path-aware network protocols, pervasive computing, and distributed systems",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Surrey Department of Computer Science",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "cs-enquiries@surrey.ac.uk",
+        "recipient_name": "Surrey CS Head",
+        "focus": "Information security, theoretical cryptography, and distributed systems",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Bath Department of Computer Science",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "compsci-enquiries@bath.ac.uk",
+        "recipient_name": "Bath CS Head",
+        "focus": "Autonomous systems, robotics motion planning, and human-computer systems",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Liverpool Department of Computer Science",
+        "domain": "Autonomous Swarm Protocols & Duty Cycles",
+        "contact_email": "cs-enquiries@liverpool.ac.uk",
+        "recipient_name": "Liverpool CS Head",
+        "focus": "Multi-agent systems, algorithmic game theory, and formal verification",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Queen's University Belfast EEECS",
+        "domain": "SCION Path-Aware Protocols & Mesh Networks",
+        "contact_email": "eeecs-enquiries@qub.ac.uk",
+        "recipient_name": "QUB EEECS Head",
+        "focus": "Cyber-security (CSIT), path-aware networks, and high-throughput systems",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Heriot-Watt University School of MACS",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "macs-enquiries@hw.ac.uk",
+        "recipient_name": "Heriot-Watt MACS Head",
+        "focus": "National Robotarium, autonomous systems, and sensor fusion",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Strathclyde Department of CIS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cis-enquiries@strath.ac.uk",
+        "recipient_name": "Strathclyde CIS Head",
+        "focus": "Distributed systems, mathematically structured programming, and security",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Aberdeen Computing Science",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "computing@abdn.ac.uk",
+        "recipient_name": "Aberdeen Computing Head",
+        "focus": "Theoretical computer science, knowledge representation, and distributed agents",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Dundee Computing",
+        "domain": "Autonomous Swarm Protocols & Duty Cycles",
+        "contact_email": "computing@dundee.ac.uk",
+        "recipient_name": "Dundee Computing Head",
+        "focus": "Space technology, autonomous software agents, and biomedical computing",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University College Cork School of CSIT",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "csit@ucc.ie",
+        "recipient_name": "UCC CSIT Head",
+        "focus": "Insight Centre for Data Analytics, distributed networking, and CRDT lattices",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Galway School of Computer Science",
+        "domain": "SCION Path-Aware Protocols & Mesh Networks",
+        "contact_email": "computerscience@universityofgalway.ie",
+        "recipient_name": "Galway CS Head",
+        "focus": "Data science, secure communication protocols, and pervasive computing",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Dublin City University School of Computing",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "computing@dcu.ie",
+        "recipient_name": "DCU Computing Head",
+        "focus": "Robotics, autonomous vehicles, and real-time distributed software",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Maynooth University Department of Computer Science",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "computerscience.department@mu.ie",
+        "recipient_name": "Maynooth CS Head",
+        "focus": "Formal methods, theoretical computing, and autonomous software verification",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Radboud University ICIS Institute",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "icis-secretariaat@cs.ru.nl",
+        "recipient_name": "Radboud ICIS Director",
+        "focus": "Formal methods, mathematical logic, cryptography, and theoretical physics",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Vrije Universiteit Amsterdam Department of CS",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs-secretariat@vu.nl",
+        "recipient_name": "VU Amsterdam CS Head",
+        "focus": "Massive distributed systems, peer-to-peer networks, and operating systems",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Maastricht University Department of Advanced Computing Sciences",
+        "domain": "Autonomous Swarm Protocols & Duty Cycles",
+        "contact_email": "dacs-info@maastrichtuniversity.nl",
+        "recipient_name": "Maastricht DACS Chair",
+        "focus": "Autonomous multi-agent systems, game theory, and swarm intelligence",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Groningen Bernoulli Institute",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "bernoulli.office@rug.nl",
+        "recipient_name": "Bernoulli Institute Director",
+        "focus": "Autonomous systems, robotics HAL, and computational mathematics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Antwerp Department of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "cs@uantwerpen.be",
+        "recipient_name": "UAntwerp CS Chair",
+        "focus": "AnSyMo distributed systems, formal modeling, and network algorithms",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Vrije Universiteit Brussel Department of Informatics (DINF)",
+        "domain": "SCION Path-Aware Protocols & Mesh Networks",
+        "contact_email": "dinf@vub.be",
+        "recipient_name": "VUB DINF Head",
+        "focus": "Next-gen network architectures, path routing, and wireless mesh networks",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "UCLouvain ICTEAM Institute",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "ingi-contact@uclouvain.be",
+        "recipient_name": "UCLouvain INGI Head",
+        "focus": "Robotics manipulation, real-time embedded systems, and autonomous control",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Liège Montefiore Institute",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "info@montefiore.ulg.ac.be",
+        "recipient_name": "Montefiore Institute Director",
+        "focus": "Distributed algorithms, smart systems, and computational intelligence",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Luxembourg SnT Centre",
+        "domain": "SCION Path-Aware Protocols & Mesh Networks",
+        "contact_email": "snt-info@uni.lu",
+        "recipient_name": "SnT Centre Director",
+        "focus": "Interdisciplinary security, SCION routing, and autonomous space telemetry",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Innsbruck Department of Computer Science",
+        "domain": "Distributed Systems & CRDT Lattices",
+        "contact_email": "informatik@uibk.ac.at",
+        "recipient_name": "Innsbruck CS Head",
+        "focus": "Distributed computing, quantum computer science, and parallel systems",
+        "doc_match": "Zero_Allocation_Causal_CRDT_Lattice.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Johannes Kepler University Linz CS",
+        "domain": "Autonomous Swarm Protocols & Duty Cycles",
+        "contact_email": "cs@jku.at",
+        "recipient_name": "JKU Linz CS Head",
+        "focus": "Autonomous software agents, formal verification, and computational intelligence",
+        "doc_match": "Omni_Swarm_Circadian_Protocol___Wor.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "Graz University of Technology Faculty of CSBME",
+        "domain": "SCION Path-Aware Protocols & Mesh Networks",
+        "contact_email": "dekanat.csbme@tugraz.at",
+        "recipient_name": "TU Graz CSBME Dean",
+        "focus": "Applied cryptography, secure network routing, and high-performance computing",
+        "doc_match": "SCION_Path_Aware_Internet_Protocol.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Klagenfurt Department of Informatics",
+        "domain": "Cyber-Physical Robotics & HAL",
+        "contact_email": "informatik@aau.at",
+        "recipient_name": "Klagenfurt Informatics Head",
+        "focus": "Autonomous aerial robotics swarms, sensor fusion, and cybernetics",
+        "doc_match": "Sovereign_Decentralized_Mesh_Open_S.html",
+        "priority": "HIGH"
+    },
+    {
+        "org": "University of Salzburg Department of Computer Science",
+        "domain": "Academic & Theoretical Physics",
+        "contact_email": "cs@plus.ac.at",
+        "recipient_name": "Salzburg CS Head",
+        "focus": "Computational systems, algorithm theory, and high-assurance architectures",
+        "doc_match": "Omni_Present_Omega_Executive_Monograph.html",
+        "priority": "HIGH"
+    }
 ]
 
 # Detailed Summaries of Research Monographs Pulled from Google Drive
